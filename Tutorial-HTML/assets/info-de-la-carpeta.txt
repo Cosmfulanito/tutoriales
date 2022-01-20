@@ -1,0 +1,3 @@
+
+
+En la carpeta assets es donde se guardan todos los medios externos, imagenes, videos, musica, iconos, fuentes de letras, etc.

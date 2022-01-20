@@ -1,0 +1,48 @@
+<!-- 
+
+                                                        _____Elementos de Bloque y de Línea_____ 
+
+
+ - Las  etiquecas no son solamente "texto", son en realidad una caja/bloque que dentro contiene texto. Estas cajas ademas de contener texto también contienen
+   otras cajas/etiquetas. Estas cajas no se puden ver a priori porque son de color blancas al igual que el fondo, y por la falta de constraste se crea la 
+   ilución de que es solamente es texto. Se pueden distinguir cajas unas de otras si se las pintan de diferentes colores
+
+
+ - Tipos de etiqueta/caja:
+
+    Elemento de Bloque:     Es una caja que ocupa desde el extremo izquierdo de la pantalla hasta el derecho, y dentro lleva el texto. Como ocupa todo el ancho
+                            de la pantalla, por obvias razones no es posible poner un Bloque al lado de otro Bloque, solamente uno abajo del otro
+                            Ej: <body>, <h1>, <footer>, <section>, <p>, etc
+                            
+    Elemento de Línea:      Es una caja que ocupa solamente el ancho del texto, el resto de la pantalla es espacio vacio que puede ser ocupado por otro elemento
+                            de Línea. Por ende, a difrerencia de un Bloque, un elemento de Línea si puede estar al lado de otro elemento de Línea.
+                            Ej: <span>
+
+
+ - Hay una forma para poder "darle color" a las etiquetas y poder ver los elementos de Bloque y de Línea. Para ello vamos al navegador, clic derecho, "inspeccionar
+   elementos", luego clic en los tres circulitos de opciones, luego hacer clic en en la opcion que separa el inspector de elemtos de la página, por ultimo hacer
+   clic en un dibujo de un mouse que esta a la izquierda de todo. Ahora al pasar el mouse sobre nuestra página web, resaltara en color los diferentes Bloques Y 
+   Línes de nuestras nuestras etiquetas
+
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementos de Bloque y elementos de Línea</title>
+    </head>
+
+    <body>
+        <h1>"Soy un elemento de Bloque"</h1>
+        <p>"Soy otro elemento de Bloque"</p>
+        <span>"Soy un elemento de Línea"</span>
+        <span>"Soy otro elemento de Línea"</span>
+    </body>
+    
+</html>

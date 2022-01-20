@@ -1,0 +1,77 @@
+/* 
+
+                                                                _____box-sizing:_____
+
+    
+
+    box-sizing:             - Traducido como "dimencionamiento de caja". Es la propiedad que nos permite controlar el cálculo que hace el navegador a la hora de modificar las propiedades content:, padding: y border:.                                                            
+
+                            - Los valores que podemos darle son 2:
+                                    - content-box           Valor que viene por defecto.
+                                    - border-box            Calcula el tamaño del elemento incluyendo el padding: y el border:   //   Básicamente, cada vez que agrego un "padding:" o un "border:" a mi caja, la termino deformando. Esto se debe a que le agrego pixeles extras a lo largo y a lo ancho. Por ejemplo, si mi  caja es de 100 pixeles y le agrego un padding de 50 pixeles, al final mi caja va a medir 150 pixeles deformando mi página web. Para solucionar esto deberia restarle pixeles a mi caja y este trabajo de cuentas en tedioso. Mediante "box-sizing: border-box;" eso no ocurre, mi caja va a segir midiendo 100 pixeles. Ahorrandome el trabajo de descontar pixeles de la caja por micuenta //  ¿Como ocurre esto? Basicamente este conjunto de propiedad/valor hace el calculo por mí de restarle 50 pixeles a la caja de pixeles para que al sumarle 50 pixeles de padding, la caja siga midiendo 100 pixeles      
+
+
+
+
+ - Como se puede apreciar, el conjunto propiedad/valor de "box-sizing: border-box;" es muy util a la hora de crear una caja. 
+   ¿Eso significa que tenemos que ponerselo a cada caja que creemos? Es lo ideal pero no hace falta, debido a que utilizando el selector universal (aquí si es buena
+   practica usarlo) podremos ponerle esta propiedad a todas las cajas de nuestro archivo. Recordar que dicho selector universal tiene que estar al principio de la 
+   página
+   Ej:      *{
+                box-sizing: border-box;
+            }
+
+*/
+
+
+
+/* Caja de referencia */
+.caja-1{                                                                                    /* Esta es una caja de referencia de 200 X 200 pixeles. Mi objetivo es que las demas cajas tengan el mismo tamaño a pesar de agregarles paddings o borders */
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+}
+
+
+
+
+/* Caja + padding de referencia */
+.caja-2{                                                                                    /* Esta es una caja de referencia igual que la anterior, pero con un "padding:" que la deforma haciendola más alta. Mi objetovo es corregir esa deformacion */
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+
+    padding-top: 100px;
+}
+
+
+
+
+/* Utilizando "box-sizing: border-box" */
+.caja-3{                                                                                    /* Como se puede apreciar, a pesar de agregar un "padding:" de 100 pixeles de alto, la caja sigue midiento 200 pixeles. Esto se debe gracias al uso de "box-sizing: border-box".   //   Lo que ocurrio es que de forma automatica el "box-sizing: border-box" le resto a la caja 100 pixeles para que luego al sumar los 100 del "padding:" el total siga siendo 200 pixeles de alto */
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+
+.caja-4{                                                                                    /* Esta caja tambien tiene todo lo anterior más un "border-top:" de 50 pixeles. Aún así se respeta la proporcion de 200 X 200 pixeles. Ya que a la caja se le restan 100 pixeles que probienen del "padding" y 50 pixeles que vienen del "bolder:", de esta manera llegamos a los 200 pixeles porque son 50 pixeles de la caja + 100 del "padding" + 50 pixeles del "border" */
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+
+    padding-top: 100px;
+    border-top: 50px solid red;
+    box-sizing: border-box;
+}
+
+
+
+

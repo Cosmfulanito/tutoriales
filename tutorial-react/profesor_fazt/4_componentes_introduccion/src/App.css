@@ -1,0 +1,19 @@
+
+
+/* 
+ _____Aplicando estilos en React:_____ 
+ 
+ - Como se puede apreciar, es igual que como lo haciamos normalmente
+ 
+ - Recordar que dentro del archivo App.js, cuando le declaremos una clase a un componente/elemento en lenguaje JSX no usaremos el artibuto class="", en su lugar
+   usaremos la palabra className=""
+   Es exactamente lo mismo pero con otro nombre. Recordar que estos cambios tambien se aplican en el resto de atributos
+
+*/
+
+
+.nombre{
+	background-color: coral;
+	border: solid black 2px;
+	margin: 3px;
+} 

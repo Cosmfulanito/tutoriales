@@ -1,0 +1,90 @@
+/* 
+
+
+															_____Propiedad: "position: absolute;"_____
+
+
+
+ - Esto es una parte especifica del apunte 26-introduccion-a-la-propiedad-position.css														
+
+
+
+
+	position: absolute;			- El elemento prederá sus medidas y su espacio reservado, esto significa que cualquier caja que pongamos ocupara su espacio, ya que 
+								  por logica, no habría nada allí que ocupe ese espacio (tener esto en cuenta debido que una caja va a tapar a la otra). 
+
+								- Si movemos este elemeneto, usará el elemento "posicionado contenedor" como referencia. Si no tiene ninguno, usará el elemento HTML 
+								  de referencia. 
+								  Esto significa que cada vez que usemos tratemos de mover esta caja, va a usar a su elemento "padre posicionado" como 
+								  referencia. En caso de que su elemento padre no este "posicionado", usara a su elemeto abuelo posicionado. Y si este tampoco lo esta,
+								  seguira así segidamente hasta llegar al HTML para usarlo como referencia. 
+
+								- Cuando se utilice este valor. La caja de bloque se va a comportar como si se le hubiera puesto la propiedad "display: inline-block".
+								  Osea, hay que darle medidas o de lo contrario van a ser iguales al del contenido interno, no como en los elementos de bloque donde 
+								  si uno no le pone mediadas el ancho de la caja llega hasta el extremo derecho de la pantalla 
+
+*/
+
+
+
+
+
+
+
+*{
+	box-sizing: border-box;				/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+/* - La idea es tener dos cajas con la propiedad "position: absolute" con exactamente los mismos valores. La unica diferencia va a ser que la primera caja va a 
+     estar dentro de una caja "padre/contenedor posicionada" que le va a servir de referencia a la hora de moverse y la segunda caja no, esta ultima al no tener una
+	 una caja padre/contenerdor, va a usar al HTML como contenedor. 
+   - A ambas cajas de se les va a dar la orden de estar en la esquina inferior derecha de sus respectivos contenedores. Al ser distintos contenedores, la posicion 
+     de hambas cajas tambien va a ser distinta (a pesar de haberles dado los exactamente los mismos valores) */
+
+
+.caja{																				/* Cree esto para carle a todas las cajas la misma medida */
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+
+
+
+
+
+/* Caja con "position: absolute" CON caja padre/contenedor */
+.contenedor{																		/* Esta es una caja que sirve de padre/contenedor para la caja "caja-absolute-1". Esta caja esta posicionada para poder servir de referencia a su caja hija para cuando se la quiera mover.  De no estarlo, su caja hija usaria de referencia el HTML */
+	background-color: lightslategrey;
+	width: 400px;
+	height: 350px;
+	position: absolute;									
+}
+.caja-absolute-1{																	/* Esta es la caja con "position: absolute" N°1, tiene como padre/contenedor a la caja "contenedor", de esta manera usa a su caja padre como referencia a la hora de moverse. Esta caja padre tambien esta posicionada, de lo contrario todo esto no funcionaria */
+	background-color: lightcoral;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+
+
+
+/* Caja con "position: absolute" SIN caja padre/contenedor */
+.caja-absolute-2{																	/* Esta caja no tiene a ninguna caja padre/contenedor. Por ende usa al HTML como contenedor y referencia para moverse */
+	background-color: lightgreen;
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+}
+
+
+

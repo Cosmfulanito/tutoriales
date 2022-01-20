@@ -1,0 +1,109 @@
+/* 
+                                                                _____Página de prueba_____
+
+- Esta es una página para probar cosas ramdons  
+
+
+*/
+
+*{                                                      /* Pongo esta propiedad para acostumbrarme a esta buena practica */
+    box-sizing: border-box;
+}
+
+
+
+
+h2 {
+    background-color: rgba(0,127,255,0.5);
+    box-shadow: 2px 2px 10px #666;
+    padding: 0.25em;
+    text-align: center;
+  }
+  
+  div.espacio3D {
+    width: 300px;
+    height: 300px;
+    margin: 3em auto 0 auto;
+    /* border: 1px solid rgba(0,255,0,0.5); */
+    position: relative;
+    perspective-origin: center -50%;
+    perspective: 500px;
+    transform: scale(0.75);
+  }
+  
+  div.cubo3D {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-150px);
+    animation-name: gira;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+  }
+  
+  div.base {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0,0,0,0.15);
+    transform: translateX(75px) translateY(75px) rotateX(90deg) translateZ(-200px);
+    box-shadow: 0 0 50px 100px rgba(0,0,0,0.15);
+  }
+  aside.cara {
+    position: absolute;
+    width: 298px;
+    height: 298px;
+    background-color: rgba(255,150,0,0.25);
+    border: 1px solid rgba(255,150,0,0.75);
+    color: #08f;
+    font-size: 3em;
+    text-align: center;
+    line-height: 298px;
+    box-shadow: 0px 0px 5px rgba(255,150,0,0.75);
+  }
+  
+  aside.cara1 { /* Frente */
+    transform: translateZ(150px);
+    overflow: hidden;
+  }
+  
+  aside.cara2 { /* Atrás */
+    transform: rotateY(180deg) translateZ(150px);
+  }
+  
+  aside.cara3 { /* Izquierda */
+    transform: rotateY(-90deg) translateZ(150px);
+  }
+  
+  aside.cara4 { /* derecha */
+    transform: rotateY(90deg) translateZ(150px);
+  }
+  
+  aside.cara5 { /* abajo */
+    transform: rotateX(-90deg) translateZ(150px);
+  }
+  
+  aside.cara6 { /* arriba */
+    transform: rotateX(90deg) translateZ(150px);
+  }
+  
+  @keyframes gira {
+    0% {
+      transform: translateZ(-150px) rotateY(0deg);
+    }
+    100% {
+      transform: translateZ(-150px) rotateY(360deg);
+    }
+  }
+
+
+
+.caja-madre{
+    text-align: right;
+}
+
+.imagen{
+  width: 300px;
+  padding-top: 70px;
+}

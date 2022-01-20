@@ -1,0 +1,41 @@
+/* Todo lo que esta aquí se copio tal cual esta en el video. Hay cosas que no tengo idea que son porque nunca las vi, porque son parte del los tuturiales más 
+   antiguos de CSS */
+
+
+body{
+	margin: 0;
+	background-color: #2f3238;
+	color: #fff;
+	font-family: sans-serif;
+}
+
+.alert{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0.5rem;
+	text-align: center;
+	transform: translateY(-100%);							/* Esto mueve el carte tan arriba que no es visible */
+}
+
+.alert--online{												/* Cuando estemos conectados a internet saldra un cartel desde arriba de color verde */
+	background-color: rgba(0, 255, 0, 0.6);
+	animation: reveal 4s ease;
+}
+
+.alert--offline{											/* Cuando NO estemos conectados a internet saldra un cartel desde arriba de color rojo */
+	background-color: rgba(255, 0, 0, 0.6);
+	animation: reveal 4s ease;
+}
+
+@keyframes reveal {											/* Esto controla la animación */
+	0%{														/* Del 0% al 15% el cartel no se ve */									
+		transform: translateY(-100%);
+	}
+	15%, 													/* (A palabras de Dorian) Del 15% al 85% vuelve a verse. Y del trozo faltante  para terminar la animación, vuelve para arriba */
+	85%{
+		transform: translateY(0)
+	}
+}

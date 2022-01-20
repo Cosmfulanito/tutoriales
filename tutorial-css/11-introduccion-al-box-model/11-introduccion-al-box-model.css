@@ -1,0 +1,29 @@
+/*
+
+                                                                    _____Box Model_____
+
+
+ - El "Box model" o modelo de caja se basa en que todas las etiquetas/elementos que uno agrega en el HTML no son más que "cajas" que ocupan un especio rectangular                                                         
+   dentro de la pantalla de nuestro navegador. 
+   Todas las cosas son cajas que ocupan espacios resctangulares. Desde etiquetas como los headers, los footers y hasta incluso elementos como los logos, imagenes 
+   e incluso el texto.  
+
+ - Hay que tener en cuenta que todas estas cajas estan al lado/arriba/abajo de otras cajas. Incluso hay cajas dentro de otras cajas, como la caja header que esta
+   dentro de la caja body.
+
+ - Desde HTML puro no se pueden apreciar las distintas propiedades de una caja e incluso es dificil diferenciar dos cajas distintas (debido a la falta de contraste 
+   ya que todo esta de color blanco). Para ello utilizamos CSS, ya que nos permite apreciar esas propiedades y a su vez manipularlas a voluntad.
+   
+
+ - Propiedades de una caja:
+                                - Contenido                 Vendria a ser el texto.
+                                - Borde:                    La parte externa de la caja
+                                - Padding:                  Esta propiedad controlo la distancia que hay desde el borde de la caja hasta el contenido 
+                                - margin:                   Permite controlar la distancia de separación que hay entre la caja seleccionada y las que la rodean
+                                - width/height:             El ancho y largo de una caja respectivamente        
+
+
+
+
+
+*/

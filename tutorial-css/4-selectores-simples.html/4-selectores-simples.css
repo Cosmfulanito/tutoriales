@@ -1,0 +1,118 @@
+/*
+
+                                                                _____Selectores Simples_____
+
+
+ - Esto es una vición más a fondo de una parte del apunte 3-tipos-de-selectores.css                                                       
+
+
+                                                                        
+_____Selectores Simples:_____                                                                
+
+        Selectores Elementales:
+            - Universal                             *                                                       Selecciona todo. No es muy recomendable de usar
+            - De tipo o etiqueta                    Nombre de la etiqueta                                   Simplemente ponemos el nombre de la etiqueta a la cual le queremos aplicar estilos de CSS. No es muy recomendable de usar
+
+        Selectores de Atributo:     
+            - id                                    id del elemento                                         Dentro del archivo .html se le coloca el atributo id="" a la etiqueta deseada, dentro de las comillas va a el nombre que le queramos poner al id. Luegon en el archivo .css, el selector lleva el nombre del id. Recordar poner un hash "#"  para que el selector funcione.       Ej:  #NombreDelid{ }     //    Este id es unico para cada etiqueta y no se puede compartir. Por ende no es un selector muy recomendable para dar estilos, esto se debe a que los id son identificadores (y por lo tanto, al ser identificadores solo puede haber uno solo), esto choca con  los principios de CSS ya que los estilos son reutilizables, cosa que no es compatible con tener estilos que solo se apliquen a un solo elemento como en el caso de id
+            - clase                                 Clase del elemento                                      Dentro del archivo .html se le coloca el atributo class="" a la etiqueta deseada, dentro de las comillas va el nombre que le queremos poner a la clase. Luego en el archivo .css, el selector lleva el nombre de la clase. Recordar poner un punto "." para que el selector funcione.     Ej:  .NombreDelSelector{ }     //    A diferencia de los selectores de id, la clase si puede ser compartida por varios elementos/etiquetas. Esto lo convierte en el tipo de selector más recomendable de usar ya que tiene estilos reutilizables                     
+            - Otros atributos:
+                [atributo]                          Atributo del elemento                                   Básicamente le aplicamos CSS a todas las etiquetas que tengan ese atributo. Este selector debe estar entre []
+                [atributo="valor"]                  Atributo + valor del elemento                           Basicamente le aplicamos CSS a todas las etiquetas que tengas ese conjunto especifico de etiqueta y valor. Este selector debe estar entre []
+                [atributo^="valor"]                 Atrinuto + primera parte del nombre del valor           Funciona exactamente igual que un selector del tipo [atributo="valor"] con la diferencia de que solamente hay que poner la primera parte del nombre del valor. De esta manera el selectror verifica si el valor del atributo comienza con esa palabra (Es una especie de buscador de coincidencia)
+                [atributo$="valor"]                 Atributo + ultima parte del nombre del valor            Funcina exactamente igual que [atributo^="valor"] con la firencia de que aqui el selector busca que el valor termine con esta palabra. Osea que la tenga al final
+                [atributo*=valor"]                  Atributo + parte del nombre del valor                   Funcina exactamente igual que [atributo^="valor"] con la diferencia de que puedo poner cualquier parate del nombre del valor. Este selector va a buscar todos los valores que tengan coincidencias con esta palabra, este adelante, al medio o al final. Da igual en que posición se encuentre
+                [atributo|="valor"]                 Atributo + parte del nombre del valor                   Funciona exactamente igual que [atributo^="valor"] pero en este caso, busca atributos que coincidan con esta palabra y que a su vez tengan un guion alto "-" al final de dicha palabra. Es muy usado con el atributo lang="" ya que el idioma va acompañado de un guion y luego la comarca/region del idioma.   Ej: lang="en-GB".    Solamente deberia poner [lang|="en" y cualquier concidencia con "en-" se le aplicaria CSS     
+
+
+
+
+
+
+                
+ - Recordar que en CSS las ordenes van en casacada, eso significa que la declaracion de arriba es sobreescrita por la de abajo. Ej: Si pongo un etiqueta de color verde y abajo pongo que es roja, al final esa etiqueta va a ser roja porque lo de abajo sobreescribe a lo de arriba */
+
+
+
+
+
+/* Selector universal:   (No es muy recomedable de usar) */
+*{
+    background-color: cornsilk;
+}
+
+
+
+
+/* Selector de Etiqueta:   (No es muy recomedable de usar) */
+h1{
+    background-color: lightcyan;
+}
+
+p{
+    background-color: lightgreen;
+}
+
+
+
+
+/* Selector de id:   (No es muy recomedable de usar) */
+#texto_id{
+    background-color: gold;
+}
+
+
+
+
+/* Selector de Clase:   (Sumamente recomendable de usar) */
+.texto_class{
+    background-color: lightskyblue;
+}
+
+
+
+
+/* Selector [atributo] */
+[href]{                                     /* Se van a pintar todas las etiquetas que tengan el atributo href="" */
+    background-color: salmon;           
+}
+
+
+
+
+/* Selector [atributo="valor"] */           
+[href="https://www.google.com/"]{           /* Se van a pintar todas las etiquetas que tengan exactamente el conjunto de atributo + valor href="https://www.google.com/" */
+    background-color: mediumorchid;
+}
+
+
+
+
+/* [atributo^="valor"] */
+[href^="color"]{                            /* Se van a pintar todas las etiquetas que tengan el atributo href="" y cuyo valor comience con la palabra "color" */
+    background-color: red;
+}
+
+
+
+
+/* [atributo$="valor"] */
+[href$="vehiculo"]{                         /* Se van a pintar todas las etiquetas que tengan el atributo href="" y cuyo valor termine con la palabra "vehiculo" */
+    background-color:darkgrey;
+}
+
+
+
+
+/* [atributo*="valor"] */
+[href*="musica"]{                           /* Se van a pintar todas las etiquetas que tengan el atributo href="" y cuyo valor tenga escrito en alguna parte la palabra "musica", puede estar escrito al comienzo, en el medio o al fianl. Da igual donde este escrito la palabra musica dentro del valor */
+    background-color:pink;
+}
+
+
+
+
+/* [atributo|="valor"] */                  
+[lang|="en"]{                               /* Sevan a pintar todas las etiquetas que tengan el atributo lang="" y cuyo valor sea "en-" (el guion lo agrega el mismo selector, no hace falta que yo lo ponga. Yo solamente tengo que escribir "en") */
+    background-color: forestgreen;
+}

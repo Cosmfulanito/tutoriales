@@ -1,0 +1,167 @@
+/* 
+
+                                                                _____Propiedad "overflow:"_____
+                                                                
+
+ - El contenido desbordado es todo aquel contenido (texto, imagenes, etc.) que esta por fuera de la caja que lo contiene. Esto se da porque la cantidad de contedo 
+   es mucho mayor que el tamaño de la caja.
+
+ - Uno creeria que la solucion seria agrandar la caja, pero esto a veces no es posible debido a las proporciones de nuestra página web. Para ello tenemos la
+   propiedad "overflow:".
+ 
+ 
+   
+    overflow:           - Traducido como "desbordamiento". Esta es la propiedad que utilizamos para controlar el desbordamiento de las cajas. Básicamente le indica 
+                          al navegador que hacer cuando eso ocurre.
+                          
+                        - Es un "shorthand" que engloba las propiedades overflow-x y overflow-y (orizontal y vertical respectivamente)
+
+                        - Tiene 4 posibles valores:
+                                visible         Es el valor por defecto
+                                hidden          Traducido como "oculto". El contenido que se desborda no se verá. Si aplicamos esta propiedad en un solo eje, el otro se pondra automaticamnente en el valor "scroll"
+                                scroll          Apareceran las "barras de scroll" en el eje asignado (X, Y o ambos. Dependiende que si utilizamos los shorthands "overflow-x:", "overflow-y;" o "overflow:" respectivamente ) 
+                                auto            Apareceran "barras de scroll" en caso de que hicieran falta. En este caso en particular se aconseja poner solamente overflow: y evitar los otros dos shorthands. Esto se debe a que puedo tener desbordamientos tantos verticales como horizontales.    Ej: Solamente pongo "overflow-y: auto;" y al final tambien tengo un desbordamiento horizontal del cual no me doy cuenta. Debido a esto lo aconsejable es poner solamente "overflow: auto;" ya que contempla las dos posibilidades 
+
+
+*/
+
+
+*{
+    box-sizing: border-box;                                 /* Pongo esta propiedad para normalizar esta buena paractica */
+}
+
+
+
+
+
+
+/* Caja desbordada */
+.caja-1{                                                            /* Este es un ejemplo de una caja desbordada. Las proximas cajas muestran distintas formas de arreglar esto */
+    margin-left: 300px;
+    background-color: mediumturquoise;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+
+
+/* Ocultar el contenido desbordado de una caja */
+.caja-2{
+    margin-left: 300px;
+    background-color: coral;
+    width: 300px;
+    height: 302px;
+
+    overflow: hidden;                                             
+}
+
+
+
+
+
+
+/* Añadir una "barra de scroll" */
+.caja-3{
+    margin-left: 300px;
+    background-color: coral;
+    width: 300px;
+    height: 300px;
+
+    overflow-y: scroll;                                             /* Puse "overflow-y" porque quiero que aparezca unicamente una barra de scroll vertical */
+}
+
+
+
+
+
+
+/* Anadir una "barra de scroll" de forma automatica dependiendo de que si hay desbordamiento o no */
+.caja-4{                                                            /* Esta caja no va a tener un desbordamiento, por ende no van a aparecer las "barras de scroll" */
+    margin-left: 300px;                                             
+    margin-right: 50px;
+    background-color: coral;
+    width: 300px;
+    height: 300px;
+
+    overflow: auto;                                                 
+}
+
+.caja-5{
+    margin-left: 300px;                                             /* Esta caja solamente va a tener un desbordamiento vertical, por ende solamente va a aparecer una "barra de scroll" vertical */
+    background-color: coral;
+    width: 300px;
+    height: 300px;
+
+    overflow: auto;
+}
+
+.texto{
+    width: 350px;                                                   /* Puse esto especificamente para darle un desbordamiento horizontal a la "caja-6" */
+}
+.caja-6{                                                            /* Esta caja va a tener un desbordamiento horizontal y vertical por ende van a aparecer un scroll horizontal y otro vertical */    
+    margin-left: 300px;
+    background-color: coral;
+    width: 300px;
+    height: 300px;
+
+    overflow: auto;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* Solución de un caso real de desbordamiento de una cajas dentro de otra caja */
+
+/* Cajas desbordadas de ejemplos */
+.caja-madre-1{
+    margin-left: 300px;
+    background-color: darkgrey ;
+    width: 320px;
+    height: 320px;
+    border-radius: 50px;
+}
+
+.caja-hija-1-a,
+.caja-hija-1-b{
+    padding: 20px;
+    background-color: mediumturquoise;
+}
+
+
+
+/* Cajas debordadas solucionado */
+.caja-madre-2{
+    margin-left: 300px;
+    background-color: darkgrey;
+    width: 320px;
+    height: 320px;
+    border-radius: 50px;
+
+    overflow: hidden;                                           /* Gracias a esta simple propiedad el contenido dentro de esta caja que esta desbordado, se oculta  */
+}
+
+.caja-hija-2-a,
+.caja-hija-2-b{
+    padding: 20px;
+    background-color: coral;
+}
+
+.caja-hija-2-b{                                                 /* Esto lo hice para tapar la linea gris que estaba abajo, es puramente estetico */
+    padding-bottom: 50px;
+}
+
+
+
+
+
+

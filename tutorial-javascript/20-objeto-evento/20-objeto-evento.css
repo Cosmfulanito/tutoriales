@@ -1,0 +1,32 @@
+*{
+	box-sizing: border-box;			/* Pongo esta propiedad para normalizar esta buena practica */
+}
+
+
+body{
+	font-family: sans-serif;		/* Esto es puramente estetico */
+}
+
+
+
+
+
+/* 
+Estilos de de la galeria para que tengta la forma de los botones de un telefono
+No tengo idea del uso de ninguna de estas propiedades solamente las estoy copiando tal cual del video									*/
+.galeria{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 10px;
+}
+.galery_item{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	border: 1px solid black;
+	cursor: pointer;
+}
+.red{
+	background-color: red;
+}

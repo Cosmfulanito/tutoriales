@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="46_api_drag_and_drop_ii_practica_guiada.css">
+		<title>Drag & drop II - Práctica guiada</title>
+	</head>
+	<body>
+		<h1 class="h1">Drag & drop II - Práctica guiada</h1>
+		
+		<div class="container">
+			<div id="pending-task" class="tasks">
+				<h2 class="title">Pending Tasks</h2>
+				<div id="task-1" class="task" draggable="true">Task 1</div>	<!-- Segun MDN, draggable="" es un atributo enumerado que indica si el elemento puede ser arrastrado , usando el "HTML Drag and Drop API" . Puede tener los valores "true" o "false". Si este atriuto no se establece, su valor por default es auto, significando que el comportamiento debe de ser el definido por default en el explorador. -->
+				<div id="task-2" class="task" draggable="true">Task 2</div>
+				<div id="task-3" class="task" draggable="true">Task 3</div>
+				<div id="task-4" class="task" draggable="true">Task 4</div>
+				<div id="task-5" class="task" draggable="true">Task 5</div>
+			</div>
+			<div id="finished-task" class="tasks">
+				<h2 class="title">Finished Tasks</h2>
+			</div>
+		</div>
+		<script src="46_api_drag_and_drop_ii_practica_guiada.js"></script>
+	</body>
+</html>

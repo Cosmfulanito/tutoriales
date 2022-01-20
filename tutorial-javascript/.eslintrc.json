@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+		// Estas son reglas que yo mismo puse porque me resultan comodas. 
+		// Recorda poner la coma al final
+		"linebreak-style":"off",
+		"indent":"off",
+		"no-tabs":"off",
+		"no-multiple-empty-lines":"off",		
+		"no-trailing-spaces":"off",
+		"max-len":"off",
+		"no-console":"off",
+		"no-plusplus":"off"
+    }
+}

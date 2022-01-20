@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/tutorial-css/17-box-sizing/normalize.css">                    <!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+        <link rel="stylesheet" href="/tutorial-css/17-box-sizing/17-box-sizing-dist.css">           <!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+        <title>box-sizing:</title>
+    </head>
+
+    <body>
+        <h1>box-sizing:</h1>                                                                                                                                            <br><br><br><br>
+
+
+        <!-- _____box-sizing: border-box;_____ -->
+        <h2>_____box-sizing: border-box;_____</h2>
+
+        <!-- Caja de referencia -->
+        <h3>Caja de referencia:</h3>
+        <div class="caja-1">Caja de referencia: 200x200</div>
+        <span>Esta es una caja 200 pixeles X 200 pixeles. Mi objetivo es que a pesar de de agregarles un padding siempre se mantenga de esta con estas dimenciones</span>              <br><br><br><br>
+
+
+
+        <!-- Caja + padding de referencia -->
+        <h3>Caja + padding de referencia:</h3>
+        <div class="caja-2">Caja de referencia: 200x200 <br>+ 100px de "padding-top:" <br><br> = 300 pixeles verticales</div>                                               
+        <span>- Como puede apreciar, el "padding-top" me agrego 100 pixeles extras a lo alto de la caja deformandola.</span>                                            <br>
+        <span>- Si quisiera que mi caja midiera 200X200 tendria que restarle 100 pixeles de alto a mi caja. Y hacer estas cuentas es muy tedioso.</span>                <br>
+        <span>- Para solucionar ese problema existe la propiedad "box-sizing:"</span>                                                                              <br><br><br><br>
+
+        
+
+        <!-- Utilizando "box-sizing: border-box" -->
+        <h3>Utilizando "box-sizing: border-box":</h3>
+        <div class="caja-3">Caja de referencia: 200x200 <br>+ 100px de "padding-top:" <br>+box-sizing: border-box <br><br>=200 pixeles de alto</div>                                                                                                                                       
+        <span>Como se puede apreciar, a pesar de agregar un "padding:" de 100 pixeles de alto, la caja sigue midiento 200 pixeles. Esto se debe gracias al uso de "box-sizing: border-box".</span>                                                                                                                                               
+        <span>Lo que ocurrio es que de forma automatica el "box-sizing: border-box" le resto a la caja 100 pixeles para que luego al sumar los 100 del "padding:" el total siga siendo 200 pixeles de alto</span>                   <br><br><br><br>
+        
+        <div class="caja-4"></div>                                                                                                                                       
+        <span>Esta caja tambien tiene todo lo anterior más un "border-top:" de 50 pixeles. Aún así se respeta la proporcion de 200 X 200 pixeles. Ya que a la caja se le restan 100 pixeles que probienen del "padding" y 50 pixeles que vienen del "bolder:", de esta manera llegamos a los 200 pixeles porque son 50 pixeles de la caja + 100 del "padding" + 50 pixeles del "border"</span>                                                                                                                                               <br><br><br><br>
+
+        
+    </body>
+</html>

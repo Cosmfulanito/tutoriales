@@ -1,0 +1,44 @@
+/*
+
+                                                                _____Errores comunes con Margin_____
+
+
+ - Estas son algunas de las practicas incorrectas que se recomiendan en algunos cursos las cuales NUNCA se de deben hacer
+
+*/
+
+
+
+
+
+ /* 
+ - Es comun ver esta mala practica, lo que hacen es usar un selector universal  "*" y poner "margin: 0;" y "padding: 0;".  Segun la logica de ellos, de esta manera 
+   se recetea el CSS que viene por defecto y se puede trabajar más facilmente.
+ - Hacer esto es totalmente incorrecto ademas de que pone en valor 0 cosas que no eran necesarias tocarlas. Por ende, hacer esto agrega trabajo extra imnecesario,
+   ademas de que a primera imprecion, todo el HTML queda amontonado a la izquierda y cuesta más distingir los titulos, parrafos, listas, etc. Se vuelve todo un 
+   quilombo */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* 
+ - Otro error comun es tratar de centrar una imagen/caja mediante "margin: 0 auto;". Si bien esto queda centrado, tambien eliminamos cualquier otro margen que 
+   hayamos puesto antes. 
+ - Si se quiere centar una imagen correctamente hay que usar el metodo:  margin-left: auto;  margin-right: auto;   */
+.caja{
+    background-color: coral;
+    width: 200px;                                       
+    height: 100px;
+    
+    margin-top: 100px;              /* Gracias al margin: 0 auto; de abajo cuya unica funcion era centrar la caja de forma horizontal, este margin-top que se encarga del movimiento vertical ahora no tiene efecto  */
+    margin: 0 auto;
+}
+
+
+
+

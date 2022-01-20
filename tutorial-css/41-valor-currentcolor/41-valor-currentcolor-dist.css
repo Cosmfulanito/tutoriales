@@ -1,0 +1,55 @@
+/* 
+
+
+																	_____Valor: currentColor_____
+
+
+
+	currentColor			- Traducido como "color actual" Es un valor que se puede utilizar en lugar de cualquier calor de color (Ej: red). Este valor usara el 
+							  valor ya sea establesido o heredado en la propiedad "color:" (RECORDAR que "color:" es una propiedad que cambia el color al texto).
+							  Osea, tomara como referencia el "color del texto" que tiene por defecto el elemeto seleccionado o que sea heredado por su caja padre.
+
+							- A pesar de que toma como referencia el color del texto, el valor "currentColor" puede ser utilizado para pintar cualquier cosa.
+							  Ej: background-color: currentColor;			Ahora esta caja sera pintada con el mismo color que tiene el texto de su elemento 
+							  												seleccionado. En caso de no tener un color propio, utilizara el heredado por su padre
+
+							- A día este valor no es muy utilizado, peno no esta de más conocerlo ya que podemos toparnos con el en un proyecto de equipo 
+										
+*/
+
+
+
+
+
+*{											/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+body{
+	font-family: sans-serif;
+
+	color: coral;											/* Ahora el texto del body y el de sus elementos hijos va a ser de color "coral" */
+}
+
+/* Caja generica de ejemplo */
+.caja-1{
+	width: 150px;
+	height: 150px;
+
+	background-color: mediumturquoise;
+}
+
+/* Caja con currentColor: */
+.caja-2{
+	width: 150px;
+	height: 150px;
+
+	background-color: currentColor;								/* Al usar este valor, la caja va a ser pintada del mismo color que tiene el "texto". Osea "coral" */
+}

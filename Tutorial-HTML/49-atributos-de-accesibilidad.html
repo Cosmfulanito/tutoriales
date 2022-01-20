@@ -1,0 +1,77 @@
+<!--
+
+                                                                _____Atributos de accesibilidad_____
+
+
+
+ - La accesibilidad son herramientas que le permiten al usuario desenvolverse mejor en la página web. Esto es mucho más comodo y fasilita la navegación tanto
+   como para el usuario promedio como para usuarios con diversar discapacidades como puede ser la ceguera.
+
+ - Este tema es un MUY EXTENSO y por ende solamente le daremos vistazo rapido a lo más basico
+
+
+ - Hay una extencion para Google Chrome llamada "ChromeVox". Funciona mediante un avoz que lee todo el texto y los <input> de la pagína web. El usuario se desplaza con la tecla Tab como haria normalmente, y lo que esta seleccionado sera leido en voz alta por este complemento de google; El usuario también puede seleccionar lo que sera leiodo con tan solo poner el mouse sobre el texto o el <input> (este sistema es choto porque en pimer lugar un ciego no tiene la más minima idea de donde esta el cursor del mouse. Por eso es mejor precionar la tecla Tab)
+
+
+  
+
+    tabindex=""             Le permite al usuario moverse por la pagina mediante un orden preestablecido mediante la tecla Tab. Osea, el usuario presiona la tecla Tab y autamticamente es redirigido a la etiqueta que el desarrollador eligio (esta etiqueta obviamente tiene que tener un texto o ser un tipo de <input>), si el usuario presiona nuevamente la tecla Tab es redirigido a la siguiente etiqueta. En esta etiqueta lo que va dentro del parentesis es un numero que representa el orden de como se va a mover el usuario
+    
+
+
+    aria-label=""           Es un atributo hecho especificamente para la gente invidente. Funciona en conjunto con la extención de Chrome "ChormeVox" ya explicada más arriba. Hay casos donde hay que uno pone un link y debido a su forma, color, ubicacion, etc. entiende perfectamente lo que hace, pero para la gente invidente esto no es tan evidente. Para eso sirve esta etiqueta, ya que entre las comillas va una descripcion mucho mas detalla que sera leida por la extención de google. El usuario al al posicionarse sobre ese elemento mediante la tecla Tab, va a escuchar una descripción mucho más detallada de ese elemento. Esta descripcion va escrita dentro de las comillas de este atributo 
+
+    role=""                 Es un atributo hecho especificamente para la gente invidente. Le dice al navegador que tipo de elemento es en que nos estamos posicionando. El usuario no se va a percatar de esto, pero es de ayuda para el navegador 
+    
+
+-->
+
+
+
+
+<!-- Para que poder apreciar este apunte, debo utilizar la extención de Chrome llamada "ChromeVox" -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atributos de accesibilidad</title>
+    </head>
+
+    <body>
+        <h1>Atributos de accesibilidad</h1>                                                                                                                     
+        <p>Para que poder apreciar este apunte, debo utilizar la extención de Chrome llamada "ChromeVox"</p>                                                    <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->                                                                                            
+
+
+
+
+
+        <!-- Atributo tabindex="" -->
+        <h2>tabindex=""</h2>
+        <p>(Para que funcione tengo que presionar la tecla Tab, de esa manera voy a poder navegar por las diferentes opciones )</p>
+
+        <p tabindex="1" >Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p tabindex="2" >Parrafo 3</p>                  <!-- Aqui no lo puese a proposito para que se aprecie -->
+        <form>
+            <input tabindex="4" type="text">            <!-- Aqui puse el orden mal para que se pueda apreciar los saltos que hace -->
+            <input tabindex="3" type="text">
+        </form>                                                                                                                                                 <br><br><br>
+
+        
+
+
+
+        <!-- Atributo aria-label="" -->
+        <h2>aria-label=""</h2>
+        <p>(Para que funcione tengo que presionar la tecla Tab o hacer clic en el link. La voz de la extencion de Chrome me dara una descripción más detallada de este link)</p>
+
+        <a href="#" role="link" aria-label="Leer más acerca de los gatitos">Leer más</a>        <!-- La extencion para Google Chrome "ChromeVox" solo leera la descción más detallada que esta en el atributo aria-label="", el resto del texto lo dejara de lado -->
+                                                                                                <!-- Con el atributo role="" le estamos diciendo al navegador que este elemento es un link -->
+
+
+
+
+    </body>
+</html>

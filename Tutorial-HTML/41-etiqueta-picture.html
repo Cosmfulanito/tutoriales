@@ -1,0 +1,80 @@
+<!--
+
+                                                                    _____Etiqueta Picture_____
+
+
+    <picture>               Esta etiqueta funciona exactamente igual que el atributo srcset="" de la etiqueta <img>, pero esta nueva etiqueta nos da muchas más funciones. Esta etiqueta debe llevar adentro la etiqueta <source>.   <picture> es una nueva etiqueta que todavia es experimental, pero se esta usando bastante y es soportada por todos los navegadores principales (exepto Internet explorer porque es una chota)
+    </picture>
+
+    <source>                Esta etiqueta va dentro de <picture>, dentro de ella va todo el contenido multimedia deseado. Para que esto funcione tiene que tener un "Fold back" obligatorio ademas de las imagenes insertadas. De no poner el "Fold back" la etiqueta <picture> y <source> no funcionarian
+                                srcset=""   Se usa este atibuto de la misma manera que la etiqueta <img>. Funciona exactamente igual que src="" salvo que en vez de enviar una imagen, envio un set de ellas (de ahí su nombre). Ponemos la misma imagen pero repetida varias veces en distintos formatos o resoluciones y le ponemos condiciones al navegador de en que momento usar cada una. Ej: puede ser que usemos la imagen A que tiene mucha más resolucion en una pantalla más grande como un monitor y la imagen B con menos resolucion en un telefono. Este atributo es mucho más conveniente de usar que un src="", porque optrimizamos la pagína en función al "Device Pixel Ratio" del dispositivo que entre a la página. Este atributoto se ve en mucho. Esto hace que la pagína este mucho más optimizada y cargue más rapido. La "condición" de cuando usar cual imagen se da con un "nuerox". Donde se representa "Device Pixel Ratio". Esto quiere decir que si a una de las imagenes le pongo la condición 3x, solamente se mostrara esa imagen en dispositivos con un DVR igual a 3. Osea, esta imagen se mostrara en un Iphone
+                                    Fold back:  Es una copia de seguridad obligatoria a modo de etiqueta <img src="">. Esto se hace porque la etiqueta <picture> es nueva y experimental y por ende puede tener errores en los navegadores. Por ese motivo se nos obliga a poner esta copia de seguridad que vendria a ser "la vieja y confiable". De no poner el "Fold back" la etiqueta <picture> y <source> no funcionarian. Si bien puse esta explicacion aquí, el "Fold back" va dentro de la etiqueta <picture>
+                                media="()"    Controlo el tamaño de pixeles de la imagen según el tamaño de la pantala. Con la etiqueta <img> Tenia que poner dos imagenes, una para PC y y otra para celulares. Pero gracias a la etiqueta <source>, puedo controlar todo eso con el atributo media=""
+
+ 
+                                
+ - Tip: Recordar que con el atributo srcset="", tambien puedo usar las condiciones xnumero en un <picture>, esto se vio más a fondo en el apunte 40-atrributo-srcset.html
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etiqueta &lt;Picture&gt;</title>
+    </head>
+
+    <body>
+        <h1>Etiqueta &lt;Picture&gt;</h1>                                                                                                                           <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->                                                                                            
+
+
+
+        <!-- Ejemplo de uso generico de las etiquetas <picture> y <source> -->
+        <h2>Ejemplo de uso generico de las etiquetas &lt;picture&gt; y &lt;source&gt;</h2>
+            
+        <div>
+            <picture>
+                <source srcset="
+                /Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.webp,
+                /Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.jpg">
+                <img src="/Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.jpg" alt="Gatitos :3">
+            </picture>
+        </div>                                                                                                                                                      <br><br><br>
+
+
+
+
+        <!-- Atributo media="" -->
+        <h2>Atributo media=""</h2>  
+        <p>(Para apreciar este ejemplo hay que agrandar y achicar la pantallar)</p>
+
+        <div>
+            <picture>
+                <source srcset="/Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.webp"  media="(min-width:940px)">  <!-- Esta imagen mide exactamente 940 pixeles de ancho. Le dije al atributo media que si la pantalla mide menos de eso (y por ende me va a terminar cortando la imagen), que use la imagen de abajo que es más pequeña -->
+
+                <img src="/Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-baja-resolucion.jpg" alt="Gatitos :3">                   <!-- Este es el Fold back -->
+            </picture>
+        </div>                                                                                                                                                      <br><br><br>
+
+
+
+
+        <!-- Ejemplo de Atributo media="" bien usado. Con sus copias de seguridad, Fold back y todo -->
+        <h2>Ejemplo de Atributo media="" bien usado</h2>
+        <p>Con sus copias de seguridad, Fold back y todo</p>
+
+        <div>
+            <picture>
+                <source srcset="/Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.webp,
+                /Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.jpg" media="(min-width:940px)">    <!-- Esta esla copia de seguridad en formato .jpg -->
+
+                <img src="/Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-baja-resolucion.jpg" alt="Gatitos :3">   <!-- Fold back -->
+                <source>
+            </picture>
+        </div>
+
+    </body>
+</html>

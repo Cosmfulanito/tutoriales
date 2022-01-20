@@ -1,0 +1,106 @@
+/* 
+
+
+															_____Propiedad: "position: relative;"_____
+
+
+ - Esto es una parte especifica del apunte 26-introduccion-a-la-propiedad-position.css
+
+
+
+
+	position: relative;				- Con este conjunto propiedad/valor, el elemento mantendra su posición y medidas de flujo de renderizado y mantendrá su espacio 
+									  reservado. Si lo movemos lo hará usando su posición en el HTML como punto de referencia. 
+
+									- Esto quiere decir que si hay una caja de 200 pixeles X 200 pixeles y la movemos de lugar, por mas que "veamos" la caja en otro 
+									  lugar, en su sitio origal va a segir estando un espacio de 200 X 200 reservado por esa caja y que por ende no puede ser ocupado 
+									  por otra caja. 
+
+
+
+
+ - RECORDAR que cuando se mueve un elemento, es posible que este tape a otro o que incluso este mismo sea tapado. 
+   ¿Como saber en cual de las dos situaciones estoy? 
+   La ultima caja que fue declarada en el .html va a ser la que va a tapar a las demas de forma predeterminada. Para que esto funcione, ambas cajas tienen que estar posionadas.									
+
+*/
+
+
+
+
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;											
+}
+
+
+
+
+/* Funcionamiento: */
+.link-1{
+	background-color: lightcoral;
+
+	position: relative;									/* Ahora esta caja/link es un elemento "posicionado". Esto quiere decir que podemos moverlo de lugar */
+	top: 100px;											/* Desde la parte superior de la caja, la movemos 100 pixeles en sentido contrario. Esto significa que nuestra caja ahora esta 100 pixeles a hacia abajo */
+	left: 40px;											/* Desde la parte izquierda de la caja, la movemos 40 pixeles en sentido contrario. Esto significa que nuestra caja ahora esta 40 pixeles a la derecha */
+}
+
+.link-2{
+	background-color: mediumturquoise;
+}
+
+
+
+
+
+
+/* Apilamiento de cajas: */
+
+/* Ej1: */
+.caja-1{
+	background-color: lightcoral;
+	border: 5px solid rgb(245, 66, 66);
+	text-align: center;
+	width: 200px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	
+	position: relative;
+	top: 100px;
+
+}
+
+.caja-2{
+	background-color: mediumturquoise;
+	border: 5px solid rgb(23, 175, 170);
+	width: 200px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	position: relative;
+}
+
+
+
+/* Ej2 */
+.caja-3{
+	background-color: lightcoral;
+	border: 5px solid rgb(245, 66, 66);
+	width: 200px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	position: relative;
+}
+
+.caja-4{
+	background-color: mediumturquoise;
+	border: 5px solid rgb(23, 175, 170);
+	text-align: center;
+	width: 200px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	
+	position: relative;
+	top: -100px;
+
+}

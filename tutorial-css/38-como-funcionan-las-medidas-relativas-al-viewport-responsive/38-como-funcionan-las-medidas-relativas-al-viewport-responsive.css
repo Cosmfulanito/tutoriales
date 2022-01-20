@@ -1,0 +1,113 @@
+/* 
+											_____Cómo funcionan las medidas relativas al VIEWPORT RESPONSIVE_____ 
+
+
+ - Esta es una pequeña parte vista en profundidad del apunte 34-introduccion-a-medidas-absolutas-y-relativas.css
+
+
+
+ - ¿Que es el "Viewport"?
+   Es el area útil donde se mostrara la página web. IMPORTANTE, tener en cuenta que es el area visible sin hace scroll. 
+
+ - Podemos usar el "viewport" como medida de varias formas: 
+		- vw				Viewport Whidth 		Hace referencia al ancho del viewport			
+		- vh				Viewport Height   		Hace referencia al alto del viewport
+		- vmin				Viewport Min			Utiliza el valor más pequeño entre el ancho y el alto del viewport. Osea, si el ancho mide 900px y el alto 500px, utiliza al alto de referencia por ser más pequeño  
+		- vmax 				Viewport Max 			Utiliza el valor más grande entre el ancho y el alto del viewport. Osea, si el ancho mide 900px y el alto 500px, utiliza al ancho de referencia por ser más grande  
+
+ - Todas estas medidas se calculan en centesimas. Osea, una unidad es equivalente al 1% del viewport, por lo tanto 100 unidades son equivalentes al 100% del viewport 
+		- 1vw    =   1% del ancho del viewport
+		- 1vh    =   1% del alto del viewport
+		- 1vmin  =   1% del valor que sea más pequeño del viewport 
+		- 1vmax  =   1% del valor que sea más grande del viewport
+
+
+
+- Notas:		- Tener cuidado al usar esta unidad de midida en un "width:". Ya que si ponemos algo como "width: 100vw;", uno creeria que esto abarca todo el ancho 
+                  visible del navegador. Esto es así pero en navegador no tiene en cuenta al scrool lateral que corta parte de la pantalla. Entonces para compensar 
+				  eso, el navegador pone un scroll inferior. Para evitar eso simplemente tenemos que porner "width: auto;"  
+
+*/
+
+
+
+*{
+	box-sizing: border-box;						/* Escribo esta propiedad para naturalizar esta buena practica */
+}
+
+html{											/* Esta y las demas propiedades de abajo solo estan para darle un poco de estetica a la página web */
+	font-family: sans-serif;
+	height: 300px;
+}
+
+body{
+	margin: 0;
+	background-color: #333;
+	color: lightcoral;
+
+}
+
+h1,
+h2{
+	margin-top: 0;
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Primer ejemplo del uso de la unidad viewport */
+.header{						
+	background-color: rgb(188, 235, 253);
+	text-align: center;
+	
+	height: 100vh;														/* Basicamenete el header sera tan alto como viewport */
+}
+
+
+
+
+/* Medidas del viewport */
+.caja-padre-1{
+	width: 300px;
+	height: 300px;
+	background-color: lightgreen;
+}
+
+.caja-hija-1{
+	color: black;
+	position: relative;
+	top: 10px;
+	background-color: lightseagreen;
+	height: 50%;
+
+	width: 50vw;														/* El ancho de esta caja hija sera la mitad de ancho del viewport */
+}
+
+
+
+
+/* Viewport máximo y míninimo */
+.caja-padre-2{
+	width: 300px;
+	height: 300px;
+	background-color: lightgreen;
+}
+
+.caja-hija-2{
+	color: black;
+	position: relative;
+	top: 10px;
+	background-color: lightseagreen;
+	height: 50%;
+
+	width: 100vmin;														/* Esta caja hija medira lo mismo que mide el lado más pequeño del viewport, este puede ser tanto el ancho como el largo */
+}

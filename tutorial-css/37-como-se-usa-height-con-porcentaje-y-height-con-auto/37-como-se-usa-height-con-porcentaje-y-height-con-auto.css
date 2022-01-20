@@ -1,0 +1,96 @@
+/* 
+
+														_____Cómo se usa "height: con %" y "height: auto"_____
+
+
+
+ - Este es una pequeña parte vista en profundidad del apunte 34-introduccion-a-medidas-absolutas-y-relativas.css
+
+
+
+
+
+ - RECORDAR que las propiedades "width" y "height" aunque parezcan iguales se comportan de forma muy difrenete. Este apunte se centra en el funcionamiento de las 
+   unidades de medida "%" y "auto" en base a la ALTURA de una caja.
+
+
+ 
+	%			- Cuando estamos dentro de un contenedor, este tiene que tener un alto declarado, si no no podrá calcular el porcentaje. Si se le le aplica una medida 
+				  con porcentaje se sustituira automaticamenete por "auto". 
+				  Osea, siempre que le apliquemos % a un elemento, ese porcentaje sera en base al tamaño de su caja contenedora/padre. Si la caja contenedora/padre no 
+				  tiene un alto declarado, a nuestro elemento se le asignara automaticcamente el valor "auto". Saber esto te ahorra varios problemas
+
+				- Tener en cuenta que todo esto se rompe cuando usamos el conjunto propiedad/valor "position: absolute;". Esto se debe a que la cuando aplicamos 
+				  dicha propiedad, el navegador no va a calcular el porcentaje en relacion a la caja contenedora, sino que la va a calcular en base a la altura del
+				  "viewport". El viewport es todo el espacio visible que tiene el navegador en nuestra pantalla sin tenerque hacer scroll.
+
+				
+
+	auto		- Cuando utilizamos "auto" el alto lo calculara el navegador en base al contenido del elemento.
+
+				- Como se puede apreciar, el funcionamiento del valor "auto" es difente dependiendo si se aplica en la altura como en este caso o en el ancho
+
+
+
+ - Nota:        - Height es una propiedad que se tiene queutilizar con con mucho cuidado. Si no es necesario establecer un alto, hay que dejar que el contenidosea el que 
+ 		          decida el alti del elemento.
+
+				
+
+*/
+
+
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+
+
+
+/* Direncia entre "height: con %" y "height: auto" */
+.caja-padre-1{
+	text-align: center;
+	background-color: #888;
+	width: 800px;
+	height: 350px;
+}
+
+.caja-hija-porcentaje-1{
+	background-color: mediumturquoise;
+	width: 300px;
+	display: inline-block;
+
+	height: 100%;
+}
+
+.caja-hija-auto-1{
+	background-color: lightcoral;
+	width: 300px;
+	display: inline-block;
+
+	height: auto;
+}
+
+
+
+
+/* Rompiendo el "height: con %" por culpa de la propiedad "position: absolute;" */
+.caja-padre-2{
+	text-align: center;
+	background-color: #888;
+	width: 800px;
+	height: 350px;
+}
+
+.caja-hija-porcentaje-2{
+	background-color: mediumturquoise;
+	width: 300px;
+	display: inline-block;
+	
+	height: 100%;
+	position: absolute;
+}
+
+
+
+

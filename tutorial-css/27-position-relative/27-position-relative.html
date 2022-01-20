@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/tutorial-css/27-position-relative/normalize.css">								<!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+		<link rel="stylesheet" href="/tutorial-css/27-position-relative/27-position-relative-dist.css">				<!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+		<title>Propiedad: "position: relative;"</title>
+	</head>
+	<body>
+
+		<h1>Propiedad: "position: relative;"</h1>																													<br><br><br><br><br>
+
+
+		<!-- Funcionamiento: -->
+		<h2>Funcionamiento:</h2>
+		<a href="#" class="link-1">Soy el link N°1</a>
+		<a href="#" class="link-2">Soy el link N°2 (deberia estar a la izquierda de todo pero ese espacio lo ocupa el link N°1 aunque aparente estar en otra parte)</a>		<br><br><br><br><br><br><br><br><br><br><br><br>		
+
+
+
+
+
+		<!-- Apilamiento de cajas: -->
+		<h2>Apilamiento de cajas:</h2>
+		<p>La ultima caja que fue declarada en el .html va a ser la que va a tapar a las demas de forma predeterminada. Para que esto funcione, ambas cajas tienen que estar posionadas.</p>
+
+		<!-- Ej:1 -->
+		<div class="caja-1">Caja que estoy moviendo</div>
+		<div class="caja-2"></div>										<!-- Como esta fue caja declarada ultima, va a tapar a la otra  -->							<br><br><br>
+
+		<!-- Ej2: -->
+		<div class="caja-3"></div>
+		<div class="caja-4">Caja que estoy moviendo"</div>				<!-- Como esta fue caja declarada ultima, va a tapar a la otra  -->
+		
+
+
+
+
+	</body>
+</html>

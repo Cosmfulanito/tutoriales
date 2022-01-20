@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/tutorial-css/36-como-se-usa-with-con-%-y-with-con-auto/normalize.css">															<!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+		<link rel="stylesheet" href="/tutorial-css/36-como-se-usa-with-con-porcentaje-y-with-con-auto/36-como-se-usa-with-con-porcentaje-y-with-auto-dist.css">			<!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+		<title>Cómo se usa "with: con %" y "with: auto"</title>
+	</head>
+	<body>
+		<h1>Cómo se usa "with: con %" y "with: auto"</h1>																											<br><br><br>
+
+
+		<!-- Usando la unidad de medida "%" -->
+		<h2>Usando la unidad de medida "%"</h2>
+		<div class="caja-padre-1">Caja padre<br>width: 300px;
+			<div class="caja-hija-porcentaje-1">Caja hija %<br>width: 50%;</div>
+		</div>																																						<br><br><br><br>
+
+
+		<!-- Comparando "%" y "auto" -->
+		<h2>Comparando "%" y "auto"</h2>
+		<div class="caja-padre-2">Caja padre<br>width: 300px;
+			<div class="caja-hija-porcentaje-2">Caja hija %<br>margin-left: 50px;<br>+ width: 100%; <br><br>Total: 350px</div>
+			<div class="caja-hija-auto-2">Caja hija auto<br>margin-left: 50px;<br>+ width: auto; <br><br>Total: 300px</div>
+		</div>
+	</body>
+</html>

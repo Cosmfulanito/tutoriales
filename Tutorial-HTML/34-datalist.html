@@ -1,0 +1,47 @@
+<!--
+
+                                                                _____Datalist_____
+
+
+
+ - <input type="list">      Este tipo de input funciona en conjunto con el elemento <datalist>                                                                  
+
+ - <datalist>               Es un elemento desplegable que brinda distintas opciones a elegir al igual <select>, pero con la diferencia de que <datalist> viene incluido con un buscador de palabras y a su vez a cada opcion se le puede poner una descripción si asi se desea (de ahí su nombre)                                                      
+     
+
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Datalist</title>
+    </head>
+
+    <body>
+        <h1>&lt;Datalist&gt;</h1>
+        <p>Este atibuto ademas de mostrar las diferentes opciones a elegir, tambien tiene un buscador de palabras</p>
+
+        <form>
+            <input type="list" list="mascotas">                         <!-- Este tipo de input nos va a permitir hacer el filto. El atributo list="" nos dice el nombre de la lista a utilizar, en este cazo "mascotas" -->
+            <datalist id="mascotas">                                    <!-- Con este <datalist> vamosa crear la lista con la vamos a trabajar -->
+                <option value="gato">Felis silvestris catus</option>    <!-- En este caso, a diferencia de <select>, el atributo value="" si se va a ver por el usuario, por ende los vamos a usar como opcion para el usuario, el resto seria una descipcion opcional -->
+                <option value="perro">Canis familiaris</option>
+                <option value="hamster">Mesocricetus auratus</option>
+                <option value="conejo"></option>
+                <option value="loro"></option>
+                <option value="canario"></option>
+                <option value="serpiente"></option>
+                <option value="tarantula"></option>
+            </datalist>
+        </form>
+
+    </body>
+
+</html>

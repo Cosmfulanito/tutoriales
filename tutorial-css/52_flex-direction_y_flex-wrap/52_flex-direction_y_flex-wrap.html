@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="52_flex-direction_y_flex-wrap.css">
+		<title>Flex-direction y flex-wrap</title>
+	</head>
+	<body>
+		<h1>Flex-direction y flex-wrap</h1>																															<br><br>
+
+		<!-- Caja de referencia: -->
+		<h2>Caja de referencia:</h2>
+		<div class="flex-container1">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- display: flex  -->
+		<h2>display: flex </h2>
+		<span>Span de ejemplo</span>
+		<div class="flex-container2">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- display: inline-flex -->
+		<h2>display: inline-flex</h2>
+		<span>Span de ejemplo</span>
+		<div class="flex-container3">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- flex-direction: row -->
+		<h2>flex-direction: row (valor por defecto)</h2>
+		<div class="flex-container4">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- flex-direction: row-reverse -->
+		<h2>flex-direction: row-reverse</h2>
+		<div class="flex-container5">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- flex-direction: column -->
+		<h2>flex-direction: column</h2>
+		<div class="flex-container6">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- flex-direction: column-reverse -->
+		<h2>flex-direction: column-reverse</h2>
+		<div class="flex-container7">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- flex-wrap: no-wramp -->
+		<h2>flex-wrap: no-wramp (valor por defecto)</h2>
+		<p>(Por más que las elementos hijos tengan dimenciones propias, estas dimenciones se ajustaran para entrar en la caja padre median una sola linea)</p>
+		<div class="flex-container8">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+		<!-- flex-wrap: wramp -->
+		<h2>flex-wrap: wramp</h2>
+		<p>Hora los elementos SI miden lo que le decimos sin que se deformen</p>
+		<div class="flex-container9">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+		<!-- flex-wrap: wrap-reverse -->
+		<h2>flex-wrap: wrap-reverse</h2>
+		<div class="flex-container10">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+
+
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!--
+                                                            _____Unir HTML y CSS_____
+
+
+ - Hay 4 metodos para unir un archivo HTML a CSS:
+    
+    1- Tener un archivo CSS separado del archivo HTML y luegos conectarlos mediante la etiqueta <link>. Esta es la forma más recomendada y la que vamos a usar el 99% de las ocaciones. Esto se debe a que este archivo de CSS le da estilo a muchos archivos .html que esten dentro mi sitio web. Gracias esto, todas las páginas de mi sitio web van a tener el mismo estilo y estectica visual 
+
+       <link> </link>       Permite unir un archivo .html a uno .css
+                                rel="stylesheet"        Indica que tipo de relacion hay entre el archivo .html y el .css. En este caso "stylesheet" me dice que el CSS es una hoja de estilos
+                                href=""                 Entre estas comillas va la ruta hacia el archivo .css 
+
+
+
+
+    2- Escribir CSS dentro del mismo archivo .html mediante una etiqueta <style>. No se recomienda mucho usar este metodo exepto en casos muy especiales. Esto se debe a que este cambio de estilo solo va a ser visible en una sola página de mi sitio web. Si quisiera que el resto de las páginas tuviesen el mismo estilo, tendria que copiar y pegar el mismo codigo en todas las páginas (hacer esto es una pajaaaaa o hasta incluso imposible dependiendo de la cantidad de páginas). Por eso es mucho mejor usar el primer metodo  
+
+        <style> </tyle>     Permite escribir codigo CSS dentro de un archivo .html. Obviamente dicho codigo CSS tiene que estar dentro de esta etiqueta. Incluso los comentarios se tienen que hacer en CSS /* */
+
+
+
+
+    3- Mediante el atributo universal style="". Este atributo va dentro de la etiqueta a la cual le queremos aplicar CSS. Dentro de las comillas iria el codigo en CSS. ESTE METODO NO ES PARA NADA RECOMENDADO, se explica en este apunte por el simple hecho de que antiguamente no habia otros metodos para aplicar CSS ademas de este y por ende podria cruzarmelo alguna vez en la vida. Pero a día de hoy ESTO NO SE DEBERIA HACER JAMAS ya que se considera muy mala practica
+
+        style""            Este atributo va dentro de la etiqueta a la cual le queremos aplicar CSS. Dentro de las comillas iria el codigo en CSS. ESTE METODO NO ES PARA NADA RECOMENDADO, se explica en este apunte por el simple hecho de que antiguamente no habia otros metodos para aplicar CSS ademas de este y por ende podria cruzarmelo alguna vez en la vida, pero hacer esto se considera muy mala practica
+
+
+
+
+    4- Mediante la regla @import url(), adentro del parentesis va va la ruta hacia el archivi .css. Esta cosa debe ir dentro de la etiqueta <style>. Esto se aplica de forma similar al primer metodo, pero es diferente a nivel tecnico ya que funciona de otra manera. Debido a eso ese funcionamiento tecnico, los estilos del .css tardan en aplicarse, lo que hace una muy mala experiencia de usuario (literalmente el usuario entra a la página y a los 5 segundos se aplican los estilos del .css), por ende este metodo no es para nada recomendado, pero se explica en este apunte por el simple hecho de que existe y podria cruzarmelo   
+        
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Unir HTML y CSS</title>
+
+
+
+        <!-- Metodo 1   (Forma correcta de aplicar CSS)   -->   
+        <link rel="stylesheet" href="/tutorial-css/1-unir-html-y-css/1-unir-html-y-css.css">   
+
+
+
+
+        <!-- Metodo 2   (Usar de manera muy limitada cuando la situacion lo amerite) -->
+        <style> 
+            h2{
+                background-color:lightsalmon;
+            }
+        </style>
+
+
+
+
+        <!-- Metodo 4   (No usar nunca, es mala practica) -->
+        <style>
+            @import url(/tutorial-css/1-unir-html-y-css/1-unir-html-y-css.css);
+        </style>
+
+
+
+
+
+    </head>
+
+    <body>
+        <h1>Metodo 1</h1>
+        <p>Forma correcta de aplicar CSS</p>
+
+
+
+        <h2>Metodo 2</h2>
+        <p>Usar de manera muy limitada cuando la situacion lo amerite</p>
+        
+
+
+        <!-- Metodo 3   (No usar nunca, es mala practica y esta terminantemente prohibido) -->
+        <h3 style="background-color: palegreen;">Metodo 3</h3>
+        <p>No usar nunca, es muy mala practica y esta terminantemente prohibido</p>
+        
+
+
+        <h4>Metodo 4</h4>
+        <p>No usar nunca, es mala practica</p>
+        
+
+    </body>
+</html>

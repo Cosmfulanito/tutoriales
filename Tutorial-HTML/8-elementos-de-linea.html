@@ -1,0 +1,59 @@
+<!-- 
+    
+
+ - En el apunte 7-elementos-de-bloque-y-elementos-de-linea.html se explico con mas profundidad lo que son los elementos de Línea. En este apunte veremos cuales son
+
+ - Básicamenete es una caja que ocupa solamente el ancho del texto, el resto de la pantalla es espacio vacio que puede ser ocupado por otro elemento de Línea. 
+   Por ende, a difrerencia de un Bloque, un elemento de Línea si puede estar al lado de otro elemento de Línea.
+                            
+
+ - Entre ellos estan:
+
+    <em> </em>                  Emphasis. Le estamos diciendo al navegador que ciertas palabras dentro de un texto tienen más importancia que el resto del texto (supongo que esto serviria para la indexacion/posicinamiento que le da Google a nuestra pagína web). También pone ese fragmento de texto en cursiva, pero solamente sirve como referencia visual para un archivo puro en HTML, ya que el estilo de la fuente se la da uno mismo con CSS
+    <strong> </strong>          Más emphasis. Le dice al navegador que es fragamento de codigo tiene aun mucha más importancia que un <em>. También pone ese fragmento de texto en negrita, pero solamente sirve como referencia visual para un archivo puro en HTML, ya que el estilo de la fuente se la da uno mismo con CSS
+    <small> </small>            Menos emphasis que en el texto normal. Tiene el efecto contrario que <em> ya que le dice al navegador que el valor de esa frase el menor que el del resto del texto. También pone ese fragmento de texto en una letra más pequeña, pero solamente sirve como referencia visual para un archivo puro en HTML, ya que el estilo de la fuente se la da uno mismo con CSS
+    <br>                        Line break. Forzar un salto de línea. Es muy util en textos donde tenga que forzar el salto de líne. Como por ejemplo un poema
+    <wbr>                       Word break opportunity. A diferencia del <br>, esto es un salto de línea si al navegador le hiciera falta hacerlo. Osea, en caso de que no haya espacio en la pantalla, esta etiqueta le dice la navegador en que parte del testo/palabra hacer el corte del salto de línea. Esto es util si ponemos una URL muy larga, ya que podemos elegir en que parte de la URL hacer el corte del salto de linea para que quede más prolijo. Tambien tener en cuenta que los cortes por saltos de línea se producen de forma automatica en los giones ya que el navegador los considera tambien como etiquetas <wbr>, por otra parte los giones bajos no cuentan
+    <time> </time>              Se usa para representar un contenido de hora/fecha. Esto es util en blogs o en post donde se tenga que aclarar en que fecha/hora fue publicado. Se puede poner la fecha y la hora juntas o por separado
+    <i> </i>                    Italic (cursiva). Su unica funcion es dar estilo al texto, aunque de eso se encarga CSS. Osea, esto existe desde el comienzo de HTML pero quedo obsoleto, es mucho mejor usar CSS. Su unica función verdadera se da cuando se trabaja con una libreria de iconos, ya que es muy problable que esos iconos vengan respresentados en una etiqueta <i>
+    <b> </b>                    Bold (negrita). Su unica funcion es dar estilo al texto, aunque de eso se encarga CSS. Osea, esto existe desde el comienzo de HTML pero quedo obsoleto, es mucho mejor usar CSS
+    <u> </u>                    Underline (subrayado). Su unica funcion es dar estilo al texto, aunque de eso se encarga CSS. Osea, esto existe desde el comienzo de HTML pero quedo obsoleto, es mucho mejor usar CSS
+    <sup> </sup>                Superindice. Hace que el texto se vea más pequeño y este ubicado arriba. Sirve para representar los exponentes en las ecuaciones matemáticas y también se ve a modo de indice como esos numeritos chiquitos que estan en la biblia o en las páginas de Wikiperdia
+    <sub> </sub>                Subindice. Hace que el texto se vea mas pequeño y este ubicado abajo. Sirve para representar los subindices propios de las formulas quimicas (esos numeros que son más pequeños que estan en las formulas que representan la cantidad de átomos)   
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementos de Línea</title>
+    </head>
+
+    <body>
+
+        <p><em>El dinero</em> es importante, pero <strong>la salud</strong> es lo más importante. <small>Saludos</small></p>
+
+        <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. Vitae ex aut corrupti magnam officiis, aliquam illo. Provident, praesentium. Hic beatae cumque reiciendis nesciunt alias voluptatem accusamus incidunt fuga. Quaerat, asperiores?</p>
+
+        <p>http://127.0.0.1:5500/cursos/elementos/texto-para-estirar-esta-URL/<wbr>ymastextoparaestirarestaURL/<wbr>8elementosdelinea.html</p>   <!-- Para apreciar esta etiqueta, tengo que achicar el navegador de forma horizontal. Voy a observar como el corte del salto de línea se hace justo despues de la barra "/", quedando el texto mas prolijo -->
+
+        <time>19/05/2021 09:45</time>  <!-- Se puede poner la fecha y la hora juntas o por separado -->
+
+        <p>
+            <i>Italic (cursiva)</i>
+            <b>Bold (negrita)</b>
+            <u>Underline (subrayado)</u>
+        </p>
+
+        <p>4 elevado al cuadrado se ve así: 4<sup>2</sup></p>
+
+        <p>La formula del agua oxigenada es: H<sub>2</sub>O<sub>2</sub></p>
+
+    </body>
+</html>

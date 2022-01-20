@@ -1,0 +1,17 @@
+/*
+
+                                                                    _____Página sin normalizar_____
+
+
+
+ - Esta página al no estar normalizada no se vera igual en los diferentes navegadores
+
+ - Para apreciar esto, abrir esta página en diferentes tipos de navegadores
+   Ej: Entre Opera y Firefox la diferencia se nota en el tamaño de los puntos de la lista
+
+*/
+
+
+.list{
+    color: red;
+}

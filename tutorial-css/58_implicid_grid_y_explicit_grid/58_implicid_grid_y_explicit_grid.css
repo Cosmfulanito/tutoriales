@@ -1,0 +1,277 @@
+/*
+
+														_____"Implicid grid" y "Explicit grid"_____
+
+
+
+
+
+ - Explicit grid: 			Es el grid que declaramos, tanto con grid-template-colums como con grid-template-rows. 
+
+
+
+ - Implicit grib:			Es el grib que no declaramos, los items que quedan fuera del "explicit grib". Osea, que salen de forma automatica
+
+							- grib-auto-columns:		Establece qué hacer con las columnas no definidas
+
+							- grib-auto-rows: 			Establece qué hacer con las filas no definidas 
+
+							- grib-auto-flow: 			Establece la dirección en la cual se va pintar el implicit grid. Osea, que se va a crear con los elementos
+														sobrantes/no declarados
+														Admite 3 valores:
+															row: 		Valor por defecto. Se crearán filas adicionales
+															column: 	Se crearán columnas adicionales
+															dense: 		Establece qué hacer con los huecos adicionales 
+
+
+							Todo esto tiene el mismo valor que un "grid-template-columns:" o un "grid-template-row:" solo que aplicamos los cambios a un 
+							"Implicit grib"
+								Osea: 		template 	= 	Explicit grid 
+											auto		= 	Implicit grid						
+												
+					
+															
+
+ - Todo lo que hicimos anteriormente fue "Explicit grid". Ahora vamos a trabajar con el "Implicit grid". Osea, le vamos a decir al navegador que hacer con las 
+   columnas y filas no declaradas 
+
+
+*/
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Esto es sumamente estetico, la mayor parte de este codigo lo puso el mismo Dorian  */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+h2{
+	margin-top: 150px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+section{										/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Caja de referencia: */
+.grid-container1{											/* Esta caja tiene tiene las dos primeras filas con un valor declarado, mientras que la tercera fila al no tener valores declarados es un "Implicit grib" y por ende esos valores se los da el navegador. Nuestro objetivo darle valor a los "Implicit grib". Esto lo haremos en los siguientes ejemplos */
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 100px);					
+}
+
+.grid-item1{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Dandole valor a los "Implicit grib": */
+
+/* grib-auto-row: */
+.grid-container2{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 100px);					
+
+	grid-auto-rows: 200px;									/* Ahora todas las filas a las cuales nosotros no le declaremos una medida tendran 200 pixeles de largo */
+}
+
+.grid-item2{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* grib-auto-flow: row */
+.grid-container3{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 100px);					
+
+	grid-auto-flow: row;									/* Convierte las celdas sobrantes (Implicit grib) en filas. Valor por defecto, por ende no cambia en nada */									
+}
+
+.grid-item3{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+/* grib-auto-flow: column */
+.grid-container4{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 100px);					
+
+	grid-auto-flow: column;									/* Convierte las celdas sobrantes (Implicit grib) en columnas */									
+}
+
+.grid-item4{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+/* grib-auto-flow: dense */
+
+/* Caja de referencia: */
+/* grib-auto-flow: column */
+.grid-container5{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 100px);														
+}
+
+.grid-item5{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+.grid-item5:nth-child(2){
+	grid-column: span 3;
+	grid-row: 2 / 4;
+	background-color: purple;
+}
+.grid-item5:nth-child(3){
+	grid-column: 3 / 6;
+	background-color: orange;
+}
+.grid-item5:nth-child(5){
+	grid-column: span 5;
+	background-color: peru;
+}
+.grid-item5:last-child{	
+	grid-column: span 3;
+	background-color: royalblue;
+}
+
+
+/* Aplicando "dense": */
+.grid-container6{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 100px);	
+	
+	grid-auto-flow: dense;									/* El valor "dense" hace que se rellenen los espacios vacios */
+}
+
+.grid-item6{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+.grid-item6:nth-child(2){
+	grid-column: span 3;
+	grid-row: 2 / 4;
+	background-color: purple;
+}
+.grid-item6:nth-child(3){
+	grid-column: 3 / 6;
+	background-color: orange;
+}
+.grid-item6:nth-child(5){
+	grid-column: span 5;
+	background-color: peru;
+}
+.grid-item6:last-child{	
+	grid-column: span 3;
+	background-color: royalblue;
+}

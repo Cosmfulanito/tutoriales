@@ -1,0 +1,30 @@
+/*
+
+                                                                ______Colapsado de márgenes_____
+
+
+
+ - Este apunbte es sumamente teorico, para una explicación más a fondo se recomienda ir a los siguientes links de la clase de "Dorian Desings":
+        - Link de YouTube:          https://www.youtube.com/watch?v=t53-d5wMwFc&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=31
+        - Link de Udemy:            https://www.udemy.com/course/css-edicion-2020/learn/lecture/26169236#overview
+
+
+
+
+ - CSS tiene un fallo/bug con los margenes verticales. La logica me indica que si una caja tiene un margen de 20 pixeles y la caja que esta al lado tiene un margen
+   20 pixeles, entre las dos tendria que haber una separación de 40 pixeles totales. Esto funciona correctamente con los margenes horizontales, pero con los margenes 
+   "verticales" esto no funciona así debido a que CSS presenta un fallo desde sus inicios
+
+ - En el caso de los margenes verticales, los margenes se colapsan/solapan/fucionan uno arriba del otro en vez de sumarse como deberian.
+        Ej1:    Caja A con un margen vertical de 20 pixeles + Caja B con margen vertical de 20 pixeles  ==>  Entre las dos cajas solamente va a haber 20 pixeles de separación    //   Esto se debe a que se solaparon los margenes
+        Ej2:    Caja A con un margen vertical de 20 pixeles + Caja B con margen vertical de 30 pixeles  ==>  Entre las dos cajas solamente va a haber 30 pixeles de separacion.   //   Esto se debe a que los 20 pixeles de la caja A se solaparo con 20 pixeles de la caja B. Pero la caja B tambien tiene otros 10 pixeles extras para llegar a 30
+
+
+ - Este problema esta desde el incio de CSS, no tiene solución ni truco alguno para corregirlo. 
+ 
+ - Debido a todo lo anterior como unica "solución" se recomienda seleccionar un elemento y darle un "margin-bottom:" para vajar el resto de los elementos hacia abajo.
+   Juntar una caja con "margin-bottom:" y otra con "margin-top:" solamente genera confuciones.  
+
+
+*/
+

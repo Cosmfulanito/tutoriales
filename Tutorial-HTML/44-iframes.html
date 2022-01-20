@@ -1,0 +1,43 @@
+<!--
+
+                                                                _____Iframes_____
+
+
+ - Basicamente un "Iframes" es agarrarun un trozo de una web ajena, y colocarlo en la nuestra. Por ejemplo: Colococar un video de youtube con todas sus interfaces 
+   y opciones propias.  
+
+   
+ - ¿Como obtener el Iframe de un página ajena? 
+
+        Depende de cada página, en el caso de YouTube hay que hacer clic en  "compartir" => luego en "inportar" => y ahí mismo Youtube te muestar una etiqueta 
+        <ifreme> rellena de ontenido. Simplemente la copiamos
+
+
+ - ¿Como colocamos ese Iframe en nuestra web? 
+
+        Simplemente agarramos esa etiqueta que acabamos de copiar y la pegamos en el <body> de nuestra página web
+
+
+ - Tip: No hay que abusar de los Iframes porque pesan mucho y van a realentizar mucho la carga de nuestro sitio web
+
+
+ 
+-->
+
+
+
+<!-- En este ejemplo vamos a usar el Iframe de un video de YouTube y lo vamos a pegar en nuestra página web -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iframes</title>
+    </head>
+
+    <body>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EjXetWK-Ur8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </body>
+
+</html>

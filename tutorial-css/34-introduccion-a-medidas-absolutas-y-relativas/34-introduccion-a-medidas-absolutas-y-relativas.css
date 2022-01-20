@@ -1,0 +1,75 @@
+/* 
+
+														_____Introducción a medidas absolutas y relativas_____
+
+
+
+ - Las medidas en CSS se pueden agrupar en 2 grupos, "absolutas" y "relativas":
+
+																																									
+	Medidas absolutas:		- NO CAMBIAN y  y siempre mantendran su tamaño independientemente del dispositivo o la interaccion del usuario. 
+						 	
+							- Uno de los inconvenientes de este tipo de medidas es que van a medir exactamente igual (en pixeles) en todas las pantallas sin importar 
+							  su tamaño. Un ejemplo de esto seria una linea de 300px. Dicha linea abarcaría toda la pantalla de un smartphone (debido a que una 
+							  pantalla de smarhphne mide 370 pixeles de ancho), pero solamente ocuparia una fraccion de la pantalla de un monitor con 1080 pixeles de
+							  ancho.
+
+							- Entre sus unidades estan:
+									- px  (píxeles)						1px  =  1/96 de 1in					Esta es medida de este tipo mas usada
+									- cm  (centímetros) 				1cm  =  96px/2,54	
+									- mm  (milimetros)					1mm  =  1/10 de 1cm
+									- Q   (cuarto de milímetro)			1Q   =  1/4 de 1cm
+									- in  (inches, pulgadas)			1in  =  2,54cm  = 96px
+									- pc  (picas)						1pc  =  1/16 de 1in
+									- pt  (puntas)						1pt  =  1/72 de 1in
+ 
+
+
+	Medidas relativas:		- Siempre dependen de un contexto. Son las que se recomiendan utilizar en la gran mayoria de las ocaciones porque nos van a permitir 
+							  todos los elementos escalen proporcionalmente.  
+							
+							- Gracias a este tipo de medidas se consiguen crear los diseños "responsive".
+
+							- Las más usadas son em, rem, %, vw, vh, vmin y vmax. Aunque tambien tenemos otras:
+									- rem				- Corresponde a la medida de la "m" de la raiz del documnento .html. Mientras este valor no se modifique, el tamaño de fuente de la letra "m" que 
+					  									  que viene por defecto es igual a 16 pixeles y por lo tanto tambien el valor de 1rem
+														- Esto quiere decir de que si pongo 1rem, el tamaño de lo que estoy modificando va a veler 16 pixeles. Y 32 pixeles en el caso de 2rem
+														- Para tamaños de fuente se recomienda usar siempre "rem" sin excepción 
+
+									- em				- Corresponde a la medida de la "m" del contexto donde nos encontremos. 
+														  Osea, em vale lo mismo que el tamaño de fuente de la letra "m", que por defecto es de 16 pixeles. Si ese tamaño de fuente se modifica, tambien 
+														  lo hara el tamaño relativo de em. Recordar que dichos cambios se aplican en ese elemento/caja y en sus elemetos hijos.
+															Ej: - La caja-padre tiene un em igual a 16 pixeles (que viene por defecto). si en un momento dado se me da por darle un "font-size: 10px;" eso 
+																quiere decir que el em de esa caja-padre y el de sus hijas ahora va a ser igual a 10 pixeles.
+																Tambien tendria el mismo efecto si pongo "font-size: 2rem;" ya que ahora el em va a tener un valor de 32 pixeles (esto se debe a que 
+																1rem es igual a 16 pixeles)
+														- Este tipo de medidas es muy util para crear cajas con texto dentro. Ya que mantienen la mismas proporciones texto/caja sin importar el tamaño 
+														  de la pantalla del navegador  
+
+									- %					- Cuando usamos esta unidad de medida, usamos de referencia el tamaño del elemento/caja contenedor y luego el navegador calcula ese porcentaje.   
+														- Esto no ocurre cuando usamos transform.														  
+
+									- auto 				- Cuando usamos auto le estamos pidiendo al navegador que calcule en función del espacio disponible del elemento/caja contenedor.
+
+									- "Viewport"		- ¿Que es el "Viewport"?
+													      Es el area útil donde se mostrara la página web. IMPORTANTE, tener en cuenta que es el area visible sin hace scroll. 
+														- Podemos usar el "viewport" como medida de varias formas: 
+																- vw				Viewport Whidth 		Hace referencia al ancho del viewport			
+																- vh				Viewport Height   		Hace referencia al alto del viewport
+																- vmin				Viewport Min			Utiliza el valor más pequeño entre el ancho y el alto del viewport. Osea, si el ancho mide 900px y el alto 500px, utiliza al alto de referencia por ser más pequeño  
+																- vmax 				Viewport Max 			Utiliza el valor más grande entre el ancho y el alto del viewport. Osea, si el ancho mide 900px y el alto 500px, utiliza al ancho de referencia por ser más grande  
+														- Todas estas medidas se calculan en centesimas. Osea, una unidad es equivalente al 1% del viewport, por lo tanto 100 unidades son equivalentes al 100% del viewport 
+																- 1vw    =   1% del ancho del viewport
+																- 1vh    =   1% del alto del viewport
+																- 1vmin  =   1% del valor que sea más pequeño del viewport 
+																- 1vmax  =   1% del valor que sea más grande del viewport
+
+									- ex 				- Altura X de la fuente del elemento 
+
+									- ch				- La medida del ancho del glifo (dibujo de una fuente, osea el tipo de letra) "0" del aletra del elemento
+
+									- lh 				- Altura de la línea del elemento
+
+
+									
+*/

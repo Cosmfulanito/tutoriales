@@ -1,0 +1,128 @@
+/*
+
+                                                                    _____Propiedad Margin:_____
+
+
+
+    margin:             - Permite controlar la distancia de separación que hay entre la caja seleccionada y las que la rodean. Solamente hay cuatro lados de margenes posibles: top (superior), right (derecha), button (inferior), left (izquierdo)
+
+                        - Admite hasta 4 valores que van en el orden de las agujas del relog. Osea, tengo que poner de uno a cuatro valores separados por un espacio y cada valor va a corresponder a un margen especifico 
+                                - 1 valor               margin: top/right/bottom/left                   Ej: margin: 100px;                          Todos los margenes van a valer 100 pixeles por igual
+                                - 2 valores             margin: top/botton - right/left                 Ej: margin: 100px 150px;                    Los margenes superior e inferior van a valer 100 pixeles. Y los margenes derecho e izquierdo 150 pixeles
+                                - 3 valores             margin: top - right/left - botton               Ej: margin: 100px 200px 300px;              El margen superior va a valer 100 pixeles. El margen derecho e izquierdo van a valer 200 pixeles. Y el margen inferior va a valer 300 pixeles 
+                                - 4 valores             margin: top - right - left - botton             Ej: margin: 100px 500px 200px 300px;        El margen superior va a medir de 100 pixeles. El derecho de 500 pixeles. El inferior de 200 pixeles. Y el izquierdo de 300 pixeles
+
+                        - Es un "shorthand". Esto significa que tiene propiedades abreviadas para controlar de distintas maneras los 4 lados posibles para dar margenes. Osea, tiene sufijos para controlar especificamente cada margen, esto es util por si queremos modificar unicamente un margen sin cambiar el resto 
+                                - margin-top:           Margen superior                                 Ej: margin-top: 100px                       Unicamente el margen superior va a vales 100 pixeles
+                                - margin-right:         Margen derecho
+                                - margin-bottom:        Margen inferior
+                                - margin-left:          Margen izquierdo
+                        
+
+
+ - Esta propiedad no funciona de la misma manera en los elementos de bloque que en los elementos de linea.
+   Esto se debe a que en los elementos de "bloque" esta propiedad funciona normalmente, pero en los elementos de "linea" no funcionan los margenes verticales                                 
+
+
+*/
+
+
+
+
+
+
+/* Cajas de referencia: */
+.bloque-1{
+    background-color: coral;
+    width: 200px;                                       /* Estos atributos de ancho y largo son para que se aprecien mejor los margenes */
+    height: 100px;
+}
+
+.linea-1{
+    background-color: lightskyblue;
+    color: inherit;                                     /* Esto es para que herede el color de texto negro original propio de del <body>. Es sumamente estetico */
+}
+
+
+
+
+
+/* Aplicando margenes en el element de "Bloque": */
+.bloque-2{
+    background-color: coral;
+    width: 200px;
+    height: 100px;
+
+    margin: 70px 50px 20px 60px;                        /* Ahora este elemento de bloque tiene un margen de 70 pixeles de alto. 50 pixeles a la derecha. 20 pixeles abajo. Y 60 pixeles de margen hacia la izquierda */
+}
+
+.linea-2{
+    background-color: lightskyblue;
+    color: inherit;                                    
+}
+
+
+
+
+
+/* Aplicando margenes en el element de "Linea": */
+.bloque-3{
+    background-color: coral;
+    width: 200px;                                       
+    height: 100px;
+}
+
+.linea-3{
+    background-color: lightskyblue;
+    color: inherit;       
+    
+    margin: 70px 50px 20px 60px;                        /* Los margenes verticales en los elementos de "Linea" no funcionan, solamente se pueden utilizar los margenes horizontales. Por ende, solamente se me aplicara un margen de 50 pixeles hacia la derecha y 60 pixeles hacia la izquierda */
+}
+
+
+
+
+
+/* Mover las cajas hacia izquieda o la derecha (aplica en las demas direcciones): */
+.bloque-4{
+    background-color: coral;
+    width: 200px;                                       
+    height: 100px;
+
+    margin-left: auto;                                  /* Esto hace que mi elemento de bloque este a la derecha. Suena contraintuitivo porque el nombre de la propiedad es "margin-left:", pero lo que ocurre que que de forma automatica se crea un margen del lado izquierdo que desplaza al elemento de "Bloque" el extremo derecho */
+}
+.linea-4{
+    background-color: lightskyblue;
+    color: inherit;                
+    
+    margin-left: auto;                                  /* No ocurre nada porque estas propiedades automaticas no funcionan con los elementos de "Linea" */
+}
+
+.bloque-4b{
+    background-color: coral;
+
+    margin-left: auto;                                  /* No ocurre nada porque este elemento de "Bloque" todo el ancho de la pantalla. Osea, por logica no se puede mover más hacia la derecha porque ocupa todo. Por ese motivo, cada vez que quiera hacer este tipo de desplazamentos es importante darle un ancho a la caja */
+}
+
+
+
+
+/* Centrar la caja: */
+.bloque-5{
+    background-color: coral;
+    width: 200px;                                       
+    height: 100px;
+
+    margin-left: auto;                                  
+    margin-right: auto;                                 /* Para que la caja se centre tengo que aplicar "margin-left: auto;" y  "margin-right: auto;". Esto funciona debido a que tanto el margen de la izquierda como el de la derecha son iguales, quedando esta manera centrado */
+}
+
+
+
+
+
+
+
+
+
+

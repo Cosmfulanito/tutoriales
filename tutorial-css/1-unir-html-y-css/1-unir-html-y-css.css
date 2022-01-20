@@ -1,0 +1,25 @@
+
+/*                                                            _____Unir HTML y CSS_____                                                                     
+
+
+ - Buena parte de los apuntes entan en el archivo HTML del mismo nombre 
+
+*/
+
+
+
+/* Metodo 1:    Una vez puesta la etiqueta <link> en el HTML, podemos darle estilo a nuestra página web   */
+
+h1{
+    background-color: steelblue;
+}
+
+
+
+
+/* Metodo 4:    Este meto no se recomienda para nada. Se explica por el simple hecho de que existe, */
+
+h4{
+    background-color:plum;
+}
+

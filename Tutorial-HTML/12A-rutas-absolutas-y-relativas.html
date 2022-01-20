@@ -1,0 +1,75 @@
+<!--
+
+                                                            _____Rutas absolutas y relativas_____
+
+
+ _____Rutas absolutas:_____
+  
+   (Cuando creamos un link que nos redirecciona a una pagína de internet ajena a nosotros  Ej: https://www.google.com/)
+
+ - Tienen un protocolo, http o https (s = certificado de "seguridad") y son unicas en la red
+ 
+ - Se suelen utilizar para rutas externas ya que son la gran mayoria de los casos
+
+
+
+
+ _____Rutas relativas:_____
+   (Cuando creamos un link que nos redirecciona a una pagína creada por nosotros. En ese caso debemos poner la ruta a ese otro archivo que tenemos guardado, 
+   ambos archivos (y por ende, ambas páginas) deben estar en la misma carpeta)
+
+ - Pueden ser relativas al punto donde nos encontramos o relativas a la raíz del proyecto
+
+ - No usan protocolo
+
+ - Si el recurso se encuentra al mismo nivel (en la misma carpeta) pondremos unicamente el nombre del archivo
+
+ - Si necesitamos salir de la carpeta actual usaremos ../ y se  pone uno por cada nivel (carpeta) de la que queremos salir
+
+ - Hay de dos tipos:
+        - Los dos archivos provienen de la misma carpeta
+        - Los dos archivos provienen de diferentes carpetas pero aun así comparten una misma carpeta raíz (carpeta abuela (?))
+
+-->
+
+
+
+
+<!-- 
+- Para poder trabajar con los links cree 3 archivos de apunte. Como lo dice el titulo, este es archivo A, que representaria la página "Home" de nuestro
+sitio web. El archivo B, osea 12b-rutas-absolutas-y-relativas.html representa la página de "contacto" de nuestro sitio web. Y la tercera 
+12c-rutas-absolutas-y-relativas.html esta ubicada en una carpeta a parte llamada "Carpeta de apuntes extras", representa la la página de "informacion"  
+
+- La idea es hacer un sitio web donde todas las páginas se conecten una con la otra mediante links, haciendo solamente un clic  -->
+ <!DOCTYPE html>
+ <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rutas absolutas y relativas (A)</title>
+    </head>
+
+    <body>
+        <h1>Home</h1>
+
+        <!-- _____Rutas Absolutas_____ -->
+        <a href="google.com">Ir a Google (Forma incorrecta que va dar errores)</a>
+
+        <a href="https://google.com/">Ir a Google (Forma correcta)</a>    <!-- Como se puede apreciar, en las rutas absolutas tiene que haber si o si un protocolo http o https, de lo contrario tira error. Esto se debe a que al no tenerlo, confunde el URL con una un archivo propio de una "ruta relativa" -->
+
+
+        <br>                                                              <!-- Esto es horrendo de hacer, lo pongo solamente para que el apunte sea mas leguible en el navegador -->
+        <br>
+
+
+        <!-- _____Rutas Relativas_____ -->
+        <!-- Archivo proviniente de la misma carpeta -->
+        <a href="12b-rutas-absolutas-y-relativas.html">Ir a contacto</a>
+
+        <!-- Archivo proviniente de otra carpeta -->
+        <a href="Carpeta de apuntes extra/12c-rutas-absolutas-y-relativas.html">Ir a informacion</a>        <!-- Simplemente ponemos la carpeta luego una barra "/" y por ultimo el nombre del archivo -->
+
+
+    </body>
+ </html>

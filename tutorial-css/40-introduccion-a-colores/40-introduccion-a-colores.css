@@ -1,0 +1,104 @@
+/* 
+
+																	_____Introducción a colores_____
+														
+
+	
+ - La mayoria de las pantallas funcionan con un modo de color aditivo. La suma RGB da como resultado un blanco.														
+
+  - RECORDARD que existe el color "transparent". Que como su nombre lo indica, hace transparente a las cajas
+ 
+ - En Web no se utiliza el "Banco puro" o el "Negro puro" debido a que uno es muy blanco y el otro muy negro (valga la redundancia). 
+   Lo que se hace es utilizar colores aproximados a estos.
+ 
+ - Hay varias formas de dar color en CSS. Entre ellos estan el modo RGB, Exadecimal y HSL
+
+ - Existen otros cuatro modos de color en los que se está trabajando. Todos estan en el borrador del modulo de color de nivel 4 pero aún no es estandar
+   Estos serian:
+		CMYK (Cyan, Magenta, Yellow, Black) 
+		HWB (Hue, Whiteness, Blackness) 
+		LAB (Lightness, Distance A, Distance B)
+		LCH (Light, Chroma, Hue)
+ 
+
+*/
+
+
+
+
+*{
+	box-sizing: border-box;			/* Pongo esta propiedad para no olvidarme de esta buena practica */
+}
+
+
+/* Estas propiedades son sumamente esteticas: */
+body{
+	font-family: sans-serif;
+}
+
+
+div{
+	margin-left: 15px;
+	margin-bottom: 35px;
+}
+
+
+
+/* Caja generica */
+.caja-1{
+	width: 200px;
+	height: 200px;
+	background-color: #444;
+	border-top: 50px solid blue;
+	border-right: 50px solid yellow;
+	border-bottom: 50px solid green;
+	border-left: 50px solid red;
+}
+
+
+/* Caja sin "caja". Solamente bordes:ss */
+.caja-2{
+	border-top: 100px solid blue;
+	border-right: 100px solid yellow;
+	border-bottom: 100px solid green;
+	border-left: 100px solid red;
+}
+
+
+
+
+
+/* Creando el triangulo  */
+/* Paso 1:  */
+.caja-3{
+	border-left: 100px solid red;
+	border-top: 100px solid blue ;
+}
+/* Paso 2: */
+.caja-4{
+	border-left: 100px solid red;
+	border-top: 100px solid transparent ;
+}
+
+/* Rotando el triangulo */
+.caja-5{
+	border-right: 100px solid red;
+	border-top: 100px solid transparent ;
+}
+
+
+
+
+/* Hacer que el triangulo mire en diagonal: */
+/* Paso: 1 */
+.caja-6{
+	border-left: 100px solid red;
+	border-top: 100px solid blue;
+	border-bottom: 100px solid green;
+}
+/* Paso: 2 */
+.caja-7{
+	border-left: 100px solid red;
+	border-top: 100px solid transparent;
+	border-bottom: 100px solid transparent;
+}

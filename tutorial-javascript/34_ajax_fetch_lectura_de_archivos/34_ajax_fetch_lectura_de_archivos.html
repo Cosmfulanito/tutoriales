@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AJAX - Fetch - Lectura de archivos</title>
+	</head>
+	<body>
+		<h1>AJAX - Fetch - Lectura de archivos</h1>																													<br>
+
+		<!-- Como visualizar una imagen con fetch: -->
+		<h2>Como visualizar una imagen con fetch:</h2>
+		<button id="buttonImg">Ver imagen</button>							
+		<img id="imagen" class="img">										<!-- Esta etiqueta no tienen el atributo src="". Por ende no carga ninguna imagen. Lo mismo pasa con el <a> de abajo, no tiene ninguna dirección para descargar el PDF ya que lo haremos mediante la API fetch en JavaScript --> 	<br><br><br>
+
+		<!-- Como visualizar un PDF con fetch: -->
+		<h2>Como visualizar un PDF con fetch:</h2>
+		<p>Primero hacer click en el boton y luego el link</p>
+		<button id="buttonPDF">Ver PDF</button>
+		<a id="pdf" href="#" target="_blank">Descargar</a>					<!-- Este es un link que lleva a un href="" vacio para que cuando se haga click en ese link se habra el pdf -->
+		
+
+
+		<script src="34_ajax_fetch_lectura_de_archivos.js"></script>
+	</body>
+</html>

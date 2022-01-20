@@ -1,0 +1,31 @@
+<!-- 
+- Para poder trabajar con los links cree 3 archivos de apunte. Como lo dice el titulo, este es archivo C, que representaria la página "Informacion" de nuestro
+sitio web, este archivo esta ubicado en una carpeta a parte separado de los demas archivos para poder hacer el ejercicio, mientras los dos primeros archivos 
+se encuuentran en carpeta de apuntuntes como cualquier otro archivo normal. El archivo A, osea 12a-rutas-absolutas-y-relativas.html representa la página 
+de "Home" de nuestro sitio web. Y la tercera 12b-rutas-absolutas-y-relativas.html representa la la página de "informacion"  
+
+- La idea es hacer un sitio web donde todas las páginas se conecten una con la otra mediante links, haciendo solamente un clic  -->
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Rutas absolutas y relativas (C)</title>
+   </head>
+
+   <body>
+       <h1>Información</h1>
+
+        <!-- _____Rutas Relativas_____ -->
+        <!-- Archivo proviniente de otra carpeta: -->
+        <a href="../12a-rutas-absolutas-y-relativas.html">Ir al Home (de forma tediosa)</a>     <!-- Como el archivo el cual queremos acceder esta una carpeta mas arriba, usamos el ../ hasta estar al mismo nivel, luego ponemos el nombre del archivo.  // En una web real, esto estaria lleno de carpetas y este metodo para ir al archivo index.html sería muy tedioso. Para solucionar esto, esta el metodo de abajo -->  
+       
+        <a href="/Tutoria HTML/12a-rutas-absolutas-y-relativas.html">Ir al Home (de forma simple)</a>    <!-- Con poner una barra "/" como primera acción, el programa entien que estamos en la carpeta raíz (la primera de todas), desde ahi solamente tenemos que vajar hasta encontrar la carpeta deseada -->
+ 
+        <a href="/Tutoria HTML/">Ir al index.html (de forma simple)</a>         <!-- Lo mismo que lo anterior, pero con la difencia de que no hace falta poner el archivo index.html, ya que los navegadores lo tienen asociado como el archivo principal y se dirigen directo a el. -->
+
+        <a href="/">Ir al index.html (de forma mucho más simple)</a>            <!-- Con el mismo razonamiento de todo lo anterior, de haber una sola carpeta (y no tantas una adentro de otra como en este caso), se podria acceder al index.html de esta forma tan simple. Como  este no es el caso me da error -->
+
+   </body>
+</html>

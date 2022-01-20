@@ -1,0 +1,267 @@
+/*
+
+														_____min-max(), auto-fill y auto-fit_____
+
+
+
+ - Estas propiedades son muy importantes debido a que con ellas podemos hacer sitios responsive. Ya que podemos establecer el tamaño mínimo y máximo de los elementos 														
+
+
+
+ - minmax() 		- Recibe dos parametros (valores) para establecer el minimo y el maximo que pueden tener los items. 														
+					  Ej:   grid-template-columns: repeat(2 minmax(100px, 1fr)		En este caso va  haber dos columnas con un ancho de 100px como minimo, y 1 fr 
+					  																como máximo 
+
+					- Valores extras: 
+						- min-content: 		Mínimo necesario en función del contenido. Básicamente ajusta automaticamente el contenido a un tamaño lo suficientemente 
+											 mínimo como para que se siga viendo estetico 
+						- max-content:     	Máximo necesario en función del contenido. Funciona igual que el "min-content:" pero en este caso no se rompe el contenido
+
+						- auto-fill: 		Crea tantos grid-items vacios como quepan en el vieport rewspetando las medidas. El Espacio esta creado para cada posible 
+						           			nuevo elemento aunque no se vean
+						- auto-fit:			Elimina los grid-items vacios que no esten ocupados 
+
+*/
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Esto es sumamente estetico, la mayor parte de este codigo lo puso el mismo Dorian  */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+h2{
+	margin-top: 150px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+
+section{										/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	/* display: flex; */
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* Caja de referencia: */
+.grid-container1{											
+	display: grid;
+	column-gap: 2px;				
+	row-gap: 2px;
+	grid-template-columns: repeat(3, 200px);
+}
+
+.grid-item1{
+	border: 0.5px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* minmax() */
+.grid-container2{											
+	display: grid;
+	column-gap: 2px;				
+	row-gap: 2px;
+	
+	grid-template-columns: repeat(3, minmax(200px, 1fr));		/* Ahora cada columna tiene un tamaño mínimo de 200px y 1fr de máximo< */
+}
+
+.grid-item2{
+	border: 0.5px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* min-content: */
+/* Ej1: */
+.grid-container3{											
+	display: grid;
+	column-gap: 2px;				
+	row-gap: 2px;
+	
+	grid-template-columns: repeat(3, minmax(min-content, 1fr));	 	/*-----*/	
+}
+
+.grid-item3{
+	border: 0.5px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+	font-size: 1rem;
+}
+
+
+
+/* Ej2: */
+.grid-container3B{											
+	display: grid;
+	column-gap: 2px;				
+	row-gap: 2px;
+	
+	grid-template-columns: repeat(3, minmax(min-content, 1fr));	 	/*-----*/	
+}
+
+.grid-item3B{
+	border: 0.5px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* max-content: */
+.grid-container4{											
+	display: grid;
+	column-gap: 2px;				
+	row-gap: 2px;
+	
+	grid-template-columns: repeat(3, minmax(max-content, 1fr));	 	/*-----*/	
+}
+
+.grid-item4{
+	border: 0.5px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* auto-fill: */
+.grid-container5{											
+	display: grid;
+	column-gap: 2px;				
+	row-gap: 2px;
+	
+	grid-template-columns: repeat(auto-fill, minmax(max-content, 100px));	 	/*-----*/	
+}
+
+.grid-item5{
+	border: 0.5px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* auto-fit: */
+.grid-container6{											
+	display: grid;
+	column-gap: 2px;				
+	row-gap: 2px;
+	
+	grid-template-columns: repeat(auto-fit, minmax(max-content, 100px));	 	/*-----*/	
+}
+
+.grid-item6{
+	border: 0.5px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+	font-size: 1rem;
+}
+

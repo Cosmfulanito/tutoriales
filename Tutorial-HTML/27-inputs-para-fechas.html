@@ -1,0 +1,45 @@
+<!--
+
+                                                        _____Inputs para fechas_____
+
+
+ - Esto es un repaso especificamente para inpusts de fechas del apunte 25-tipos-de-inputs.html  
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inputs para fechas</title>
+    </head>
+
+    <body>
+        <h1>Inputs para fechas</h1>
+        <form>
+
+            <label>"date"</label>
+            <input type="date">                                             <!-- El usuario puede agregar una fecha -->                                             <br> <br>   <!-- Esta etiqueta <br> esta horrenda y deberia hacer el salto de linea con CSS, pero la uso a fines practicos. Esto no debe hacerse de manera profecional -->
+
+            <label>"time"</label>                         
+            <input type="time">                                             <!-- El usuario puede agregar la hora -->                                               <br> <br>
+            
+            <label>"datetime-local" (no funciona en Firefox)</label>
+            <input type="datetime-local">                                   <!-- El usuario puede agregar fechas y horas. Pero no funciona en Firefox, debido a esto solamente me mostraria el input que viene por defecto. Por esta razon, lo recomendable es usar un imput del tipo "date" y otro del tipo "time" -->           <br> <br>
+            
+            <label>"datetime" (obsoleto)</label>
+            <input type="datetime">                                         <!-- Este input esta obsoleto y por ende solo me muetra el input que viene por defecto -->                      <br> <br> 
+
+            <label>"month" (no funciona en Firefox)</label>
+            <input type="month">                                            <!-- El usuario puede agregar un mes de un año especifico. Pero no funciona en Firefox, debido a esto solamente me mostraria el input que viene por defecto -->         <br> <br>
+                
+            <label>"week" (no funciona en Firefox)</label>
+            <input type="week">                                             <!-- El usuario puee agregar una semana de un año en concreto. Pero no funciona en Firefox, debido a esto solamente me mostraria el input que viene por defecto -->
+
+        </form>
+    </body>
+
+</html>

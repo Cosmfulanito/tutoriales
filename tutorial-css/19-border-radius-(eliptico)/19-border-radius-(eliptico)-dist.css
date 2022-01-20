@@ -1,0 +1,115 @@
+/* 
+
+                                                                _____Propiedad border-radius: (Elíptico)_____
+
+
+ - Esto es una continuacion del apunte "18-border-radius-(circular).css"
+
+
+ - Como ya vimos antes, la propiedad "border-radius:" redondea las puntas de las cajas por medio de un circulo cuyo "radio" es igual a la cantidad de pixeles 
+   ingresados. Pero tambien es posible crear un circulo con forma "Eliptico". Osea, un obalo
+
+
+
+
+ - La forma de craer un "border-radius:" elíptico es exactamente igual a al de un "border-radius:" generico, pero en este caso agregamos dos valores separados por 
+   una barra diagonal "/". El primer valor corresponderia al radio del eje X y el segundo valor corresponde al eje Y. Esto se debe a que si no ponemos la barra, el 
+   navegador cree que es un "border-radius" circular de dos valores como se vio en el apunte "18-border-radius-(circular).css".
+   
+        border-radius: X / Y                Ej: border-radius: 50px / 150px;                Ahora  todos las puntas del de la caja van a estar redondeadas con una forma de elipce/obalado de 50 pixeles de ancho y 150 pixeles de altura              
+   
+   
+ 
+
+ - RECORDAR que cuando se quiere aplicar esta propiedad a "una sola punta", no se debe aplicar la barra diagonal. Es tediosa tantas reglas de sintanxis pero 
+   lamentablemente funciona así. Esto se debe a que por logica solamente se le aplica el cambio a una sola punta, y por ende no tiene sentido razonar que esto es un 
+   "border-radius" circular de dos valores como se vio en el apunte "18-border-radius-(circular).css".
+
+        border-top-right-radius: X Y        Ej border-top-right-radius: 50px 150px;         Ahora solamente la punta superior derecha se le aplicara un borde con forma de elipse/obalado de 50 pixeles de ancho y 150 pixeles de altura     
+
+
+*/
+
+
+*{
+    box-sizing: border-box;                         /* Pongo esta propiedad para normalizar esta buena paractica */
+}
+
+
+
+
+
+
+/* Caja generica */
+.caja-1{                                                                                    /* Esta es una caja generica sin alterar que uso como referencia */
+    width: 200px;
+    height: 200px;
+    background-color: mediumturquoise;
+    margin-left: 100px;
+
+    
+}
+
+
+
+
+/* Caja con con un "border-radius:" circular de referencia */
+.caja-2{                                                                                    /* Esta en una caja que uso de referencia ya que se le aplico un "border-radius:" generico de forma circular como se vio en el apunte "18-border-radius-(circular).css".  */
+    width: 200px;
+    height: 200px;
+    background-color: mediumturquoise;
+    margin-left: 100px;
+
+    border-top-right-radius: 50px;
+}
+
+
+
+
+/* Caja con con un "border-radius:" Eliptico */
+.caja-3{                                                                                    /* Ejemplo del uso de un "border-radius:" Eliptico de una sola punta */
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    margin-left: 100px;
+
+    border-top-right-radius: 50px 150px;                                                    /* Recordar que cuando se aplica en una sola punta no hace falta una barra diagonal "/" para separar el radio X e Y */
+}
+
+
+
+
+/* Caja con con un "border-radius:" circular de referencia */
+.caja-4{
+    width: 200px;
+    height: 200px;
+    background-color: mediumturquoise;
+    margin-left: 100px;
+
+    border-radius: 50px;
+}
+
+
+
+/* Caja con un "border-radius:" eleíptico de: 50px X 150px */
+.caja-5{                                                                                    /* Ejemplo de un "border-radius:" eleiptico el cual aplica este este cambio a todas las puntas */
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    margin-left: 100px;
+
+    border-radius: 50px / 150px;                                                            /* Recordar que como este "border-radius:" eleiptico aplica cambio a todas las puntas, es necesario separar los radios X e Y con una barra diagonal "/" */
+}
+
+
+
+
+/* Caja con un "border-radius:" eleiptico de: 150px X 50px */
+.caja-6{
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    margin-left: 100px;
+
+    border-radius: 150px / 50px;
+}

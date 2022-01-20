@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="59_min-max_auto-fill_y_auto-fit.css">
+		<title>min-max(), auto-fill y auto-fit</title>
+	</head>
+	<body>
+		<h1>min-max(), auto-fill y auto-fit</h1>
+		
+		<p>Achicar y agandar la pantalla para apreciar esta propiedades</p>
+
+		<!-- Caja de referencia: -->
+		<h2>Caja de referencia:</h2>
+		<p>Tiene un tamaño constante que no se modifica</p>
+		<section>									
+			<div class="grid-container1">
+				<div class="grid-item1">A</div>
+				<div class="grid-item1">B</div>
+				<div class="grid-item1">C</div>
+				<div class="grid-item1">D</div>
+				<div class="grid-item1">E</div>
+				<div class="grid-item1">F</div>
+			</div>
+		</section>
+
+
+		<!-- minmax() -->
+		<h2>minmax()</h2>
+		<p>Ahora cada columna tiene un tamaño mínimo de 200px y 1fr de máximo</p>
+		<section>									
+			<div class="grid-container2">
+				<div class="grid-item2">A</div>
+				<div class="grid-item2">B</div>
+				<div class="grid-item2">C</div>
+				<div class="grid-item2">D</div>
+				<div class="grid-item2">E</div>
+				<div class="grid-item2">F</div>
+			</div>
+		</section>
+
+
+		<!-- min-content: -->
+		<h2>min-content:</h2>
+		<p>Ej1:</p>
+		<section>									
+			<div class="grid-container3">
+				<div class="grid-item3">A</div>
+				<div class="grid-item3">B</div>
+				<div class="grid-item3">C</div>
+				<div class="grid-item3">D</div>
+				<div class="grid-item3">E</div>
+				<div class="grid-item3">F</div>
+			</div>
+		</section>																																					<br>
+		
+		<p>Ej2:</p>
+		<section>									
+			<div class="grid-container3">
+				<div class="grid-item3B">A</div>
+				<div class="grid-item3B">B</div>
+				<div class="grid-item3B">C Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+				<div class="grid-item3B">D</div>
+				<div class="grid-item3B">E</div>
+				<div class="grid-item3B">F</div>
+			</div>
+		</section>
+
+
+		<!-- max-content: -->
+		<h2>max-content:</h2>
+		<section>									
+			<div class="grid-container4">
+				<div class="grid-item4">A</div>
+				<div class="grid-item4">B</div>
+				<div class="grid-item4">C Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+				<div class="grid-item4">D</div>
+				<div class="grid-item4">E</div>
+				<div class="grid-item4">F</div>
+			</div>
+		</section>
+
+
+		<!-- auto-fill: -->
+		<h2>auto-fill:</h2>
+		<p>Para porder apreciarlo, ir al inspector de elementos => elements=> Layouts =>  luego seleccionar el div.grib-conteiner correspondiente a esta caja (Es el numero 5)</p>
+		<section>									
+			<div class="grid-container5">
+				<div class="grid-item5">A</div>
+				<div class="grid-item5">B</div>
+				<div class="grid-item5">C</div>
+				<div class="grid-item5">D</div>
+				<div class="grid-item5">E</div>
+				<div class="grid-item5">F</div>
+			</div>
+		</section>
+		
+		
+		
+		<!-- auto-fit: -->
+		<h2>auto-fit:</h2>
+		<p>Para porder apreciarlo, ir al inspector de elementos => elements=> Layouts =>  luego seleccionar el div.grib-conteiner correspondiente a esta caja (Es el numero 6)</p>
+		<section>									
+			<div class="grid-container6">
+				<div class="grid-item6">A</div>
+				<div class="grid-item6">B</div>
+				<div class="grid-item6">C</div>
+				<div class="grid-item6">D</div>
+				<div class="grid-item6">E</div>
+				<div class="grid-item6">F</div>
+			</div>
+		</section>
+
+
+	</body>
+</html>

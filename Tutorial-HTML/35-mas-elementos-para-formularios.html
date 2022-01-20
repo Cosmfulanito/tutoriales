@@ -1,0 +1,109 @@
+<!--
+
+                                                            _____Más elementos para formularios_____
+
+
+    <fieldset>                  Se utiliza para agrupar elementos dentro de un formulario. Es de ayuda para en navegador y a su vez crea una cuadrado que rodea a todos los elementos que estan adentro. De esta manera el usuario sabe que elememtos de un formulario estan relacionados  
+    </fieldset>
+
+    <legend> </legend>          Le da un titulo a la etiqueta <fieldset>
+
+
+    <input type="file">         Sirve para que el usuario pueda subir sus propios archivos. Un ejemplo de esto es cuando uno adjunta un archivo en Gmail para enviarlo. Hace falta JavaScript para hacer cosas visuales/esteticos como mostrar una barra de progreso, poner una minuatura de lo que se sube, etc 
+
+
+    <meter> </meter>            Representa un valor optimo dentro d un rango conocido. Osea, entre el 0 y 100 puede ser que el valor optimo sea 50, por ende este numero va a estar en verde mientras el resto en amarillo. Posiblemente nunca lo use pero no esta de más conocerlo
+                                    min=""          Valor minimo de la grafica
+                                    max=""          Valor maximo de la grafica
+                                    low=""          Rango minimo que esta permitido (un numero por debajo de este significa que esta todo mal)
+                                    high=""         Rango maximo que esta permitido (un numero por arriba de este significa que esta todo mal)
+                                    optimun=""      Valor optimo
+                                    value=""        Valor actual de la grafica
+    
+
+    <progress> </progress>      Es una grafica que representa el progreso de una tarea
+                                    max=""          Representa el valor maximo, se suele poner "100" = 100%.   
+                                    value=""        Valor actual de la página
+
+
+    <textarea> </textarea>      Se utiliza para introducir texto en formulario. Es un cuadrado en el cual se puede escribir, como la caja de comentarios de reddit
+                                    cols=""         Cantidad de columnas. Me dice que tan ancho es el cuadrado. Esto esta al pedo ya que es algo que se debe modificar en CSS
+                                    rows=""         Cantidad de filas. Me dice que tan alto es el cuadrado. Esto esta al pedo ya que es algo que se debe modificar en CSS
+
+
+                                    
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Más elementos para formularios</title>
+    </head>
+
+    <body>
+        <h1>Más elementos para formularios</h1>
+
+        <form>
+
+
+            <!-- Etiquetas <fieldset> y <legend> -->
+            <h2>Etiquetas &lt;fieldset&gt; y &lt;legend&gt;</h2>
+            
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text"  id="nombre">
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text"  id="apellido">
+                </div>
+            </fieldset>                                                                                                                                             <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->
+
+
+
+
+            <!-- input de tipo "file" -->
+            <h2>&lt;input&gt; del tipo "file"</h2>
+
+            <input type="file">                                                                                                                                     <br><br><br>
+
+
+
+
+            <!-- <meter> -->
+            <h2>&lt;meter&gt;</h2>  
+            
+            <label for="fuel">Contador de cantidad optima de azucar en sangre:</label>
+            <meter id="fuel" min="0" max="100" low="30" high="75" optimum="50" value="20"></meter>
+            <meter id="fuel" min="0" max="100" low="30" high="75" optimum="50" value="50"></meter>
+            <meter id="fuel" min="0" max="100" low="30" high="75" optimum="50" value="90"></meter>                                                                  <br><br><br>
+
+
+
+
+            <!-- <progres> -->
+            <h2>&lt;progress&gt;</h2>
+
+            <label for="tarea">Tarea 1:</label>
+            <progress id="tarea" max="100" value="75"></progress>                                                                                                   <br><br><br>
+
+
+
+
+            <!-- <textarea> </textarea> -->
+            <h2>&lt;textarea&gt;</h2>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="" id="Mensaje" cols="30" rows="10"></textarea>
+
+
+
+        </form>    
+    </body>
+    
+</html>

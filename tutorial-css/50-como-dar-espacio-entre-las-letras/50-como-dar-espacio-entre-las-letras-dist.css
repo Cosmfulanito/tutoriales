@@ -1,0 +1,132 @@
+/* 
+
+														_____Cómo dar ESPACIO entre letras en CSS_____
+
+
+
+ - Espacio entre fuentes y textos:
+
+	- letter-spacing: 					- Establece la separación entre caracteres. Se puede establecer en cualquier medida valida para CSS (px, %, rem, em, vh, etc).
+										  Recordar que el "spacio" cuenta como caracter y también le da su separacion como a cualquier otro caracter.
+
+	- word-spacing:						- Establece la separación entre palabras. Se puede establecer en cualquier medida valid para CSS.
+
+	- line-height:						- Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multiplicará por el 
+										  font-size del texto al que se lo estemos aplicando. Para aplicar este ultimo caso solamente se debe poner un numero sin 
+										  unidad.
+
+
+
+- Orientacion de texto:
+
+	- writing-mode:						- Establece la dirección del texto.
+										- Tiene varios valores pero los más importantes son:
+											- vertical-rl				Pone el texto de costado mirando hacia abajo
+											- vertical-lr				Pone el texto de costado mirando hacia abajo y a su vez invierte el orden de los renglones.
+										
+
+
+
+*/
+
+
+
+*{
+	box-sizing: border-box;									/* Pongo esta propiedd para normalizar esta buena practica */
+}
+
+/* Todos estos son cambios esteticos */
+body{
+	font-family: sans-serif;
+	margin-left: 15px;
+}
+h1{
+	text-align: center;
+}
+h3,
+p{
+	font-weight: normal;
+	margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* letter-spacing: */
+.texto_1_a{
+	letter-spacing: 15px;
+}
+
+.texto_1_b{
+	letter-spacing: -5px;
+}
+
+
+
+
+
+/* word-spacing: */
+.texto_2{
+	word-spacing: 50px;
+}
+
+
+
+
+
+/* line-height: */
+.texto_3_a{
+	background-color: mediumturquoise;
+}
+
+.texto_3_b{
+	background-color: coral;
+
+	line-height: 3;
+}
+
+.texto_3_c{
+	background-color: lightgreen;
+	text-align: center;
+	width: 450px;
+	
+	height: 300px;
+	line-height: 300px;											/* Este truco para centrar verticalmente un texto con "line-height:" solamente sirve cuando sabemos la altura del contenedor y cuando el texto es de un solo renglon // Se debe saber el valor de la altura del contenedor ya que el "line-height:" debera tener la misma altura para que el texto quede centrado, en este caso es de 200px. Esto tiene algunas desbentajas, entre la más obvia es que si cambia el el valor de la altura del contenedor, va a dejar de estar centrado el texto  */					
+}
+
+
+
+
+
+/* writing-mode: */
+.texto_4_a{
+	-ms-writing-mode: tb-rl;
+	    writing-mode: vertical-rl;
+	background-color: coral;
+}
+
+.texto_4_b{
+	-ms-writing-mode: tb-lr;
+	    writing-mode: vertical-lr;
+	background-color: mediumturquoise;
+}
+
+
+
+
+
+
+/* Truco extra para poner las letral en vertical: */
+.texto_5{
+	word-break: break-all;										/* Esto sirve para rompre el texto */
+	width: 14px;												/* Este es el ancho de ruptura, mientras más grande, más va a haber por bloque. Por ese motivo debo poner un ancho pequeño */
+	text-align: center;											/* Sin esto, todas las letras estarian hacia la izquierda */
+}

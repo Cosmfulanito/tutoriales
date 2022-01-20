@@ -1,0 +1,504 @@
+/*
+
+															_____Flexbox: Propiedades para los items_____
+
+
+
+
+ Flex:			La propiedad "flex:" es un "shorthand" que engloba las siguientes propiedades 
+				Todas las medidias se establecen en función del espacio disponible en el contenedor 
+
+					- flex-grow: 		Establece qué hacer cuando hay espacio sobrante. Osea, cuantas diviciones agarra el elemento del espacio sobrante de su 
+										elemento padre. El valor es un numero entero que comienza a partir del "0", incluye el valor "auto"
+
+					- flex-shinrk:		Establece qué hacer cuando no hay espacio suficiente. Osea, cuando no hay espacio, en el elemento padre, los elemtos hijos 
+										pierden parte de su tamaño para entrar, esta propiedad determina cuanto de su ancho o largo puede perder un elemento hijo 
+										por separado. Todo lo que este elemento hijo pierda le sera entregado a sus hermanos. El valor en un numero entero que 
+										comienza a partir de "0"  
+
+					- flex-basis: 		Establece cuanto tiene que ocupar el item antes de encojer o extenderse. "Flex-axis" prevalece ante "width" si el main-axis 
+										es horizontal o ante "height" si el main-axis es vertical. El valor es un numero entero que comienza a partir del "0"
+
+
+					- Se recomienda usar flex en conjunto en vez de sus propiedades por separado ya que hay navegador le cuesta menos hacer los calculos. Por ende es 
+					  más problable que en un proyecto lo vea de esta manera. El resultado es exactamente el mismo
+					  Flex: flex-grow flex-shinrk flex-basis;
+
+						- Por defecto es:		flex: 0 1 auto;
+						- auto: 				flex: 1 1 auto;
+						- none: 				flex: 0 0 auto;	
+
+
+
+				- Order: 	Establece qué orden ocupará el elemento en el contenedor flex. El valor es el "peso" respecto a los valores que tengan los otros elementos
+							hermanos. Su valor por defecto es "0"
+							Funciona de forma similar que "z-index. Pero en este caso puedo posicionar un elemento que estaba a la izquierda, a la derecha de su hermano. Esto
+							util porque puedo pasarme por las bolas el orden en el que fueron maquetados los elementos hermanos dentro del HTML
+				
+
+				- Extra: 
+					Existe un shorthan para flex-direction y flex-wrap. flex-flow: flex-direction flex-wrap.
+					flex-flow: colom wrap;
+
+*/
+
+
+
+
+
+
+
+
+/* Esto es sumamente estetico */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+h2{
+	margin-top: 100px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Caja de referencia: */
+.flex-container1{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item1:nth-child(2){
+	background-color: lightseagreen;
+}
+
+.flex-item1:nth-child(3){
+	background-color: lightskyblue;
+}
+
+.flex-item1:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* flex-grow:  */
+
+/* Ej1: */
+.flex-container2{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item2:nth-child(2){
+	background-color: lightseagreen;
+
+	flex-grow: 1;											/*--------*/
+}
+
+.flex-item2:nth-child(3){
+	background-color: lightskyblue;
+}
+
+.flex-item2:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+/* Ej2: */
+.flex-container3{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item3{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item3:nth-child(2){
+	background-color: lightseagreen;
+
+	flex-grow: 1;											/*--------*/
+}
+
+.flex-item3:nth-child(3){
+	background-color: lightskyblue;
+
+	flex-grow: 1;											/*--------*/
+}
+
+.flex-item3:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+/* Ej:3 */
+.flex-container4{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item4{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item4:nth-child(2){
+	background-color: lightseagreen;
+
+	flex-grow: 1;											/*--------*/
+}
+
+.flex-item4:nth-child(3){
+	background-color: lightskyblue;
+
+	flex-grow: 1;											/*--------*/
+}
+
+.flex-item4:nth-child(4){
+	background-color: darkgoldenrod;
+
+	flex-grow: 2;											/*--------*/
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Caja de referencia: */
+.flex-container5{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item5{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item5:nth-child(2){
+	background-color: lightseagreen;
+}
+
+.flex-item5:nth-child(3){
+	background-color: lightskyblue;
+}
+
+.flex-item5:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+
+/* flex-shinrk:  */
+.flex-container6{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item6{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item6:nth-child(2){
+	background-color: lightseagreen;
+
+	flex-shrink: 2;											/*--------*/				
+}
+
+.flex-item6:nth-child(3){
+	background-color: lightskyblue;
+}
+
+.flex-item6:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Caja de referencia: */
+.flex-container7{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item7{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item7:nth-child(2){
+	background-color: lightseagreen;
+}
+
+.flex-item7:nth-child(3){
+	background-color: lightskyblue;
+}
+
+.flex-item7:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+/* flex-basis: */
+.flex-container8{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item8{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item8:nth-child(2){
+	background-color: lightseagreen;
+
+	flex-basis: 200px;										/* Esto es lo que va a medir esta caja. Funciona como un "width" */					
+	flex-shrink: 0;											/* En conjunto con "flex-shrink: 0;" el elemento no pierde su tamaño por más que chica que sea la caja. Incluso la puede llegar a desbordar */
+}
+
+.flex-item8:nth-child(3){
+	background-color: lightskyblue;
+}
+
+.flex-item8:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+/* flex-basis: (Desbordado) */
+.flex-container9{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item9{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item9:nth-child(2){
+	background-color: lightseagreen;
+
+	flex-basis: 200px;									/*--------*/
+	flex-shrink: 0;										/*--------*/
+}
+
+.flex-item9:nth-child(3){
+	background-color: lightskyblue;
+	flex-basis: 200px;									/*--------*/
+	flex-shrink: 0;										/*--------*/
+}
+
+.flex-item9:nth-child(4){
+	background-color: darkgoldenrod;
+	flex-basis: 200px;									/*--------*/
+	flex-shrink: 0;										/*--------*/
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Order: */
+.flex-container10{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item10{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item10:nth-child(2){
+	background-color: lightseagreen;
+
+	order: 1;											/* Este elemento estara a la derecha de los elementos hermanos con el valor de orde menor a al suyo. Osea todos los demas elementos sin un "order:" declarado ya que por defecto tienen el valor 0*/ 
+}
+
+.flex-item10:nth-child(3){
+	background-color: lightskyblue;
+
+	order: 2;											/* Como es el elemento con el valor de order más alto, estara a la derecha de todos sus hermanos*/
+}
+
+.flex-item10:nth-child(4){
+	background-color: darkgoldenrod;
+}
+
+
+
+
+
+
+
+
+
+/* .flex-container{
+	background-color: #fca17d;
+	height: 300px;
+	width: 400px;
+	display: flex;
+}
+
+.flex-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+}
+
+.flex-item:nth-child(2){
+	background-color: lightseagreen;
+}
+
+.flex-item:nth-child(3){
+	background-color: lightskyblue;
+}
+
+.flex-item:nth-child(4){
+	background-color: darkgoldenrod;
+} */

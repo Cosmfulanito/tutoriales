@@ -1,0 +1,131 @@
+/*
+
+																_____Grid track_____
+
+
+
+
+ - Este tema no es más que una definición de un consepto
+
+ - Un "Grid track" es la union de celdas consecutivas tanto horizontal como verticalmente.
+   Al ser uniones, obviamente deben ser 2 o más celdas
+   Estas uniones pueden ser por cosas abstractas como colores, letras, etc																
+
+*/
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Esto es sumanente estetico */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+
+h2{
+	margin-top: 70px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+section{										/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Caja SIN grid track: */
+
+.grid-container1{
+	display: grid;		
+	grid-template: 
+		"first first first" 150px			
+		"center center center" 150px 
+		"last . . " 150px / 
+		250px 250px 250px;						
+}		
+
+
+.grid-item1{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+}
+
+.grid-item1:first-child,
+.grid-item1:nth-child(3){
+	background-color:goldenrod;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Caja CON grid track: */
+
+.grid-container2{
+	display: grid;		
+	grid-template: 
+		"first first first" 150px			
+		"center center center" 150px 
+		"last . . " 150px / 
+		250px 250px 250px;						
+}		
+
+.grid-item2{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+.grid-item2:first-child,
+.grid-item2:nth-child(2){
+	background-color:goldenrod;
+}

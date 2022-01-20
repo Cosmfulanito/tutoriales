@@ -1,0 +1,53 @@
+
+
+
+
+<!-- En este apunte vamos a ver el ejemplo de un <section> que contiene a varios <articles> 
+
+    <section>              Es un contenedor genérico que agrupa contenido que esta relacionado. Cuando creamos bloques cuyo contenido es parte de un bloque total usaremos section. En su interior se pueden poner varios <article> y viceversa
+
+    <article>              Es un contenedor que representa contenido independiente, es decir, podemos leer ese fragmento en cualquier otro sitio y tendria sentido por sí mismo. En su interior se pueden poner varios <section> y viceversa     
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sections anidando articles</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Noticias nacionales</h1>
+        </header>
+        
+        <main>
+            <section>                       <!-- Es un contenedor genérico que agrupa contenido que esta relacionado. Cuando creamos bloques cuyo contenido es parte de un bloque total usaremos section. En su interior se pueden poner varios <article> y viceversa -->
+                <h2>Noticias del día</h2>
+                <article>                   <!-- Es un contenedor que representa contenido independiente, es decir, podemos leer ese fragmento en cualquier otro sitio y tendria sentido por sí mismo. En su interior se pueden poner varios <section> y viceversa -->
+                    <h3>Noticia 1</h3>      <!-- Los <article> necesitan un titulo o sino da un fallo -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis saepe ea magni, dicta nihil nam error illum. Placeat laboriosam ipsum nemo soluta pariatur, architecto asperiores iste ullam incidunt voluptatum facilis?</p>
+                </article>
+                
+                <article>
+                    <h3>Noticia 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio beatae aliquid vero eveniet. Dignissimos voluptatum quas minima aut dolorem porro error, laudantium, deserunt rerum debitis voluptatibus, consequuntur ullam. Quaerat, quo.</p>
+                </article>
+                
+                <article>
+                    <h3>Noticia 3</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis vero ducimus modi. Suscipit eveniet qui similique voluptatibus distinctio consequatur, eligendi et id odit repellendus ea modi fugiat ipsum aliquid incidunt.</p>
+                </article>
+
+            </section>
+        </main>
+
+        <footer>17/05/2021</footer>
+    </body>
+</html>

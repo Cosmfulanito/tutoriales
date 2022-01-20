@@ -1,0 +1,50 @@
+/*              
+
+                                                                _____Normalizar estilos del navegador_____
+
+
+
+    (En esta misma carpeta hay otras 2 subcarpetas. Una tiene una pagina web sin normalizar y la en la otra esta normalizada. Para poder apreciar los cambios hay 
+    que abrir dichos archivos en distintos navegadores. ¿Que es normalizar? Este apunte lo explica) 
+
+
+
+
+
+ - Cada navegador tiene sus propios estilos de CSS por defecto cuando abren un archivo .css (el color negro de las letras, su tamaño, la distancia entre el borde 
+   del navegador y las palabras, etc). Por ese motivo, siempre que que habrimos una página web recien creada por nosotros en distintos en distintos navegadores, esta 
+   siempre se va a ver dirtintas debido a cambios muy sutiles que hay de navegador en navegador
+   
+
+ - ¿Como evito estos pequeños cambios y hago que mi página web se vea  exactamente igual en todos los navegadores? 
+   Eso se consigue "normalizando los estilos del navegador"
+   
+
+ - ¿Como normalizo los estilos del navegador?
+   Hay diferentes maneras, pero actualmente la forma más efectiva es mediante un archivo .css que sobreescriba los estilos originales para que los estilos en todos
+   los navegadores sea identico. Hasta la fecha, pagina más efectiva para descargar dicho archivo es:
+
+   https://necolas.github.io/normalize.css/
+
+   De aqui voy a descargar un archivo .css llamado "normalice.css"
+   
+   Recordar que en dicha página web actualizan constantemente este archivo. Es recomendable visitarla y ver si hay alguna acrualizacion ya que podria estar 
+   trabajando con un archivo que guarse hace tiempo y ahora esta obsoleto
+
+
+ - ¿Como funciona este archivo?
+   Funciona como cuarquier archivo .css. Simplemente tengo que usar la etiqueta <link> desde el archivo .html y conectarla al archivo normalize.css
+
+   Es muy importante poner primero este archivo normalize.css en el .html y luego por debajo nuestro propio archivo de estilos .css 
+
+   Esto se debe a que por logica los estilos estilos que vienen por defecto en el navegador seran sobreescritos por el archivo normalize.css y luego este mismo 
+   archivo sera sobreescrito por nuestro propio archivo de estilos .css. 
+   De lo contrario el los estilos del archivo normalize sobreescribiran a nuestros estilos 
+
+   
+ - A modo de ejemplo tengo descargado el archivo .normalize.css y lo conece al archivo "9-normalizar-estilos-navegador.html" y también cree dos subcarpetas. Una tiene
+   una pagina web sin normalizar y la en la otra esta normalizada. Para poder apreciar los cambios hay que abrir dichos archivos en distintos navegadores.
+
+
+
+*/

@@ -1,0 +1,58 @@
+<!-- 
+
+
+ - En este apunte veremos algunos de los atributos globales más utilizados y que estan disponibles para la mayoria de 
+   etiquetas en HTML 
+
+
+    class=""        Este atributo se usa para dar estilo a travéz de CSS. Asocia la etiqueta que contenga la clase con codigo CSS. El valor que que se le agrega al atributo es una palabra inventada por mí, de esta forma un determinado codigo CSS se asocia con unas determinadas etiquetas con atributos class y solamente le produce los cambios a ellas
+    
+    id=""           Es un identificador único que se utiliza para seleccionar el elemento de JavaScript y para hacer navegacion desde las anclas (Tema que se vera en el proximo apunte). Básicamente, asocia una etiqueta HTML con Javascript. Un identificador no se puee repetir y debe ser único          
+
+    title=""        Es un atributo que ayuda a la accesibilidad mostrando una descripción del elemento al que pertenece. Aparece el mensaje en un tooltip. Osea, si pongo el mouse sobre un texto con este atributo, aparecera un cartelito con una descripcion que yo haya puesto
+
+    data-*=""       Es un atributo que nos permite guardar algún valor en la etiqueta HTML. * Es una palabra que nosotros queramos Ej: data-nikin  // En HTML no tiene mucho valor pero en más adelante en JavaScript es mucho más importante 
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atributos globales</title>
+
+        <style>                     /* Esta etiqueta sirve para maquetar en CSS dentro de un archivo .html. Incluso debo poner los comentarios en CSS */
+            .parrafo-class{         /* La esplicacion del por que de esto esta mas abajo en la etiqueta class. No se dara más explicacion porque esto entraria en el tema de CSS  */
+                color:red
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <p class="parrafo-class">class (clase, conecta HTML con CSS)</p>                    <!-- Lo que hice con el atributo class fue agregarle una palabra creada por mí. Esta palabra "parrafo-1" asocia esta etiqueta con codigo CSS. De esta manera el codigo CSS sabe en que etiquetas hacer los cambios -->
+
+        <p id="parrafo-id">id (identificador, conecta HTML con JavaScrip)</p>               <!-- A esta etiqueta le agregue un identificador con una palabra inventada por mí. Ahora puedo asociar estaestiqueta con JavaScript -->
+            <script>                                                                        /* Esta etiqueta sirve para programar en JavaScript dentro de un archivo .html. Incluso debo poner los comentarios en JavaScript */                  
+                const p = document.getElementById("parrafo-id");                            /* Básicamente guarde toda la etiqueta <p> entera junto con su contenido dentro de una una constante "p" creada por mi en JavaScript  // De momento no importante saber esto, es a modo de ejemplo para saber como funciona el atributo id="" */
+                console.log(p.textContent);                                                 /* Básicamente mediante JavaScrip le estoy diciendo al programa que me muestre en la consola el contenido de la etiqueta <p>. Toda esa etiqueta entera ya la guarde en una constante "p". Como solamente quiero que me muestre el contenido, uso el metodo .textContent  // De momento no importante saber esto, es a modo de ejemplo para saber como funciona el atributo id=""   */
+            </script>
+
+        <p title= "Este es un ejemplo del atributo title">title (título con tooltip)</p>    
+
+        <p id="parrafo-data" data-ejemplo="Datos de ejemplo">data-* (datos pasados en las etiquetas)</p>        <!-- Esta sección es para el atributo data-*, pero tube que poner un atributo id="" para poder trabajar con esta etiqueta -->
+            <script>
+                const datin = document.getElementById("parrafo-data")
+                console.log(datin.dataset.ejemplo);                                                             /* El procedimiento es igual a la otra línea de codigo. Con el extra de que tengo que agregar el .ejemplo que proviene del atributo ya creado por mí, data-ejemplo""    // Para poder apreciar la informacion extra que yo guarde en la etiqueta, tengo que entrar  ala consola del navegador    */                                               
+            </script>
+
+
+    </body>
+
+</html>

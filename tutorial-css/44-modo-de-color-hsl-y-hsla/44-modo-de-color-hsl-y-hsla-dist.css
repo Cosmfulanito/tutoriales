@@ -1,0 +1,168 @@
+/* 
+
+															_____Modo de color: HSL y HSLA_____
+
+
+
+	HSL 			- "Hue Saturation lightness", trado  como "Tono Saturación y luminancia. Es el modo de color más intuitivo para los humanos.   duci
+	
+					- El primer valor "Hue" (tono), es el ángulo en el "circulo cromático", donde 0 y 360 sera el color rojo. Hay ciertos valores que nos pueden 
+					  servir como referencia para relaconar mejor los colores con sus angulors
+							0		=		Rojo
+							60		=		Amarillo
+							120 	=		Verde
+							240		=		Azul
+							300		=		Magenta
+
+					- El segundo valor es "Saturation" (saturación o intensidad) del color
+							0%		=		Gris
+							100%	= 		Color puro
+	
+					- El tercer valor es la "Lightness", luminancia del color
+							0%		=		Negro, nada de luz
+							50%		=		Color puro
+							100%	=		Banco, luz máxima
+							
+					- Es importante que aunque el valor de saturación o luminancia sea 0, hay que poner 0%. Si no, no funcionará  
+
+					- Su sintaxis es la siguiente es: 
+							hsla(h, s, l)			Ej: hsl(16, 100%, 66%)
+							
+		
+
+	HSLA			- HSLA es el modo que tiene HSL para admitir transparencia y su sintaxis es la misma que la del RGBA. Donde A significa "Alpha" y corresponde al 
+				      valor de la transparencia. Dicho valor va entre 0 y 1, donde "0" es la transperencia total (invisible) y "1" es basicamente sin transparencia
+					  Tenemos dos sintaxis disponibles:
+					  		hsla(h, s, l, a)		Ej: hsla(16, 100%, 66%, 0.5)
+							hsl(h s l / a)  		Ej: hsl(16 100% 66% / 0.5)
+
+
+	
+							
+
+	  
+*/
+
+
+
+*{
+	box-sizing: border-box;			/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+
+
+/* Todas estas propiedades son esteticas */
+body{
+	font-family: sans-serif;
+}
+
+.caja{
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	border: 5px solid #555;
+	text-align: center;
+	border-radius: 20px;
+	padding-top: 10px;
+}
+
+
+
+/* Ejemplo del uso del modo de color HSL: */
+.caja-1{
+	background-color: red;
+}
+
+.caja-2{
+	background-color: rgb(255, 0, 0);
+}
+
+.caja-3{
+	background-color: hsl(0, 100%, 50%);
+}
+
+
+
+
+/* Distintos colores en HSL: */
+.caja-4{
+	background-color: hsl(0, 100%, 50%);
+}
+
+.caja-5{
+	background-color: hsl(120, 100%, 50%);
+}
+
+.caja-6{
+	background-color: hsl(240, 100%, 50%);
+}
+
+
+
+
+/* Saturation en HSL: (Escala de grises de un color) */
+.caja-7{
+	background-color: hsl(0, 0%, 50%);
+}
+
+.caja-8{
+	background-color: hsl(0, 50%, 50%);
+}
+
+.caja-9{
+	background-color: hsl(0, 100%, 50%);
+}
+
+
+
+
+/* Lightness en HSL: (Luminacia de un color) */
+.caja-10{
+	color: white;
+	background-color: hsl(0, 100%, 4%);
+}
+
+.caja-11{
+	background-color: hsl(0, 100%, 50%);
+}
+
+.caja-12{
+	background-color: hsl(0, 100%, 96%);
+}
+
+
+
+
+
+/* Transparencia en HSL: */
+.caja-padre{
+	height: 500px;
+	background-color: mediumorchid;
+}
+
+.caja-hija-sin-transparencia{
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	background-color: hsl(16, 100%, 66%);
+}
+.caja-hija-con-transparencia-1{
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	background-color: hsla(16, 100%, 66%, 0.5);
+}
+.caja-hija-con-transparencia-2{
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	background-color: hsl(16 100% 66% / 0.5);
+}

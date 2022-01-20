@@ -1,0 +1,50 @@
+/*
+
+                                                                _____Propiedades: Width y Height_____
+
+
+    width/height:           Estas propiedades controlan el ancho y el largo de una caja respectivamente 
+
+
+ - Tener en cuenta de que estas dos propiedades funcinan de forma diferente si la caja se trata de un elemento de "bloque" o de "linea".
+   Esto se debe a que en un elemento de "bloque" las propiedades Width/Height van a funcionar normalmente, pero en un elemento de "linea" no tienen ningun efecto
+
+ - Sabieno lo anterior, lo unico que controla el ancho y el largo de un elemento de linea es su contenido. Por ejemplo: mientras más larto sea el texto en un elemento
+   de linea, más larga o ancha se su caja
+
+
+*/
+
+
+
+
+/* Elemento de "Bloque" original:  */   
+.bloque-1{                                                          /* Uso este elemento de bloque sin alterar a modo de comparación */
+    background-color: steelblue;        
+
+}
+
+/* Elemento de "Bloque" con el ancho y el largo alterado  */
+.bloque-2{
+    background-color: lightblue;
+    width: 400px;                                                   /* Ahora el ancho de esta caja es de 400 pixeles. En su forma original llegaba hasta el estremo derecho de la pantalla de mi computadora */
+    height: 200px;                                                  /* Ahora el largo de esta caja es de 200 pixeles. En su forma original tenia el mismo largo que el texto que tenia dentro */
+}
+
+
+
+
+
+/* Elemento de "Linea" original:  */
+.linea-1{
+    background-color: tomato;
+    color: inherit;                                                 /* Esto es para que herede el color de texto negro original propio de del <body>. Es sumamente estetico */
+}
+
+/* Elemento de "Linea" con el ancho y el largo alterado */
+.linea-2{
+    background-color: lightsalmon;
+    color: inherit;
+    width: 400px;                                                   /* Es totalmente inutil tratar de cambiar el ancho o el largo de un elemento de linea, este nunca se vera alterado. En este caso, el ancho va a ser más grande que el del original de referencia, pero esto se debe a que tiene más texto que el original */
+    height: 200px;
+}

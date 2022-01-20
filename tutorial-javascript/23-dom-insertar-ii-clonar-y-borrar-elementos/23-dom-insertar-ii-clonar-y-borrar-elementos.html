@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DOM - Insertar, clonar y borrar elementos</title>
+		<style>
+			.color{
+				height: 70px;
+				width: 150px;
+				background-color: lightcoral;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> DOM - Insertar II, clonar y borrar elementos</h1>																										<br><br>
+
+		<!-- _____Insertar II:_____ -->
+		<h2>_____Insertar II:_____</h2>
+
+		<!-- Lista de referencia -->
+		<h3>Lista de referencia</h3>
+		<ul>
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+
+		<!-- Metodo 1: -->
+		<h3>Metodo 1:</h3>
+		<ul id="lista1">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+
+		<!-- Metodo 2: -->
+		<h3>Metodo 2:</h3>
+
+		<!-- .insertAdjacentElement -->
+		<h4>.insertAdjacentElement</h4>
+		<ul id="lista2">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+		<!-- .insertAdjacentHTML -->
+		<h4>.insertAdjacentHTML</h4>
+		<ul id="lista3">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+		<!-- .insertAdjacentText -->
+		<h4>.insertAdjacentText</h4>
+		<ul id="lista4">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>																																						
+
+
+		<!-- Reemplazar elementos: -->
+		<h4>Reemplazar elementos:</h4>
+		<ul id="lista5">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>																																						<br><br>
+		
+
+
+
+		<!-- _____DOM manipulation convenience methods - JQuery Like_____ -->
+		<h2>_____DOM manipulation convenience methods - JQuery Like_____</h2>
+
+		<!-- Insertar elementos: -->
+		<h3>Insertar elementos:</h3>
+		<ul id="lista6">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>	
+		
+		<!-- Reemplazar elementos: -->
+		<h3>Reemplazar elementos:</h3>
+		<ul id="lista7">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+
+
+
+		<!-- _____Clonar y eliminar elementos_____ -->
+		<h2> _____Clonar y eliminar elementos_____</h2>
+
+		<!-- Clonar elementos INCLUYENDO HIJOS: -->
+		<h3>Clonar elementos INCLUYENDO HIJOS:</h3>
+		<ul id="lista8" class="color">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+		<!-- Clonar elemento SIN INCLUIR HIJOS: -->
+		<h3>Clonar elemento SIN INCLUIR HIJOS:</h3>
+		<ul id="lista9" class="color">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+
+		<!-- Eliminar el nodo: -->
+		<h3>Eliminar el nodo:</h3>
+		<p>Aunque no lo parezca aquí había una lista, pero fue eliminada con JavaScript. Ir al archivo .html para poder verificar su existencia</p>
+		<ul id="lista10">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+
+
+		<!-- Eliminar un nodo hijo: -->
+		<h3>Eliminar un nodo hijo:</h3>
+		<ul id="lista11">
+			<li>Hijo de referencia 1</li>
+			<li>Hijo de referencia 2</li>			
+			<li>Hijo de referencia 3</li>			
+		</ul>
+																																									<br><br><br><br>
+
+
+
+
+		<script src="23-dom-insertar-ii-clonar-y-borrar-elementos.js"></script>
+	</body>
+</html>

@@ -1,0 +1,737 @@
+<!-- Así se hacen los comentarios-->
+<!--
+
+  
+
+
+                                                          _____Páginas web recomendadas____
+
+
+    https://www.w3.org/
+    W3C es una página que da informacion acerca de todas las actualizaciones que rodean el mundo del desarrolo web. Como HTML, CSS, JavaScrip, etc 
+
+    https://developer.mozilla.org/es/ 
+    MDN es una wiki que brinda informacion/trutoriales de forma muy amena acerca de los distintos metodos y plabras clables de diferentes lenguajes como HTML,CSS, JavaScript, etc 
+
+    https://validator.w3.org/#validate_by_input
+    En esta pagína podemos chequear nuestro archivo .html y ver si tiene alguna falla semantica. Ademas de marcar errores, te indica si hay que quitar o agregar etiquetas
+
+    https://es.vectormagic.com/
+    Página para vectorizar imagenes
+
+    https://imagen.online-convert.com/es/convertir-a-webp
+    Página para convertir imagenes .jpg a .webp
+
+    https://whatismyviewport.com/
+    Me dice la cantidad de pixeles que tiene mi pantalla. No es la cantidad totales de pixeles, sino los pixeles que visualizan una página web desde un navegador (que obviamente son menos porque parate de la pantalla es cortada por las barras del navegador). Sirve de ayuda para crear una página web "responsive"
+
+    https://www.favicon-generator.org/
+    Generador de favicones (el icono que esta arriba de todo en la pestaña)
+
+    https://fontawesome.com/
+    Página para consegir iconos vectoriales. Recordar que para usar estos iconos debo estar logeado en la página, debido que primero tengo que poner en el <head> una etiqueta que ellos me dan que vendria a ser el link su biblioteca de iconos y luego recien ahí puedo poner el icono en el <body>. Todo estos pasos estan explicados en su página web y en el tutorial 48-fontawesome-pagína-web-para-obtener-iconos 
+
+    https://ogp.me/
+    Esta pagína explica que es y como utilizar el protocolo "Open Graph". Para entrar en contexto, cuando uno comparte un publicación ya sea en whatsaap, twiter, instagram, facebook, etc. Esta publicación va a estar representada mediante una cartel donde adrentro va a haber un titulo, imagen, URL y descripción de dicha publicación/pagína. El "The Open Graph protocol" es un protocolo (valga la redundancia) creado por Facebook que nos dice como va a estar estructurado dicho cartel  // En esta misma pagína esta la MetaData (etiqutas estructuradas) de este protocolo, es importante subirlo a nuestra web y editarlo a nuestro gusto ya que de esa manera nosotros mismos podemos eleguir que se va a ver en esos carteles cuando se comparta nuestra pagína web, de lo contrario esto lo desidira el The Open Graph protocol. Y si por esa casualidad tampoco encuentra el protocolo propio, simplemente pone el link  de la forma más desabrida posible
+ 
+    https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
+    Es lo mismo que el link de arriba "The Open Graph protocol", pero en este caso es exclusivo para Twiter. Ya que Twiter tiene sus propias formas de compartir publicaciones
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                    _____Vocabulario:_____
+
+
+ - IP                     Es el identiicador numerico de una pagína web. Es único y representa la dirección donde está el ordenador que contiene la pagína web.   Ej: IP de google = 216.58.210.162
+ 
+ - Dominio web/URL        Uniform Resources Location, traducido como "Ubicación de recursos uniformes". Es el nombre asociado a la IP que utilizamos para solicitar recursos, en  nuestro caso un sitio web. En resumen, el URL existe porque es mucho mas facil para una persona recordar una palabra (URL) que un numero (IP).    Ej: https://www.google.com = 216.58.210.162
+ 
+ - DNS                    Domain Name System, traducido como "sistema de nombres de dominio". Es un servidor cuya principal función es traducir el nombre del dominio a su indentificador único. Osea, traduce de IP a URL y de URL a IP
+ 
+ - Sitio web              Conjunto de uno o varios recursos (inicio, servicio, contacto. Osea una página web) web alojados en el mismo dominio. Osea, un onjunto de págnas web.
+ 
+ - Servidor web           Es una computadora curo objetivo es servir recursos web
+
+ - Hostin                 Es el almacenamiento del servidor web. El disco duro donde el servidor guarda los recursos
+
+ - Peticion               Es la acción de pedir recursos a un servidor
+
+ - SEO                    Search engine optimization, traducido como: "optimización en motores de búsqueda". Es un conjunto de acciones orientadas a mejorar el posicionamiento de un sitio web en la lista de resultados de Google, Bing, u otros buscadores de internet. Basicamente, esto es lo que analiza una página web y dictamina si aparece arriba de todo en la primera página de google o en la numero 504, ahí en la loma del orto donde no la va a encontrar nadie
+ 
+ - WebCrawler             Traducido tambien como "araña web",  es una programa informático/bot que trabaja para el SEO inspeccionando las páginas del World Wide Web de forma metódica y automatizada.1​ Uno de los usos más frecuentes que se les da consiste en crear una copia de todas las páginas web visitadas para su procesado posterior por un motor de búsqueda que indexa las páginas proporcionando un sistema de búsquedas rápido
+ 
+ - Viewport               Espacio disponible para dibujar 
+
+ - Device Pixel Ratio     Es el zoom que se le da a una página web. Un zoom del 100% equivale a 1 DPR (Device Pixel Ratio) de una unidad. Mientras que un zoom del 200% equivale a 2 DPR. Es importante saber esto porque los celulares le hacen zoom a la página para adaptarla a sus pantallas. Un ejemplo de esto es el Iphone cuya pantalla tiene 3 DPR. Esto es algo a tener en cuenta para poder hacer páginas "responsives", ya que cada panatalla tendra un zoon diferente que moveran de lugar a las imagenes que estan en la página
+
+ - CDN                    Content delivery network, traducido como "red de distribución de contenidos". Es un sistema de varios servidores compartiendo copias del archivo original. Basicamente la información no debe estar en un solo servidor, lo ideal es que haya copias en barios servidores en todo el mundo. De esta manera el usuario puede acceder a la información del servidor más cercano y de esta manera los tiempos de carga son muchos más rapido. Este sistema también sirve para cuando un servidor esta caido o saturado, ya que el usuario puede ser redireccionado a otro servidor 
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+                                                            
+
+                                                            _____Reglas generales_____
+
+
+ - Todos los archivos incluidas las carpetas se deben escribir en minusculas, sin espacios y evitando letras que esten fuera del alfabeto ingles como la "ñ". El guion y el guion bajo estan permitidos. Esto se debe a que las mayusculas, guiones y letras que estan fuera del ingles pueden probocar errores.   Ej de archivo bien escrito: pagina_web.html      La forma en la que yo creo los archivos de apuntes esta mal hecho. No se debe hacer
+ 
+ - El archivo principal en el que se trabaja, por arbitrariedad lleva el nombre de: index.html
+ 
+ - El contenido enbebido (imagenes, videos, audios, etc) va dentro d una carpeta llamada "assets". Dentro de dicha carpeta habra subcarpetas donde se separaran los contenido, como la carpeta favicon (iconos), images, video, audio, etc
+
+ 
+
+
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                              _____Atajos de teclado_____
+ 
+
+    Ctrl + s                    Guarda automaticamente los cambios hechos en los archivos
+    
+    Ctrl + b                    Abre y cierra el explorador de carpetas y archivos
+
+    Ctrl + }                    Crea comentarios automaticamente
+        
+    Ctrl + a                    Copia por completo todo el contenido del archivo 
+
+    Ctrl + h                    Es una herramienta que nos permite "buscar" y "reemplazar". Gracias a esta herramienta no tenemos que copiar y pegar muchas veces en varias lineas de codigo. Se hace todo de una
+
+    Shift + Alt + f             Formatea el codigo. Sumamente recomendado antes de subirlo a GitHub. ¿Que significa esto? Basicamente me acomoda las etiquetas para que esten más prolijas. Osea, las acomoda con su correspondiente tabulación una adentro de otra  
+
+    Ctrl + Shift + p            Despliega un buscador de todas las configuraciones de Visual Studio Code. Luego desde desde ese buscador puedo cambiar la configuración que desee
+
+    Alt + flecha                Muevo la linia de codigo de arriba hacia abajo
+
+    Alt + Shift + flecha        Copio y pego la linea de codido de donde estoy arriba o abajo
+
+    Ctrl + Borrar               Borro un trozo/palabra completa de la linea de codigo
+
+    Ctrol + INTRO               Voy hacia abajo sin importar que el cursor este en el medio de una palabra
+
+
+                                                                
+    "!" , INTRO                 Escribir el signo se esclamacion ! y luego precionar la tecla ENTER, nos hasra aparecer la "estructura base" de un archivo .html. Basicamente esto hace que se escriban automaticamente la mayoria de las etiquetas clave de un archivo .html
+ 
+    "lorem" , INTRO             Genera un texto aleatorio para rellenar. Basicamente sirrve para ponbe un texto generico de prueba
+
+    "&" , Ctrl + spacebar       Me permite ver todos los Ampersand Characters que existen
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                    _____Ampersand Character: Entidades de caracter_____
+
+
+ - Hay simbolos que no pueden escribirse en un texto para luego ser visualizados por el navegador. Un ejemplo de esos caracteres son < y >, ya que el navegador 
+    y el IDE los confunde con el principio y fin de etiquetas. Para solucionar estos problemas existen las "Entidades de caracteres". Son convinaciones de letras
+    que el navegador representa como el simbolo/caracter deseado
+    
+ - Atajo de teclado:        &, enter, Ctrl + spacebar       Con este atajo de teclado de visual studio puedo ver todos lo Ampersand que existen
+
+
+    &lt;        <       Less than: Menor que
+    &gt;        >       Greater than: Mayor que   
+
+    &copy;      ©       Copyright  
+
+    &quot;      "   	Double quote
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+                                                        _____Elementos de Bloque y de Línea_____ 
+
+
+ - Las  etiquecas no son solamente "texto", son en realidad una caja/bloque que dentro contiene texto. Estas cajas ademas de contener texto también contienen
+   otras cajas/etiquetas. Estas cajas no se puden ver a priori porque son de color blancas al igual que el fondo, y por la falta de constraste se crea la 
+   ilución de que es solamente es texto. Se pueden distinguir cajas unas de otras si se las pintan de diferentes colores
+
+
+ - Tipos de etiqueta/caja:
+
+    Elemento de Bloque:     Es una caja que ocupa desde el extremo izquierdo de la pantalla hasta el derecho, y dentro lleva el texto. Como ocupa todo el ancho
+                            de la pantalla, por obvias razones no es posible poner un Bloque al lado de otro Bloque, solamente uno abajo del otro
+                            Ej: <body>, <h1>, <footer>, <section>, <p>, etc
+                            
+    Elemento de Línea:      Es una caja que ocupa solamente el ancho del texto, el resto de la pantalla es espacio vacio que puede ser ocupado por otro elemento
+                            de Línea. Por ende, a difrerencia de un Bloque, un elemento de Línea si puede estar al lado de otro elemento de Línea.
+                            Ej: <span>
+                                
+
+ - Hay una forma para poder "darle color" a las etiquetas y poder ver los elementos de Bloque y de Línea. Para ello vamos al navegador, clic derecho, "inspeccionar
+   elementos", luego clic en los tres circulitos de opciones, luego hacer clic en en la opcion que separa el inspector de elemtos de la página, por ultimo hacer
+   clic en un dibujo de un mouse que esta a la izquierda de todo. Ahora al pasar el mouse sobre nuestra página web, resaltara en color los diferentes Bloques Y 
+   Línes de nuestras nuestras etiquetas
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                            _____Rutas absolutas y relativas_____
+
+
+ _____Rutas absolutas:_____
+  
+   (Cuando creamos un link que nos redirecciona a una pagína de internet ajena a nosotros  Ej: https://www.google.com/)
+
+ - Tienen un protocolo, http o https (s = certificado de "seguridad") y son unicas en la red
+ 
+ - Se suelen utilizar para rutas externas ya que son la gran mayoria de los casos
+
+
+
+
+ _____Rutas relativas:_____
+   (Cuando creamos un link que nos redirecciona a una pagína creada por nosotros. En ese caso debemos poner la ruta a ese otro archivo que tenemos guardado, 
+   ambos archivos (y por ende, ambas páginas) deben estar en la misma carpeta)
+
+ - Pueden ser relativas al punto donde nos encontramos o relativas a la raíz del proyecto
+
+ - No usan protocolo
+
+ - Si el recurso se encuentra al mismo nivel (en la misma carpeta) pondremos unicamente el nombre del archivo
+
+ - Si necesitamos salir de la carpeta actual usaremos ../ y se  pone uno por cada nivel (carpeta) de la que queremos salir
+
+ - Hay de dos tipos:
+        - Los dos archivos provienen de la misma carpeta
+        - Los dos archivos provienen de diferentes carpetas pero aun así comparten una misma carpeta raíz (carpeta abuela (?))
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                            _____¿Como ver nuestra página web desde nuestro propio celular?_____
+
+
+    - Paso 1:   Abrir la consola con CMD e ingresar la palabra: ipconfig
+                Ahí veremos nuestra IP, la copiamos en el buscador de nuestro celular.
+
+    - Paso 2:   Desde nuestra PC abrimos nuestro archivo con la extención de Visual Studio Code: Live server
+                En el buscador veremos la direccion de nuestra página. Solamente tenemos que copiar en nuestro celular al lado de la IP el puerto. 
+                El puerto son dos puntos junto con un numero. En este caso :5500
+
+    - Paso 3:   Luego copiamos el texto que sigue despues del puerto. Osea, la barra "/", carpetas y el archivo (todo esta en la url del navegador de la PC junto
+                con el puerto).
+
+    - Fin:      Una vez copiado todo eso en el navegador del celular, simplemete preciono enter y podre ver mi página web desde mi propio celular
+
+    - Tip:      Puede ser que quiera ver todos los archivos que tenga en esa carpeta. Para hacer eso, simplemente tengo que omitir copiar el nombre del archi y
+                solamente la carpeta raiz a la que quiera acceder. 
+                Tener en cuenta que no debo tener un archivo index.html. Ya que el navegador entrara por defecto a el
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                    _____Contenido embebido_____
+
+
+ - Es todo el contenido que no son parte de nuestro codigo (no se crea mediante etiquetas) pero tiene que ser parte de nuestra página web. 
+   Entre ellos estan imagenes, videos, gif, audio, etc.
+ 
+ - Estos archivos son los que más peso (tamaño) le agregan a nuestro sitio web. Ya que si le sacamos todas las imagenees, nuestra página podria pesar muchimo 
+   menos de la mitad. 
+   Esto ocaciona que la página tarde muchisimo en abrir y que el usuario se vaya 
+
+ - Los tipos más conocidos son:
+    - Imágenes
+    - Videos
+    - Audio
+    - Iframe (Estos no son contenido enbebido como tal, pero como traemos desde afuera como los demas, entra en este apunte)
+
+
+
+
+_____Imagenes:_____
+
+- Los formatos de imágenes para web se pueden clasificar en dos tipos:
+
+    - Vectoriales:
+        - .svg           (recomendado siempre que se pueda)
+    
+    - Mapa de bits:
+        - .jpg
+        - .png 8 y 24    (si se necesita transparencia)
+        - .gif           (si se necesita una imagen animada)
+        - .webp          (este es un formato fue creado por google. Basicamente se puede convertir cualquiera de los 3 formatos anteriores en .webp ya que pesa menos. Este formato hesta hecho para ser visto en navegador)
+
+
+- Idealmente recomienda que todas las imagenes esten en formato .svg siempre que se pueda, caso contrario en .webp
+
+- Hay navegadores muy antiguos que no soportan webp. En esos casos hay que utilizar un "fold back". Basicamente le decimos al navegador que use el archivo .webp, en
+  caso de no poder soportarlo, que utilice la copia que esta en formato .jpg  
+  
+  
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                    _____Iframes_____
+
+
+ - Basicamente un "Iframes" es agarrarun un trozo de una web ajena, y colocarlo en la nuestra. Por ejemplo: Colococar un video de youtube con todas sus interfaces 
+   y opciones propias.  
+
+   
+ - ¿Como obtener el Iframe de un página ajena? 
+
+        Depende de cada página, en el caso de YouTube hay que hacer clic en  "compartir" => luego en "inportar" => y ahí mismo Youtube te muestar una etiqueta 
+        <ifreme> rellena de ontenido. Simplemente la copiamos
+
+
+ - ¿Como colocamos ese Iframe en nuestra web? 
+
+        Simplemente agarramos esa etiqueta que acabamos de copiar y la pegamos en el <body> de nuestra página web
+
+
+ - Tip: No hay que abusar de los Iframes porque pesan mucho y van a realentizar mucho la carga de nuestro sitio web
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+                                                                   _____Icono Favicon_____
+
+
+ - Un Favicon es simplement el icono que aparece en la pestaña de nuestra página web. Por ejemplo, el Favicon de YouTube es un cuadrado rojo con un triangulo
+   blanco que apunta a la derecha en el centro 
+
+ - Lo recomendado es poner varios favicones, ya que al poner uno solo posiblemente este solamente funcione en un solo navegador pero no en otros. Tambien es 
+   posible que solo funcionen en PC pero no en movil. Por eso es importante poner unos cuantos para abarcar la mayor cantidad de navegadores posibles
+
+ - Estos favicones se consigen en una página que los genere
+
+ - Pagina para generar favicones: https://www.favicon-generator.org/
+ 
+ - Como agregarlos a mi página web:
+        Paso 1: Entrar a esta página y descargar los favicones a la carpeta "assets"
+        Paso 2: La misma página nos va a brindar etiquetas <links> con todo el contenido interno ya estructurado para facilitarnos el trabajo. Solamente tendremos 
+                que retocar la ruta para llegar al icono, debido a que esta página no sabe en que carpeta guardamos los archivos 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                    _____Etiquetas_____
+
+
+_____Estructura base:_____
+
+    <!DOCTYPE html>                 Es la primera etiqueta que se pone. Esta etiqueta define el estandar de documento que estamos siguiendo. En este caso, el estandar HTML5 
+
+    <html lang="es">                Esta es la etiqueta <html> </html> dentro de ella es donde va a estar toda informacion/etiquetas de nuestro archivo .html     Tambien nos especifica que el lenguaje de nuestra página web es el español (es). Por defecto viene en ingles (en) 
+    </html>
+
+    <head>                          Representa una coleccion de datos o metadatos del documento. Estos son datos que le vamos a pasar al navegador para que interprete nuestra pagína web. No es informacion vicible para nosotros pero le es util al navegador
+    </head>
+
+    <body>                          Representa todo el contenido de nuestra web. Este contenido si es vicible para el usuario
+    </body>
+
+
+
+_____<head> </head>_____
+
+    <meta>                          Son etiquetas que sirven para brindarle al navegador información a cerca de nuestra página web. Esta etiqueta va dentro de la etiqueta  Normalmente el usuario no va a poder visualizar dicha información, pero esto es sumamente importante para el navegador. Utiliza diversos atributos para distintas cosas. Para entrar más en detalle, ir al apunte 46-etiquetas-meta.html 
+
+    <title> </title>                Esta etiqueta le pone titulo a la pestaña de la página web. 
+
+
+
+
+
+    <link> </link>                  Permite unir un archivo .html a uno .css.   Esta es la forma más recomendada y la que vamos a usar el 99% de las ocaciones. Esto se debe a que este archivo de CSS le da estilo a muchos archivos .html que esten dentro mi sitio web. Gracias esto, todas las páginas de mi sitio web van a tener el mismo estilo y estectica visual 
+                                        rel="stylesheet"        Indica que tipo de relacion hay entre el archivo .html y el .css. En este caso "stylesheet" me dice que el CSS es una hoja de estilos
+                                            href=""                 Entre estas comillas va la ruta hacia el archivo .css 
+
+
+    <style> </tyle>                 Permite escribir codigo CSS dentro de un archivo .html. Obviamente dicho codigo CSS tiene que estar dentro de esta etiqueta. Incluso los comentarios se tienen que hacer en CSS /* */   No se recomienda mucho usar este metodo exepto en casos muy especiales. Esto se debe a que este cambio de estilo solo va a ser visible en una sola página de mi sitio web. Si quisiera que el resto de las páginas tuviesen el mismo estilo, tendria que copiar y pegar el mismo codigo en todas las páginas (hacer esto es una pajaaaaa o hasta incluso imposible dependiendo de la cantidad de páginas). Por eso es mucho mejor usar el <link> como metodo para ponerle CSS a un archivo .html                                
+
+
+
+
+_____<body> </body>_____
+
+    <header>                        Sinifica cabecera. Aquí iria: menu de navegacion, logo, redes sociales, etc
+    </header>
+
+    <main>                          Significa "principal". Como su nombre lo indica, aquí iria el contenido principal de la página
+    </main>
+
+    <footer>                        Aquí va el pie de página
+    </footer>
+
+    <nav>                           Representa una seccion de la página cuyo propósito es proporcionar enlaces de navegación, sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices
+    </nav>
+
+    
+
+
+
+    <section>                       Es un contenedor genérico que agrupa contenido que esta relacionado. Cuando creamos bloques cuyo contenido es parte de un bloque total usaremos section. En su interior se pueden poner varios <article> y viceversa
+    </section>
+
+    <article>                       Es un contenedor que representa contenido independiente, es decir, podemos leer ese fragmento en cualquier otro sitio y tendria sentido por sí mismo. En su interior se pueden poner varios <section> y viceversa
+    </article>
+
+    <aside>                         Se utiliza para reperentar contenidos relacionado pero que no forma parte del contenido principal. Ej: "Haz clic aquí para ver más videos en canal de YouTube". Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados. El <aside> puede estar dentro del main o fuera del <main>, el validador no ve problemas al respecto 
+    </aside>
+
+
+
+
+    
+    <h1> </h1>                      Se utiliza <h> para ecribir títulos. Estos titulos estan divididos en distintas jerarquías. Desde <h1> que es el mas importante y se utiliza en el titulo principal hasta <h6>, estos ultimos se utilizan en titulos secundarios. Visualmente se diferencian por tamaño, donde <h1> es el más grande y <h6> el más pequeño. No se puede poner un numero pequeño si antes de forma jerarquica no tengo un numero mas grande
+
+    <p> </p>                        "p" de "Parrafo". Queda más que obvio que es donde se escriben los parrafos
+
+    <styl>                         Esta etiqueta sirve para maquetar en CSS dentro dentro de un archivo .html. Incluso debo poner los comentarios en CSS
+    </styl> 
+
+    <script>                        Esta etiqueta sirve para programar en JavaScript dentro de un archivo .html. Incluso debo poner los comentarios en JavaScript
+    </script>
+
+    <a href=""> </a>                "a" de anchor (ancla). Sirve para colocar links. Dentro de esta etiqueta escribiremos un texto que estara asociado a un link que colocaremos dentro del atributo href="" (atributo que viene por defeto con la etiqueta <a>). En el navegador, al hacer clic en ese texto, se nos redirecionara al link agregado
+
+
+
+
+    <address>                       Se utiliza para aportar información de contacto para el article más cercano o para todo el body
+    </address>                                                
+
+    <blockquote>                    Se utiliza para marcar las citas a otros autores o ducumentos.  
+    </blockquote>                   cite=""     Se puede incluir este atributo para poner un enlace al documento original o fuente. Esto no lo ve el usuario pero es de ayuda para el navegador
+
+    <pre>                           Se utiliza para tener codigo preformateado que necesita ser reperesentado igual que como se escribio. Esto es muy util para poemas, letras de canciones o codigo que queremos representar visualmente. Ya que se representa visualmente exactamente igual a como lo escribimos, respentando los espacios y los saltos de linea 
+    </pre>              
+
+    <div>                           Se usa como división del documento, semánticamente no significa nada. Es un contenedor generico que se usa generalmente para dar estilos a través de CSS a cada uno de los elementos seleccionados con esta etiqueta y/o general clases. Lo más importante es que el contenido que este dentro de un <div> este relacionado.   Tambien se usa para usar algo denominado "delegación de eventos" en JavaScript
+    </div> 
+
+    <hr>                            Horizontal rule: Regla horizontal. Se utiliza para decirle al navegador que vamos a cambiar de tema. Visualmente vamos a ver una linea horizontal que divide la página pero esa no es su función. Si queremos poner lineas hay otros metodos. Esta etiqueta sirve solamente para brinarle informacion al navegador 
+
+    
+
+    <script> </script>              Permite unir HTML a un archivo JavaScript. Se recomienda que se escriba al al final del de la etiqueta <body>, justo a lo ultimo
+                                        src=""    Entre las comillas va la ruta que va hacia el archivo .js
+
+
+
+
+_____Etiquetas de Lista:_____
+
+    <ul>                            Unordered list: Como su nombre lo índica, se utiliza para ordenar los items de una lista sin un orden. Dichos items van a aparecer en el navegador ordenados con un punto adelante. Recordar que dentro de esta etique deben ir los items adentro de una etiqueta <li>
+    </ul>
+
+    <ol>                            Ordered list: Como su nombre lo índica, se utiliza para ordenar los items de una lista con un orden numérico. Dichos items van a apareceran en el navegador ordenados con su respectivo numero adelante. Recordar que dentro de esta etique deben ir los items adentro de una etiqueta <li>
+    </ol>
+
+    <li>                            List item: Se utiliza para colocar los items de una lista. Esta etiqueta debe ir dentro de las etiquetas <ul> y <ol>
+    </li>
+
+    <dl>                            Definition list: Se utiliza para hacer una lista de definición. Esto sería un item con su respectiva descripcion. Este tipo de lista debe tener adentro estas dos etiquetas, <dt> y <dd>
+    </dl>
+                                        <dt> </dt>      Definitión term: El termino/item que vamos a definir    
+                                        <dd> </dd>      Definition description: La descrpción del término/item
+
+
+
+
+_____Etiquetas de tabla:_____
+
+    <table>                         Etiqueta que encierra una tabla
+    </table>
+
+    <caption> </caption>            Le da un titulo a la tabla. Esta etiqueta se coloca dentro de la etiqueta <table>
+    
+    <thead>                         Table head: Sirve para establecer la cabecera de una tabla. Dentro debe ir una etiqueta <tr> y par crear celdas se utiliza una tiqueta <th>, que para la cabecera seria el equivalente a un <td> 
+    </thead>                        
+                                        <th> </th>      Table header: Sirve para crear las celdas de la cabecera de una tabla y va dentro de una etiqueta <tr> que a su vez esta dentro de la etiqueta <theader>. Es equivalente a la etiqueta <td>
+
+    <tbody>                         Sirve para establecer el cuerpo de el cuerpo de nuestra tabla, aqui iria el resto del contenido de nuestra tabla. Esta etiqueta es opcional a no ser que haya una etiqueta <thead>. En ese caso seria obligatorio usar un <tbody>. Esto se debe al estandar semantico de HTML
+    </tbody>
+
+    <tr>                            Table row: Estructura que construye una fila. Va dentro de la etiqueta <table>
+    </tr>
+
+    <td></td>                       Table data: Estructura que construye una celda de la fila creada con <tr>. Va dentro de la etiquta <tr>
+
+    <tfoot> </tfoot>                Sirve para establecer el pie de una tabla.Dentro podria las etiquetas <tr> y <td>
+
+    <colgroup>                      Grupo de columnas: Esta etiqueta nos permite seleccionar una columa en concreto. Dentro pondremos tantas etiquetas <col> como columnas tengamos. 
+    </colgroup>                         <col>       Cada etiqueta <col> equilvaldrá a una columna siguiendo el mismo orden que tiene la tabla
+                                            span=""     Si necesitamos que una etiqueta <col> agrupe a más de una columna, tenemos el atributo spam, que funciona exactamente igual que el atributo rowspan="" y colspan=""
+
+
+
+
+_____Etiquetas de Formularios:_____
+
+    <form>                          Es la etiqueta que engloba nuestro formulario
+    </form>                             method=""   Es el metodo con el cual el usuraio envia información al servidor. Hay de dos tipos: "GET" y "POST". De no usar este atributo el metodo por defecto es el "GET"   //    Buscar información en el apunte: 37-envio-GET-vs-POST.html
+
+    <label> </label>                Sirve para escribir el nombre del campo a rellenar. Basicamente, es un texto descriptivo
+                                        for=""      Se le indica un id proveniente de su <input> correspondiente. De esta manera ambas etiquetas estaran conectadas. Un ejemplo de este uso seria que haciendo clic en <lavel>, puedo escribir en el <input>
+
+    <input>                         Sirve para crear un campo que permitirá al usuario interactuar. Básicamente es un rectangulo para escribir informacion
+                                        date=""     Sirve para cambiar a los diferentes tipos de <input>, ir al apunte 25-tipos-de-input.html 
+                                            
+    <button>                        Crea un botón que permitira enviar un formulario 
+    </button>
+
+
+
+
+    <select>                        Es una etiqueta cuyo funcionamiento es similar a la convinaion de los inputs de "radio" y de "checkbox". Ya que el usuario podra selecionar una o varias opciones de una lista
+    </select>                           name=""     Es obligatorio. Me permite decirle al navegador que las etiquetas <option> pertenecen a la misma categoria, en este caso lenguaje      
+                                        
+    <option>                        Esta etiqueta son las opciones que estan dentro de la etiqueta <select>. Tambien puede estar dentro de la etiqueta <optgroup> o de <datalist> 
+    </option>                           value=""    Es importantisimo en las etiquetas <option>. Ya que le da un valor a esa opcion el cual luego sera mandado al servidor. El valor puede ser cualquier cosa, palabra/numero. Lo importante es que sea identificativo con el <option> correspondiente                
+
+    <optgroup>                      Esta etiqueta es optativa y va dentro de la etiqueta <select>. Son cambios visuales para para el usuario ya que divide los <option> en categorias. Detro de esta etique va la etiqueta <option>
+    </optgroup>                         label=""    Esta es la categoria visible para el usuario
+
+    <datalist>                      Es un elemento desplegable que brinda distintas opciones a elegir al igual <select>, pero con la diferencia de que <datalist> viene incluido con un buscador de palabras y a su vez a cada opcion se le puede poner una descripción si asi se desea (de ahí su nombre)                                                      
+
+              
+
+    
+    <fieldset>                      Se utiliza para agrupar elementos dentro de un formulario. Es de ayuda para en navegador y a su vez crea una cuadrado que rodea a todos los elementos que estan adentro. De esta manera el usuario sabe que elememtos de un formulario estan relacionados  
+    </fieldset>
+
+    <legend> </legend>              Le da un titulo a la etiqueta <fieldset>
+
+    <meter> </meter>                Representa un valor optimo dentro d un rango conocido. Osea, entre el 0 y 100 puede ser que el valor optimo sea 50, por ende este numero va a estar en verde mientras el resto en amarillo. Posiblemente nunca lo use pero no esta de más conocerlo
+                                        min=""          Valor minimo de la grafica
+                                        max=""          Valor maximo de la grafica
+                                        low=""          Rango minimo que esta permitido (un numero por debajo de este significa que esta todo mal)
+                                        high=""         Rango maximo que esta permitido (un numero por arriba de este significa que esta todo mal)
+                                        optimun=""      Valor optimo
+                                        value=""        Valor actual de la grafica
+    
+    <progress> </progress>          Es una grafica que representa el progreso de una tarea
+                                        max=""          Representa el valor maximo, se suele poner "100" = 100%.   
+                                        value=""        Valor actual de la página
+    
+    <textarea> </textarea>          Se utiliza para introducir texto ne formulario. Es un cuadrado en el cual se puede escribir, como la caja de comentarios de reddit
+                                        cols=""         Cantidad de columnas. Me dice que tan ancho es el cuadrado. Esto esta al pedo ya que es algo que se debe modificar en CSS
+                                        rows=""         Cantidad de filas. Me dice que tan alto es el cuadrado. Esto esta al pedo ya que es algo que se debe modificar en CSS
+
+    
+
+
+_____Etiquetas de Línea:_____
+
+    <em> </em>                      Emphasis. Le estamos diciendo al navegador que ciertas palabras dentro de un texto tienen más importancia que el resto del texto (supongo que esto serviria para la indexacion/posicinamiento que le da Google a nuestra pagína web). También pone ese fragmento de texto en cursiva, pero solamente sirve como referencia visual para un archivo puro en HTML, ya que el estilo de la fuente se la da uno mismo con CSS
+
+    <strong> </strong>              Más emphasis. Le dice al navegador que es fragamento de codigo tiene aun mucha más importancia que un <em>. También pone ese fragmento de texto en negrita, pero solamente sirve como referencia visual para un archivo puro en HTML, ya que el estilo de la fuente se la da uno mismo con CSS
+
+    <small> </small>                Menos emphasis que en el texto normal. Tiene el efecto contrario que <em> ya que le dice al navegador que el valor de esa frase el menor que el del resto del texto. También pone ese fragmento de texto en una letra más pequeña, pero solamente sirve como referencia visual para un archivo puro en HTML, ya que el estilo de la fuente se la da uno mismo con CSS
+
+    <br>                            Line break. Forzar un salto de línea. Es muy util en textos donde tenga que forzar el salto de líne. Como por ejemplo un poema
+
+    <wbr>                           Word break opportunity. A diferencia del <br>, esto es un salto de línea si al navegador le hiciera falta hacerlo. Osea, en caso de que no haya espacio en la pantalla, esta etiqueta le dice la navegador en que parte del texto/palabra hacer el corte del salto de línea. Esto es util si ponemos una URL muy larga, ya que podemos elegir en que parte de la URL hacer el corte del salto de linea para que quede más prolijo. Tambien tener en cuenta que los cortes por saltos de línea se producen de forma automatica en los giones ya que el navegador los considera tambien como etiquetas <wbr>, por otra parte los giones bajos no cuentan
+
+    <time> </time>                  Se usa para representar un contenido de hora/fecha. Esto es util en blogs o en post donde se tenga que aclarar en que fecha/hora fue publicado. Se puede poner la fecha y la hora juntas o por separado
+
+    <i> </i>                        Italic (cursiva). Su unica funcion es dar estilo al texto, aunque de eso se encarga CSS. Osea, esto existe desde el comienzo de HTML pero quedo obsoleto, es mucho mejor usar CSS
+
+    <b> </b>                        Bold (negrita). Su unica funcion es dar estilo al texto, aunque de eso se encarga CSS. Osea, esto existe desde el comienzo de HTML pero quedo obsoleto, es mucho mejor usar CSS
+
+    <u> </u>                        Underline (subrayado). Su unica funcion es dar estilo al texto, aunque de eso se encarga CSS. Osea, esto existe desde el comienzo de HTML pero quedo obsoleto, es mucho mejor usar CSS
+
+    <sup> </sup>                    Superindice. Hace que el texto se vea más pequeño y arriba. Sirve para representar los exponentes en las ecuaciones matemáticas y también se ve a modo de indice como esos numeritos chiquitos que estan en la biblia o en las páginas de Wikiperdia
+
+    <span>                          Es un contenedor de línea equivalente a <div>, se suele utilizar para encerrar palabras o pequeños textos y darles estilos a traves de CSS o localizarlos desde JavaScript. Semánticamente no significa nada
+    </span>
+
+    <q>                             Quote: Cita. Es el equivalente al bloquequote (utilizado en los bloques, de ahí su nombre). Es una etiqueta de línea que pone citas.
+    </q>
+
+    <code>                          Sirve para representar código que queremos representar visualmente, suele ir dentro de la etiqueta <pre>
+    </code>
+
+
+
+
+_____Contenido embebido_____
+
+    <img>                           Sirve para visualizar los ditintos tipos de imagenes. Entre ellos: .svg, .jpg, .gif, .png, webp, etc. 
+                                        src=""          Atributo obligatorio. En el pondremos el link/ruta de las carpetas del archivo deseado
+                                        srcset=""       Funciona exactamente igual que src="" salvo que en vez de enviar una imagen, envio un set de ellas (de ahí su nombre). Ponemos la misma imagen pero repetida varias veces en distintos formatos o resoluciones y le ponemos condiciones al navegador de en que momento usar cada una. Ej: puede ser que usemos la imagen A que tiene mucha más resolucion en una pantalla más grande como un monitor y la imagen B con menos resolucion en un telefono. Este atributo es mucho más conveniente de usar que un src="", porque optrimizamos la pagína en función al "Device Pixel Ratio" del dispositivo que entre a la página. Este atributoto se ve en mucho. Esto hace que la pagína este mucho más optimizada y cargue más rapido. Más profundidad en el el apunte: 40-atributo-srcset.html. La "condición" de cuando usar cual imagen se da con un "nuerox". Donde se representa "Device Pixel Ratio". Esto quiere decir que si a una de las imagenes le pongo la condición 3x, solamente se mostrara esa imagen en dispositivos con un DVR igual a 3. Osea, esta imagen se mostrara en un Iphone  
+                                        alt=""          Atributo obligatorio. En el pondremos una pequeña descripcion de la imágen. Esto es util en caso de que no cargue la imagen o de que el usuario use un lector en caso de ser invidente ya que le brindaria una descripción. Si esta etiqueta puede funcionar sin este atributo, es obligatorio ya que de no ponerlo, el W3C nos marcaria un error y posiblemente este penalizado por el SEO 
+
+
+
+
+                        
+    <picture>                       Esta etiqueta funciona exactamente igual que el atributo srcset="" de la etiqueta <img>, pero esta nueva etiqueta nos da muchas más funciones. Esta etiqueta debe llevar adentro la etiqueta <source>.   <picture> es una nueva etiqueta que todavia es experimental, pero se esta usando bastante y es soportada por todos los navegadores principales (exepto Internet explorer porque es una chota)
+    </picture>
+
+    <source>                        Esta etiqueta va dentro de <picture>, dentro de ella va todo el contenido multimedia deseado. Para que esto funcione tiene que tener un "Fold back" obligatorio ademas de las imagenes insertadas. De no poner el "Fold back" la etiqueta <picture> y <source> no funcionarian
+                                        srcset=""       Se usa este atibuto de la misma manera que la etiqueta <img>. Funciona exactamente igual que src="" salvo que en vez de enviar una imagen, envio un set de ellas (de ahí su nombre). Ponemos la misma imagen pero repetida varias veces en distintos formatos o resoluciones y le ponemos condiciones al navegador de en que momento usar cada una. Ej: puede ser que usemos la imagen A que tiene mucha más resolucion en una pantalla más grande como un monitor y la imagen B con menos resolucion en un telefono. Este atributo es mucho más conveniente de usar que un src="", porque optrimizamos la pagína en función al "Device Pixel Ratio" del dispositivo que entre a la página. Este atributoto se ve en mucho. Esto hace que la pagína este mucho más optimizada y cargue más rapido. La "condición" de cuando usar cual imagen se da con un "nuerox". Donde se representa "Device Pixel Ratio". Esto quiere decir que si a una de las imagenes le pongo la condición 3x, solamente se mostrara esa imagen en dispositivos con un DVR igual a 3. Osea, esta imagen se mostrara en un Iphone
+                                            Fold back:      Es una copia de seguridad obligatoria a modo de etiqueta <img src="">. Esto se hace porque la etiqueta <picture> es nueva y experimental y por ende puede tener errores en los navegadores. Por ese motivo se nos obliga a poner esta copia de seguridad que vendria a ser "la vieja y confiable". De no poner el "Fold back" la etiqueta <picture> y <source> no funcionarian. Si bien puse esta explicacion aquí, el "Fold back" va dentro de la etiqueta <picture>
+                                        media="()"      Controlo el tamaño de pixeles de la imagen según el tamaño de la pantala. Con la etiqueta <img> Tenia que poner dos imagenes, una para PC y y otra para celulares. Pero gracias a la etiqueta <source>, puedo controlar todo eso con el atributo media=""
+
+    <audio>                         Esta etiqueta como su nombre lo indica, sirve para reproducir contenido de audio. Esta va dentro de la etiqueta <picture>. Para funcionar necesita obligatoriamente el atributo src="" y controls
+    </audio>                            src=""          Aqui va la dirección del archivo de audio. Funciona de la misma manera que lo haría con una etiqueta <img>
+                                        control         Es un atributo booleano obligatorio. Sirve para que se visualice el elemento de audio. De lo contrario no apareceria en la pagína
+                                        autoplay        Es un atributo booleano. Sirve para que el elemento de audio se reproduzca automaticamente. Actualmente muchos navegadores reconocen que esto es molesto y por ende lo desactivan. Es posible que en mi navegador mientras estoy programando este atributo funcione correctamente, pero normalmente a un usuario no se reproduciria automaticamente el audio. A no ser que se use el atributo muted que esta más abajo 
+                                        muted           Es un atributo booleano. Sirve para que el reproductor este muteado por defecto. Es usado en conjunto con el atributo autoplay en páginas como Instagram, ya que en estas páginas se reproduce el video pero no el sonido, a no ser que el usuario lo active
+                                        loop            Es un atributo booleano. Sirve para que el reproductor vuelva a inciar otra vez desde el comienzo el el archivo de audio cuando este llegue a su fin  
+
+    <video>                         Esta etiqueta como su nombre lo indica, sirve para reproducir contenido de video.Esta va dentro de la etiqueta <picture>. Para funcionar necesita obligatoriamente el atributo src="" y controls
+    </video>                            src=""          Aqui va la dirección del archivo de video. Funciona de la misma manera que lo haría con una etiqueta <img>             
+                                        control         Es un atributo booleano obligatorio. Sirve para que se visualice el elemento de reproduccion de video. De lo contrario no apareceria el boton de play en el video y simplemente seria una imagen estatica 
+                                        autoplay        Es un atributo booleano. Sirve para que el elemento de video se reproduzca automaticamente. Posiblemente algunos navegadores reconocen que esto es molesto y por ende lo desactivan. Es posible que en mi navegador mientras estoy programando este atributo funcione correctamente, pero normalmente a un usuario podria no reproducirse automaticamente el video. A no ser que se use el atributo muted que esta más abajo 
+                                        muted           Es un atributo booleano. Sirve para que el reproductor de video este muteado por defecto. Es usado en conjunto con el atributo autoplay en páginas como Instagram, ya que en estas páginas se reproduce el video pero no el sonido, a no ser que el usuario lo active
+                                        loop            Es un atributo booleano. Sirve para que el reproductor vuelva a inciar otra vez desde el comienzo el video cuando este llegue a su fin
+                                        poster=""       Le dice al video cual va a ser su "miniatura". Como hace Youtube. Dentro de este atributo debe ir la ruta de la imagen que usaremos como miniatura del video
+
+
+
+                                        
+   <figure>                         Sirve para agregar contenido relacionado, pero que no es importante para la pagína web. Su funcion es más que nada estetica, ya que no aporta nada. Un ejemplo de esto son las imagenes ramdon sacadas de google y que no tienen importancia pero que aparecen en los articulos de los diarios, ya que sirven solamente para rellenar y daler un poco más de color/estetica al articulo. No solamente son imagenes, tambien pueden ser citas textuales, graficos, trozo de codigo, etc. Para cada tipo de archivo, habria que poner un tipo diferenre de etiqueta dentro de la etiqueta <figure>
+   </figure>
+
+   <figcaption> </figcaption>       Va dentro de la etiqueta <figure> y por de bajo del contenido subido. Su funcion es que de bajo de la imagen hace aparecer una descripción para que el usuario puede leer (aunque es al pedo darle descripción a una imagen decorativa sacada de google que se puede quitar sin ningun problema). Basicamente sirve como un "pie de foto".   
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                  _____Atributos_____
+
+
+ - Los Atributos son valores adicionales que configuran los elementos y/o ajustan su comportamiento 
+
+
+ - En terminos generales hay dos tipos de atributos:
+
+        Comunes:            Su sintaxis es:     atributo="valor"            // El valor se lo da lo que escribamos entre las cosmillas
+
+        Booleanos           Su sintaxis es:     atributo                    // Al ser un booleano, el valor es "true" o "false" en caso de que solamente se ponga o no el atrubuto respectivamente 
+
+
+
+_____Lista de atributos:_____
+
+    class=""                Este atributo se usa para dar estilo a travéz de CSS. Asocia la etiqueta que contenga la clase con codigo CSS. El valor que que se le agrega al atributo es una palabra inventada por mí, de esta forma un determinado codigo CSS se asocia con unas determinadas etiquetas con atributos class y solamente le produce los cambios a ellas
+    
+    id=""                   Se utiliza para dos cosas:   1- Es un identificador único que se utiliza para seleccionar el elemento de JavaScript. Básicamente, asocia una etiqueta HTML con Javascript. Un identificador no se puee repetir y debe ser único  //  2- Para hacer navegacion desde las anclas       
+
+    title=""                Es un atributo que ayuda a la accesibilidad mostrando una descripción del elemento al que pertenece. Aparece el mensaje en un tooltip. Osea, si pongo el mouse sobre un texto con este atributo, aparecera un cartelito con una descripcion que yo haya puesto
+
+    data-*=""               Es un atributo que nos permite guardar algún valor en la etiqueta HTML. * Es una palabra que nosotros queramos Ej: data-nikin  // En HTML no tiene mucho valor pero en más adelante en JavaScript es mucho más importante
+
+    style""                 Este atributo va dentro de la etiqueta a la cual le queremos aplicar CSS. Dentro de las comillas iria el codigo en CSS. ESTE METODO NO ES PARA NADA RECOMENDADO, se explica en este apunte por el simple hecho de que antiguamente no habia otros metodos para aplicar CSS ademas de este y por ende podria cruzarmelo alguna vez en la vida, pero hacer esto se considera muy mala practica. El metodo correcto de aplicar CSS es por medio de la etiqueta <link>  
+
+
+_____Atributos de los Link:_____
+
+    target=""               Define donde se abrirá el recurso solicitado. Funciona con la etiqueta <a href=""></a> Por norma general siempre que useis rutas absolutas pondreís como valor "_self" o "_blanck"  
+                            "_self"         Viene por defecto. Por ende nunca lo voy a usar pero no esta de mas saberlo. Hace que el link abra en la misma pestaña donde esta mi página. Obviamente mi pagína se va a cerrar  
+                            "_blank"        Hace que el link se habra en otra pestaña 
+
+    download                Atributo booleano, sirve para descargar el recurso solicitado. Importante, el recurso debe estar en mi propio servidor. Esto se hace con la etiqueta <a>, recordar que esta etiqueta no es solo para linkear, sino que es para acceder a diferentes archivos, viendolos o descargandolos
+
+
+
+
+_____Atributos de las Tablas:_____
+
+    rownspan=""             Intervalo de filas: Sirve para que una celda ocupe más de una fila (se hace más alta). Su valor por defecto es "1"
+    
+    colspawn=""             Intervalo de columnas: Sirve para que una celda ocupe más de una columna (se hace más ancha). Su valor por defecto es "1"
+
+
+
+
+_____Atributos de los Formularios:_____
+
+    placeholder=""          Da una pista al usuario de lo que debe introducir. Esto normalmente se debe hacer con CSS
+
+    required                Requerido. Es un atributo booleano. Hace que un campo a llenar sea obligatorio, de lo contrario aparecera un cartel con la frace "Completa este campo". Esto no es para nada seguro ya que con hacer clic en "inspeccionar elementos" esto se puede modificar. Para que sea realmente seguro se necesita JavaScrit
+
+    readonly                Solamente leer. Es un tributo booleano. Hace que el contenido que este adentro por de defecto solo sea para lectura, el usuario no puede escribir nada. Tener en cuenta de que si pongo un <button> esa informacion que tengo por defecto escrita se va a enviar. El usuario no va a poder escribir informacion. Esto no es para nada seguro ya que con hacer clic en "inspeccionar elementos" esto se puede modificar. Para que sea realmente seguro se necesita JavaScrit
+
+    disabled                Incapacitado. Es un atributo booleano. Funciona de manera similar a un atributo readonly ya que sirve para mostrar texto sin darle la oportunidad al usuario de escribir soble el, pero es mucho mejor, ya que desactiva por completo un <input> y a su vez no envia informacion que esta escrita por defecto dentro de el cuando se presiona un <button>
+
+    min=""                  Estos dos atributos establecen el mínimo y máximo de valores de un campo númerico respectivamente. En grafico o lista me van a aparecer esos numeros, y en caso de que los agregue con el teclado y ponga numero que no entren en ese rango, me va a aparecer un cartel diciendome "ese numero es muy grande o muy pequeño". Estos dos atributos no son obligatorios ni tampoco es obligatorio que esten los dos al mismo tiempo
+    max=""              
+
+    minlength=""            Estos dos atributos establecen la cantidad mínima y máxima de caracteres que se pueden escribir 
+    maxlength=""
+
+    selected                Atributo booleano. Sirve para que aparezca seleccionada de forma predefinida una opción en particular entre muchas 
+
+    autofocus               Atributo booleano. Al cargar una página hace clic automaticamente sobre el elemento deseado y tambien dezplaza la página hacia ese elemento para que el usuario empiece a escribir directamente sin perder el tiempo. Es como si el usuario hiciera clic en ese elemento si haberlo hecho  
+
+
+
+
+_____Atributos de accesibilidad:_____
+
+    tabindex=""             Le permite al usuario moverse por la pagina mediante un orden preestablecido mediante la tecla Tab. Osea, el usuario presiona la tecla Tab y autamticamente es redirigido a la etiqueta que el desarrollador eligio (esta etiqueta obviamente tiene que tener un texto o ser un tipo de <input>), si el usuario presiona nuevamente la tecla Tab es redirigido a la siguiente etiqueta. En esta etiqueta lo que va dentro del parentesis es un numero que representa el orden de como se va a mover el usuario
+    
+
+    aria-label=""           Es un atributo hecho especificamente para la gente invidente. Funciona en conjunto con la extención de Chrome "ChormeVox" ya explicada más arriba. Hay casos donde hay que uno pone un link y debido a su forma, color, ubicacion, etc. entiende perfectamente lo que hace, pero para la gente invidente esto no es tan evidente. Para eso sirve esta etiqueta, ya que entre las comillas va una descripcion mucho mas detalla que sera leida por la extención de google. El usuario al al posicionarse sobre ese elemento mediante la tecla Tab, va a escuchar una descripción mucho más detallada de ese elemento. Esta descripcion va escrita dentro de las comillas de este atributo 
+
+    role=""                 Es un atributo hecho especificamente para la gente invidente. Le dice al navegador que tipo de elemento es en que nos estamos posicionando. El usuario no se va a percatar de esto, pero es de ayuda para el navegador 
+    
+
+
+-->
+
+
+
+

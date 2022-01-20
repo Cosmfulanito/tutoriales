@@ -1,0 +1,31 @@
+/*
+
+                                                                    _____Sintaxis de CSS_____
+
+
+ - Selector:        Es el elemento al cual le vamos a aplicar estilos
+ 
+ - Propiedad:       Es lo que vamos a cambiar
+
+ - Valor:           El nuevo valor que le vamos a dar a la propiedad
+
+
+ - Declaración:     Propiedad: Valor
+
+ - Regla:           Conjunto de de Selector + Declaración(es) 
+
+
+
+    Selector{
+        Propiedad1: Valor;
+        Propiedad2: Valor;
+        PropiedadN: Valor;
+    } 
+
+
+
+
+    
+*/
+
+

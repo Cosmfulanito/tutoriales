@@ -1,0 +1,86 @@
+/*
+
+                                                                _____Selectores Compuestos_____
+
+
+ - Esto es una vición más a fondo de una parte del apunte 3-tipos-de-selectores.css    
+ 
+ - Los selectores compuestos son todos aquellos que engloban a varios elementos en un mismo selector, de esta manera se le pueden aplicar exactamente los mismos 
+   estilos de CSS a muchos elementos distintos
+
+
+ 
+
+_____Selectores Compuestos:_____                   
+
+       - Selectores Agrupados                                         ,                    Son varios selectores distintos que comparten una misma declaración (conjunto propiedad-valor). De esta manera se pueden aplicar exactamente los mismos cambios de CSS a diferentes elementos. La forma de aplicarlos es escribir el nombre de los elememtos deseados separados por una coma ","                                        
+
+       - Selectores Convinatorios:
+              - Desendientes                                                               Selecciona un elemento especifico para aplicar CSS aunque comparta el mismo nombre con otros elementos. Para lograr allar a este elemento en especifico entre tantos otros con el mismo nombre, tenemos que colocar la etiqueta padre de nuestro elemento a modo de referencia, y luego el nombre de nuestro elemento deseado para aplicar CSS. Osea, buscamos una etiqueta especifica en funcion de su etiqueta padre. Se puede ser aun más especifico y poner etiquetas dentro de etiquetas, pero las buenas practicas recomiendan no bajar más de un nivel (osea, solamente poner una sola etiqueta padre)    
+              - Selector de Hijo Directo                              >                    Aplica CSS a los hijos directos de de una etiqueta. Osea, solamente a los elementos/etiquetas hijas directas, las etiquetas nietas no se les vaa  aplicar CSS. Tener en cuenta que todas estas elemetos/etiquetas hijas deben tener el mismo nobre. Para aplicar este tipo de selector, primero tengo que poner el nombre de la etiqueta/elemento padre seguido del simbolo >, luego pongo la etiqueta hija. Ej: .lista > <p>   ahora a todas las etiquetas <p> que esten dentro de la etiqueta lista se les aplicara CSS 
+              - Selector de hermano siguiente                         +                    Selecciona un elemento especifico para aplicar CSS aunque comparta el mismo nombre con otros elementos. Para lograr allar a este elemento en especifico entre tantos otros con el mismo nombre, tenemos que colocar un elemento hermano como referencia (un elemento que este dentro del mismo nivel. Osea, otra etiqueta/elemento que sea hijo de la misma etiqueta padre que nuestro elemento deseado). Luego ponemos nuestro elemto deseado para aplicar CSS. Recordar que para que esto funcione, primero tengo que poner la etiqueta/clase hermana, seguido del simbolo de "+" y luego la etiqueta/clase deseada. Esta clase deseada tiene que estar escrita dentro del .html a continuación de su etiqueta hermana, si hay otra etiqueta hermana de por medio este selector no va a funcionar 
+              - Selector de los hermanos siguientes                   ~                    Selecciona a un grupo especificos de elementos para aplicar CSS, ese grupo de elementos comparte el mismo nombre y a su vez son parte de un grupo más grande de elementos del mismo nombre. Para lograr segregar a estos elementos especicos del resto que son iguales, usamos de referencia a una etiqueta/elemento hermano que tengan en comun. Primero ponemos el nombre del elemento que usamos de referencia luego el simbolo "~" y por ultimo el nombre de la etiqueta/elementos deseados, este ultimo elemento/etiqueta representa a a todas las etiquetas iguales que son hermanas del primero y se les aplicara CSS
+              
+       - Pseudoclases - Pseudoelementos               (Se veran más adelante en el curso)
+
+
+
+
+
+ - Recordar que en CSS las ordenes van en casacada, eso significa que la declaracion de arriba es sobreescrita por la de abajo. Ej: Si pongo un etiqueta de color verde y abajo pongo que es roja, al final esa etiqueta va a ser roja porque lo de abajo sobreescribe a lo de arriba
+ 
+*/
+
+
+
+
+/* Selectores Agrupados: */
+ .texto,                                         /* A todos estos elememtos diferentes se le aplicaran los cambios en de la misma declaración (conjunto propiedad-valor) */
+ .texto-2,
+ .texto-3,
+ .texto-4{
+        background-color: steelblue;
+ }
+
+
+
+
+/* Selectores  Desendientes:  */              
+div .texto-5{                                    /* Tengo varios elementos llamados texto-5 pero quiero se le apliquen los cambios solamente al que esta dentro de la etiqueta <div> */
+       background-color: coral;
+}
+
+
+
+
+/* Selector de Hijo Directo */
+.container > p{                                  /* Dentro del elemento "container" hay varias etiquetas <p>. Pero yo solamente quiero aplicar CSS a las etiquetas <p> hijas, no a las nietas. Para lograr eso primero pongo la clase/etiqueta padre seguido del simbolo ">" y luego de los elemtos/etiquetas hijas que deseo aplicar CSS */
+       background-color: pink;
+}
+
+
+
+
+/* Selector de hermano siguiente: */
+.texto-6 + .titulo{                              /* Tengo varios elementos "titulo". Para hallar especificamente el que estoy buscando, uso de referencia su etiqueta/clase hermana "texto-6"  (son hermanas porque ambas estan dentro / son hijas de la misma etiqueta <div>).   */
+       background-color: crimson;
+}
+
+
+
+
+/* Selector de los hermanos siguientes: */
+.titulo-2 ~ p{                                   /* Tengo varias etiquetas <p> pero solamente quiero darles estilos CSS a 3 de ellas. Para eso uso a su etiqueta/ clase hermana titulo-2 de referencia. Ahora todas las etiquetas hermanas <p> de la clase titulo-2 se les aplicara CSS */
+       background-color: chartreuse;
+}
+
+
+
+
+
+
+
+
+ 
+
+

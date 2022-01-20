@@ -1,0 +1,200 @@
+/*
+
+														_____"grid-column:" y "grid-row:"_____
+
+
+
+
+ - Ordenar los elementos y darles tamaños con "grid-colum:" y "grid-row:"														
+   
+	- grid-colum-start:			Establece desde que colum-line empezará el elemento  
+
+	- grid-colum-end:         	Establece hasta que column-line llega el elemento    
+
+	- grid-row-start:			Establece desde que row-line empezará el elemento
+
+	- grid-row-end:				Establece hasta que row-line llega el elemento 
+
+	
+	- Existe un short que engloba las 2 propiedades:
+		- grid-colum: start / end
+		- grid-row: start / end
+
+
+	- Tanto "start" como "end" admiten valores positivos , negativos y la palabra "span"
+		- Valor positivo: 			Empieza a contar las column-lines o las row-lines de izquierda a derecha
+		- Valor negativo 			Empieza a contar las column-lines o las row-lines de de derecha a izquierda. Osea, empieza a contar desde atras 
+		- span:						Establecemos cuantas columnas ha de ocupar. Ej: "span 3" es como decirle que ocupe 3 columnas. Esto es comodo porque no tenemos 
+									que usar el prefijo "-end"
+
+		- TIP: Si ponemos en el valor "end" -1, llegara hasta el final 	
+
+
+
+
+
+
+
+ - Actividad:
+   En este apunte nuestro objetivo es convertir la "caja inicial" en la "caja final", tal cual esta en la imagen de referencia
+
+
+
+	
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Esto es sumamente estetico, la mayor parte de este codigo lo puso el mismo Dorian  */
+*{												
+	box-sizing: border-box;								/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+
+h2{
+	margin-top: 20px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+section{										/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Caja de inicio: */									/* Esto esta copiado tal cual del video de Dorian */
+.grid-container1{	
+	display: grid;
+	grid-template-columns: 75px 75px 75px 75px;
+	grid-template-rows: 75px 75px 75px 75px;			/* Esto es de 4 filas porque en el resultado final va a haber un caja de 4 filas x 4 columnas */
+
+}
+
+.grid-item1{
+	border: 1px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 2rem;
+}
+
+.grid-item1:first-child,								/* Esto solamente le cambia el estilo al primer y segundo hijo */
+.grid-item1:nth-child(2){
+	background-color: violet;
+}
+
+.grid-item1:nth-child(3),								/* Esto solamente le cambia el estilo al tercer y cuarto hijo */
+.grid-item1:nth-child(4){
+	background-color: orange;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Caja final: */	
+.grid-container2{	
+	display: grid;
+	grid-template-columns: 75px 75px 75px 75px;
+	grid-template-rows: 75px 75px 75px 75px;		
+
+}
+
+.grid-item2{
+	border: 1px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 2rem;
+}
+
+/* Ordenando los elementos de izquierda a derecha: */
+/* Elemento D: */
+.grid-item2:nth-child(4){							/* Le estoy diciendo que dicho elemento que verticalmente comience desde la colum-line n°1 hasta la n°2; y que horizontalmente comience desde la row-line n°1 hasta la n°2. Esto hara que este elemento tenga un tamaño de 1x1 y que a su ve este posicionado arriba a la izquierda. */
+	background-color: orange;
+
+	grid-column-start: 1;						
+	/* grid-column-end: 2;*/						/* Cuando el elemento ocupa una sola sola celda de tamaño, no hace aclararle al navegador el tamaño de nuestro elemento, ya que por defecto le da un tamaño de una celda */
+	grid-row-start: 1;
+	/* grid-row-end: 2; */
+}
+
+/* Elemento A: */
+.grid-item2:nth-child(1){							/* Este elemento esta en su lugar y por ende no hace falta tocarlo. Solamente le cambiamos el color */
+	background-color: violet;
+}
+
+/* Elemento C: */
+.grid-item2:nth-child(3){							/* Le estoy diciendo que este elemento esta posicionado a partir de la tercera columna arriba de todo y que mide  "una celda de ancho x 2 de largo" */			
+	background-color: orange;
+
+	grid-column-start: 3;						
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+/* Elemento B: */
+.grid-item2:nth-child(2){							/* Le estamos diciendo al navegador que este elemento va a estar poscionado en la primera columna y en la segunda fila. Y que va a tener un tamaño de 2x2 celdas */
+	background-color: violet;
+
+	/* grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 4 ; */
+	grid-column: 1 / 3;								/* Este es un ejemplo del uso del shorthand. Es lo mismo que usar "grid-column-start:" y "grid-column-end:", pero en este caso es mucho más comodo */
+	grid-row: 2 / 4;
+}
+
+/* El resto de los elementos estan posisionados en su lugar correspondiete. Por ende no hace falta tocarlos */
+

@@ -1,0 +1,64 @@
+/*
+
+                                                                    _____Herencia en CSS_____
+
+
+ - La herencia es la capacidad que tienen algunos elementos (no todos) de heredar algunas propiedades de sus elementos contenedores (padres, abuelos, bisabuelo, etc)
+ 
+
+*/
+
+
+
+/* Ejemplo de elementos que heredan los estilos de su padre: */
+.title{                             
+    color: lawngreen;                   /* En este ejemplo se puede apreciar como la palabra "CSS" que esta dentro de la etiqueta <span> también recibe cambios de color. Esto se debe a que esta adentro de su etiqueta padre <h1> */
+}
+
+
+
+
+
+/* Ejemplos de elementos que NO heredan los cambios de su padre */
+.text_1{
+    color: orange;                      /* En este ejemplo la etiqueta <a> no hereda los cambios de su padre debido a que los links no heredan los cambios de su padre. Esto se debe a que por logica los links tienen que destacar en entre todo el texto. Por eso los links se ven en azul y subrayados. De lo cotrario el usuario no distingiria entre el link y el resto del texto */
+}
+
+
+
+
+/* ¿Como hacer para que un elemento que no hereda, termine heredando */
+/* Básicamente tengo que que aplicarle los estilos al padre y luego por separado al hijo */
+.text_2{
+    color: orange;
+}
+.link_2{
+    color: orange;
+}
+
+
+
+
+/* ¿Como forzar la herencia? */
+/* El metodo anterior para obligar a un elemento a heredar es muy tedioso. Imaginate, si más adelante quisiera sobreescribir un cambio, deberia darle estilos tanto al padre como al hijo */
+/* Con la palabra clave "inherit" puedo obligar a heredar por la fuerza a cualquier elemento hijo  */ 
+.text_3{
+    color: hotpink;
+}
+.link_3{
+    color: inherit;                     /* Ahora el link va a heredar todos los cambios de CSS que tenga su padre, cosa que antes no hacia */
+}
+
+
+
+
+/* ¿Como cancelar la herencia? */
+/* Digamos que no quiero que mi elemento herede los cambios de su etiqueta padre */
+/* Con la palabra clave "initial" hago que dicho elemento vuelva a su estado inicial (Osea, por más cambios que le haga a su etiqueta padre, este elemto hijo no heredara los cambios ya que siempre volvera a su estado inicial donde no tenia CSS) */
+.list{
+    color: limegreen;
+}
+.list-item-extra{
+    color: initial;                     /* En este caso, desde el navegador voy a ver una lista donde todo los items exepto el ultimo heredan los estilos de su padre. Tengo una etiqueta <ul> que representa una lista, dentro dicha lista tengo muchas etiquetas <li> que representan los elementos de esta lista. Simplemente no quiero que el ultimo elemento herede los cambios de estilo de su padre. Por eso use en el la palabra clave "initial". */
+}
+

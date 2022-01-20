@@ -1,0 +1,171 @@
+/*
+
+                                                                    _____Propiedad Padding_____
+
+    
+    
+    padding:        - Esta propiedad controloa la distancia que hay desde el borde de la caja hasta el contenido.  Básicamente se agarra la caja original que ya tiene una altura y ancho predeterminado, y a esta se le agrega un grozor extra que vendria a ser el padding. De esta manera se le da a la caja un tamaño extra. 
+
+                    - El grozor extra que le da el padding no se puede apreciar a simple vista debido a que tiene el mismo color que la caja original. Pero en el "inspector de elementos" si se puede ver
+    
+                    - Solamente hay cuatro lados de paddings posibles: top (superior), right (derecha), button (inferior), left (izquierdo)
+                    
+                    - Admite hasta 4 valores que van en el orden de las agujas del relog. Osea, tengo que poner de uno a cuatro valores separados por un espacio y cada valor va a corresponder a un padding especifico 
+                            - 1 valor               padding: top/right/bottom/left                   Ej: padding: 100px;                          Todos los paddings van a valer 100 pixeles por igual
+                            - 2 valores             padding: top/botton - right/left                 Ej: padding: 100px 150px;                    Los paddings superior e inferior van a valer 100 pixeles. Y los paddings derecho e izquierdo 150 pixeles
+                            - 3 valores             padding: top - right/left - botton               Ej: padding: 100px 200px 300px;              El padding superior va a valer 100 pixeles. El padding derecho e izquierdo van a valer 200 pixeles. Y el padding inferior va a valer 300 pixeles 
+                            - 4 valores             padding: top - right - left - botton             Ej: padding: 100px 500px 200px 300px;        El padding superior va a medir de 100 pixeles. El derecho de 500 pixeles. El inferior de 200 pixeles. Y el izquierdo de 300 pixeles                    
+
+                    - Es un "shorthand". Esto significa que tiene propiedades abreviadas para controlar de distintas maneras los 4 lados posibles para dar paddings. Osea, tiene sufijos para controlar especificamente cada padding, esto es util por si queremos modificar unicamente un ppadding sin cambiar el resto 
+                            - padding-top:          Padding superior                                 Ej: padding-top: 100px                       Unicamente el padding superior va a valer 100 pixeles
+                            - padding-right:        Padding derecho
+                            - padding-bottom:       Padding inferior
+                            - padding-left:         Padding izquierdo
+ 
+
+
+- Recordar que el contenido de la caja (texto) va dentro de la misma caja y que por ende no entra en contacto con el borde extra creado por el padding. Por ese motivo, si ponemos un paddin arriba de la caja y luego le decimos al texto que este aparezca arriba de todo, va a haber un pedazo de espacio por enzima del texto a pesar de haberle dicho que se ponga arriba de todo  
+
+- El padding actua de diferente manera en un elemento de "Bloque" que en un elemento de "Linea". Esto se debe a que en una caja que es un elemento de "bloque", al 
+  aplicar padding esta caja se desplaza para no atravezar algo. Mientras tanto, en una caja que es un elemento de "linea", al activar un padding "vertical", la 
+  caja se queda en su lugar y el padding atravieza todo lo que tenga adelante. Recordar, esto solamente le ocurre al elemento de "linea" al usar un padding "vertical"
+  como puede ser un "padding-top:" o un "padding-bottom:"
+
+
+*/
+
+
+
+
+
+/* _____Padding en elemento de "Bloque"_____ */
+
+/* Caja de referencia: */
+.caja-bloque-1{                                                     /* Esta es una caja de referencia. Sirve como contraste para ver como afecta el padding: */
+    background-color: coral;
+    width: 200px;                                       
+    height: 200px;
+}
+
+
+
+
+/* padding: superior */
+.caja-bloque-2{                                                    /* Mediante el padding: le agrege un "grosor" extra en la parte superior a mi caja. Por logica el texto tendria que estar en la parte superior tocando el borde de la caja, pero esto no ocurre porque el padding no es parte de la caja. El padding es un vorde extra que va pegado a la caja original, por ese motivo hay un pedazo un borde sobrante antes de llegar al texto, ya que ese borde seria el padding  */
+    background-color: steelblue;                                 
+    width: 200px;                                       
+    height: 200px;
+
+    padding-top: 50px;
+}
+
+
+
+/* padding: inferior */
+.caja-bloque-3{
+    background-color: gold;
+    width: 200px;                                       
+    height: 200px;
+
+    padding-bottom: 50px;
+}
+
+
+
+/* padding: izquierdo */
+.caja-bloque-4{
+    background-color: mediumorchid;
+    width: 200px;                                       
+    height: 200px;
+
+    padding-left: 50px;
+}
+
+
+
+/* padding: derecho */
+.caja-bloque-5{
+    background-color: lime;
+    width: 200px;                                       
+    height: 200px;
+
+    padding-right: 50px;
+}
+
+
+
+/* padding: en todas las direcciones */
+.caja-bloque-6{
+    background-color: crimson;
+    width: 200px;                                       
+    height: 200px;
+
+    padding: 50px;
+}
+
+
+
+
+
+
+
+/* _____Padding en elemento de "Linea"_____ */
+
+/* Caja de referencia */                                        /* Esta es una caja de referencia. Sirve como contraste para ver como afecta el padding: */
+.caja-linea-1{
+    background-color: coral;
+    color: inherit;
+}
+
+
+
+/* padding: superior */                                         /* Mediante el padding: le agrege un "grosor" extra en la parte superior a mi caja. Por logica el texto tendria que estar en la parte superior tocando el borde de la caja, pero esto no ocurre porque el padding no es parte de la caja. El padding es un vorde extra que va pegado a la caja original, por ese motivo hay un pedazo un borde sobrante antes de llegar al texto, ya que ese borde seria el padding */
+.caja-linea-2{                                                  /* A su vez, como es un elemento de "Linea" y el pading afecta de manera vertical. Esta caja en vaz de desplazarse hacia abajo como lo haria un elemento de "Bloque", lo que hace es quedarse en el lugar y desde ahí poner su padding, el cual va a atravezar todo lo que se le ponga por delante. Recordar, esto solamente pasa con los padding verticales */
+    background-color: steelblue;                                    
+    color: inherit;                                                   
+
+    padding-top: 28px;
+}
+
+
+
+/* padding: inferior */                                                             
+.caja-linea-3{
+    background-color: gold;
+    color: inherit;
+
+    padding-bottom: 70px;
+}
+
+
+
+/* padding: izquierdo */                                        /* Los padding horizontales en vez de atravezar todo lo que esta en su camino como los paddings verticales, simplemente se dezplazan para un costado sin atravezar nada*/
+.caja-linea-4{
+    background-color: mediumorchid;
+    color: inherit;
+
+    padding-left: 40px;
+}
+
+
+
+/* paddin: derecho */
+.caja-linea-5{
+    background-color: lime;
+    color: inherit;
+
+    padding-right: 40px;
+}
+
+
+
+/* paddin: en todas las direcciones */
+.caja-linea-6{
+    background-color: crimson;
+    color: inherit;
+
+    padding: 30px;
+}
+
+
+

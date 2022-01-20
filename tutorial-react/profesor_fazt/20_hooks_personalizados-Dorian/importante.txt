@@ -1,0 +1,7 @@
+-En este tutorial de "Hooks" vamos a trabajar con un archivo el cual fue creado por "Dorian Desings". 
+
+- Hay dos carpetas: 
+	aplicacion_origianl_de_referencia:			- Esta capeta tiene una copia del archivo sin modificar de la app creada por Dorian Desings. Solamente sirve 
+	      										  de referencia para saber como fue el archivo original antes de ser modificado
+
+	my-app										- Es la carpeta donde estan todos nuestros apuntes y archivos con los que trabajaremos 													

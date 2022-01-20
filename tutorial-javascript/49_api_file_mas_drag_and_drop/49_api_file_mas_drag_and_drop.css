@@ -1,0 +1,70 @@
+
+
+
+/* Salvo por el ".title", ".fa-zone-upload" y el ".drop-zone--active" de abajo de todo, todo fue copiado tal cual esta en el video tuturial. Hay cosas que no vi en la vida, pero aparentemente estaban 
+   dentro del curso de CSS antiguo. Supongo que ese contenido estara en el curso de CSS medio y avanzado  */
+
+
+body{
+	margin: 0;
+	background-color: #2f3238;
+	font-family: sans-serif;
+	color: #222;
+	user-select: none;										/* Con esta propiedad hacemos que el usuario no pueda seleccionar cosas de la página web. Es util por si querememos hecer un boton y que el usuario no pueda arrastrar a la palabra escrita dentro de el */
+}
+
+.title{
+	color: #caced6;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.fa-zone-upload{
+	font-size: 3.5rem;										/* Cambio el tamaño del icono.  Tener en cuenta de que este es un icono del tipo "fuente". Osea que es básicamente una letra con forma de icono, y por ende todos los cambios de estilo que le hagamos, se lo tendremos que hacer como si fuera un texto más del monton.   No confundir con los iconos .svg */
+}
+
+.drop-zone{
+	width: 80%;
+	margin: 1rem auto;
+	height: 300px;
+	background-color: #838383;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	border: 5px dashed #caced6;
+}
+
+
+.drop-zone:active{
+	border: 5px solid #caced6;
+	background-color: #414141;
+	color: #caced6;
+}
+
+.form{
+	width: 100%;
+	text-align: center;
+}
+
+.form__button{
+	font-size: 1.5rem;
+	background-color: orangered;
+	border: none;
+	padding: 0.2em 0.8em;
+	border-radius: 5em;
+	color: #414141;
+	cursor: pointer;										/* Cambia el estilo del cursor cuando se posicione por arriba de este elemento. Osea, cuando pongamos el cursor arriba de este boton, la flechita se transformara en una manito */
+}
+
+.hide{
+	display: none;											/* Esto hace que el elemento exista, pero que sea invisible e intagible. Usaremos esto en el <input> file para que no se vea */
+}
+
+
+.drop-zone--active{
+	border: 5px solid #caced6;
+	background-color: #414141;
+	color: #caced6;
+}

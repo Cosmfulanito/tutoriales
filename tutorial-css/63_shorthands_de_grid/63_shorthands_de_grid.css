@@ -1,0 +1,152 @@
+/*
+
+																_____Shorthands de grid_____
+
+
+ Shorthands: Los 3 ultimos shorhands ya lo vimos en apuntes anteriores
+
+	- grid: 				- Esta propiedad engloba TODO lo que tiene "grid". Como es muy amplia lleva a mucha confucion, hasta para el mismo Dorian. por ende es mucho
+	                          más recomendable usar las propiedades especificas de grid que queramos usar. De esta manera evitamos las confucines 
+							  (sin soporte con internet explorer)
+							  https://developer.mozilla.org/es/docs/Web/CSS/grid
+
+	- grid-tamplete: 		- Le da un numero y tamaño a las filas y a las columnas. Tambien podemos definir las "areas"
+								Ej1:  grid-template: 100px 200px / 300px 250px;					Va a haber 2 filas de 100px y 200px y dos columnas de 300px y 250px 
+								Ej2:  
+							- Engloba: 
+								- grid-template-columns:
+	                            - grid-template-rows: 
+								- grid-template-areas: 
+
+	- grid-gap: 			Engloba: 
+								- grid-column-gap
+								- grid-grow-gap
+
+	- grid-colum: 			Engloba:
+								- grid-columm-start
+								- grid-column-end
+
+	- grid-row: 			Engloba:								
+								- grid-row-start
+								- grid-row-end
+
+
+*/
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Esto es sumanente estetico */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+
+h2{
+	margin-top: 70px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+section{										/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Caja de referencia: */
+.grid-item1{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* grid-tamplete: */
+
+/* Ej1: */
+.grid-container2{
+	display: grid;		
+	
+	grid-template: 100px 200px / 300px 250px;			/*-----*/
+}
+
+.grid-item2{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+/* Ej2: */
+.grid-container3{
+	display: grid;		
+	
+	grid-template: 
+		"first first first" 100px			/* Este es el primer area de 3 columnas. Y esa fila medira 100px  */
+		"center center center" 200px 
+		"last . . " 150px / 
+		300px 250px;						/* Despues del slash de arriba "/" este es el tamaño de las columnas. La primera es de 300px, la segunda de 250px y la tercera no tiene medidas por ende se las da automaticamente el navegador */
+}		
+
+.grid-item3{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}

@@ -1,0 +1,130 @@
+<!--
+
+                                                         _____Seleccionar columnas de una tabla_____
+
+
+ - En este apunte veremos las formas para seleccionar columnas por separado (filas verticales). 
+   Lo logico seria pensar en tocar las etiquetas ya creadas de la tabla, pero esto no esposible debido a que las estiquetas de una tabla estan pensadas
+   para crear filas horizontales.
+
+ - Debido a esto, debemos utilizar estas nuevas etiquetas que crean columnas en base a las celdas que estan una arriba de la otra
+
+
+
+    <colgroup>              Grupo de columnas: Esta etiqueta nos permite seleccionar una columa en concreto. Dentro pondremos tantas etiquetas <col> como columnas tengamos. 
+    </colgroup>                 <col>       Cada etiqueta <col> equilvaldrá a una columna siguiendo el mismo orden que tiene la tabla     
+
+
+    span=""                 Si necesitamos que una etiqueta <col> agrupe más de una columna, tenemos el atributo spam, que funciona exactamente igual que el atributo rowspan="" y colspan=""
+
+-->
+
+
+
+<!-- Para este apunte use como referencia la tabla creada en el apunte 19-atributos-de-las-tablas -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seleccionar columnas de una tabla (A)</title>
+
+        <style>             /* Aplique CSS en la etiqueta <col> solamente para poder ver las celdas y los cambios que le aplico a ellas */
+            col{
+                background-color:rgb(105, 151, 189);        
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <table>
+            <caption>Horarios de clase</caption>        
+
+            <colgroup>                  <!-- La cantidad de columnas que sufriran cambios seran igual a la cantidad de etiquetas <col> que tenga en dentro de esta misma etiqueta. En este caso seran las 2 primeras columnas. Si pusiera 6 <col> tendria las 6 columnas pintadas -->
+                <col>                   <!-- Este <col> equivale a la primera columna -->
+                <col>                   <!-- Y este a la segunda columna-->
+            </colgroup>
+
+            <thead>                         
+                <tr>
+                    <th></th>               
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+
+            <tbody>                             
+                <tr>                            
+                    <td>8:30 - 9:30</td>        
+                    <td>Matemáticas</td>
+                    <td>Matemáticas</td>
+                    <td>Cs. Sociales</td>
+                    <td>Matemáticas</td>
+                    <td>Matemáticas</td>
+                </tr>
+        
+                <tr>
+                    <td>9:30 - 10:45</td>
+                    <td>Lengua</td>
+                    <td>Lengua</td>
+                    <td>Matemáticas</td>
+                    <td>Ciencias</td>
+                    <td>Lengua</td>
+                </tr>
+
+                <tr>
+                    <td>10:25 - 11:20</td>
+                    <td>Educacion Física</td>
+                    <td>Ciencias</td>
+                    <td>Lengua</td>
+                    <td>Lengua</td>
+                    <td>Educacion Física</td>
+                </tr>
+
+                <tr>
+                    <td>11:20 - 17:45</td>
+                    <td colspan="5">Recreo</td>             
+                </tr>
+
+                <tr>
+                    <td>11:45 - 12:40</td>
+                    <td>Ingles</td>
+                    <td>Cs. Sociales</td>
+                    <td>Ingles</td>
+                    <td>Tutoria</td>
+                    <td>Ingles</td>
+                </tr>
+
+                <tr>
+                    <td>12:40 - 13:35</td>
+                    <td rowspan="2">Tecnología</td>         
+                    <td>Educación física</td>
+                    <td>Plástica</td>
+                    <td>Religión</td>
+                    <td rowspan="2">Tecnología</td>
+                </tr>
+
+                <tr>
+                    <td>13:35 - 14:30</td>
+                    <td>Francés</td>
+                    <td>Tecnologia</td>
+                    <td>Francés</td>
+                </tr>
+
+                <footer>
+                    <tr>
+                        <td colspan="5">Total de materias</td>
+                        <td>12 materias</td>
+                    </tr>
+                </footer>
+
+            </tbody>
+        </table>
+    </body>
+</html>

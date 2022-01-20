@@ -1,0 +1,49 @@
+/*
+
+                                                                    _____Tipos de selectores_____
+
+                                                                        
+_____Selectores Simples:_____                                                                
+
+        Selectores Elementales:
+            - Universal                             *                                                       Selecciona todo. No es muy recomendable de usar
+            - De tipo o etiqueta                    Nombre de la etiqueta                                   Simplemente ponemos el nombre de la etiqueta a la cual le queremos aplicar estilos de CSS. No es muy recomendable de usar
+
+        Selectores de Atributo:     
+            - id                                    id del elemento                                         Dentro del archivo .html se le coloca el atributo id="" a la etiqueta deseada, dentro de las comillas va a el nombre que le queramos poner al id. Luegon en el archivo .css, el selector lleva el nombre del id. Recordar poner un hash "#"  para que el selector funcione.       Ej:  #NombreDelid{ }     //    Este id es unico para cada etiqueta y no se puede compartir. Por ende no es un selector muy recomendable para dar estilos, esto se debe a que los id son identificadores (y por lo tanto, al ser identificadores solo puede haber uno solo), esto choca con  los principios de CSS ya que los estilos son reutilizables, cosa que no es compatible con tener estilos que solo se apliquen a un solo elemento como en el caso de id
+            - clase                                 Clase del elemento                                      Dentro del archivo .html se le coloca el atributo class="" a la etiqueta deseada, dentro de las comillas va el nombre que le queremos poner a la clase. Luego en el archivo .css, el selector lleva el nombre de la clase. Recordar poner un punto "." para que el selector funcione.     Ej:  .NombreDelSelector{ }     //    A diferencia de los selectores de id, la clase si puede ser compartida por varios elementos/etiquetas. Esto lo convierte en el tipo de selector más recomendable de usar ya que tiene estilos reutilizables                     
+            - Otros atributos:
+                [atributo]                          Atributo del elemento                                   Básicamente le aplicamos CSS a todas las etiquetas que tengan ese atributo. Este selector debe estar entre []
+                [atributo="valor"]                  Atributo + valor del elemento                           Basicamente le aplicamos CSS a todas las etiquetas que tengas ese conjunto especifico de etiqueta y valor. Este selector debe estar entre []
+                [atributo^="valor"]                 Atrinuto + primera parte del nombre del valor           Funciona exactamente igual que un selector del tipo [atributo="valor"] con la diferencia de que solamente hay que poner la primera parte del nombre del valor. De esta manera el selectror verifica si el valor del atributo comienza con esa palabra (Es una especie de buscador de coincidencia)
+                [atributo$="valor"]                 Atributo + ultima parte del nombre del valor            Funcina exactamente igual que [atributo^="valor"] con la firencia de que aqui el selector busca que el valor termine con esta palabra. Osea que la tenga al final
+                [atributo*=valor"]                  Atributo + parte del nombre del valor                   Funcina exactamente igual que [atributo^="valor"] con la diferencia de que puedo poner cualquier parate del nombre del valor. Este selector va a buscar todos los valores que tengan coincidencias con esta palabra, este adelante, al medio o al final. Da igual en que posición se encuentre
+                [atributo|="valor"]                 Atributo + parte del nombre del valor                   Funciona exactamente igual que [atributo^="valor"] pero en este caso, busca atributos que coincidan con esta palabra y que a su vez tengan un guion alto "-" al final de dicha palabra. Es muy usado con el atributo lang="" ya que el idioma va acompañado de un guion y luego la comarca/region del idioma.   Ej: lang="en-GB".    Solamente deberia poner [lang|="en" y cualquier concidencia con "en-" se le aplicaria CSS     
+
+                
+
+_____Selectores Compuestos:_____                   
+
+       - Selectores Agrupados                                         ,                    Son varios selectores distintos que comparten una misma declaración (conjunto propiedad-valor). De esta manera se pueden aplicar exactamente los mismos cambios de CSS a diferentes elementos. La forma de aplicarlos es escribir el nombre de los elememtos deseados separados por una coma ","                                            
+
+       - Selectores Convinatorios:
+              - Desendientes                                                               Selecciona un elemento especifico para aplicar CSS aunque comparta el mismo nombre con otros elementos. Para lograr allar a este elemento en especifico entre tantos otros con el mismo nombre, tenemos que colocar la etiqueta padre de nuestro elemento a modo de referencia, y luego el nombre de nuestro elemento deseado para aplicar CSS. Osea, buscamos una etiqueta especifica en funcion de su etiqueta padre. Se puede ser aun más especifico y poner etiquetas dentro de etiquetas, pero las buenas practicas recomiendan no bajar más de un nivel (osea, solamente poner una sola etiqueta padre)    
+              - Selector de Hijo Directo                              >                    Aplica CSS a los hijos directos de de una etiqueta. Osea, solamente a los elementos/etiquetas hijas directas, las etiquetas nietas no se les vaa  aplicar CSS. Tener en cuenta que todas estas elemetos/etiquetas hijas deben tener el mismo nobre. Para aplicar este tipo de selector, primero tengo que poner el nombre de la etiqueta/elemento padre seguido del simbolo >, luego pongo la etiqueta hija. Ej: .lista > <p>   ahora a todas las etiquetas <p> que esten dentro de la etiqueta lista se les aplicara CSS 
+              - Selector de hermano siguiente                         +                    Selecciona un elemento especifico para aplicar CSS aunque comparta el mismo nombre con otros elementos. Para lograr allar a este elemento en especifico entre tantos otros con el mismo nombre, tenemos que colocar un elemento hermano como referencia (un elemento que este dentro del mismo nivel. Osea, otra etiqueta/elemento que sea hijo de la misma etiqueta padre que nuestro elemento deseado). Luego ponemos nuestro elemto deseado para aplicar CSS. Recordar que para que esto funcione, primero tengo que poner la etiqueta/clase hermana, seguido del simbolo de "+" y luego la etiqueta/clase deseada. Esta clase deseada tiene que estar escrita dentro del .html a continuación de su etiqueta hermana, si hay otra etiqueta hermana de por medio este selector no va a funcionar 
+              - Selector de los hermanos siguientes                   ~                    Selecciona a un grupo especificos de elementos para aplicar CSS, ese grupo de elementos comparte el mismo nombre y a su vez son parte de un grupo más grande de elementos del mismo nombre. Para lograr segregar a estos elementos especicos del resto que son iguales, usamos de referencia a una etiqueta/elemento hermano que tengan en comun. Primero ponemos el nombre del elemento que usamos de referencia luego el simbolo "~" y por ultimo el nombre de la etiqueta/elementos deseados, este ultimo elemento/etiqueta representa a a todas las etiquetas iguales que son hermanas del primero y se les aplicara CSS
+              
+       - Pseudoclases - Pseudoelementos               (Se veran más adelante en el curso)
+
+
+
+
+
+
+
+Recordar que en CSS las ordenes van en cascada, eso significa que la declaracion de arriba es sobreescrita por la de abajo. Ej: Si pongo un etiqueta de color verde y abajo pongo que es roja, al final esa etiqueta va a ser roja porque lo de abajo sobreescribe a lo de arriba 
+
+
+*/
+
+
+

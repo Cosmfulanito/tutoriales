@@ -1,0 +1,71 @@
+/* 
+
+															_____Cómo usar Google Fonts_____
+
+											
+															
+ Para ver este apunte más a fondo ir a los links: 
+ https://www.youtube.com/watch?v=Q9vP43V7Q5E&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=61
+
+
+ Link de Google font:
+ https://fonts.google.com/
+
+
+
+
+
+ - Ademas de las fuentes que vienen en el navegador, existen fuentes externas a las cuales podemos acceder.
+ 
+ - Entre ellas esta las "Fuentes desde un sevido remoto". Son fuentes que se encuentran en u servidor y que nosotros descargamos para su uso, la más famosa es 
+   "Google Fonts"
+
+ - Siempre que utilicemos fuentes no genericas, debemos poner fuentes génericas que vienen por defecto en el navegador a modo de "fallback" (respaldo en caso de que 
+   la primera opción falle)
+
+
+
+
+  ¿Como utilizar las fuentes de Google Font?
+		1- Nos dirigimos a la página "https://fonts.google.com/" y seleccionamos la fuente deseada
+		   Automaticamente nos saldra un cartel con una etiqueta <link>  
+		   Recordar que si seleccionamos más de una fuente, Google nos pone las dos fuentes en el mismo <link>. Esto es importante saberlo porque si ponemos dos 
+		   fuentes en dos <links> separados, la página va a tardar el doble de tiempo en descargar las dos fuentes. 
+		
+		2- Copiamos dicha etiqueta y la pegmos en el <head> nuestro archivo .html
+		   Recordar que dicha etiqueta tiene que estar arriba de nuestros estilos de CSS. De esta manera evitamos que cualquier archivo pise los cambios hechos 
+		   por nuestros estilos
+
+		3- Luego simplemente vamos a nuestro archico .css y seleccionamos esta nueva fuente como si fuese cualquier otra
+		   Recordar poner una fuente generica a modo de "fallback". Esto se hace escribiendo con una coma "," y luego la fuente generica detras de la seleccionada
+		   Google también tiene preparado para copiar y pegar en nuestro archivo .css una etiqueta "font-family:" con la nueva fuente y una de generica a modo de 
+		   fallback que se le parece
+
+		4- En el caso de que haya descargado la misma fuente pero en distintos grosores (400, 700, etc,), para utilizarlos tengo que usar la propiedad 
+		   "font-weight:" y como valor ingresar el grosor que ya habia descargado 
+			Ej: "font-weight: 400" 
+*/
+
+
+
+*{
+	box-sizing: border-box;			/* Pongo esta propiedad para acostumbrarme de esta buena practica */
+}
+
+
+
+
+/* Ejemplo N°1 del uso de una fuente de un servidor remorto: */
+.font-1{
+	font-family: 'Roboto', sans-serif;									/* La primera fuente es la seleccionada desde "Goolge fonts", la segunda es una generica a modo de fallback */
+}
+
+
+
+/* Ejemplo N°2 del uso de una fuente de un servidor remorto: */
+.font-2{
+	font-family: 'Marck Script', cursive;
+}
+
+
+

@@ -1,0 +1,69 @@
+<!--
+
+                                                                _____Envío GET vs POST_____
+
+
+ - Bibliografia:    https://www.youtube.com/watch?v=DVU0ZWnmx1U&list=PLROIqh_5RZeB92ME1GFyeqDVOa-gL0Ybd&index=54
+
+
+
+ - El metodo GET y el metodo POST son dos formas distitas en las cuales el usuario envia informacion al servidor
+
+ - Este apunte es solamente teorico e informativo, ya que esta informacion para usarla solamente para HTML no sirve de nada. Esta informacion se vuelve realmente
+   util cuando estamos utilizando JavaScript
+
+
+
+ - El metodo por defecto es "GET" pero esto se cambiar con el atributo method=""
+
+
+
+ - El metodo GET es el metododo que se ejecuta por defecto cuando nosotros entramos a una página por URL. Si el usuario hace clic en "enviar" le aparecera la
+   informacion enviada desde el URL del navegador
+
+ - El metodo POST es el envio de informacion por parte del usario hacia el servidor utilizando el backend. Siendo usuario, para ver la informacion enviada hay 
+   que entrar a "inspeccionar elementos" => network  =>  (Desde la página hacer clic en enviar)   =>  dentro de network hacer clic en el primer archivo que aparece
+   ya que suele ser el archivo que guarda. Luego ir hasta abajo de todo. Ahí esta la informacion guardada
+
+
+-->
+
+
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Envío GET vs POST</title>
+    </head>
+
+    <body>
+        <h1>Envío GET vs POST</h1>                                                                                                                                  
+        <p>LLenar un campo y hacer clic en su correspondiente boton para ver como cambia la página segun el metodo</p>
+        <p>Si utlizamos el metodo "GET" podremos ver la informacion enviada en el URL del navegador<br>En el caso de POST tendremos que entrar a "inspeccionar elementos" => network</p>        <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->
+                                                                                                                                                                                                                    
+
+
+        <!-- Metodo de envío GET -->
+        <form action="enviar.html" method="GET">                            <!-- El archivo "enviar.html" no existe y por ende nos va a dar herror pero nos sirve de ejemplo -->           
+            <label for="nombre">Metodo GET:</label>                         
+            <input type="text" id="nombre" name="nombrecito">
+            <input type="submit">
+        </form>                                                                                                                                                     <br><br><br>
+
+
+
+        <!-- Metodo de envío POST -->
+        <form action="enviar.html" method="POST">
+            <label for="">Metodo POST</label>:
+            <input type="text" id="apellido" name="apellidin">
+            <input type="submit">
+        </form>
+
+
+
+
+    </body>
+
+</html>

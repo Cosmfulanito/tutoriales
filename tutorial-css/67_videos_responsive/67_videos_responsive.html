@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="67_videos_responsive.css">
+		<title>Videos responsive</title>
+	</head>
+	<body>
+		<h1>Videos responsive</h1>
+		
+		<p>Se recomienda jugar con el tamaño de la pantalla del navegador para poder apreciar como responden los videos al tamaño de este </p> 
+
+		<!-- Video de referencia: -->
+		<h2>Video de referencia:</h2>
+		<div>
+			<div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/zBrP143AZqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		
+		<!-- Intento de video responsive hecho por mí: (Sale mal) -->
+		<h2>Intento de video responsive hecho por mí: (Sale mal)</h2>
+		<div>
+			<div>
+				<iframe class="videopropio" width="560" height="315" src="https://www.youtube.com/embed/zBrP143AZqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		
+		<!-- Video responsive: (hecho correctamente) -->
+		<h2>Video responsive: (hecho correctamente)</h2>
+		<div class="container">
+			<div class="video">
+				<iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/zBrP143AZqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
+	</body>
+</html>

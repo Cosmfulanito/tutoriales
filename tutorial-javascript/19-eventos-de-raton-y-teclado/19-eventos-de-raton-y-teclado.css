@@ -1,0 +1,47 @@
+
+
+*{
+	box-sizing: border-box;						/* Pongo esta propiedad para normalizar esta buena practica */
+}
+
+body{											/* Esto es puramente estetico */
+	font-family: sans-serif;
+}
+
+
+/* Este es el estilo de la caja que aparece por sorpresa  */
+.caja{
+	font-size: 1.5rem;
+	margin-top: 15px;
+	margin-bottom: 90px;
+	height: 8em;
+	width: 8em;
+	text-align: center;
+	/* padding-top: 2.5em; */
+	border-radius: 30px;
+	color: transparent;							/* El texto es transparente al igual que su caja para dar el efecto de que no hay nada allí. Más adelante se le dara color a la caja y al texto dando la iluciónn de que aparecen de la nada */
+}
+
+
+
+
+/* Colores para el background: */				/* En JavaScrip voy a usar estos selectores en vez de poner los colores directamente JavaScrip. Parece más trabajo al pedo pero es la forma correcta de hacerlo ya que los cambios de estilos hechos desde JavaScrip tienen más peso que los propios de CSS, y esto puede ocacionar problemas a futuro. Haciendo todo este trabajo extra me aseguro que todos los cambios que haga en JavaScrip vengan realmente desde el CSS  */
+.coral{
+	background-color: coral;
+	color: inherit;
+}
+
+.red{
+	background-color: red;
+	color: inherit;
+}
+
+.green{
+	background-color: lime;
+	color: inherit;
+}
+
+.mediumturquoise{
+	background-color: mediumturquoise;
+	color: inherit;
+}

@@ -1,0 +1,67 @@
+/*
+
+                                                            _____Estilos Computados_____
+
+    
+ - Este apunte es sumamente teorico ya que veremos el funcionamiento del inspector de elementos. Para ver este tema más en detalle ir a los siguientes links:
+   (Ambos links van a mismo video de Dorian Desings. Solo que uno esta en Youtube y el otro en Udemy)
+
+    https://www.youtube.com/watch?v=RcR92AXQAcU&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=17
+    https://www.udemy.com/course/css-edicion-2020/learn/lecture/26063848#overview
+
+
+
+ - El inspector de elementos no es más que una herramienta que tenemos a nuestra disposición para facilitarnos nuestro trabajo. Ya que con el podemos dar un vistazo 
+   a los archivos .html y .css de todas las páginas web desde nuestro navegador. 
+
+ - Esta herramienta es extremadamente util ya que con ella podemos saber exactamente que partes del codigo del archivo .css le esta haciendo cambios a archivo .html
+   El tiempo que me ahorro buscando especificamente ese elemento CSS vale oro
+
+ - El inspector de elementos ademas de brindarme toda esa informacion util, tambien me permite escribir codigo ahí (obviamente no seran cambios temporales que 
+   solamente vere hasat que refresque la página), esto es util para previsualizar algún tipo de cambio
+
+
+
+ _____Pestaña: Element____ 
+
+  - Me muestra el archivo .html con todo su codigo
+
+    _____Subpestaña: Stiles_____
+    - Si hago click en un elemento/etiqueta en la pestaña element, la subpestaña Stiles me va a indicar exactamente la linea de codigo CSS que le esta aplicando 
+      estilos a esa etiqueta actualmente. Tambien muestra los estilos originales que vienen por defecto en el HTML (osea, la fuente de las letras, su color negro 
+      y su tamaño predefinidos por HTML puro). Ojo que estos estilos vienen por defecto en el navegador. Por ese motivo las paáginas web se ven distintas en 
+      diferentes navegadores.
+
+    - Si hacemos clic en alguna linea de codigo que nos indica, nos llevara automaticamente a la "Sources". Esta pestaña me muestra el archivo .css y todo su codigo.
+
+    _____Subpestaña: Computed
+    - Me muetra todos los estilos que recibio la etiqueta seleccionada, desde el ultimo que sobreescribio a los demas y que por ende es el mostrado por el navegador,
+      hasta incluso los primeros estilos que fueron sobreescritos por la cascada. Incluso me muestra los estilos por defectoq ue vienen con el navegador
+    
+    - Esto es lo más exacto que hay. Ya que me indica que selectores aplican estilos, cuales dejaron de hacerlo y porque, ademas de indicarme la linea de codigo 
+      exacta que produce ese cambio
+
+
+
+      
+_____Pestaña: Sources_____
+
+ - Me muestra el archivo .css y todo su contenido
+
+    
+
+
+
+
+ 
+
+
+
+
+
+
+
+    
+
+
+*/

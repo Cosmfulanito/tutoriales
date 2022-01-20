@@ -1,0 +1,119 @@
+/* 
+
+                                                                _____Propiedad "outline"_____
+
+
+                                                                
+    outline:            - Es una propiedad que nos permite dibujar un borde por fuera del modelo de la caja. Básicamente es un borde extra que si se quiere puede 
+                          ser colocado por fuera de la caja. 
+
+                        - Tiene las mismas propiedades y sintaxis que border, pero con algunas diferencias:
+                                - No ocupa sitio, ya que no forma parte del box-model. Esto quiere decir que si hacemos un borde muy grande, en vez que mover las cajas del alrededor, el borde simplemente las va a tapar
+                                - Al no formar parte del box-model tampoco se ve afectado por el conjunto de propiedad/valor "box-sizing: border-box;" 
+                                - No se puede redondear.
+                                - No se pueden controlar los lados de forma independiente.
+
+                        - Es un "shorthand" debido a que tiene propiedades abreviadas como:
+                                - outline-with:         Controla el ancho del "Outline"
+                                - outline-style:        Controla el estilo del "Outline". Recordar que funciona de forma similar a la propiedad "border:" y por ende tienen muchas cosas en comun como lo son los estilos.
+                                - outline-color:        Controla el color del "Outline"
+
+                                - outline-offset:       Nos permite aumentar o disminuir la distancia del outline respecto a la caja a la que pertenece
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+*{                                              /* Pongo esta propiead para normalizar esta buena practica */
+    box-sizing: border-box;
+}
+
+
+
+.border,                                        /* Cree esta "regla" (Conjunto de de Selector + Declaración(es)) para que todas las cajas tengan el mismo tamaño de base */
+.outline-1,
+.outline-2,
+.outline-3,
+.outline-4,
+.outline-5{
+    background-color: lightslategrey;
+    width: 100px;
+    padding: 10px 25px;
+    margin: 50px 100px;
+}
+
+
+
+
+
+
+
+/* Comparacion entre "border:" y "outline:" */
+
+/* Propiedad "border:" de ejemplo */
+.border{
+    border: 3px solid lime;
+}
+
+/* Propiedad "outline:" de ejemplo */
+.outline-1{
+    outline: 3px solid coral;
+}
+
+
+
+
+
+
+/* Colapsando el "outline": */
+.outline-2{                                                     
+    outline: 70px solid coral;                                      /* Al no formar parte del box-model la propiedad "outline:" no se ve afectada por el conjunto de propiedad/valor "box-sizing: border-box;. A su vez si hacemos un borde muy grande con el "outline:", en vez que mover las cajas del alrededor, el borde simplemente las va a tapar */
+}
+
+
+
+
+
+
+/* Utilizar un "border:" junto con un "outline:" */
+.outline-3{
+    border: 10px solid lime;
+    outline: 15px solid coral;
+}
+
+
+
+
+
+
+/* Utilizando outline-offset: con valores positivos */
+.outline-4{
+    border: 5px solid lime;
+    outline: 5px solid coral;
+    outline-offset: 10px;                                           /* Le estoy diciendo al navegador que el "outline:" este a 10 pixeles de distancia de la caja desde el borde de la misma como punto de partida */
+}
+
+
+
+
+
+/* Utilizando outline-offset: con valores negativos: */
+.outline-5{
+    border: 5px solid lime;
+    outline: 5px solid coral;
+    outline-offset: -15px;                                          /* Se usa el mismo razonamiendo de los numeros positos. Al tener como punto de partida el borde de la caja, al poner un numero negativo se creara el outline por debajo del borde. Osea, por dentro de la caja */
+}
+
+
+
+

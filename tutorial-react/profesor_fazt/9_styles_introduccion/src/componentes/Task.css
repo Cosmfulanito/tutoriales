@@ -1,0 +1,10 @@
+
+
+/* Esta es nuestra hoja de estilos/archivo .css para el atributo que esta en el archivo "Task.js". Por ende, esta hoja de estilos se inportara en ese archivo */
+
+
+.red {
+	background-color: red;
+	border: 2px black solid;
+	margin: 5px;
+}

@@ -1,0 +1,78 @@
+/* 
+
+															_____Unidades de medida "em" y "rem"_____
+
+
+
+ - Este es una pequeña parte vista en profundidad del apunte 34-introduccion-a-medidas-absolutas-y-relativas.css
+
+
+
+
+ - Estas dos medidas toman como referencia la medida de la fuente. Especificamente la medida de la letra "m". 
+   Se utiliza la letra "m" porque en imprenta esta letra es el caracter más ancho que existe. Y por este motivo se utiliza a modo de referencia para las demas letras.
+
+ - El standar del tamaño de fuente de la raíz del documento es de 16px, y NO ES RECOMENDABLE MODIFICARLO
+   En web utilizan 16 pixeles porque equivale a los 12 puntos que se utiliza en imprenta
+   Por temas de experiencia de ursuario esta demostrado que es el tamaño el cual el usuario esta más acostumbrado. Por ende, no se recomienda modificar el tamaño de 
+   la fuente que viene por defecto porque de lo contrario nuestras webs se veran raras
+ 
+ 
+
+
+
+	rem				- Corresponde a la medida de la "m" de la raiz del documnento .html. Mientras este valor no se modifique, el tamaño de fuente de la letra "m" que 
+					  que viene por defecto es igual a 16 pixeles y por lo tanto tambien el valor de 1rem
+
+					- Esto quiere decir de que si pongo 1rem, el tamaño de lo que estoy modificando va a veler 16 pixeles. Y 32 pixeles en el caso de 2rem
+
+					- Para tamaños de fuente se recomienda usar siempre "rem" sin excepción 
+
+
+
+ 	em				- Corresponde a la medida de la "m" del contexto donde nos encontremos. 
+	 				  Osea, em vale lo mismo que el tamaño de fuente de la letra "m", que por defecto es de 16 pixeles. Si ese tamaño de fuente se modifica, tambien 
+					  lo hara el tamaño relativo de em. Recordar que dichos cambios se aplican en ese elemento/caja y en sus elemetos hijos.
+	              		Ej: - La caja-padre tiene un em igual a 16 pixeles (que viene por defecto). si en un momento dado se me da por darle un "font-size: 10px;" eso 
+						      quiere decir que el em de esa caja-padre y el de sus hijas ahora va a ser igual a 10 pixeles.
+							  Tambien tendria el mismo efecto si pongo "font-size: 2rem;" ya que ahora el em va a tener un valor de 32 pixeles (esto se debe a que 
+							  1rem es igual a 16 pixeles)
+
+					- Este tipo de medidas es muy util para crear cajas con texto dentro. Ya que mantienen la mismas proporciones texto/caja sin importar el tamaño 
+					  de la pantalla del navegador  
+
+  
+
+*/
+
+
+
+
+*{												/* Pongo esta propiedad para no olvidarme de esta buena practica */
+	box-sizing: border-box;					
+}
+
+
+
+
+
+/* Este es un ejemplo real de como se utilizarian los las medidas "rem" y "em". Para apreciarlo solamente hay que cambiar el valor del font-size: 2rem; Al
+   hacerlo, toda la caja cambiara de forma proporcional */
+/* La logica de esto es que el tipo de medida "rem" le va a dar el tamaño a la fuente y a su vez va a servir de referencia relativa para darle medidas a las 
+   partes de la caja. Dichas partes van a utilizar el tipo de medida "em", que como se dijo antes su medida va a ser relativa a la medida del "rem" ya que los 
+   calculos del "em" se haran en vace a este */
+/* Todo esto quiere decir que voy a tener un boton que con tan solo cambiar el valor del "rem" que esta dentro del "font-size:", voy a poder cambiar es tamaño de
+   todo el boton de forma proporcional sin tener que haber tocado las demas medidas. Esto es muy pero muy practico. */
+
+
+.boton-link{
+	display: inline-block;
+	margin: 100px 50px;
+	background-color: lightcoral;
+	color: #333;
+	
+	font-size: 2rem;							/* Ahora el tamaño de fuente mide 16 pixeles. Este tamaño de fuente le sirve de referencia al "em". Debido a esto, ahora un "em" tambien mide 16 pixeles. Esto es muy util porque las otras partes de la caja van a estar en "em" y van a ser proporcionales con el texto. Esto quiere decir que si cambio el valor de "rem", toda la caja va a cambiar de tamaño de forma proporcional. Ej: El valor actual es de 2rem, si lo cambio 4rem toda la caja va a ser el doble de grande de forma proporcional */
+	padding: 1em 2em;							/* Esta propiedad junto con el "border-radius:" estan medidas en "em" eso quiere decir que su tamaño es relativo al valor actual del "font-size:". Si ese valor cambia, el valor de todas estas propiedades tambien. // Se puede decir que si en este momento "font-size:" tiene un valor de 2rem (que es igual 32 pixeles), "padding: 1em 2em" es equivalente a "padding: 32px 64px"  */
+	border-radius: 5em;
+}
+

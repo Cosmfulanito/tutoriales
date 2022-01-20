@@ -1,0 +1,80 @@
+/*
+
+															_____grid-template-areas:_____
+
+
+ - Esta propiedad nos permite distribuir nuestro "layout" a traves de nombres y de una forma más intuitiva. 
+   Básicamente nos permite ordenar y darle tamaño a los elementos/celdas como lo vimos en el apunte "56_grid-column_y_grid-row", pero en vez de usar numeros, usamos 
+   nombres. Es exactamente lo mismo pero mucho más comodo y visual
+
+
+
+- grid-template-areas:			- Esta propiedad se utiliza en el caja contenedora/"grid-container". Por medio de palabras declaramos donde iran ubicados los 
+								  elementos hijos/"grid-item" y cuantas columnas y filas abarcaran. Esto se logra armando una matrix con esas palabras.
+								  Tambien se puede usar el punto "." esto representa una celda vacia
+									Ej: grid-template-areas:				Como se puede apreciar. Este grid tiene un "header" que abarca toda la parte 
+										"header header header"				superior. En la parte central hay un "aside" que esta a la izquierda y un "article"
+										"aside article article"				que abarca la parte del medio y la derecha. Y en la parte inferior hay "footer"
+										"footer footer ."					pero solo en la parte izquierda y central, ya que a la derecha hay un espacio
+																			vacio
+
+								- Estas se puede usar cualquier palabra. Pero por si mismas no hacen nada. Para que estas palabras tengan "valor" hay que asociarlar 
+								  a su respectivo elemento hijo/"grid-item" mediante la propiedad "grid-area:"
+
+
+ - grid-area:					Esta propiedad es necesaria para que la propiedad "grid-template-areas:". Se utiliza en el elemento hijo/"grid-item" y sirve para 
+								asociarlo a su respectiva a la palabra utilizada en el "grid-template-areas:"
+									Ej: grid-area: header;					Ahora el navegador sabe que cuando utilizo la palabra "header" en el "grid-template-areas:" 
+									                                        me refiero a este elemento
+ 
+
+*/
+
+  
+body {
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 150px repeat(2, 1fr);	
+    grid-template-areas:							/* Ahora nuestra página web va tener sus partes dispuestas de esta manera */
+		"header header header"
+		"aside article article"
+		"footer footer -"
+}
+
+.header,
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+    background: peru;
+}
+
+.header {
+	grid-area: header;								/*-----*/
+}
+
+.aside {
+    background: hotpink;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+
+	grid-area: aside;								/*-----*/
+}
+
+.article {
+    background: royalblue;
+    padding: 1rem;
+
+	grid-area: article;								/*-----*/
+}
+
+.footer {
+	grid-area: footer;								/*-----*/
+}

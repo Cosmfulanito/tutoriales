@@ -1,0 +1,79 @@
+<!--
+
+                                                                _____Inputs para móviles_____
+
+
+- Esto es un repaso especificamente para inpusts para moviles del apunte 25-tipos-de-inputs.html  
+
+- Estos son imputs que en panatalla se ven exactamente igual al input que viene por defecto, PEEEEERO con la diferencia de que cuando el usuario quiere
+  ingresar información en ellos desde un celular, el teclado en pantalla se va a ver diferente, desde un teclado comun hasta el teclado númerico y muchos otros más.
+  Esto hace que la accesibilidad sea mucho más comoda. Por eso es importantisimo utilizar estos imputs cuando corresponda y no cualquier otro. 
+
+
+
+
+- ¿Como ver nuestra página web desde nuestro propio celular?
+    
+    - Paso 1:   Abrir la consola con CMD e ingresar la palabra: ipconfig
+                Ahí veremos nuestra IP, la copiamos en el buscador de nuestro celular.
+
+    - Paso 2:   Desde nuestra PC abrimos nuestro archivo con la extención de Visual Studio Code: Live server
+                En el buscador veremos la direccion de nuestra página. Solamente tenemos que copiar en nuestro celular al lado de la IP el puerto. 
+                El puerto son dos puntos junto con un numero. En este caso :5500
+
+    - Paso 3:   Luego copiamos el texto que sigue despues del puerto. Osea, la barra "/", carpetas y el archivo (todo esta en la url del navegador de la PC junto
+                con el puerto).
+
+    - Fin:      Una vez copiado todo eso en el navegador del celular, simplemete preciono enter y podre ver mi página web desde mi propio celular
+
+    - Tip:      Puede ser que quiera ver todos los archivos que tenga en esa carpeta. Para hacer eso, simplemente tengo que omitir copiar el nombre del archi y
+                solamente la carpeta raiz a la que quiera acceder. 
+                Tener en cuenta que no debo tener un archivo index.html. Ya que el navegador entrara por defecto a el
+
+
+
+- Video-Tuturial: https://www.youtube.com/watch?v=_MJqIjiz4BA&list=PLROIqh_5RZeB92ME1GFyeqDVOa-gL0Ybd&index=46
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inputs para móviles</title>
+    </head>
+
+    <body>
+
+        <div>                                                       <!-- Esta etique <div> esta solamente para hacer el salto de línea -->
+            <label for="a">"search"</label>                                             
+            <input id="a" type="search">    
+        </div>                        
+
+        <div>
+            <label for="b">"tel"</label>
+            <input id="b" type="tel">   
+        </div>                           
+
+        <div>
+            <label for="c">"email"</label>
+            <input id="c" type="email">             
+        </div>                
+
+        <div>
+            <label for="d">"password"</label>
+            <input id="d" type="password">                   
+        </div>       
+
+        <div>
+            <label for="e">"url"</label>
+            <input id="e" type="url"> 
+        </div>     
+
+    </body>
+
+</html>

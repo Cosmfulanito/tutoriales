@@ -1,0 +1,69 @@
+body{
+	font-family: sans-serif;
+}
+
+img { 
+	max-width: 100%;				/* Esto es para que la imagen no desborde */
+}
+
+
+
+
+
+/* Barra de progreso con "2 elementos": */
+.load-bar{
+	width: 50%;
+	background-color: #bbb;
+	height: 10px;
+	position: relative;
+	margin: 1rem 0;
+}
+
+.progress{
+	display: block;
+	background-color: royalblue;
+	height: 10px;
+	width: 0%;						/* Este % es relativo al tamaño de la caja de la padre de este elemento. Osea que el tamaño de este <span>/.progress es relativo al tamaño de su elemento padre <div>/load-bar. Si pongo 50%, el <span> va atener el 50% del tamaño del <div>. Al jugar con esto puedo crear una barra de carga */
+}
+
+
+
+
+
+/* Barra de progreso con "un solo elemento": */
+:root{								/* Esto esta copiado tal cual del tutorial de "Dorian Desings". No tengo idea de lo que es, pero aparentemente se se explico en la vercion vieja del tutorial de CSS */
+	--bar-width: 0%;				/* Esta variable es la que vamos a utilizar para darle un ancho a nuestro elemento   */
+}
+
+.load-bar2{
+	width: 50%;
+	background-color: #bbb;
+	height: 10px;
+	position: relative;
+	margin: 1rem 0;
+}
+
+.load-bar2::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: royalblue;
+	width: var(--bar-width);
+	height: 10px;
+}
+
+
+
+
+/* Barra de progreso propia: */
+.full-progress{
+	display: block;
+	background-color: limegreen;
+	height: 10px;
+	width: 100%;					/* Este % es relativo al tamaño de la caja de la padre de este elemento. Osea que el tamaño de este <span>/.progress es relativo al tamaño de su elemento padre <div>/load-bar. Si pongo 50%, el <span> va atener el 50% del tamaño del <div>. Al jugar con esto puedo crear una barra de carga */
+}
+
+
+

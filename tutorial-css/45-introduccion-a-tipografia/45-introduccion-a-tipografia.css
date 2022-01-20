@@ -1,0 +1,84 @@
+/* 
+
+																	_____Introducción a Tipografía_____ 
+
+
+
+ - La "tipografía" es la ciancia que estudia el diseño y uso de los tipos de letra.
+
+ - Las "fuentes" son tipos esecíficos de letra.
+
+ - Los son cada uno de los dibujos que representa cada símbolo de la fuente, incluidos los espacios.
+
+ - Los estilos de fuente son las modificaciones que se hacen a las fuentes, como el grosor o la inclinación. 	Ej: "Negrita", "Cursiva" 		
+   Recordar que no todas las fuentes tienen esa modificcion y por lo tanto el navegador para consegirla lo que hace es falsear la fuente original 	
+
+ - Familia tipográfica, son las diferentes fuentes que pertenecen a una misma fuente base.	
+   Ej: "Familia de Arial"	==   "Arial" (fuente normal), "Arial bold" (negrita) y "Arial italic" (cursiva).  
+
+ - Cuando usamos una propiedad "text-*" estamos afectando a un bloque completo.		
+   Ej: text-align: center;  	 Esta propiedad centra todo el contenido de la caja, no solamente al texto
+
+ - Cuando utilizamos una propiedad "font-*" afectamos a la fuente del texto.
+
+ - Fuentes predeterminadas, son las fuentes que se consideran seguras ya que son genéricas y no establecen una familia tipográfica, si no un estilo de fuente.
+		- serif				Fuentes que tienen "serifas" (adornos en los caracteres). Es la que viene por defecto en el navegador
+		- sans-serif		Fuentes sin serifas. Es mucho más limpia y comoda de leer que una fuente con serifa
+		- monospace			Fuentes que tienen el mismo espacio entre todos sus cararcteres. 	Ej: La fuente de los editores de codigo como el visual estudio code es "monospace", debido a que la separacion entre caracteres es siempre la misma
+		- cursive			Cursiva, fuente que pretende emular la escritura a mano, con ligaduras y trazos fluidos
+		- fantasy			Fuentes que suelen ser decorativas
+
+
+
+*/
+
+
+
+
+*{											
+	box-sizing: border-box;					/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+body{										
+	margin-left: 10px;						/* Esta propiedad es solamente decorativa */
+}
+
+
+
+
+
+
+
+/* Tipos de fuentes: */
+
+/* Fuente: serif */
+.serif{
+	font-family: serif;
+}
+
+
+/* Fuente: sans-serif */
+.sans-serif{
+	font-family: sans-serif;
+}
+
+
+/* Fuente: monospace */
+.monospace{
+	font-family: monospace;
+}
+
+
+/* Fuente: cursive */
+.cursive{
+	font-family: cursive;
+}
+
+
+/* Fuente: fantasy */
+.fantasy{
+	font-family: fantasy;
+}
+
+
+

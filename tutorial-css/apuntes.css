@@ -1,0 +1,1346 @@
+/* Así es como se hacen los comentarios */
+/*
+
+
+
+                                                            _____Páginas web recomendadas:____
+
+    
+
+
+	- Documentación oficial de CSS con describe todas sus propiedades y funcionamiento. Esta es la posta de postas en cuanto a como funciona CSS
+    	https://www.w3.org/TR/CSS/#properties
+
+    - Pagína que describe la modularización de CSS. De forma muy resumida, CSS3 no existe. CSS3 es el nombre que se le da a CSS 2.2 ya que a partir de ahí hubo un cambio enorme debido a que modularon el contenido, eso quiere decir que el contenido estaba dibido en distintos modulos y estos modulos se actualizan de forma independientes unos de otros. Comercialmente vende más la palabra CSS3 que CSS 2.2
+    	https://developer.mozilla.org/es/docs/Archive/CSS3
+
+    - Con esta pagína podremos saber si escribimos un codigo CSS de forma correcta. Simplemente copiamos nuestro codigo y luego lo pegamos ahí adentro, luego la página nos mostrara un grafico. Una codigo en CSS correctamente escrito mostrara un grafico completamente plano (osea, una linea horizontal recta y plana, sin subidas o bajadas). Por otro lado, un CSS mal escrito mostrara un grafico lleno de puntas, subidas y bajadas (osea, un CSS escrito para el orto).  //  Para entender como funciona CSS y evitar esto, ir al apunte 6-especifidad-y-cascada.css        
+    	https://jonassebastianohlsson.com/specificity-graph/
+
+	- Páginas recomendadas para investigar por mi cuenta:
+		https://developer.mozilla.org/en-US/
+		https://css-tricks.com/
+
+	- Página para saber cuantos navegadores soportan la propidad que estoy utilizando
+		https://caniuse.com/
+
+    - Este video explica en detalle el funcionamiento del "inspector de elementos". Ambos links van a mismo video de Dorian Desings. Solo que uno esta en Youtube y el otro en Udemy
+    	https://www.youtube.com/watch?v=RcR92AXQAcU&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=17
+    	https://www.udemy.com/course/css-edicion-2020/learn/lecture/26063848#overview
+
+    - Página para descargar archivo .css que sirve para normalizar nuestra web y que de esa manera se vea igual en todos los navegadores. Es recomendable visitarla y ver si hay alguna acrualizacion ya que podria estar trabajando con archivo que guarse hace tiempo y ahora esta obsoleto
+    	https://necolas.github.io/normalize.css/
+
+    - Página web que agrega "prefijos" automaticamente. Estos prefijos son necesarios porque a veces CSS larga nuevas propiedades experimentales que no son soportadas por los navegadores por el momento. Para que esto ocurra tenenos que poner prefijos especiales en nuestra archivo .css   Esta página web lo hace de forma automatica por nosotros, con tan solo copiar y pegar nuestro codigo, esta web lo devuelve con las "prefijos" agregados. Esto mismo tambien los hace el programa "Prepos"
+    	https://autoprefixer.github.io/
+
+    - Link de descarga del programa "Prepos". Prepos es una programa/aplicación que agrega "prefijos" automaticamente. Estos prefijos son necesarios porque a veces CSS larga nuevas propiedades experimentales que no son soportadas por los navegadores por el momento. Para que esto ocurra tenenos que poner prefijos especiales en nuestra archivo .css   Este programa lo hace de forma automatica por nosotros. Toda esta información enta en el apunte "10-prefijos-propietarios.css"
+    	https://prepros.io/
+
+	- Páginas para poder seleccionar correctamente una paleta de colores
+		https://brandcolors.net/
+		https://htmlcolorcodes.com/es/tabla-de-colores/
+		https://colorhunt.co/
+		https://color.adobe.com/es/create/color-wheel
+	
+	- Página de Google para selecionar fuentes para nuestra página web
+		https://fonts.google.com/
+
+	- Página de Google para seleccionar iconos para nuestra página web
+		https://fonts.google.com/icons
+
+	- Páginas para descargar fuentes
+		https://www.1001fonts.com/
+		https://www.dafont.com/es/
+
+	- Página para convertir un formato de fuente a otro
+		https://convertio.co/es/ttf-otf/
+
+	- Extención de Chrome para saber que fuente es la que estamos viendo en una página de internet
+		https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=es
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                 _____Vocabulario:_____
+
+									
+														
+	- CRUDS:								Create Read Update Delete (Crear Leer Actualizar Borrar)
+
+	- TODO:									Esta es una palabra que se puede hallar en los comentarios, significa: "Tarea pendiente" 															 
+
+    - shorthand                           	Son subpropiedades dentro que pertenecen a las propiedades.   Ej: "margin-top:" es un shorthand de la propiedad "margin:"    
+
+    - contenido desbordado                	Es todo aquel contenido (texto, imagenes, etc.) que esta por fuera de la caja que lo contiene. Esto se da porque la 
+											cantidad de contedo es mucho mayor que el tamaño de la caja.                                                              
+
+	- Flujo renderizado: 					Por norma general los elementos se dibujan de izquierda a derecha y de arriba a abajo. El punto 0,0 de los de los 
+											elementos, por norma general, es la esquina superior derecha.
+
+	- Espacio reservado: 					Es el espacio que tiene un elemento asignado en el navegador. Básicamente es el lugar que ocupa la caja. Puede modificarse
+											mediante varias propiedades entre ellas "whith:", "hight", etc. 
+
+	- Elemento posicionado:					Esto significa que el elemento tiene la propiedad "position:" con valor distinto de "static", que es el valor que tiene 
+											esta propiedad por defecto. Osea, cuando un elemento no tiene el valor "static" se dice que posicionado, esto se debe 
+											a que estamos abilitando la posibilidad de poder mover/posicionar ese elemento en cualquiera de los 3 ejes.
+
+	- Stakin context: 						Contenido de apilamiento. Es el orden en que se apilaran las cajas que se superponen dentro del mismo contenedor
+
+    - Responsive:							Tipo de diseño de página que se adapta al tamaño de la pantalla del navegador. Haciendo que se vea "esteticamente linda" 
+											tanto en la pantalla de un monitor como en el de un smartphone
+  
+    - Viewport:								Es todo el espacio visible que tiene el navegador en nuestra pantalla, sin tener que hacer scroll.
+
+	- Fallback:								Es una segunda opción extra de respaldo en caso de que la primera opción falle. 		Ej: La imagene de respaldo en formato .jpg que uno pone en las páginas web en caso de que la imagen en formato .webp no sea leída por el navegador
+
+	- Grid track: 							es la union de celdas consecutivas tanto horizontal como verticalmente. Al ser uniones, obviamente deben ser 2 o más celdas. Estas uniones pueden ser por cosas abstractas como la similitud de colores, letras, etc	
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+                                                            
+
+                                                                _____Reglas generales_____
+
+
+ - Todos los archivos incluidas las carpetas se deben escribir en minusculas, sin espacios y evitando letras que esten fuera del alfabeto ingles como la "ñ". El guion y el guion bajo estan permitidos. Esto se debe a que las mayusculas, guiones y letras que estan fuera del ingles pueden probocar errores.   Ej de archivo bien escrito: pagina_web.html      La forma en la que yo creo los archivos de apuntes esta mal hecho. No se debe hacer
+ 
+ - El archivo principal en el que se trabaja en HTML, por arbitrariedad lleva el nombre de: index.html
+
+ - El contenido enbebido (imagenes, videos, audios, etc) va dentro d una carpeta llamada "assets". Dentro de dicha carpeta habra subcarpetas donde se separaran los contenido, como la carpeta favicon (iconos), images, video, audio, etc
+
+ - El archivo principal en el que se trabaja en CSS, por arbitrariedad lleva el nombre de: styles.css   Dicho archivo debe estar dentro de una carpeta para archivos CSS llamada CSS
+
+ - Nuestar página web debe estar conectada a un archivo .css llamado normalize.css    Este sirve para "normalizar" mi página web en los distintos navegadores. Osea, que mi página web se vea igual en los diferentes navegadores
+
+ - En nuestra página web trabajaremos con nuestro archivo principal .css    Pero ese archivo .css NUNCA sera conectado al .html    El archivo .css que ira conectado al .html es una copia de nuestro archivo .css creada por el programa "Prepos", ya que este archivo incluye "prefijos" que coloca de forma automatica para que las nuevas propiedades experimentales de CSS funcionen en los navegadores. Toda esta información enta en el apunte "10-prefijos-propietarios.css"
+
+ - Se recomienda utilizar el conjunto propiedad/valor "box-sizing: border-box;" Dentro de un selector universal justo al principio de cualquier archivo .css. De esta manera cada vez que utilice una propiedad padding: o border:, mis cajas no se veran deformadas. Para más informacion ir al apunte 17-box-sizing.css
+        Ej:     *{
+                    box-sizing: border-box;
+                }      
+
+
+ 
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                               _____Atajos de teclado_____
+ 
+
+    Ctrl + s                    Guarda automaticamente los cambios hechos en los archivos
+    
+    Ctrl + b                    Abre y cierra el explorador de carpetas y archivos
+
+    Ctrl + }                    Crea comentarios automaticamente
+        
+    Ctrl + a                    Copia por completo todo el contenido del archivo 
+
+    Ctrl + h                    Es una herramienta que nos permite "buscar" y "reemplazar". Gracias a esta herramienta no tenemos que copiar y pegar muchas veces en varias lineas de codigo. Se hace todo de una
+
+    Shift + Alt + f             Formatea el codigo. Sumamente recomendado antes de subirlo a GitHub. ¿Que significa esto? Basicamente me acomoda las etiquetas para que esten más prolijas. Osea, las acomoda con su correspondiente tabulación una adentro de otra  
+
+    Ctrl + Shift + p            Despliega un buscador de todas las configuraciones de Visual Studio Code. Luego desde desde ese buscador puedo cambiar la configuración que desee
+
+    Alt + flecha                Muevo la linia de codigo de arriba hacia abajo
+
+    Alt + Shift + flecha        Copio y pego la linea de codido de donde estoy arriba o abajo
+
+    Ctrl + Borrar               Borro un trozo/palabra completa de la linea de codigo
+
+    Ctrol + INTRO               Voy hacia abajo sin importar que el cursor este en el medio de una palabra
+
+
+                                                                
+    "!" , INTRO                 Escribir el signo se esclamacion ! y luego precionar la tecla ENTER, nos hasra aparecer la "estructura base" de un archivo .html. Basicamente esto hace que se escriban automaticamente la mayoria de las etiquetas clave de un archivo .html
+ 
+    "lorem" , INTRO             Genera un texto aleatorio para rellenar. Basicamente sirrve para ponbe un texto generico de prueba
+
+    "&" , Ctrl + spacebar       Me permite ver todos los Ampersand Characters que existen
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                _____Unir HTML y CSS_____
+
+
+ - Hay 4 metodos para unir un archivo HTML a CSS:
+    
+    1- Tener un archivo CSS separado del archivo HTML y luegos conectarlos mediante la etiqueta <link>. Esta es la forma más recomendada y la que vamos a usar el 99% de las ocaciones. Esto se debe a que este archivo de CSS le da estilo a muchos archivos .html que esten dentro mi sitio web. Gracias esto, todas las páginas de mi sitio web van a tener el mismo estilo y estectica visual 
+
+       <link> </link>       Permite unir un archivo .html a uno .css
+                                rel="stylesheet"        Indica que tipo de relacion hay entre el archivo .html y el .css. En este caso "stylesheet" me dice que el CSS es una hoja de estilos
+                                href=""                 Entre estas comillas va la ruta hacia el archivo .css 
+
+
+
+    2- Escribir CSS dentro del mismo archivo .html mediante una etiqueta <style>. No se recomienda mucho usar este metodo exepto en casos muy especiales. Esto se debe a que este cambio de estilo solo va a ser visible en una sola página de mi sitio web. Si quisiera que el resto de las páginas tuviesen el mismo estilo, tendria que copiar y pegar el mismo codigo en todas las páginas (hacer esto es una pajaaaaa o hasta incluso imposible dependiendo de la cantidad de páginas). Por eso es mucho mejor usar el primer metodo  
+
+        <style> </tyle>     Permite escribir codigo CSS dentro de un archivo .html. Obviamente dicho codigo CSS tiene que estar dentro de esta etiqueta. Incluso los comentarios se tienen que hacer en CSS /* */                                                                                                               /*
+
+
+
+    3- Mediante el atributo universal style="". Este atributo va dentro de la etiqueta a la cual le queremos aplicar CSS. Dentro de las comillas iria el codigo en CSS. ESTE METODO NO ES PARA NADA RECOMENDADO, se explica en este apunte por el simple hecho de que antiguamente no habia otros metodos para aplicar CSS ademas de este y por ende podria cruzarmelo alguna vez en la vida. Pero a día de hoy ESTO NO SE DEBERIA HACER JAMAS ya que se considera muy mala practica
+
+        style""            Este atributo va dentro de la etiqueta a la cual le queremos aplicar CSS. Dentro de las comillas iria el codigo en CSS. ESTE METODO NO ES PARA NADA RECOMENDADO, se explica en este apunte por el simple hecho de que antiguamente no habia otros metodos para aplicar CSS ademas de este y por ende podria cruzarmelo alguna vez en la vida, pero hacer esto se considera muy mala practica
+
+
+
+    4- Mediante la regla @import url(), adentro del parentesis va va la ruta hacia el archivi .css. Esta cosa debe ir dentro de la etiqueta <style>. Esto se aplica de forma similar al primer metodo, pero es diferente a nivel tecnico ya que funciona de otra manera. Debido a eso ese funcionamiento tecnico, los estilos del .css tardan en aplicarse, lo que hace una muy mala experiencia de usuario (literalmente el usuario entra a la página y a los 5 segundos se aplican los estilos del .css), por ende este metodo no es para nada recomendado, pero se explica en este apunte por el simple hecho de que existe y podria cruzarmelo   
+      
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                    _____Sintaxis de CSS_____
+
+
+ - Selector:        Es el elemento al cual le vamos a aplicar estilos
+ 
+ - Propiedad:       Es lo que vamos a cambiar
+
+ - Valor:           El nuevo valor que le vamos a dar a la propiedad
+
+
+ - Declaración:     Propiedad: Valor
+
+ - Regla:           Conjunto de de Selector + Declaración(es) 
+
+
+
+    Selector{
+        Propiedad1: Valor;
+        Propiedad2: Valor;
+        PropiedadN: Valor;
+    } 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                    _____Tipos de selectores_____
+
+                                                                        
+_____Selectores Simples:_____                                                                
+
+        Selectores Elementales:
+            - Universal                             *                                                       Selecciona todo. No es muy recomendable de usar
+            - De tipo o etiqueta                    Nombre de la etiqueta                                   Simplemente ponemos el nombre de la etiqueta a la cual le queremos aplicar estilos de CSS. No es muy recomendable de usar
+
+        Selectores de Atributo:     
+            - id                                    id del elemento                                         Dentro del archivo .html se le coloca el atributo id="" a la etiqueta deseada, dentro de las comillas va a el nombre que le queramos poner al id. Luegon en el archivo .css, el selector lleva el nombre del id. Recordar poner un hash "#"  para que el selector funcione.       Ej:  #NombreDelid{ }     //    Este id es unico para cada etiqueta y no se puede compartir. Por ende no es un selector muy recomendable para dar estilos, esto se debe a que los id son identificadores (y por lo tanto, al ser identificadores solo puede haber uno solo), esto choca con  los principios de CSS ya que los estilos son reutilizables, cosa que no es compatible con tener estilos que solo se apliquen a un solo elemento como en el caso de id
+            - clase                                 Clase del elemento                                      Dentro del archivo .html se le coloca el atributo class="" a la etiqueta deseada, dentro de las comillas va el nombre que le queremos poner a la clase. Luego en el archivo .css, el selector lleva el nombre de la clase. Recordar poner un punto "." para que el selector funcione.     Ej:  .NombreDelSelector{ }     //    A diferencia de los selectores de id, la clase si puede ser compartida por varios elementos/etiquetas. Esto lo convierte en el tipo de selector más recomendable de usar ya que tiene estilos reutilizables                     
+            - Otros atributos:
+                [atributo]                          Atributo del elemento                                   Básicamente le aplicamos CSS a todas las etiquetas que tengan ese atributo. Este selector debe estar entre []
+                [atributo="valor"]                  Atributo + valor del elemento                           Basicamente le aplicamos CSS a todas las etiquetas que tengas ese conjunto especifico de etiqueta y valor. Este selector debe estar entre []
+                [atributo^="valor"]                 Atrinuto + primera parte del nombre del valor           Funciona exactamente igual que un selector del tipo [atributo="valor"] con la diferencia de que solamente hay que poner la primera parte del nombre del valor. De esta manera el selectror verifica si el valor del atributo comienza con esa palabra (Es una especie de buscador de coincidencia)
+                [atributo$="valor"]                 Atributo + ultima parte del nombre del valor            Funcina exactamente igual que [atributo^="valor"] con la firencia de que aqui el selector busca que el valor termine con esta palabra. Osea que la tenga al final
+                [atributo*=valor"]                  Atributo + parte del nombre del valor                   Funcina exactamente igual que [atributo^="valor"] con la diferencia de que puedo poner cualquier parate del nombre del valor. Este selector va a buscar todos los valores que tengan coincidencias con esta palabra, este adelante, al medio o al final. Da igual en que posición se encuentre
+                [atributo|="valor"]                 Atributo + parte del nombre del valor                   Funciona exactamente igual que [atributo^="valor"] pero en este caso, busca atributos que coincidan con esta palabra y que a su vez tengan un guion alto "-" al final de dicha palabra. Es muy usado con el atributo lang="" ya que el idioma va acompañado de un guion y luego la comarca/region del idioma.   Ej: lang="en-GB".    Solamente deberia poner [lang|="en" y cualquier concidencia con "en-" se le aplicaria CSS     
+
+                
+
+_____Selectores Compuestos:_____                   
+
+       - Selectores Agrupados                                         ,                    Son varios selectores distintos que comparten una misma declaración (conjunto propiedad-valor). De esta manera se pueden aplicar exactamente los mismos cambios de CSS a diferentes elementos. La forma de aplicarlos es escribir el nombre de los elememtos deseados separados por una coma ","                                            
+
+       - Selectores Convinatorios:
+              - Desendientes                                                               Selecciona un elemento especifico para aplicar CSS aunque comparta el mismo nombre con otros elementos. Para lograr allar a este elemento en especifico entre tantos otros con el mismo nombre, tenemos que colocar la etiqueta padre de nuestro elemento a modo de referencia, y luego el nombre de nuestro elemento deseado para aplicar CSS. Osea, buscamos una etiqueta especifica en funcion de su etiqueta padre. Se puede ser aun más especifico y poner etiquetas dentro de etiquetas, pero las buenas practicas recomiendan no bajar más de un nivel (osea, solamente poner una sola etiqueta padre)    
+              - Selector de Hijo Directo                              >                    Aplica CSS a los hijos directos de de una etiqueta. Osea, solamente a los elementos/etiquetas hijas directas, las etiquetas nietas no se les vaa  aplicar CSS. Tener en cuenta que todas estas elemetos/etiquetas hijas deben tener el mismo nobre. Para aplicar este tipo de selector, primero tengo que poner el nombre de la etiqueta/elemento padre seguido del simbolo >, luego pongo la etiqueta hija. Ej: .lista > <p>   ahora a todas las etiquetas <p> que esten dentro de la etiqueta lista se les aplicara CSS 
+              - Selector de hermano siguiente                         +                    Selecciona un elemento especifico para aplicar CSS aunque comparta el mismo nombre con otros elementos. Para lograr allar a este elemento en especifico entre tantos otros con el mismo nombre, tenemos que colocar un elemento hermano como referencia (un elemento que este dentro del mismo nivel. Osea, otra etiqueta/elemento que sea hijo de la misma etiqueta padre que nuestro elemento deseado). Luego ponemos nuestro elemto deseado para aplicar CSS. Recordar que para que esto funcione, primero tengo que poner la etiqueta/clase hermana, seguido del simbolo de "+" y luego la etiqueta/clase deseada. Esta clase deseada tiene que estar escrita dentro del .html a continuación de su etiqueta hermana, si hay otra etiqueta hermana de por medio este selector no va a funcionar 
+              - Selector de los hermanos siguientes                   ~                    Selecciona a un grupo especificos de elementos para aplicar CSS, ese grupo de elementos comparte el mismo nombre y a su vez son parte de un grupo más grande de elementos del mismo nombre. Para lograr segregar a estos elementos especicos del resto que son iguales, usamos de referencia a una etiqueta/elemento hermano que tengan en comun. Primero ponemos el nombre del elemento que usamos de referencia luego el simbolo "~" y por ultimo el nombre de la etiqueta/elementos deseados, este ultimo elemento/etiqueta representa a a todas las etiquetas iguales que son hermanas del primero y se les aplicara CSS
+              
+       - Pseudoclases - Pseudoelementos               (Se veran más adelante en el curso)
+
+
+
+
+ - Recordar que en CSS las ordenes van en cascada, eso significa que la declaracion de arriba es sobreescrita por la de abajo. Ej: Si pongo un etiqueta de color verde y abajo pongo que es roja, al final esa etiqueta va a ser roja porque lo de abajo sobreescribe a lo de arriba 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                _____Especificidad y Cascada_____  
+                                                               
+                                                                
+ - El objetivo de esta sección es comprender el funcionamiento de CSS. Ya que normalmente la gente cree que lo que esta abajo del codigo sobreescribe a lo de arriba, 
+   cuando esto NO ES ASÍ. Debido a este concepto erroneo, es normal que desarrolladores tengan problemas al escribir nuevo codigo en el.css que en teoria deberia 
+   sobreescribir al anterior y luego encontrarse con la sorpresa de que no funciona así
+
+
+ - ¿COMO FUNCIONA CSS?
+    
+    - Especificidad:        - Establece cómo de especifico es un selector para saber que estilo aplicar. Básicamenete cada tipo de selector (#id, .clase, <etiqueta>)
+                              tiene su propio "puntaje". Cuanto mayor sea el puntaje que tenga el selector, más prioridas le va a dar el navegador, sin importar haya
+                              codigo CSS que lo sobreescriba abajo. El navegador siempre prioriza a los selectores de mayor puntaje sin importar que este escrito
+                              arriba o abajo del archivo .css
+
+                            - Puntajes:     - <etiquetas>           0,0,1 =    1 punto
+                                            - Pseudoelementos       0,0,1 =    1 punto
+                                            - .clases               0,1,0 =   10 puntos   
+                                            - pseudoclases          0,1,0 =   10 puntos        
+                                            - atributos             0,1,0 =   10 puntos
+                                            - #id                   1,0,0 =  100 puntos
+                                            - Atributos en linea            1000 puntos     (Estos son los estilos que se escriben dentro del archivo .html) 
+                                            - !important            GANA A TODO             (Usar esto es considerado MUY MALA PRACTICA, ya que es un recurso que se
+                                                                                             usa por la desesperación de querer apliar cambios al CSS y no poder porque
+                                                                                             desde un principio ese codigo esta escrito con los pies)
+
+                            - ¿Como sabemos el puntaje de nuestro selector? Simplemente ponemos el cursor sobre el y automaticamente aparecerá un carte con la 
+                              frase "Selector specifity: (0,1,0)", este es un ejemplo de un selector de .clase
+
+                            - Recordar que en una misma etiqueta puedo poner muchos tipos de selectores para referirme a ella. En esos casos los puntajes de todos 
+                              los selectores se suman dando como resultado un selector con un puntaje mucho más alto y por ende con mayor prioridad
+                              Ej: h1.clase#id{ }    -->   "Selector specifity: (1,1,1)" = 111 puntos totales.   
+                                    Da 111 puntos porque son: 1 punto de la etiqueta + 10 puntos de la .clase + 100 puntos del #id
+                            
+
+    - Cascada:              - Una vez se haya establecido la prioridad de los selectores segun su especificidad (puntaje), viene la prioridad por cascada. Esto 
+                              significa que si hay un puntaje máxmo compartido por dos elementos, se le dara prioridad al que esta escrito abajo de todo en el 
+                              archivo .css
+ 
+
+
+ - Debido a la especificidad, es comun que desarrolladores novatos intenten aplicar nuevos cambios al CSS sobreescribiendo el codigo y que este no tenga cambios.
+   Para evitar este problema simplemente hay que usar selectores de .clase, de esta forma todos los selectores tienen el mismo puntaje, así de simple. Usar 
+   cualquier otro tipo de selector no es considerado buena practica y ademas da complicaciones a futuro
+        - Usar !important para poder aplicar un cambio en CSS es admitir que no sabemos como funciona CSS y que nuestro codigo es una chota. 
+        - Recordar que !important que !importan no soluciona nada porque entre dos !important, tiene prioridad el que tiene mayor especificidad por sus selectores.
+          Osea, no suluciona una mierda e hice pija la especificidad de la página  
+        - Para saber si nuestro codigo es choto, usar el link que esta arriba de todo de este apunte
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                  _____Herencia en CSS_____
+
+
+ - La herencia es la capacidad que tienen algunos elementos (no todos) de heredar algunas propiedades de sus elementos contenedores (padres, abuelos, bisabuelo, etc)
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                _____Estilos Computados_____
+
+    
+ - Este apunte es sumamente teorico ya que veremos el funcionamiento del inspector de elementos. Para ver este tema más en detalle ir a los siguientes links:
+   (Ambos links van a mismo video de Dorian Desings. Solo que uno esta en Youtube y el otro en Udemy)
+
+    https://www.youtube.com/watch?v=RcR92AXQAcU&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=17
+    https://www.udemy.com/course/css-edicion-2020/learn/lecture/26063848#overview
+
+
+
+ - El inspector de elementos no es más que una herramienta que tenemos a nuestra disposición para facilitarnos nuestro trabajo. Ya que con el podemos dar un vistazo 
+   a los archivos .html y .css de todas las páginas web desde nuestro navegador. 
+
+ - Esta herramienta es extremadamente util ya que con ella podemos saber exactamente que partes del codigo del archivo .css le esta haciendo cambios a archivo .html
+   El tiempo que me ahorro buscando especificamente ese elemento CSS vale oro
+
+ - El inspector de elementos ademas de brindarme toda esa informacion util, tambien me permite escribir codigo ahí (obviamente no seran cambios temporales que 
+   solamente vere hasat que refresque la página), esto es util para previsualizar algún tipo de cambio
+
+
+
+ _____Pestaña: Element____ 
+
+  - Me muestra el archivo .html con todo su codigo
+
+    _____Subpestaña: Stiles_____
+    - Si hago click en un elemento/etiqueta en la pestaña element, la subpestaña Stiles me va a indicar exactamente la linea de codigo CSS que le esta aplicando 
+      estilos a esa etiqueta actualmente. Tambien muestra los estilos originales que vienen por defecto en el HTML (osea, la fuente de las letras, su color negro 
+      y su tamaño predefinidos por HTML puro). Ojo que estos estilos vienen por defecto en el navegador. Por ese motivo las paáginas web se ven distintas en 
+      diferentes navegadores.
+
+    - Si hacemos clic en alguna linea de codigo que nos indica, nos llevara automaticamente a la "Sources". Esta pestaña me muestra el archivo .css y todo su codigo.
+
+    _____Subpestaña: Computed
+    - Me muetra todos los estilos que recibio la etiqueta seleccionada, desde el ultimo que sobreescribio a los demas y que por ende es el mostrado por el navegador,
+      hasta incluso los primeros estilos que fueron sobreescritos por la cascada. Incluso me muestra los estilos por defectoq ue vienen con el navegador
+    
+    - Esto es lo más exacto que hay. Ya que me indica que selectores aplican estilos, cuales dejaron de hacerlo y porque, ademas de indicarme la linea de codigo 
+      exacta que produce ese cambio
+
+
+
+      
+_____Pestaña: Sources_____
+
+ - Me muestra el archivo .css y todo su contenido
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                _____Normalizar estilos del navegador_____
+
+
+
+ - Cada navegador tiene sus propios estilos de CSS por defecto cuando abren un archivo .css (el color negro de las letras, su tamaño, la distancia entre el borde 
+   del navegador y las palabras, etc). Por ese motivo, siempre que que habrimos una página web recien creada por nosotros en distintos en distintos navegadores, esta 
+   siempre se va a ver dirtintas debido a cambios muy sutiles que hay de navegador en navegador
+   
+
+ - ¿Como evito estos pequeños cambios y hago que mi página web se vea  exactamente igual en todos los navegadores? 
+   Eso se consigue "normalizando los estilos del navegador"
+   
+
+ - ¿Como normalizo los estilos del navegador?
+   Hay diferentes maneras, pero actualmente la forma más efectiva es mediante un archivo .css que sobreescriba los estilos originales para que los estilos en todos
+   los navegadores sea identico. Hasta la fecha, pagina más efectiva para descargar dicho archivo es:
+
+   https://necolas.github.io/normalize.css/
+
+   De aqui voy a descargar un archivo .css llamado "normalice.css"
+   
+   Recordar que en dicha página web actualizan constantemente este archivo. Es recomendable visitarla y ver si hay alguna actualizacion ya que podria estar 
+   trabajando con un archivo que guarse hace tiempo y ahora esta obsoleto
+
+
+ - ¿Como funciona este archivo?
+   Funciona como cuarquier archivo .css. Simplemente tengo que usar la etiqueta <link> desde el archivo .html y conectarla al archivo normalize.css
+
+   Es muy importante poner primero este archivo normalize.css en el .html y luego por debajo nuestro propio archivo de estilos .css 
+
+   Esto se debe a que por logica los estilos estilos que vienen por defecto en el navegador seran sobreescritos por el archivo normalize.css y luego este mismo 
+   archivo sera sobreescrito por nuestro propio archivo de estilos .css. 
+   De lo contrario el los estilos del archivo normalize sobreescribiran a nuestros estilos 
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+                                                                    _____Box Model_____
+
+
+ - El "Box model" o modelo de caja se basa en que todas las etiquetas/elementos que uno agrega en el HTML no son más que "cajas" que ocupan un especio rectangular                                                         
+   dentro de la pantalla de nuestro navegador. 
+   Todas las cosas son cajas que ocupan espacios resctangulares. Desde etiquetas como los headers, los footers y hasta incluso elementos como los logos, imagenes 
+   e incluso el texto.  
+
+ - Hay que tener en cuenta que todas estas cajas estan al lado/arriba/abajo de otras cajas. Incluso hay cajas dentro de otras cajas, como la caja header que esta
+   dentro de la caja body.
+
+ - Desde HTML puro no se pueden apreciar las distintas propiedades de una caja e incluso es dificil diferenciar dos cajas distintas (debido a la falta de contraste 
+   ya que todo esta de color blanco). Para ello utilizamos CSS, ya que nos permite apreciar esas propiedades y a su vez manipularlas a voluntad.
+   
+
+ - Propiedades de una caja:
+                                - Contenido             Vendria a ser el texto.
+                                - Borde                 La parte externa de la caja
+                                - Padding               Esta propiedad controlo la distancia que hay desde el borde de la caja hasta el contenido 
+                                - Margin                Permite controlar la distancia de separación que hay entre una caja y las que la rodean
+                                - Width/Height          El ancho y largo de una caja respectivamente     
+
+
+
+
+                                
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                                _____Palabras claves_____
+
+
+ - Son palabras que cumplen una determinada duncion en el funcionamiento de CSS
+
+
+    !important      Se utiliza para darle prioridad a un elemento sin importad su especificidad o cascada. Usar esto es considerado MUY MALA PRACTICA, ya que es un recurso que se usa por la desesperación de querer aplicar cambios al CSS y no poder porque desde un principio ese codigo esta escrito con los pies
+
+    inherit         Fuerza la herencia de un elemento. Hay elemtos que no heredan los cambios hechos en sus padres (Ej: Un elemento link que esta dentro de un texto nunca va a cambiar de color aunque se lo haya hecho a su padre. Siempre va a estar axzul y subrayado). Pero con esta palabra clave puedo hacer que dichos elementos SI hereden los cambios de estilo de sus etiquetas padres
+
+    initial         Con esta palabra clave, mi elemento no heredara los cambios de estilo de su padre. Básicamente hago que dicho elemento vuelva a su estado inicial (Osea, por más cambios que le haga a su etiqueta padre, este elemto hijo no heredara los cambios ya que siempre volvera a su estado inicial donde no tenia CSS)
+
+
+    
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                            ______Colapsado de márgenes_____
+
+
+
+ - Para una explicación más a fondo se recomienda ir a los siguientes links de la clase de "Dorian Desings":
+        - Link de YouTube:          https://www.youtube.com/watch?v=t53-d5wMwFc&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=31
+        - Link de Udemy:            https://www.udemy.com/course/css-edicion-2020/learn/lecture/26169236#overview
+
+
+
+
+ - CSS tiene un fallo/bug con los margenes verticales. La logica me indica que si una caja tiene un margen de 20 pixeles y la caja que esta al lado tiene un margen
+   20 pixeles, entre las dos tendria que haber una separación de 40 pixeles totales. Esto funciona correctamente con los margenes horizontales, pero con los margenes 
+   "verticales" esto no funciona así debido a que CSS presenta un fallo desde sus inicios
+
+ - En el caso de los margenes verticales, los margenes se colapsan/solapan/fucionan uno arriba del otro en vez de sumarse como deberian.
+        Ej1:    Caja A con un margen vertical de 20 pixeles + Caja B con margen vertical de 20 pixeles  ==>  Entre las dos cajas solamente va a haber 20 pixeles de separación    //   Esto se debe a que se solaparon los margenes
+        Ej2:    Caja A con un margen vertical de 20 pixeles + Caja B con margen vertical de 30 pixeles  ==>  Entre las dos cajas solamente va a haber 30 pixeles de separacion.   //   Esto se debe a que los 20 pixeles de la caja A se solaparo con 20 pixeles de la caja B. Pero la caja B tambien tiene otros 10 pixeles extras para llegar a 30
+
+
+ - Este problema esta desde el incio de CSS, no tiene solución ni truco alguno para corregirlo. 
+ 
+ - Debido a todo lo anterior como unica "solución" se recomienda seleccionar un elemento y darle un "margin-bottom:" para vajar el resto de los elementos hacia abajo.
+   Juntar una caja con "margin-bottom:" y otra con "margin-top:" solamente genera confuciones. 
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+														_____Qué es el "Staking constext"_____
+
+
+
+ - Este a apunte es sumamente teorico. Para profundizar en el tema ir a los links:
+   		https://www.youtube.com/watch?v=kSQeLmPwrt4&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=43
+   		https://www.udemy.com/course/css-edicion-2020/learn/lecture/26348962#questions
+
+	
+
+ - El "Staking constext" o "contexto de apilamiento" es el espacio donde nuestros elementos se van a ir apilando para que unos queden por detras y otros por delante.
+
+ - El orden de prioridad del "Staking constext" visto desde adelante hacia atras es el siguiente: 
+		1- Elementos "posicionados" y CON un "z-index" de 1 más. 								Estos elementos estaran adelante de todos.
+		2- Elementos "posicionados" y SIN un "z-index" declarado (o z-index: auto;). 
+		3- Elementos NO "posicionados".
+		4- Elementos con "z-index" negativo.													Estos elementos estaran atras de todos. 			
+
+ - Recordar que el "z-index" no afecta a los hijos. Saber esto es es importante porque puedo tener cajas contenedores/padres arriba de otras cajas, pero los hijos no 
+  se verian porque estarian por detras. Para solucionar este problema se debe darle un "posicionamiento" y un "z-index" a las cajas hijas.    
+
+ - Tener cuidado a la hora de usar la propiedad "opacity:" (propiedad que sera vista más adelante). Ya que rompe el "Staking constext".
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+																_____Cómo ordenar Propiedades_____ 
+
+
+ - No hay ningun orden semantico o logico para ordenar las propiedades segun el navegador, pero es importante tener un orden preestablecido para que el fujo de 
+   trabajo sea más fluido y organizado en equipo. 
+   Este es un orden arbitrario donde la mayoria de los expertos coinciden: 
+
+		1- Propiedades de posicionamiento
+		2- Propiedades del box model
+		3- propiedades de texto
+		4- Propiedades visuales (colores, bordes, background...)
+		5- El resto de las cosas
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+														_____Introducción a medidas absolutas y relativas_____
+
+
+
+ - Las medidas en CSS se pueden agrupar en 2 grupos, "absolutas" y "relativas":
+
+																																									
+	Medidas absolutas:		- NO CAMBIAN y  y siempre mantendran su tamaño independientemente del dispositivo o la interaccion del usuario. 
+						 	
+							- Uno de los inconvenientes de este tipo de medidas es que van a medir exactamente igual (en pixeles) en todas las pantallas sin importar 
+							  su tamaño. Un ejemplo de esto seria una linea de 300px. Dicha linea abarcaría toda la pantalla de un smartphone (debido a que una 
+							  pantalla de smarhphne mide 370 pixeles de ancho), pero solamente ocuparia una fraccion de la pantalla de un monitor con 1080 pixeles de
+							  ancho.
+
+							- Entre sus unidades estan:
+									- px  (píxeles)						1px  =  1/96 de 1in					Esta es medida de este tipo mas usada
+									- cm  (centímetros) 				1cm  =  96px/2,54	
+									- mm  (milimetros)					1mm  =  1/10 de 1cm
+									- Q   (cuarto de milímetro)			1Q   =  1/4 de 1cm
+									- in  (inches, pulgadas)			1in  =  2,54cm  = 96px
+									- pc  (picas)						1pc  =  1/16 de 1in
+									- pt  (puntas)						1pt  =  1/72 de 1in
+ 
+
+
+	Medidas relativas:		- Siempre dependen de un contexto. Son las que se recomiendan utilizar en la gran mayoria de las ocaciones porque nos van a permitir 
+							  todos los elementos escalen proporcionalmente.  
+							
+							- Gracias a este tipo de medidas se consiguen crear los diseños "responsive".
+
+							- Las más usadas son em, rem, %, vw, vh, vmin y vmax. Aunque tambien tenemos otras:
+									- rem				- Corresponde a la medida de la "m" de la raiz del documnento .html. Mientras este valor no se modifique, el tamaño de fuente de la letra "m" que 
+					  									  que viene por defecto es igual a 16 pixeles y por lo tanto tambien el valor de 1rem
+														- Esto quiere decir de que si pongo 1rem, el tamaño de lo que estoy modificando va a veler 16 pixeles. Y 32 pixeles en el caso de 2rem
+														- Para tamaños de fuente se recomienda usar siempre "rem" sin excepción 
+
+									- em				- Corresponde a la medida de la "m" del contexto donde nos encontremos. 
+														  Osea, em vale lo mismo que el tamaño de fuente de la letra "m", que por defecto es de 16 pixeles. Si ese tamaño de fuente se modifica, tambien 
+														  lo hara el tamaño relativo de em. Recordar que dichos cambios se aplican en ese elemento/caja y en sus elemetos hijos.
+															Ej: - La caja-padre tiene un em igual a 16 pixeles (que viene por defecto). si en un momento dado se me da por darle un "font-size: 10px;" eso 
+																quiere decir que el em de esa caja-padre y el de sus hijas ahora va a ser igual a 10 pixeles.
+																Tambien tendria el mismo efecto si pongo "font-size: 2rem;" ya que ahora el em va a tener un valor de 32 pixeles (esto se debe a que 
+																1rem es igual a 16 pixeles)
+														- Este tipo de medidas es muy util para crear cajas con texto dentro. Ya que mantienen la mismas proporciones texto/caja sin importar el tamaño 
+														  de la pantalla del navegador  
+
+									- %					- Cuando usamos esta unidad de medida, usamos de referencia el tamaño del elemento/caja contenedor y luego el navegador calcula ese porcentaje.   
+														- Esto no ocurre cuando usamos transform.														  
+
+									- auto 				- Cuando usamos auto le estamos pidiendo al navegador que calcule en función del espacio disponible del elemento/caja contenedor.
+
+									- "Viewport"		- ¿Que es el "Viewport"?
+													      Es el area útil donde se mostrara la página web. IMPORTANTE, tener en cuenta que es el area visible sin hace scroll. 
+														- Podemos usar el "viewport" como medida de varias formas: 
+																- vw				Viewport Whidth 		Hace referencia al ancho del viewport			
+																- vh				Viewport Height   		Hace referencia al alto del viewport
+																- vmin				Viewport Min			Utiliza el valor más pequeño entre el ancho y el alto del viewport. Osea, si el ancho mide 900px y el alto 500px, utiliza al alto de referencia por ser más pequeño  
+																- vmax 				Viewport Max 			Utiliza el valor más grande entre el ancho y el alto del viewport. Osea, si el ancho mide 900px y el alto 500px, utiliza al ancho de referencia por ser más grande  
+														- Todas estas medidas se calculan en centesimas. Osea, una unidad es equivalente al 1% del viewport, por lo tanto 100 unidades son equivalentes al 100% del viewport 
+																- 1vw    =   1% del ancho del viewport
+																- 1vh    =   1% del alto del viewport
+																- 1vmin  =   1% del valor que sea más pequeño del viewport 
+																- 1vmax  =   1% del valor que sea más grande del viewport
+
+									- ex 				- Altura X de la fuente del elemento 
+
+									- ch				- La medida del ancho del glifo (dibujo de una fuente, osea el tipo de letra) "0" del aletra del elemento
+
+									- lh 				- Altura de la línea del elemento
+
+
+
+
+
+									
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+																_____Modos de colores_____
+
+
+ - Introduccion:		- La mayoria de las pantallas funcionan con un modo de color aditivo. La suma RGB da como resultado un blanco.	
+						- RECORDARD que existe el color "transparent". Que como su nombre lo indica, hace transparente a las cajas
+						- En Web no se utiliza el "Banco puro" o el "Negro puro" debido a que uno es muy blanco y el otro muy negro (valga la redundancia). 
+   						  Lo que se hace es utilizar colores aproximados a estos.
+
+
+ - Modos:							 
+
+	RGB				- En el modo RGB tenemos tres canales (Red, Green, Blue) los cuales tienen 8 bits de color por canal (cada bit tiene dos posibles valores 0 ó 1). 
+					  Lo que significa que tenemos 2^8 posibles valores, que van desde el 0 hasta 255. Danco un total de 256 valores incluyendo al 0
+
+					- Esto nos da un total de 255* 255 * 255 = 16.581.375 colores.   
+
+					- Su sintaxis es rgb(R,G,B)			Ej: rgb(80, 185, 200);
+
+					- Si ponemos todos los canales a 0 tendremos un negro puro  	Ej: rgb(0, 0, 0)
+					  Y si los ponemos a 255 tendremos un blanco puro 	  Ej: rgb(255, 255, 255)
+
+					- Para movernos por la gama de grises debemos poner los 3 canales con el mismo valor. Si ponemos los 3 canales a 128 tendremos el gris puro (debido a que es el valor que esta entre medio de 0 y 255).   Ej: rgb(50, 50, 50) 		rgb(128, 128, 128)		rgb(200, 200, 200);	
+
+	
+	RGBA 			- RGBA es la posibilidad de usar un cuarto canal llamado Alpha. Este canal representa la "transparencia". 
+	
+					- Sus valores van desde el 0 al 1. Donde 0 es la transparencia total (invisible) y 1 es basicamente sin transparencia
+
+					- Tenemos dos sintaxis para para utilizar el canal Alpha. Ambas tienen exactamente el mismo efecto y no cambian en nada salvo en su sintaxis:
+							rgba(R,G,B,A)			Ej: rgb(255, 127, 80, 0.5)	
+							rgb(R G B / A)			Ej: rgb(255 127 80 / .5)
+
+					- Tiene muchas utilidades, entre ellas hacer que las sombras se vean más reales al darle una transparencia. De esta manera no son un negro plano
+
+
+
+
+	Hexadexiamal	- La notacion hexadecimal es la más comun en el desarrolo web. Se basa en los mismos principios del RGB pero escrito en notacion hexadecimal.
+
+					- En este tipo de notación también necesitamos 256 valores.  
+
+					- El sistema hexadecimal esta basado en 16 valores del 0 al 15.
+						Utiliza los digitos del 0 al 9 y las letras de la A a la F. Donde "0" es el valor más pequeño y "F" el más grande	
+						  
+					- Se componen de 16 caracteres en pareja ya que 16*16 = 256  
+						0 1 2 3 4 5 6 7 8 9 A B C D E F
+						0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+					- Para indicar que vamos a usar la notación hexadecimal, debemos usar el símbolo de hash/almohadilla "#" y a continuación usaremos esta notación 
+					  por parejas.
+						Cada canal debe recibir 2 valores.  
+						#RRGGBB		 	Ej: #ff7f50
+
+					- En algunas ocaciones se puede simplificar la notacion. Esto ocurre cuando una pareja usa el mismo valor, ya que se puede omitir el segundo 
+					  valor. Siempre y cuando que esto ocurra en las 3 parejas.
+						Ej1: 	rgb(255, 255, 255)		=		#ffffff			=		#fff		 
+						Ej2:	rgb(0, 0, 0)			=		#000000			=		#000
+
+					- También tenemos la opcción de usar transparencias en hexadecimal añadiendo un cuarto canal que sigue las mismas normas
+						Ej:		rgb(0 0 0 .5)			= 		#00000088		=		#0008
+
+
+
+
+	HSL 			- "Hue Saturation lightness", trado  como "Tono Saturación y luminancia. Es el modo de color más intuitivo para los humanos.   duci
+	
+					- El primer valor "Hue" (tono), es el ángulo en el "circulo cromático", donde 0 y 360 sera el color rojo. Hay ciertos valores que nos pueden 
+					  servir como referencia para relaconar mejor los colores con sus angulors
+							0		=		Rojo
+							60		=		Amarillo
+							120 	=		Verde
+							240		=		Azul
+							300		=		Magenta
+
+					- El segundo valor es "Saturation" (saturación o intensidad) del color
+							0%		=		Gris
+							100%	= 		Color puro
+	
+					- El tercer valor es la "Lightness", luminancia del color
+							0%		=		Negro, nada de luz
+							50%		=		Color puro
+							100%	=		Banco, luz máxima
+							
+					- Es importante que aunque el valor de saturación o luminancia sea 0, hay que poner 0%. Si no, no funcionará  
+
+					- Su sintaxis es la siguiente es: 
+							hsla(h, s, l)			Ej: hsl(16, 100%, 66%)
+							
+
+	HSLA			- HSLA es el modo que tiene HSL para admitir transparencia y su sintaxis es la misma que la del RGBA. Donde A significa "Alpha" y corresponde al 
+				      valor de la transparencia. Dicho valor va entre 0 y 1, donde "0" es la transperencia total (invisible) y "1" es basicamente sin transparencia
+					  Tenemos dos sintaxis disponibles:
+					  		hsla(h, s, l, a)		Ej: hsla(16, 100%, 66%, 0.5)
+							hsl(h s l / a)  		Ej: hsl(16 100% 66% / 0.5)
+
+
+
+
+
+    Existen otros cuatro modos de color en los que se está trabajando. Todos estan en el borrador del modulo de color de nivel 4 pero aún no es estandar
+	Estos serian:
+		CMYK (Cyan, Magenta, Yellow, Black) 
+		HWB (Hue, Whiteness, Blackness) 
+		LAB (Lightness, Distance A, Distance B)
+		LCH (Light, Chroma, Hue)
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+																_____Tipos de Iconos_____
+
+
+    Existen dos tipos de iconos, "Iconos de fuente" y los "Iconos SVG" (ya visto en el tutorial de HTML)
+
+	En este apunte ns vamos a enfocar en los "iconos de fuente"
+
+	Link para seleccionar iconos de Google	https://fonts.google.com/icons
+
+
+
+
+	- Iconos de Fuente				- Básicamente no son más que un "glifo" propio de una "fuente", de ahí su numbre.
+									  Osea, basicamente es una letra con forma de icono.
+
+									- Debido a esto, para cambiar su tamaño, color, etc. Hay que usar las mismas propiedades que se usan en las fuentes, porque 
+									  literalmente son "glifos de una fuente"
+									  Ej:	"color:"	"font-size:"	etc
+
+									- Como fuentes que son, se pueden seleccionar en la página de Google: "Google icons". 
+									
+									- ¿Como utilizarlos?
+											1- - Seleccionasmos el icono deseado
+											   - Automaticamente aparecera un archivo <span> el cual nos permitira copiar y pegar
+
+											2- - Pegamos esa etiqueta dentro del <body> en nuestro archivo .html.  
+
+											3- - Para que dicho icono funcione, dentro de la etiqueta <meta>, por encima de nuestros estilos CSS, debemos poner una 
+											     etiqueta <link rel="stylesheet" href="">  dentro del href="" va el link de la libreria del icono que estamos usando. 
+											   - En el caso de Google, temos que seleccionar la libreria en base al tipo de icono seleccionado:
+													- Material Icons:
+													  https://fonts.googleapis.com/css?family=Material+Icons
+
+													- Material Icons Outlined:	
+													  https://fonts.googleapis.com/css?family=Material+Icons+Outlined
+
+													- Material Icons Two Tone:
+													  https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone
+
+													- Material Icons Rounded
+													  https://fonts.googleapis.com/css?family=Material+Icons+Round
+
+													- Material Icons Sharp
+													  https://fonts.googleapis.com/css?family=Material+Icons+Sharp
+											
+									- NOTA: - Si se van a usar una gran cantidad de iconos en nuestra web, es util usar una libreria remota. Osea, usar "iconos de 
+									          fuente"
+											- En caso contrario, cuando solamente usamos pocos iconos, es mejor descargarlos en formato .svg y utilizarlos como 
+											  "imagenes"
+
+
+									
+
+
+	- Iconos SVG					- "Scalable Vector Graphics". Traducido como gráficos vectoriales escalables, básicamente son las tipicas imagenes/iconos 
+						              vectoriales ya vistos en en el tutorial de HTML. 
+
+									- Al ser "imagenes vectoriales", para cambiar su aspecto hay que utilizar las mismas propiedades que se utilizan en cualquier 
+									  imagen.
+									  En caso de querer cambiar el "color" del icono, estamos obligados a modificar el archivo .svg (de la misma manera que tendriamos
+									  que modificar un archivo .jpg en el caso de una imagen normal) 
+
+									- ¿Como utilizarlos?
+											1- Me dirijo a la página de Google y descargo y lo selecciono. Luego descargo el icono en formato.svg
+											
+											2- Ahora dentro del <body> simplemente pongo el icono .svg dentro de una etiqueta <img src="" alt=""> como si fuera una 
+											   imagen normal. Porque practicamente eso es lo que es
+
+
+
+
+
+   - ¿Cuando usar uno u otro?		- Si se van a usar una gran cantidad de iconos en nuestra web, es util usar una libreria remota. Osea, usar "iconos de 
+									  fuente"
+									  
+								    - En caso contrario, cuando solamente usamos pocos iconos, es mejor descargarlos en formato .svg y utilizarlos como 
+									  "imagenes"
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+																_____Cómo usar @font-face_____
+
+
+
+ 	Páginas para descargar fuentes: 																
+		https://www.1001fonts.com/
+		https://www.dafont.com/es/
+
+	Página para convertir un formato de fuente a otro
+		https://convertio.co/es/ttf-otf/
+
+	Extención de Chrome para saber que fuente es la que estamos viendo en una página de internet
+		https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=es 
+	
+
+
+
+ - Formatos para fuentes:																
+
+	.ttf						"True Type Font" 			- Fue el primer formato estándar. Al ser el más antiguo, es el que más probable con el que me pueda cruzar
+
+	.oft 						"Open True Type Font"		- Facilita o implementa la cración de las curvas. Osea, se creo para poder hacer fuentes más redondeadas 
+
+	.woff / .woff2				"Web Open Font Format" 		- Es un formato mucho más ligero y mejora el rendimiento.Funciona a travéz de metadatos. WOFF tiene soporte 
+	 														  total en todos los navegadores, mientras WOFF2 no funciona en Internet explorer.  
+
+	.svg 						"Scalabe Vector Graphics"	- Vasicamente son las imagenes vectoriales que ya conocemos pero en este caso funcionan a modo de fuente. 
+															  Se utilizan para efectos y animaciones sobre el texto. 
+															- No es recomendable usarlo en un texto genérico en la web ya que tiene muchos problemas. Ya que al ser SVG 
+															  se trata más de una imagen que de una fuente
+
+	.eot						"Embedded Open Type"		- Primer formato digital propuesto para sitios WEB, es muy comprimido. Se quedó como una propuesta ya que 
+															  no paso a ser estándar.  
+
+
+
+
+
+
+ - Regla @font-face:			- Básicamente es la forma de utilizar fuentes quefueron previamente descargadas. Ya que la otra opción es traerlas desde un servidor 
+ 								  remoto como se vio anteriormente con Google Fonts.   	
+								  Cuando usamos usamos Google Fonts ocurre esto mismo por detrás sin que lo notemos
+
+								- Recordar descargar previamente esas fuentes y guardarlas en la una carpeta "fonts". Dicha carpeta debe estar dentro de la carpeta
+								  "assets"
+
+								- Su sintaxis es:
+
+									@font-face{
+
+										font-family: 		Nombre de la familia de esta nueva fuente, se lo damos nosotros.
+
+										src: 				Aquí pondremos los dos primeros tipos de valores, el tercero no es tan suado:
+																- local() 	Pondremos el nombre de la fuente para buscarla en el ordenador del usuario, de esa forma 
+																	    	podremos evitar descaragarla.   
+																- url()		Si no existe esa fuente procederemos a descargarla.
+
+																- format()	Este es otro tipo de valor menos usado. Este valor o pasaremos de forma opcional si 
+																			queremos ser más especificos con la fuente vamos a buscar o descargar. Si no la ponemos 
+																			agarrara el primer formato soportado, si lo ponemos sólo usará el que le hemos establecido,
+																					y si no lo encuentra no hara nada.
+
+																- Hay más valores opcionales como:					
+																	font-style
+																	font-weight
+																	font-display (experimental)
+									}
+
+									- Se recomienda declarar todo esto al principio del archivo .css
+
+									- Recordar que hacer esto deja la fuente lista y preparada para usar como si fuera cualquier otra fuente
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+                                                                	_____Propiedades_____
+
+
+ - Las propiedades son las partes de un elemento que van a recibir cambios de estilo
+
+
+
+_____Propiedades de una caja:_____
+
+    background-color:		- Sirve para cambiar el color de la caja
+
+    width/height:           - Estas propiedades controlan el ancho y el largo de una caja respectivamente. Tener en cuenta de que estas dos propiedades funcinan de forma diferente si la caja se trata de un elemento de "bloque" o de "linea". Esto se debe a que en un elemento de "bloque" las propiedades Width/Height van a funcionar normalmente, pero en un elemento de "linea" no tienen ningun efecto. Sabieno lo anterior, lo unico que controla el ancho y el largo de un elemento de linea es su contenido. Por ejemplo: mientras más larto sea el texto en un elemento de linea, más larga o ancha se su caja
+
+	min-width: 				- Indica el "ancho mínimo" que puede alcanzar el elemento.
+	max-widht:				- Indica el "ancho máximo" que puede alcanzar el elemento.
+
+	min-height:				- Indica el "alto mínimo" que puede alcanzar el elemento.			No es muy recomendable usar esta propiedad		
+	max-height:				- Indica el "alto máximo" que puede alcanzar el elemento.			No es muy recomendable usar esta propiedad
+
+
+	
+
+    margin:                 - Permite controlar la distancia de separación que hay entre la caja seleccionada y las que la rodean. Solamente hay cuatro lados de margenes posibles: top (superior), right (derecha), button (inferior), left (izquierdo)
+
+                            - Admite hasta 4 valores que van en el orden de las agujas del relog. Osea, tengo que poner de uno a cuatro valores separados por un espacio y cada valor va a corresponder a un margen especifico 
+                                    - 1 valor               margin: top/right/bottom/left                   Ej: margin: 100px;                          Todos los margenes van a valer 100 pixeles por igual
+                                    - 2 valores             margin: top/botton - right/left                 Ej: margin: 100px 150px;                    Los margenes superior e inferior van a valer 100 pixeles. Y los margenes derecho e izquierdo 150 pixeles
+                                    - 3 valores             margin: top - right/left - botton               Ej: margin: 100px 200px 300px;              El margen superior va a valer 100 pixeles. El margen derecho e izquierdo van a valer 200 pixeles. Y el margen inferior va a valer 300 pixeles 
+                                    - 4 valores             margin: top - right - left - botton             Ej: margin: 100px 500px 200px 300px;        El margen superior va a medir de 100 pixeles. El derecho de 500 pixeles. El inferior de 200 pixeles. Y el izquierdo de 300 pixeles
+
+                            - Es un "shorthand". Esto significa que tiene propiedades abreviadas para controlar de distintas maneras los 4 lados posibles para dar margenes. Osea, tiene sufijos para controlar especificamente cada margen, esto es util por si queremos modificar unicamente un margen sin cambiar el resto 
+                                    - margin-top:           Margen superior                                 Ej: margin-top: 100px                       Unicamente el margen superior va a vales 100 pixeles
+                                    - margin-right:         Margen derecho
+                                    - margin-bottom:        Margen inferior
+                                    - margin-left:          Margen izquierdo
+
+
+
+
+
+    padding:                - Esta propiedad controloa la distancia que hay desde el borde de la caja hasta el contenido.  Básicamente se agarra la caja original que ya tiene una altura y ancho predeterminado, y a esta se le agrega un grozor extra que vendria a ser el padding. De esta manera se le da a la caja un tamaño extra. 
+
+                            - El grozor extra que le da el padding no se puede apreciar a simple vista debido a que tiene el mismo color que la caja original. Pero en el "inspector de elementos" si se puede ver
+            
+                            - Solamente hay cuatro lados de paddings posibles: top (superior), right (derecha), button (inferior), left (izquierdo)
+                            
+                            - Admite hasta 4 valores que van en el orden de las agujas del relog. Osea, tengo que poner de uno a cuatro valores separados por un espacio y cada valor va a corresponder a un padding especifico 
+                                    - 1 valor               padding: top/right/bottom/left                   Ej: padding: 100px;                          Todos los paddings van a valer 100 pixeles por igual
+                                    - 2 valores             padding: top/botton - right/left                 Ej: padding: 100px 150px;                    Los paddings superior e inferior van a valer 100 pixeles. Y los paddings derecho e izquierdo 150 pixeles
+                                    - 3 valores             padding: top - right/left - botton               Ej: padding: 100px 200px 300px;              El padding superior va a valer 100 pixeles. El padding derecho e izquierdo van a valer 200 pixeles. Y el padding inferior va a valer 300 pixeles 
+                                    - 4 valores             padding: top - right - left - botton             Ej: padding: 100px 500px 200px 300px;        El padding superior va a medir de 100 pixeles. El derecho de 500 pixeles. El inferior de 200 pixeles. Y el izquierdo de 300 pixeles                    
+
+                            - Es un "shorthand". Esto significa que tiene propiedades abreviadas para controlar de distintas maneras los 4 lados posibles para dar paddings. Osea, tiene sufijos para controlar especificamente cada padding, esto es util por si queremos modificar unicamente un ppadding sin cambiar el resto 
+                                    - padding-top:          Padding superior                                 Ej: padding-top: 100px                       Unicamente el padding superior va a valer 100 pixeles
+                                    - padding-right:        Padding derecho
+                                    - padding-bottom:       Padding inferior
+                                    - padding-left:         Padding izquierdo                                     
+
+
+
+
+
+    border:                 - Es la propiedad que nos permite modificar el borde de una caja
+
+                            - El "border:" consta de 3 propiedades: width (ancho del borde), style (estilo del borde) y color (color del borde)
+                                    
+                            - Admite hasta 3 valores, estos valores tienen que ir separados por un espacio
+                                    Ej:  border: 20px solid red;        Esto significa que el borde de mi caja va a ser de 20 pixeles de ancho, va a tener un estilo solido y va a ser de color rojo
+
+
+                            - Es un "shorthand". Esto significa que tiene propiedades abreviadas para poder controlar cada una de sus 3 propiedades por separado. Osea, tiene sufijos para poder controlar cada una de sus propiedades por separado. Ademas esas mismas abreviaturas tienen más abreviaturas para ser aún más especifico
+                                    - border-width:                         Ancho del borde                         Ej: border-width: 10px;             Ahora el borde de todos los lados vale 10 pixeles
+                                            border-top-width:               Ancho superior del borde                Ej: border-top-width: 5px;          Ahora unicamente el borde superior vale 5 pixeles
+                                            border-right-width:             Ancho derecho del borde
+                                            border-bottom-width:            Ancho inferior del borde    
+                                            border-left-width:              Ancho izquierdo del borde
+
+                                    - border-color:                         Color del borde                         Ej: border-color: red;              Ahora el borde de todos los lados es de color rojo
+                                            border-top-color:               Color superior del borde                Ej: border-top-color: blue;         Ahora unicamente el borde superior va a estar pintado de azul
+                                            border-right-color:             Color derecho del borde
+                                            border-bottom-color:            Color inferior del borde
+                                            border-left-color:              Color izquierdo del borde
+
+                                    - border-style:                         Estilo del borde
+                                            border-top-style:               Estilo superior del borde
+                                            border-right-style:             Estilo derecho del borde
+                                            border-bottom-style:            Estilo inferiro del borde
+                                            border-left-style:              Estilo izquierdo del borde
+
+                                        Listado de valores para style: 
+                                            solid                           Hace una linea solida y continua. Es el estilo más comun y usado
+                                            none                            Quita cualquier borde que tenga la caja  
+                                            hidden                          A efectos practicos hace lo mismo que "none". Pero toca un tema que entra más adelante que es hacer bordes con imagenes
+                                            dotted                          Hace que el borde este conformado por puntos
+                                            dashed                          Hace que el borde este conformado por lineas
+                                            double                          Hace una linea continua doble  //  Recordar que con width controlamos el ancho. Si ponemos 15px, estos pixeles se van a dividir en 3 partes iguales, 5 pixeles van a ir a ir para la primera linea roja, 5 para la linea blanca y 5 para la otra linea roja
+                                            groove                          Le da un efecto 3D al borde. Dicho efecto tiene una iluminación que viene desde la parte inferior derecha
+                                            ridge                           Al igual que "groove", tambien le da un efecto 3D al borde. Pero en este caso, dicho efecto tiene una iluminación que viene desde la parte superior derecha
+                                            inset                           Da al borde un efecto de iluminación que proviene desde la parte inferior derecha
+                                            outset                          Al igual que el "inset", tambien da un efecto de iluminacion. Pero en este caso proviene de laparte superior derecha
+
+
+
+
+
+    box-sizing:             - Traducido como "dimencionamiento de caja". Es la propiedad que nos permite controlar el cálculo que hace el navegador a la hora de modificar las propiedades content:, padding: y border:.                                                            
+
+                            - Los valores que podemos darle son 2:
+                                    content-box           Valor que viene por defecto.
+                                    border-box            Calcula el tamaño del elemento incluyendo el padding: y el border:   //   Básicamente, cada vez que agrego un "padding:" o un "border:" a mi caja, la termino deformando. Esto se debe a que le agrego pixeles extras a lo largo y a lo ancho. Por ejemplo, si mi  caja es de 100 pixeles y le agrego un padding de 50 pixeles, al final mi caja va a medir 150 pixeles deformando mi página web. Para solucionar esto deberia restarle pixeles a mi caja y este trabajo de cuentas en tedioso. Mediante "box-sizing: border-box;" eso no ocurre, mi caja va a segir midiendo 100 pixeles. Ahorrandome el trabajo de descontar pixeles de la caja por micuenta //  ¿Como ocurre esto? Basicamente este conjunto de propiedad/valor hace el calculo por mí de restarle 50 pixeles a la caja de pixeles para que al sumarle 50 pixeles de padding, la caja siga midiendo 100 pixeles      
+
+
+
+
+
+    border-radius:          - Es la propiedad que nos permite redondear vertices de forma independiente. Osea, hace que una caja sea más redondeada
+
+                            - Al escribir un solo valor se redondearan las 4 puntas de una caja.    Ej: border-radius: 50px;        Con esto estoy redondeando 50 pixeles las cuatro puntas de mi caja
+                         
+                            - Admite hasta 4 valores que van en el orden de las agujas del relog desde la esquina superior izquierda. Osea, tengo que poner de uno a cuatro valores separados por un espacio y cada valor va a corresponder a un padding especifico
+                                    - 1 valor               border-radius: top-left / top-right / botton-right / botton-lef             Ej: border-radius: 50px;                        Con esto estoy redondeando 50 pixeles las cuatro puntas de mi caja              
+                                    - 2 valores             border-radius: top-left / botton-right , top-right /botton-left             Ej: border-radius: 50px 100px;                  Se redondean 50 pixeles la esquina superior izquierda y la esquina inferior derecha. Y por otro lado se redondean 100 pixeles la esquina superior derecha y la esquina inferior izquierda. Básicamente, el efecto visual se aprecia de forma cruzada
+                                    - 3 valores             border-radius: top-left , top-right /botton-left , botton-right             Ej: border-radius: 50px 100px 150px;            Se redondean 50 pixeles la esquina superior izquierda. 100 pixeles la esquina superior derecha y la esquina inferior izquierda. Y 150 pixeles la esquina inferior derecha                               
+                                    - 4 valores             border-radius: top-left , top-right , botton-right , botton-lef             Ej: border-radius: 50px 100px 150px 200px       Cada esquina tiene su propio valor. Se redondea 50 pixeles la esquina superior izquierda. 100 pixeles la esquina superior derecha. 150 pixeles la esquina inferiro derecha. Y 200 pixeles la esquina inferior izquierda
+
+                            - Es un "shorthand" que engloba 4 propiedades. De esta manera se pueden se pueden redondear cada punta de forma independiente
+                                    - border-top-left-radius:                   Redondea el borde superior izquierdo                    Ej: border-top-left-radius: 50px;               Este "shorthand" hace que especificamente el borde superior izquierdo se redondee con un radio de 50 pixeles       
+                                    - border-top-right-radius:                  Redondea el borde superior derecho 
+                                    - border-botton-right-radius:               Redondea el borde inferior derecho
+                                    - border-botton-left-radius:                Redondea el borde inferior izquierdo 
+
+                            - Se le puede dar forma de "elipse" pero se vera más adelante en el apunte "19-border-radius-(eliptico)"
+
+
+
+
+                 
+    overflow:               - Traducido como "desbordamiento". Esta es la propiedad que utilizamos para controlar el desbordamiento de las cajas. Básicamente le indica 
+                              al navegador que hacer cuando eso ocurre.
+                          
+                            - Es un "shorthand" que engloba las propiedades overflow-x y overflow-y (orizontal y vertical respectivamente)
+
+                            - Tiene 4 posibles valores:
+                                    visible         Es el valor por defecto
+                                    hidden          Traducido como "oculto". El contenido que se desborda no se verá. Si aplicamos esta propiedad en un solo eje, el otro se pondra automaticamnente en el valor "scroll"
+                                    scroll          Apareceran las "barras de scroll" en el eje asignado (X, Y o ambos. Dependiende que si utilizamos los shorthands "overflow-x:", "overflow-y;" o "overflow:" respectivamente ) 
+                                    auto            Apareceran "barras de scroll" en caso de que hicieran falta. En este caso en particular se aconseja poner solamente overflow: y evitar los otros dos shorthands. Esto se debe a que puedo tener desbordamientos tantos verticales como horizontales.    Ej: Solamente pongo "overflow-y: auto;" y al final tambien tengo un desbordamiento horizontal del cual no me doy cuenta. Debido a esto lo aconsejable es poner solamente "overflow: auto;" ya que contempla las dos posibilidades 
+                                
+
+
+
+
+    display:                - Esta propiedad nos permite cambiar el tipo de "caja" de un elemento. Esto significa que si un elemento/etiqueta es una caja del tipo
+                              "bloque", podemos cambiarlo al tipo de "linea" y viceversa. Estos cambios incluyen todas las propiedades, ventajas y desventajas del tipo
+                              de elemento al que cambiamos
+                        
+                            - Admite varios valores. En este apunte solamente veremos estos debido a que el resto son experimentales y todabia no lo soportan la mayoria 
+                              de los navegadores:
+                                    - none              Hace que el elemento no se muestre, pero sigue existiendo y por ende cargandoce. Hay que tener cuidado con este valor debido a que a pesar de no poder ver es elemento seleccionado, este va a seguir existiendo y cargando sus procesos. Eso quiere decir que a pesar de que dicha propiedad es invisible, es informacion extra para el navegador y va a hacer demorar la carga de la página web 
+                                    - block             Hace que el elemento sea de bloque
+                                    - inline            Hace que el elemento sea de linea
+                                    - inline-block      Hace que el elemento sea de linea y se comporte como tal peeeero que a su vez tenga las propiedades de un elemento de bloque. Ya que admite medidas y margenes verticales como lo haria un elemento de bloque. Básicamenente es la fucion de ambos elementos. No es una propiedad que se utilice muy a menudo, pero hay ocaciones en las que puede salvarnos de un apuro
+                                        
+
+
+
+
+    outline:                - Es una propiedad que nos permite dibujar un borde por fuera del modelo de la caja. Básicamente es un borde extra que si se quiere puede 
+                              ser colocado por fuera de la caja. 
+
+                            - Tiene las mismas propiedades y sintaxis que border, pero con algunas diferencias:
+                                    - No ocupa sitio, ya que no forma parte del box-model. Esto quiere decir que si hacemos un borde muy grande, en vez que mover las cajas del alrededor, el borde simplemente las va a tapar
+                                    - Al no formar parte del box-model tampoco se ve afectado por el conjunto de propiedad/valor "box-sizing: border-box;" 
+                                    - No se puede redondear.
+                                    - No se pueden controlar los lados de forma independiente.
+
+                            - Es un "shorthand" debido a que tiene propiedades abreviadas como:
+                                    - outline-with:         Controla el ancho del "Outline"
+                                    - outline-style:        Controla el estilo del "Outline". Recordar que funciona de forma similar a la propiedad "border:" y por ende tienen muchas cosas en comun como lo son los estilos.
+                                    - outline-color:        Controla el color del "Outline"
+
+                                    - outline-offset:       Nos permite aumentar o disminuir la distancia del outline respecto a la caja a la que pertenece
+
+
+
+
+
+    text-align:             - Es la propiedad que nos permite alinear horizontalmente el "contenido" de una caja. Especificamente el contenido de un elemento de 
+                              bloque, siempre que el contenido NO TENGA ANCHO DECLARADO
+
+                            - Esta propiedad no funciona con elementod de linea, esto se debe a que tienen un ancho declarado y por ende no hay espacio por donde moverse 
+                                
+                            - De nuevo, solamente alinea el "contenido" de la caja. Para alinear una caja tengo que jugar con la propiedad "margin:" ya vista en
+                                apuntes antenriores
+
+                            - Acepta 4 posibles valores:
+                                    - left              Alinea el contenido a la izquierda (valor que suele venir por defecto)
+                                    - right             Alinea el contenido a la derecha.
+                                    - center            Alinea el contenido al centro
+                                    - justify           Alinea el contenido de forma justificada (no es recomendable usarlo). Básicamente se expande para abarcar todo el ancho de la pantalla. En el caso de un texto, crearia espacios en blanco entre las palabras para abarcar todo el ancho de la pantalla, haciendo que el texto se vea feo. Por ese motivo no es muy recomendable usarlo
+
+
+
+
+
+    box-shadow:             - Esta propiedad se creó para añadir efectos a las sombras de nuestra caja.
+                            
+                            - En esencia lo que hace es crear un clon de la caja seleccionada, respetando la forma de su box-model (ancho, largo, redondez)
+
+                            - La sintaxis de "box-shadow:" se puede escribir de distintas formas según lo que queramos conseguir.
+
+                            - Los valores que le podemos poner son:
+                                    - offset-x              Desplazamiento en X (obligatorio). Admite valores positivos o negativos para desplazar la sombra a la derecha o a la izquierda respectivamente .
+                                    - offset-y              Desplazamiento en Y (obligatorio). Admite valores positivos o negativos para desplazar la sombra a la abajo o a arriba respectivamente.
+                                    - blur-radius           Desenfoque de la sombra. Básicamente seria un difuminado
+                                    - spread-radius         Extención de la sombra. Básicamente juego con sus proporciones haciendola más grande o más chica. Como si fuera un padding. Admite valores positivos o negativos, para agrandar o achicar la caja respectivamente
+                                    - color                 Color de la sombra. Si no lo especificamos lo heredará del elemento al que pertenece
+                                    - inset                 Determina si la sombra será interior o exterior. Es util para dar tridimencionalidad
+
+                                    - El "box-shadow:" se usaria así:
+                                        Ej: box-shadow: offset-x  offset-y  blur-radius  spread-radius  color  inset;      
+                                        Ej: box-shadow: 5px 10px 20px 30px red inset;                                       Básicamente esta sombra en relacion a la caja esta a 5 pixeles por debajo. 10 pixeles a la derecha. Tiene 20 pixeles de desenfoque. 30 pixeles de tamaño extra. Es de color roja. Y esta arriba de la caja       
+
+                                    - También se pueden agragar más de una sombra mediante el uso de la coma ",":           RECORDAR poner las sombras a distintas distancias poque de lo contrario una estaria encima de la otra y no se verian  
+                                        Ej: box-shadow: 5px 5px red, 10px 10px blue, 20px 20px green;                       Ahora tengo una caja con tres sombras, una roja, otra azul y otra verde.
+
+
+
+
+
+	position:				- Esta propiedad nos permite  los elementos. Hay conseptos que se deben conocer para entender esta propiedad.
+
+							- Flujo renderizado: 		Por norma general los elementos se dibujan de izquierda a derecha y de arriba a abajo. El punto 0,0 de los 
+							                        	de los elementos, por norma general, es la esquina superior derecha.
+
+							- Espacio reservado: 		Es el espacio que tiene un elemento asignado en el navegador. Básicamente es el lugar que ocupa la caja. 
+														Puede modificarse mediante varias propiedades entre ellas "whith:", "hight", etc. 
+
+							- Elemento posicionado:		Esto significa que el elemento tiene la propiedad "position:" con valor distinto de "static", que es el 
+														valor que tiene esta propiedad por defecto. Osea, cuando un elemento no tiene el valor "static" se dice que 
+														posicionado, esto se debe a que estamos abilitando la posibilidad de poder mover/posicionar ese elemento en 
+														cualquiera de los 3 ejes.
+
+							- Stakin context: 			Contenido de apilamiento. Es el orden en que se apilaran las cajas que se superponen dentro del mismo 
+														contenedor
+
+
+
+							- Al posicionar un elemento se habilitan 5 propiedades que podemos utilizar para mover los elementos en los 3 ejes
+									- top				El elemento se moverá desde la parte superior la distancia que le hayamos indicado.
+
+									- right				El elemento se moverá desde la parte derecha la distancia que le hayamos indicado.
+
+									- botton			El elemento se moverá desde la parte inferiors la distancia que le hayamos indicado.
+
+									- left 				El elemento se movera desde la parte izquierda la distancia que le hayamos indicado.
+
+									- z-index			Nos permitira vover el elemento en el contexto de apilamiento (eje Z). Osea, cual es la caja que va a estar
+														arriba/tapando a otra.
+
+									NOTA: Si a un elemento le declaramos la propiedad top y/o left, las propiedades botton y/o right no funcionaran. Esto se da 
+									cuando hay dos propiedades que afectan al mismo eje.   
+									Ej: Si el navegador tiene que elegir si hacer caso a la propiedad top o a la propiedad botton, el navegador termina eligiendo top. 
+							
+									
+
+							- Los posibles valores que le podemos dar son:
+									- static			Es el valor que tiene por defecto un elemento, con ese valor el elemento NO ESTA POSICIONADO y por lo cual no 
+														podemos moverlo. Para que un elemento este "posicionado" tenemos que quitarle este calor y cambiarlo por 
+														cualquiera de los otros 3 que estan abajo
+
+									- relative 			El elemento mantendra su posición y medidas de flujo de renderizado y mantendrá su espacio reservado. Si lo 
+														movemos lo hará usando su posición en el HTML como punto de referencia. 
+														Esto quiere decir que si hay una caja de 200 pixeles X 200 pixeles y la movemos de lugar, por mas que "veamos"
+														la caja en otro lugar, en su sitio origal va a segir estando un espacio de 200 X 200 reservado por esa caja y 
+														que por ende no puede ser ocupado por otra caja. 
+													 
+									- absolute			El elemento prederá sus medidas y su espacio reservado. Si lo movemos usará el elemento "posicionado 
+														contenedor" como referencia. Si no tiene ninguno, usará el elemento HTML de referencia.
+														
+									- fixed				El elemento perderá sus medidas y su espacio reservado.
+														Si lo movemos usara el elemento HTML de referencia, y además se quedara fijo en esa posición aunque hagamos
+														scroll. 
+										
+
+
+
+
+	z-index:				- Es la propiedad que nos permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.
+							  Para poder utilizar esta propiedad se necesita que el elemento seleccionado este "posicionado".
+							
+							- Como valor lleva un numero. Mientras más grande sea el numero más por arriba en el eje X se posicionara. 
+							  Ej: Una caja con un "z-index: 5," estara arriba de una caja con un "z-index: 2;"  
+
+						    - Los elementos que tengan el mismo valor de z-index: se posicionaran segun el orden del de como fueron declarados en el .html. Dejando 
+							  por arriba los elementos que fueron declarados a lo ultimo.
+							  
+							- Tiene como valor predeterminado "z-index: auto,". Que seria equivalente a "0" pero no funciona igual. Recordar esto. 
+
+							- Esta propiedad apila a los hijos por arriba de de los padres automaticamene, pero se encuentran problemas  cuando se quiere apilar un 
+							  padre por encima de un hijo. Suena extraño pero un "padre" no se puede poner por delante de un "hijo", pero un "hijo" si se puede poner 
+							  por atras de un "padre", siempre y cuando el padre tenga como valor "z-index: auto,", eso quiere decir que el hijo debera tener como 
+							  valor un numero negativo para poder apilarlo por detras de su padre.
+							  Ej: "z-index: 1,"  
+
+							- TIP: En la practica no conviene ponerle a las cajas numeros consecutivos. (Ej: 1,2,3,4 etc,) debido a que puede venir un futuro 
+							  desarrollador y querer poner una caja entre medio de esas. Obviamente si quiere poner una nueva caja que este entre la caja 3 y 4, 
+							  debera convertir la antigua caja 3 en 4 y a la antigua caja 4 en 5 y así seguidamente para poder hacer espacio. Esto es inviable 
+							  Para solucionar este problema se aconseja poner como "z-index:" valores con mucho margen de distancia (Ej: 100, 200, 300, 400 etc). De 
+							  esta manera si quiero poner una nueva caja entre medio de los valores 300 y 400, seria tan simple como darle un valor de 350 a la nueva
+							  caja.
+
+
+
+
+
+
+
+
+	color:					- Cambia el color del texto
+
+
+	font-size:			    - Cambia el tamaño de la fuente. Se recomienda utilizar rem como unidad de medida. 	Ej: "font-size: 2rem;"
+
+
+	font-family:			- Cambia el tipo de fuente.
+
+
+	font-weight:			- Cambia el grosor de una fuente. (Mientras más gruesa la fuente, más parecida se vuelve a la "negrita"). Recordar que las familias de fuentes por lo general vienen con una variante en negrita, la cual tiene por defecto un valor en "font-weight:"  Ese valor es la verdadera "negritra" para esa fuente
+
+
+ 	text-transform:			- Esta propiedad nos permitehacer transformaciones ESTÉTICAS en nuestro texto. 
+							- Admite los valores:
+								- none					No se aplicara ninguna transformación.
+								- uppercase				El texto se pondrá en mayúsculas. 
+								- lowercase				El texto se pondra en minúsculas.
+								- capitalize			Transforma la primera letra de cada palabra en mayúsculas.
+
+
+ 	text-decoration:		- Esta propiedad nos permite controlar la linea que podemos poner en los textos.
+							- Admite los valores:
+								- none 					Elimina cualquier linea.
+								- underline				Coloca una linea bajo el texto.
+								- overline				Coloca una linea sobre el texto.
+								- line-through			Coloca una linea tachada al texto.
+								- Valor extra			Permite ponerle un color a la linea si junto con los demas ponemos un color como valor extra 
+
+
+    text-shadow:			- Funciona exáctamente igual que box-shadow, con la única diferencia de que no admite el valor inset ni la expancion de sombra.										
+							- Los valores son:
+								- offsetX 				Desplazamiento horizontal.
+								- offsetY				Dezplazamiento vertical.
+								- blur					Desenfoque.	
+								- color					Color. Por defecto tiene el color del texto.
+
+
+	letter-spacing: 					- Establece la separación entre caracteres. Se puede establecer en cualquier medida valida para CSS (px, %, rem, em, vh, etc).
+										  Recordar que el "spacio" cuenta como caracter y también le da su separacion como a cualquier otro caracter.
+
+	word-spacing:						- Establece la separación entre palabras. Se puede establecer en cualquier medida valid para CSS.
+
+	line-height:						- Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multiplicará por el 
+										  font-size del texto al que se lo estemos aplicando. Para aplicar este ultimo caso solamente se debe poner un numero sin 
+										  unidad.
+
+
+	
+    user-select: none;				    - Hacemos que el usuario no pueda seleccionar cosas de la página web. Es util por si querememos hecer un boton y que el 
+										  usuario no pueda arrastrar a la palabra escrita dentro de el 										  
+
+
+    cursor:								- Cambia el estilo del cursor cuando este se posicione en sobre el elemento seleccionado. Osea, cambia la forma de la flechita										  
+
+	-webkit-tap-highlight-color:        - Al hacer click en un boton en el movil, aparece un recuadro celeste. Con esta propiedad puedo cambiar el color de ese 
+										  cuadro e incluso hacerlo ""desaparecer" si le ponemos como valor "transparent". Esta es una propiedad experimental, por 
+										  ende no esta implementada en la mayoria de los navegadores y que tener cuidado con esto
+
+*/
+

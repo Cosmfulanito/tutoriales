@@ -1,0 +1,100 @@
+/*
+
+                                                                _____Especificidad y Cascada_____
+
+
+ - Link recomendado:
+    https://jonassebastianohlsson.com/specificity-graph/
+    Con esta pagína podremos saber si escribimos un codigo CSS de forma correcta. Simplemente copiamos nuestro codigo y luego lo pegamos ahí adentro, luego la 
+    página nos mostrara un grafico. Una codigo en CSS correctamente escrito mostrara un grafico completamente plano (osea, una linea horizontal recta y plana, 
+    sin subidas o bajadas). Por otro lado, un CSS mal escrito mostrara un grafico lleno de puntas, subidas y bajadas (osea, un CSS escrito para el orto). 
+    Para entender como funciona CSS y evitar esto, ir al apunte 6-especifidad-y-cascada.css        
+
+
+
+ - Este apunte sumamente teorico. El objetivo es comprender el funcionamiento de CSS. Ya que normalmente la gente cree que lo que esta abajo del codigo sobreescribe 
+   a lo de arriba, cuando esto NO ES ASÍ. Debido a este concepto erroneo, es normal que desarrolladores tengan problemas al escribir nuevo codigo en el.css que en 
+   teoria deberia sobreescribir al anterior y luego encontrarse con la sorpresa de que no funciona así
+   
+
+
+ - ¿COMO FUNCIONA CSS?
+    
+    - Especificidad:        - Establece cómo de especifico es un selector para saber que estilo aplicar. Básicamenete cada tipo de selector (#id, .clase, <etiqueta>)
+                              tiene su propio "puntaje". Cuanto mayor sea el puntaje que tenga el selector, más prioridas le va a dar el navegador, sin importar haya
+                              codigo CSS que lo sobreescriba abajo. El navegador siempre prioriza a los selectores de mayor puntaje sin importar que este escrito
+                              arriba o abajo del archivo .css
+
+                            - Puntajes:     - <etiquetas>           0,0,1 =    1 punto
+                                            - Pseudoelementos       0,0,1 =    1 punto
+                                            - .clases               0,1,0 =   10 puntos   
+                                            - pseudoclases          0,1,0 =   10 puntos        
+                                            - atributos             0,1,0 =   10 puntos
+                                            - #id                   1,0,0 =  100 puntos
+                                            - Atributos en linea            1000 puntos     (Estos son los estilos que se escriben dentro del archivo .html) 
+                                            - !important            GANA A TODO             (Usar esto es considerado MUY MALA PRACTICA, ya que es un recurso que se
+                                                                                             usa por la desesperación de querer aplicar cambios al CSS y no poder porque
+                                                                                             desde un principio ese codigo esta escrito con los pies)
+
+                            - ¿Como sabemos el puntaje de nuestro selector? Simplemente ponemos el cursor sobre el y automaticamente aparecerá un carte con la 
+                              frase "Selector specifity: (0,1,0)", este es un ejemplo de un selector de .clase
+
+                            - Recordar que en una misma etiqueta puedo poner muchos tipos de selectores para referirme a ella. En esos casos los puntajes de todos 
+                              los selectores se suman dando como resultado un selector con un puntaje mucho más alto y por ende con mayor prioridad
+                              Ej: h1.clase#id{ }    -->   "Selector specifity: (1,1,1)" = 111 puntos totales.   
+                                    Da 111 puntos porque son: 1 punto de la etiqueta + 10 puntos de la .clase + 100 puntos del #id
+                            
+
+    - Cascada:              - Una vez se haya establecido la prioridad de los selectores segun su especificidad (puntaje), viene la prioridad por cascada. Esto 
+                              significa que si hay un puntaje máxmo compartido por dos elementos, se le dara prioridad al que esta escrito abajo de todo en el 
+                              archivo .css
+ 
+
+
+ - Debido a la especificidad, es comun que desarrolladores novatos intenten aplicar nuevos cambios al CSS sobreescribiendo el codigo y que este no tenga cambios.
+   Para evitar este problema simplemente hay que usar selectores de .clase, de esta forma todos los selectores tienen el mismo puntaje, así de simple. Usar 
+   cualquier otro tipo de selector no es considerado buena practica y ademas da complicaciones a futuro
+        - Usar !important para poder aplicar un cambio en CSS es admitir que no sabemos como funciona CSS y que nuestro codigo es una chota. 
+        - Recordar que !important que !importan no soluciona nada porque entre dos !important, tiene prioridad el que tiene mayor especificidad por sus selectores.
+          Osea, no suluciona una mierda e hice pija la especificidad de la página  
+        - Para saber si nuestro codigo es choto, usar el link que esta arriba de todo de este apunte
+        
+
+
+*/
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* En este ejercicio le puse un class="" y un id="" a la etiqueta <h1> para ver cual tiene prioridad */
+
+/* ¿Cual de todos estos selectores tiene prioridad y por ende le dara el estilo de color al titulo titulo de nuestra página? */
+
+
+h1.titulo#titulo{                       /* Como se puede apreciar en el navegador, este es el selector elegido para que aplique los cambios de color en el titulo, aunque este selector este arriba de todo. Esto se debe a que es el selector con mayor especificidad/puntaje (1,1,1) = 111 puntos */
+    background-color: tomato
+}
+
+h1{
+    background-color: red;
+}
+
+.titulo{
+    background-color: blue;
+}
+
+#titulo{
+    background-color: green; 
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+

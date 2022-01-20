@@ -1,0 +1,680 @@
+/*
+
+																____Flexbox: Alinieamiento_____
+
+
+
+ - Recordar que el "main axis" puede estar vertical o horizontalmente. Generalmente esta de forma horizontal pero eso puede cambiar. Si eso ocurre, el "cross axis"
+   pasara de ser vertical a horizontal
+
+
+ - Alineamiento:			- Estas propiedades para alinear siempre se aplican al flex-container (caja padre)
+							  Existen propiedades para el main-axis y para el cross-axis
+
+
+							- main-axis
+								- justify-content:   
+										- flex-start			Alinea los elementos al principio del main axis
+										- center				Centra los elementos en la mitad del main axis
+										- flex-end				Alinea los elementos al final del main axis 
+										
+										- space-between 		Distribuye los items a la misma distancia y no deja espacio exterior ni el primer ni el ultimo fix-end  		
+
+										- space-around 			Distribuye los items a la misma distancia y deja un espacio exterior en el primer y en el último 
+																flex-item 
+
+										- space-evenly			Distribuye los ítems y los espacios exteriores del primer y el último flex-item dejando la misma 
+																distancia entre todos 
+
+								- Recordar que "justify-content" alinea el "main axis". Si el main axis esta horizontal, alineara de forma horizontal; si el main axis 
+								  esta vertical, alineara de forma vertical		
+
+
+							- cross-axis
+								- aling-items:			Una sola linea		
+										- flex-start			Alinea los elementos al principio del cross-axis. 
+										- center				Centra los elementos a la mitad del cross-axis. 
+										- flex-end				Alinea los elementos al final del cross-axis. 
+										- stretch 				Valor que viene por defecto, parece similar al "flex-start" pero no es así. Ya que si los elementos hijos NO tienen
+																un tamaño definido, se estiraran tanto como su elemento padre
+										- baseline
+
+								- aling-content: 		Varias lineas
+										- flex-start
+										- center
+										- flex-end
+										- stretch 		(Valor por defecto)
+										- baseline
+
+								- aling-self: 			Se aplica al flex-item. Sirve para alinear un elemento en concreto en el cross-axis		
+
+
+							- Tip: - Los "margin: auto" dejan de funcionar con normalidad dentro de un "flexblox". Lo que ocurre es que al utilizarlos, el flex-item
+							         (caja hija) se desplaza completamente hacia el sentido opuesto.
+								   - Saber esto nos permite ahorrarnos varios problemas
+								   - También podemos sacarle provecho. Devido a que podemos desplazar completamente un elemento en una direccion. Y si lo dezplazamos
+								     en sentodos opuestos al mismo tiempo, podemos centrarlo  
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+/* Esto es sumamente estetico */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+h2{
+	margin-top: 100px;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* Caja de referencia:  */
+.flex-container1{
+	background-color: #fca17d;
+	height: 400px;
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.flex-item{
+	width: 50px;
+	height: 50px;
+	margin: 0.5em;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* justify-content: flex-start */
+.flex-container2{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+
+
+/* justify-content: center */
+.flex-container3{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+/* justify-content: flex-end */
+.flex-container4{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+
+
+/* justify-content: space-between */
+.flex-container5{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+/* justify-content: space-around */
+.flex-container6{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	justify-content: space-around;
+}
+
+
+
+
+/* justify-content: space-evenly */
+.flex-container7{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+
+/* Mezclando lo visto con "flex-direction column" */
+.flex-container8{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* aling-items: flex-start */
+.flex-container9{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	align-items: flex-start;
+}
+
+
+
+
+/* aling-items: center */
+.flex-container10{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	align-items: center;
+}
+
+
+
+
+/* aling-items: flex-end */
+.flex-container11{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	align-items: flex-end;
+}
+
+
+
+
+/* aling-items: stretch */
+/* Elementos hijos CON tamaño definido */
+.flex-container12{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	align-items: stretch;
+}
+/* Elementos hijos SIN tamaño definido  */
+.flex-container13{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	align-items: stretch;
+}
+.flex-item2{
+	width: 50px;
+	margin: 0.5em;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+}
+
+
+
+
+
+/* Colapsado de imagenes: */
+/* Imagen dentro de un flex SIN un "aling-items": */
+.box1{
+	border: 1px solid black;
+	width: 100%;
+	height: 400px;
+
+	display: flex;
+}
+
+.box1 img{
+	max-width: 50%;
+}
+
+/* Imagen dentro de un flex CON un "aling-items": */
+.box2{
+	border: 1px solid black;
+	width: 100%;
+	height: 400px;
+
+	display: flex;
+	align-items: center;
+}
+
+.box2 img{
+	max-width: 50%;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Caja de referencia: */
+.flex-container15{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+
+/* aling-content: flex-start */
+.flex-container16{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+
+
+
+/* aling-content: center */
+.flex-container17{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+
+
+
+/* aling-content: flex-end */
+.flex-container18{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+}
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Convinar un "justify-content:" con un "aling-content:" */
+.flex-container18b{
+	background-color: #fca17d;
+	height: 400px;
+	margin-bottom: 1em;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Centrar textos que estan en cajas a distintas alturas con el valor "baseline" */
+/* Tarjetas de referencia: */
+.prices{
+	display: flex;
+}
+
+.prices__item{
+	width: 25%;
+	height: 400px;
+}
+
+.prices__item:first-child{
+	background-color: peru;
+}
+
+.prices__item:nth-child(2){
+	background-color: green;
+	line-height: 20px;
+}
+
+.prices__item:nth-child(3){
+	background-color: indianred;
+	line-height: 15px;
+}
+
+.prices__item:nth-child(4){
+	background-color: lightgreen;
+	line-height: 50px;
+}
+
+
+
+
+
+
+/* Textos centrados: */
+.prices2{
+	display: flex;
+
+	align-items: baseline;							/* Esto me centra los titulos */
+}
+
+.prices__item{
+	width: 25%;
+	height: 400px;
+}
+
+.prices__item:first-child{
+	background-color: peru;
+}
+
+.prices__item:nth-child(2){
+	background-color: green;
+	line-height: 20px;
+}
+
+.prices__item:nth-child(3){
+	background-color: indianred;
+	line-height: 15px;
+}
+
+.prices__item:nth-child(4){
+	background-color: lightgreen;
+	line-height: 50px;
+}
+
+
+
+
+/* Alinear un item en concreto: */
+.prices3{
+	display: flex;
+
+	align-items: flex-start;	
+	height: 800px;											/* Para que funcione necesito darle una altura definida */						
+	border: 2px solid black;
+}
+
+.prices__item{
+	width: 25%;
+	height: 400px;
+}
+
+.prices__item:first-child{
+	background-color: peru;
+}
+
+.prices__item:nth-child(2){
+	background-color: green;
+	line-height: 20px;
+
+	align-self: flex-end;									/* Esto me mueve este elemento al final */
+}
+
+.prices__item:nth-child(3){
+	background-color: indianred;
+	line-height: 15px;
+}
+
+.prices__item:nth-child(4){
+	background-color: lightgreen;
+	line-height: 50px;
+	align-self: center;										/* Este elemento ahora esta en el centro */
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Tip: desplazar y centrar elementos con el "margin: auto" */
+
+
+
+/* Caja de referencia: */
+.flex-container19{
+	background-color: #fca17d;
+	height: 400px;
+	width: 500px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-item19{
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+}
+
+
+
+
+/* Desplazar a la derecha: */
+.flex-container20{
+	background-color: #fca17d;
+	height: 400px;
+	width: 500px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-item20{
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+
+	margin-left: auto;										/*///*/
+}
+
+
+
+/* Desplazar hacia abajo: */
+.flex-container21{
+	background-color: #fca17d;
+	height: 400px;
+	width: 500px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-item21{
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+
+	margin-top: auto;										/*///*/
+}
+
+
+
+/* Centrar en la parte superior: */
+.flex-container22{
+	background-color: #fca17d;
+	height: 400px;
+	width: 500px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-item22{
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+
+	margin-left: auto;										/*///*/
+	margin-right: auto;										/*///*/
+}
+
+
+
+/* Centrar en la parte izquierda: */
+.flex-container23{
+	background-color: #fca17d;
+	height: 400px;
+	width: 500px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-item23{
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+
+	margin-top: auto;										/*///*/
+	margin-bottom: auto;									/*///*/
+}
+
+
+
+/* Centrar completamente: */
+.flex-container24{
+	background-color: #fca17d;
+	height: 400px;
+	width: 500px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-item24{
+	width: 50px;
+	height: 50px;
+	color: aliceblue;
+	background-color: #9a348e;
+	text-align: center;
+	line-height: 50px;
+
+	margin: auto;											/* El valor "auto" en un "margin:" tiene en cuenta a todos los lados  */
+}
+
+
+
+

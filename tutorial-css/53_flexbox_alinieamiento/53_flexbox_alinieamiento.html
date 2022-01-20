@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="53_flexbox_alinieamiento.css">
+		<title>Alinieamiento</title>
+	</head>
+	<body>
+		<h1>Flexbox: Alinieamiento</h1>
+
+
+		<!-- Caja de referencia: -->
+		<h2>Caja de referencia:</h2>
+		<div class="flex-container1">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+
+
+
+
+		<!-- justify-content: flex-start -->
+		<h2>justify-content: flex-start</h2>
+		<p>(Es el valor por defecto)</p>
+		<div class="flex-container2">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- justify-content: center -->
+		<h2>justify-content: center</h2>
+		<div class="flex-container3">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- justify-content: flex-end -->
+		<h2>justify-content: flex-end</h2>
+		<div class="flex-container4">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- justify-content: space-between -->
+		<h2>justify-content: space-between</h2>
+		<p>(Separa a todos los elementos por igual, pero se mantienen pegados al borde)</p>
+		<div class="flex-container5">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- justify-content: space-around -->
+		<h2>justify-content: space-around</h2>
+		<p>(Sepera a todos los elementos por igual, pero esta un pocquito pegado al borde)</p>
+		<div class="flex-container6">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- justify-content: space-evenly -->
+		<h2>justify-content: space-evenly</h2>
+		<p>(Similar al "space-around", pero en este caso la separacion entre los elementos y el borde es la misma)</p>
+		<div class="flex-container7">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- Mezclando lo visto con "flex-direction column" -->
+		<h2>Mezclando lo visto con "flex-direction column"</h2>
+		<p> (Recordar que "justify-content" alinea el "main axis". Si el main axis esta horizontal, alineara de forma horizontal; si el main axis esta vertical, alineara de forma vertical)</p>
+		<div class="flex-container8">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+
+
+
+
+
+		<!-- aling-items: flex-start -->
+		<h2>aling-items: flex-start</h2>
+		<div class="flex-container9">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- aling-items: center -->
+		<h2>aling-items: center</h2>
+		<div class="flex-container10">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- aling-items: flex-end -->
+		<h2>aling-items: flex-end</h2>
+		<div class="flex-container11">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+
+		<!-- aling-items: stretch -->
+		<h2>aling-items: stretch (Valor por defecto)</h2>
+		<p>Valor que viene por defecto, parece similar al "flex-start" pero no es así. Ya que si los elementos hijos NO tienen un tamaño definido, se estiraran tanto como su elemento padre. Esto con "flex-start" no pasar <br>Este problema también afecta a las imagenes</p>
+		<h3>Elementos hijos CON tamaño definido</h3>
+		<div class="flex-container12">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+		</div>
+		<h3>Elementos hijos SIN tamaño definido</h3>
+		<div class="flex-container13">
+			<div class="flex-item2">1</div>
+			<div class="flex-item2">2</div>
+			<div class="flex-item2">3</div>
+			<div class="flex-item2">4</div>
+			<div class="flex-item2">5</div>
+		</div>
+
+		<!-- Colapsado de imagenes: -->
+		<h2>Colapsado de imagenes:</h2>
+		<p>Es normal que una imagen se deforme si la pongo dentro de un flex. Ya que las imagenes que no tengan un tamaño definido se estiraran hasta llegar al final de la caja padre, ya que ese es el problema de "aling-items: stretch" como se vio anteriormente. <br> Por suerte esto se soluciona aplicando un "aling-items: " cualquiera (exeptuando "tretch" obviamente). También podria darle un tamaño definido a las imagenes para solucionar este problema, pero a veces uno quiere la magen en su tamaño original</p> <br>
+		<h3>Imagen dentro de un flex SIN un "aling-items":</h3>
+		<div class="box1">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet itaque quis a, veniam vero suscipit voluptatibus praesentium voluptates illum quisquam accusantium, veritatis iure et ut nobis, magni accusamus maiores.</p>
+			<img src="assets/axis.png" alt="">
+		</div>																																						<br>
+		<h3>Imagen dentro de un flex CON un "aling-items":</h3>
+		<div class="box2">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet itaque quis a, veniam vero suscipit voluptatibus praesentium voluptates illum quisquam accusantium, veritatis iure et ut nobis, magni accusamus maiores.</p>
+			<img src="assets/axis.png" alt="">
+		</div>
+
+
+
+
+
+
+		<!-- Caja de referencia -->
+		<h2>Caja de referencia:</h2>
+		<p>Como se puede apreciar, la distancia entre la primera linea de elementos hijos y la segunda, y de la segunda al final de caja padre es la misma. Pero yo no quiero eso, porque entre la segunda linea y el final de la caja padre hay una linea de espacio basio que es antiestetica</p>
+		<div class="flex-container15">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+		<!-- aling-content: flex-start -->
+		<h2>aling-content: flex-start</h2>
+		<div class="flex-container16">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+		<!-- aling-content: center -->
+		<h2>aling-content: center</h2>
+		<div class="flex-container17">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+		<!-- aling-content: flex-end -->
+		<h2>aling-content: flex-end</h2>
+		<div class="flex-container18">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+
+
+
+
+		<!-- Convinar un "justify-content:" con un "aling-content:" -->
+		<h2>Convinar un "justify-content:" con un "aling-content:"</h2>
+		<div class="flex-container18b">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+			<div class="flex-item">4</div>
+			<div class="flex-item">5</div>
+			<div class="flex-item">6</div>
+			<div class="flex-item">7</div>
+			<div class="flex-item">8</div>
+			<div class="flex-item">9</div>
+			<div class="flex-item">10</div>
+			<div class="flex-item">11</div>
+			<div class="flex-item">12</div>
+			<div class="flex-item">13</div>
+			<div class="flex-item">14</div>
+			<div class="flex-item">15</div>
+			<div class="flex-item">16</div>
+			<div class="flex-item">17</div>
+			<div class="flex-item">18</div>
+			<div class="flex-item">19</div>
+			<div class="flex-item">20</div>
+			<div class="flex-item">21</div>
+			<div class="flex-item">22</div>
+			<div class="flex-item">23</div>
+			<div class="flex-item">24</div>
+			<div class="flex-item">25</div>
+			<div class="flex-item">26</div>
+			<div class="flex-item">27</div>
+			<div class="flex-item">28</div>
+			<div class="flex-item">29</div>
+			<div class="flex-item">30</div>
+			<div class="flex-item">31</div>
+			<div class="flex-item">32</div>
+			<div class="flex-item">33</div>
+			<div class="flex-item">34</div>
+			<div class="flex-item">35</div>
+			<div class="flex-item">36</div>
+			<div class="flex-item">37</div>
+			<div class="flex-item">38</div>
+			<div class="flex-item">39</div>
+			<div class="flex-item">40</div>
+		</div>
+
+
+
+		<!-- Centrar textos que estan en cajas a distintas alturas con el valor "baseline -->
+		<h2>Centrar textos que estan en cajas a distintas alturas con el valor "baseline"</h2>
+		<!-- Tarjetas de referencia: -->
+		<h3>Tarjetas de referencia:</h3>
+		<div class="prices">
+			<div class="prices__item">
+				<h2 class="prices__title">Table 1</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita voluptas, veritatis ipsum, dicta maxime animi facere fugit quas laudantium laborum, praesentium nobis totam saepe impedit.
+				</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 2</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa.</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 3</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita voluptas, veritatis ipsum, dicta maxime animi facere fugit quas laudantium laborum, praesentium nobis totam saepe impedit.</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 4</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita</p>
+			</div>
+		</div>																																						<br><br>
+
+		<!-- Titulos centrados: -->
+		<h3>Titulos centrados:</h3>
+		<div class="prices2">
+			<div class="prices__item">
+				<h2 class="prices__title">Table 1</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita voluptas, veritatis ipsum, dicta maxime animi facere fugit quas laudantium laborum, praesentium nobis totam saepe impedit.
+				</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 2</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa.</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 3</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita voluptas, veritatis ipsum, dicta maxime animi facere fugit quas laudantium laborum, praesentium nobis totam saepe impedit.</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 4</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita</p>
+			</div>
+		</div>																																						<br><br>
+
+		<!-- Alinear un item en concreto: -->
+		<h3>Alinear un item en concreto:</h3>
+		<div class="prices3">
+			<div class="prices__item">
+				<h2 class="prices__title">Table 1</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita voluptas, veritatis ipsum, dicta maxime animi facere fugit quas laudantium laborum, praesentium nobis totam saepe impedit.
+				</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 2</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa.</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 3</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita voluptas, veritatis ipsum, dicta maxime animi facere fugit quas laudantium laborum, praesentium nobis totam saepe impedit.</p>
+			</div>
+			<div class="prices__item">
+				<h2 class="prices__title">Table 4</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, culpa. Culpa voluptatum ratione expedita</p>
+			</div>
+		</div>
+
+		
+
+
+		<!-- Tip: desplazar y centrar elementos con el "margin: auto" -->
+		<h2>Tip: desplazar y centrar elementos con el "margin: auto"</h2>
+
+		<!-- Caja de referencia: -->
+		<h3>Caja de referencia:</h3>
+		<div class="flex-container19">
+			<div class="flex-item19"></div>
+		</div>																																						<br>
+
+		<!-- Desplazar hacia la derecha: -->
+		<h3>Desplazar a la derecha:</h3>
+		<div class="flex-container20">
+			<div class="flex-item20"></div>
+		</div>																																						<br>
+
+		<!-- Desplazar hacia abajo: -->
+		<h3>Desplazar hacia abajo:</h3>
+		<div class="flex-container21">
+			<div class="flex-item21"></div>
+		</div>																																						<br>
+
+		<!-- Centrar en la parte superior: -->
+		<h3>Centrar en la parte superior:</h3>
+		<div class="flex-container22">
+			<div class="flex-item22"></div>
+		</div>																																						<br>
+
+		<!-- Centrar en la parte izquierda: -->
+		<h3>Centrar en la parte izquierda:</h3>
+		<div class="flex-container23">
+			<div class="flex-item23"></div>
+		</div>																																						<br>
+
+		<!--Centrar completamente: -->
+		<h3>Centrar completamente:</h3>
+		<div class="flex-container24">
+			<div class="flex-item24"></div>
+		</div>																																						<br><br>
+
+
+
+	</body>
+</html>

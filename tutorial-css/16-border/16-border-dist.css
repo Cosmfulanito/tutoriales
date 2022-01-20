@@ -1,0 +1,210 @@
+/* 
+
+                                                                _____Border:_____
+
+
+
+    border:         - Es la propiedad que nos permite modificar el borde de una caja
+
+                    - El "border:" consta de 3 propiedades: width (ancho del borde), style (estilo del borde) y color (color del borde)
+                              
+                    - Admite hasta 3 valores, estos valores tienen que ir separados por un espacio
+                            Ej:  border: 20px solid red;        Esto significa que el borde de mi caja va a ser de 20 pixeles de ancho, va a tener un estilo solido y va a ser de color rojo
+
+
+                    - Es un "shorthand". Esto significa que tiene propiedades abreviadas para poder controlar cada una de sus 3 propiedades por separado. Osea, tiene sufijos para poder controlar cada una de sus propiedades por separado. Ademas esas mismas abreviaturas tienen más abreviaturas para ser aún más especifico
+                            - border-width:                         Ancho del borde                         Ej: border-width: 10px;             Ahora el borde de todos los lados vale 10 pixeles
+                                    border-top-width:               Ancho superior del borde                Ej: border-top-width: 5px;          Ahora unicamente el borde superior vale 5 pixeles
+                                    border-right-width:             Ancho derecho del borde
+                                    border-bottom-width:            Ancho inferior del borde    
+                                    border-left-width:              Ancho izquierdo del borde
+
+                            - border-color:                         Color del borde                         Ej: border-color: red;              Ahora el borde de todos los lados es de color rojo
+                                    border-top-color:               Color superior del borde                Ej: border-top-color: blue;         Ahora unicamente el borde superior va a estar pintado de azul
+                                    border-right-color:             Color derecho del borde
+                                    border-bottom-color:            Color inferior del borde
+                                    border-left-color:              Color izquierdo del borde
+
+                            - border-style:                         Estilo del borde
+                                    border-top-style:               Estilo superior del borde
+                                    border-right-style:             Estilo derecho del borde
+                                    border-bottom-style:            Estilo inferiro del borde
+                                    border-left-style:              Estilo izquierdo del borde
+
+                                Listado de valores para style: 
+                                    solid                           Hace una linea solida y continua. Es el estilo más comun y usado
+                                    none                            Quita cualquier borde que tenga la caja  
+                                    hidden                          A efectos practicos hace lo mismo que "none". Pero toca un tema que entra más adelante que es hacer bordes con imagenes
+                                    dotted                          Hace que el borde este conformado por puntos
+                                    dashed                          Hace que el borde este conformado por lineas
+                                    double                          Hace una linea continua doble  //  Recordar que con width controlamos el ancho. Si ponemos 15px, estos pixeles se van a dividir en 3 partes iguales, 5 pixeles van a ir a ir para la primera linea roja, 5 para la linea blanca y 5 para la otra linea roja
+                                    groove                          Le da un efecto 3D al borde. Dicho efecto tiene una iluminación que viene desde la parte inferior derecha
+                                    ridge                           Al igual que "groove", tambien le da un efecto 3D al borde. Pero en este caso, dicho efecto tiene una iluminación que viene desde la parte superior derecha
+                                    inset                           Da al borde un efecto de iluminación que proviene desde la parte inferior derecha
+                                    outset                          Al igual que el "inset", tambien da un efecto de iluminacion. Pero en este caso proviene de laparte superior derecha
+
+
+
+*/              
+
+
+
+
+
+/* Boton de referencia */
+.boton-1{                                                                       /* Este es un boton generico sin cambios */
+    margin-left: 100px;
+    padding: 10px 30px;
+}
+
+
+
+
+/* Boton de con los bordes agregados de forma generica */
+.boton-2{                                                                       
+    margin-left: 100px;
+    padding: 10px 30px;
+
+    border: 20px solid red ;                                                  /* Aqui le agregue a la caja un borde de 20 pixeles, de estilo solido y de color rojo */
+}
+
+
+
+
+/* _____Shorthand -color_____ */
+/* Cambiando de color uno solo de los lados */
+.boton-3{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-right-color: blue;                                                 /* Usando la caja anterior como referencia, a esta caja solamente le cambie el borde derecho de color azul */
+}
+
+
+
+
+/* _____Shorthand -width_____ */
+/* Cambiando el tamaño de uno solo de los lados */
+.boton-4{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+    border-right-color: blue;
+
+    border-right-width: 5px;                                                    /* Hice que el borde derecho de la caja (5 pixeles) sea más chico que el resto (20 pixeles)  */
+}
+
+
+
+
+/* _____Shorthand -style_____ */
+/* Quitar todos los bordes */
+.boton-5{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: none;                                                         /* Esto quita cualquier borde que tenga la caja */
+}
+
+.boton-6{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: hidden;                                                       /* A efectos practicos hace lo mismo que "none". Pero toca un tema que entra más adelante que es hacer bordes con imagenes */
+}
+
+
+
+
+/* Borde con puntos */
+.boton-7{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: dotted;                                                       /* Hace que el borde este conformado por puntos  //  Recordar que con width controlamos el ancho de los puntos */
+}
+
+
+
+/* Borde con lineas */
+.boton-8{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 10px solid red ;
+
+    border-style: dashed;                                                       /* Hace que el borde este conformado por lineas  //  Recordar que con width controlamos el ancho de las lineas */    
+}
+
+
+
+
+/* Borde con una linea solida y continua */
+.boton-9{                                                               
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+    
+    border-style: solid;                                                        /* Hace que el borde sea una linea solida y continua. Es el estilo más comun y usado */
+}
+
+
+
+
+/* Borde con una linea doble */
+.boton-10{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: double;                                                       /* Hace una linea continua doble  //  Recordar que con width controlamos el ancho. Si ponemos 15px, estos pixeles se van a dividir en 3 partes iguales, 5 pixeles van a ir a ir para la primera linea roja, 5 para la linea blanca y 5 para la otra linea roja  */
+}
+
+
+
+
+/* Bordes con efecto 3D */
+.boton-11{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: groove;                                                       /* Le da un efecto 3D al borde. Dicho efecto tiene una iluminación que viene desde la parte inferior derecha */
+}
+
+.boton-12{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: ridge;                                                        /* Al igual que "groove", tambien le da un efecto 3D al borde. Pero en este caso, dicho efecto tiene una iluminación que viene desde la parte superior derecha */
+}   
+
+
+
+
+
+/* Bordes con efecto de iluminación */
+.boton-13{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: inset;                                                        /* Da al borde un efecto de iluminación que proviene desde la parte inferior derecha */                             
+    
+}   
+
+.boton-14{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border: 20px solid red ;
+
+    border-style: outset;                                                       /* Al igual que el "inset", tambien da un efecto de iluminacion. Pero en este caso proviene de laparte superior derecha */     
+    
+}   
+
+
+

@@ -1,0 +1,96 @@
+/* 
+
+														_____Cómo se usa "with: con %" y "with: auto"_____
+
+
+
+ - Este es una pequeña parte vista en profundidad del apunte 34-introduccion-a-medidas-absolutas-y-relativas.css
+
+ 
+
+
+ - RECORDAR que las propiedades "width" y "height" aunque parezcan iguales se comportan de forma muy difrenete. Este apunte se centra en el funcionamiento de las 
+   unidades de medida "%" y "auto" en base a el ancho de una caja.
+
+
+ 	%				- Cuando usamos esta unidad de medida, usamos de referencia el tamaño del elemento/caja contenedor y luego el navegador calcula ese porcentaje.   
+					
+	 				- Esto no ocurre cuando usamos transform. 
+
+
+	auto 			- Cuando usamos auto le estamos pidiendo al navegador que calcule en función del espacio disponible del elemento/caja contenedor.
+					
+	
+
+
+ - A simple vista "100%" funciona de una manera similar a "auto", pero esto no es así y creer en eso nos puede generar problemas en nuestra página web. 
+   Esto se debe a que si nosotros ponemos una caja contenedor de 100 pixeles de ancho y luego una caja hija de 100% de ancho, el navegador interpreta que debe darle
+   un total de 100 poixeles netos a la caja hija. En caso de que la caja hija tenga un "margin: 70px" adicional, esta caja hija a va a ser desplazada por afuera
+   de la caja padre porque mediria sus 100 pxeles más los 70 pixeles del margin. Osea, 170 pixeles.
+   Con "with: auto" esto no pasa porque primero se calculan los 50 pixeles del margin y luego lo que queda para medir lo mismo que la caja padre. Osea 
+   30 pixeles.  
+
+*/
+
+
+
+*{
+	box-sizing: border-box;				/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+
+
+
+/* Usando la unidad de medida "%" */
+.caja-padre-1{
+	text-align: end;
+	background-color: #888;
+
+	height: 300px;
+	width: 300px;
+}
+
+.caja-hija-porcentaje-1{
+	position: relative;
+	top: -37px;
+	background-color: lightsalmon;
+	text-align: center;
+	height: 150px;
+
+	width: 50%;
+}
+
+
+
+
+
+/* Comparando "%" y "auto" */
+.caja-padre-2{
+	text-align: center;
+	background-color: #888;
+
+	height: 400px;
+	width: 300px;
+}
+
+.caja-hija-porcentaje-2{
+	position: relative;
+	top: 10px;
+	background-color: lightsalmon;
+	height: 150px;
+
+	margin-left: 50px;
+	width: 100%;
+}
+
+.caja-hija-auto-2{
+	background-color: mediumturquoise;
+	position: relative;
+	top: 10px;
+	height: 150px;
+
+	margin-left: 50px;
+	width: auto;
+}
+
+

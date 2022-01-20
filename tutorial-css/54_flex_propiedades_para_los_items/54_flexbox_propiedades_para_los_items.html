@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="54_flexbox_propiedades_para_los_items.css">
+		<title>Flexbox: Propiedades para los items</title>
+	</head>
+	<body>
+		<h1>Flexbox: Propiedades para los items</h1>
+
+		<!-- Caja de referencia: -->
+		<h2>Caja de referencia:</h2>
+		<div class="flex-container1">
+			<div class="flex-item1">1</div>
+			<div class="flex-item1">2</div>
+			<div class="flex-item1">3</div>
+			<div class="flex-item1">4</div>
+		</div>
+
+
+
+
+
+
+		<!-- flex-grow: -->
+		<h2>flex-grow: </h2>
+		<p>Para raxonar el funcionamiento de "flex-grow:" hay que tener en cuenta las fracciones (tema visto en la escuela)</p>
+		<h3>Ej1:</h3>
+		<p>Solamente se le esta aplicando a una sola caja el flex-grow. Por ende esta sola caja tiene el tamaño sobrante de la caja padre, más el su tamaño propio</p>
+		<div class="flex-container2">
+			<div class="flex-item2">1</div>
+			<div class="flex-item2">2</div>
+			<div class="flex-item2">3</div>
+			<div class="flex-item2">4</div>
+		</div>
+
+		<h3>Ej2:</h3>
+		<p>Al haber 2 elementos con el mismo valor "flex-grow: 1". La porción sobrante se reparte en parte iguales.</p>
+		<p>Esto se debe a que ambos se tienen un "flex-grow: 1". Por ende el flex-grow: total es igual 2. Por ende a cada uno le corresponde 1/2 del total sobrante</p>
+		<div class="flex-container3">
+			<div class="flex-item3">1</div>
+			<div class="flex-item3">2</div>
+			<div class="flex-item3">3</div>
+			<div class="flex-item3">4</div>
+		</div>
+
+		<!-- Ej3: -->
+		<h3>Ej3:</h3>
+		<p>Dos cajas recibieron un "flex-grow:" con valor de 1, mientras que la tercera recibio un "flex-grow:" con valor de 2. Esto nos da un flex-grow total igual a 4. Esto siginica que dos cajas van a tener un 1/4 del tamaño sobrante del contenedor padre; y la otra caja va a tener 2/4 del tamaño sobrante del contenedor padre. Todo sumando el tamaño de las propias cajas</p>
+		<div class="flex-container4">
+			<div class="flex-item4">1</div>
+			<div class="flex-item4">2</div>
+			<div class="flex-item4">3</div>
+			<div class="flex-item4">4</div>
+		</div>
+
+
+
+
+
+
+
+
+		<!-- flex-shinrk: -->
+		<h2>Caja de referencia</h2>
+		<p>Si observamos el CSS, podemos apreciar que la caja padre mide 400px pero que las cajas hijas miden 200px. Esto significa que para poder entrar, todas las cajas hijas perdieron 100 de sus pixeles cada una para poder entrar en la caja padre</p>
+		<div class="flex-container5">
+			<div class="flex-item5">1</div>
+			<div class="flex-item5">2</div>
+			<div class="flex-item5">3</div>
+			<div class="flex-item5">4</div>
+		</div>
+
+		<h2>flex-shinrk:</h2>
+		<p>Una de las cajas tiene un "flex-shinrk:" con valor de 2, esto significa que perdio el doble de pixeles que sus cajas hermanas. El espacio sobrante luego le fue repartido a sus hermanas en partes iguales</p>
+		<div class="flex-container6">
+			<div class="flex-item6">1</div>
+			<div class="flex-item6">2</div>
+			<div class="flex-item6">3</div>
+			<div class="flex-item6">4</div>
+		</div>
+
+
+
+
+
+
+		<!-- flex-basis: -->
+		<h2>Caja de referencia</h2>
+		<div class="flex-container7">
+			<div class="flex-item7">1</div>
+			<div class="flex-item7">2</div>
+			<div class="flex-item7">3</div>
+			<div class="flex-item7">4</div>
+		</div>
+
+		<h2>flex-basis:</h2>
+		<p>Le da una medida especifica a la caja. Funciona como un "width" <br>En conjunto con "flex-shrink: 0;" el elemento no pierde su tamaño por más chica que sea la caja. Incluso la puede llegar a desbordar</p>
+		<div class="flex-container8">
+			<div class="flex-item8">1</div>
+			<div class="flex-item8">2</div>
+			<div class="flex-item8">3</div>
+			<div class="flex-item8">4</div>
+		</div>
+
+		<h2>flex-basis: (Desbordado)</h2>
+		<p>Como se dijo anteriormente, si caja padre es muy chica o los elemenotos hijos son muy granes, el contenido se desborda</p>
+		<div class="flex-container9">
+			<div class="flex-item9">1</div>
+			<div class="flex-item9">2</div>
+			<div class="flex-item9">3</div>
+			<div class="flex-item9">4</div>
+		</div>
+
+
+
+
+
+		<!-- Order: -->
+		<h2>Order:</h2>
+		<p>la propiedad "order:" se encarga de ordenar a los elementos hermanos. Primero iran los elementos con un "order" por defecto (ese calor por defecto es "0"). Luego ira la caja N°2 ya que el valor de su order es igual a "1" (1 es mayor que 0). Y por ultimo a la derecha de todo aparecera la "caja N°3" ya que el valor de su order es "2" (2 es mayor que 1)</p>
+		<div class="flex-container10">
+			<div class="flex-item10">1</div>
+			<div class="flex-item10">2</div>
+			<div class="flex-item10">3</div>
+			<div class="flex-item10">4</div>
+		</div>
+
+	</body>
+</html>

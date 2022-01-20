@@ -1,0 +1,122 @@
+/*
+
+														_____Breakpoints / Media Querys_____
+
+
+
+
+ - "Breakpoints" y "Media Querys" son sinonimos. Aunque el termino correcto es breakpoint
+
+
+
+
+
+														
+
+ _____Media Querys - Concepto_____  (Estracto sacado del apunte "65_responsive_web_design")
+
+ - Son condiciones para que el navegador sepa cómo actuar en función de la condición
+ 
+
+ - Hay 4 tipos de "Media Querys"
+ 	- screen: 			Destinado principalmente a las pantallas. Es el principal para diseño web y el que veremos en este curso
+	- all: 				Apto para todos los dispositivos 
+	- print: 			Destinado a material impreso y visualización de modo de vista previa de impreción
+	- speech: 			Destinado a sintetizadores de voz
+
+
+ - Sintaxis: 
+    - @media "tipo de media" and|or (condición)	
+
+
+ - Las condiciones más utilizadas son "min-width", "max-widht" y orientation 	
+
+   Ej: 	- @media screen and (min-widht: 360px)										Le estamos diciendo que es para un medio del tipo "pantalla" y con un "ancho minimo
+																					de 360px" 										
+			
+		- @media screen and (max-width: 1024px) and (orientation: landscape)		Le estamos diciendo que es para una "pantalla" con un "ancho maximo de 1024px" "y" 
+		                                                                            con la orientación en "landscape" (con el movil en horizontal o en un monitor)														orizontal)
+		
+		- @media screen and (max-widht: 480px) or (orientation: portrait)			Le estamos diciendo que es para una "pantalla" con "ancho minimo de 480px" "o" que
+																					este en orientación "portrair" (en vertical como en un movil) 
+
+
+
+
+
+
+
+
+
+ _____Breakpoints_____																				
+
+ - Los "breakpoints" son los puntos de ruptura que establecemos en una web para cambiar su estructura  
+
+
+
+ - Existen dos tipos de "breakpoint":
+	- Mayor breakpoints: 		Son los que cambiam ls apariencia de la web de forma significativa. 
+	                            	Ej1: Que el menu deje de estar en vertical se vuelva horizontal dependiento el tamaño de la pantalla 
+									Ej2: Que aparezca un baner o que se oculte dependiendo el tamaño de la pantalla
+
+	- Minor breakpoints:		Son los que hacen cambios menores, ya que van dirigidos a una cosa especifica para un elemento en concreto 
+									Ej:  Vemos que en una anchura de 450px hay un error y una imagen se mueve un poco para izquierda. Con un "minor breakpoint" solucionamos ese problema 
+
+
+
+ - Medidas más comunes: 		
+ 	- Móviles portrait: 						0px    -  320px  -  360px: 
+	- Moviles landscape y tablets:				480px  -  640px  -  768px 
+	- Tablets grandes y portatile no HD:		1024px -  1200px -  1400px 
+	- HD, 2K, 4K...								1920px
+
+
+
+
+ - Tip:  	- Se recomienda escribir primero los estilos por defecto y luego ir subiendo en cuanto resolucion (siempre y cuando usemos la metodología de "Movile-first". 
+              Osea, diseñar los primero los estilos y dimenciones para moviles primero y luego ir aumentando en tamaño como pantallas de monitores y pantallas 4K)
+              Si pusiera los estilos por defecto despues de los Breakpoints / Media Querys, estos ultimos no tendrian efecto porque sus propiedades fueron sobreescritas 
+		      por dichos estilos que fueron escritos despues
+
+			- Recordar que los estilos que no escribamos, se heredan    
+*/
+
+
+
+
+
+
+
+/* Estilo por Defecto / Movil: */
+.menu{
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+body{
+	background-color: royalblue;
+}
+
+
+/* Estilo de Tablet: */
+@media screen and (min-width: 480px) {				/* Como minimo nuestra pantalla debe tener 480px como medida para que se apliquen los siguientes estilos. Osea, cuando la pantalla mida 480px o más, el body se volvera rojo */
+	body{
+		background-color:lightsalmon;
+	}
+}
+
+
+/* Estilo de Escritorio: */
+@media screen and (min-width: 1400px) {
+	body{
+		background-color: lightgreen;
+	}
+}
+
+
+/* Conclución: 
+	- Estilos por Defecto / Movil:  	Ancho de la pantalla menor a 480px
+	- Estilos para Tablet: 				Ancho de la pantalla entre 480px y 1400px  
+	- Estilos para Escritorio: 			Ancho de la pantalla mayor a 1400px */

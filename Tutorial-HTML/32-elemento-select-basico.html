@@ -1,0 +1,60 @@
+<!--
+
+                                                                _____Elemento <s>elect> básico_____
+
+
+    <select>            Es una etiqueta cuyo funcionamiento es similar a la convinaion de los inputs de "radio" y de "checkbox". Ya que el usuario podra selecionar una o varias opciones de una lista
+    </select>               name=""     Es obligatorio. Me permite decirle al navegador que las etiquetas <option> pertenecen a la misma categoria, en este caso lenguaje      
+                            <option>    Esta etiqueta con las opciones que estan dentro de la etiqueta <select>
+                                El atributo value="" es importantisimo en las etiquetas <option>. Ya que le da un valor a esa opcion el cual luego sera mandado al servidor. El valor puede ser cualquier cosa, palabra/numero. Lo importante es que sea identificativo con el <option> correspondiente                
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elemento select básico</title>
+    </head>
+    
+    <body>
+
+        <h1>Elemento &lt;select&gt; básico</h1>                                                                                                                     <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->
+
+
+
+        <!-- <select> que se comporta como un <input> de "radio" -->
+        <h2>&lt;select&gt; que se comporta como un &lt;input&gt; de "radio"</h2>
+        <form>
+            <select name="lenguajes">                               <!-- El atributo name="" Es obligatorio. Me permite decirle al navegador que las etiquetas <option> pertenecen a la misma categoria, en este caso lenguaje -->
+                <option value="html">HTML</option>                  <!-- El atributo value="" es importantisimo en las etiquetas <option>. Ya que le da un valor a esa opcion el cual luego sera mandado al servidor. El valor puede ser cualquier cosa, palabra/numero. Lo importante es que sea identificativo con el <option> correspondiente-->
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+        </form>                                                                                                                                                     <br><br><br>
+
+
+
+        <!-- <select> que se comporta como un <input> de "checkbox" -->
+        <h2>&lt;select&gt; que se comporta como un &lt;input&gt; de "checkbox"</h2>
+        <h3>(Para ello tengo que mantener precionado la tecla Ctrl a la hora se elegir las multiples opciones)</h3>
+        <form>
+            <select name="lenguajes" multiple>                      <!-- multiple es un atributo booleano que me permite seleccionar multiples occiones en un elemento <select>. Para ello tengo que mantener precionado la tecla Ctrl a la hora se elegir las multiples opciones -->                        
+                <option value="html">HTML</option>                      
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+        </form>  
+
+
+
+
+
+
+    </body>
+
+</html>

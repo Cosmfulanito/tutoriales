@@ -1,0 +1,75 @@
+/*
+
+														_____Propiedad: "position: sticky;"_____
+
+
+	position: sticky;					- Es una mezcla de position relative y "fixed". 
+										  Con este tipo de posicion los valores top, left, botton y right no sirven para mover el elemento, sino para indicarle en 
+										  qué punto pasará a tener un comportamiento de posición similar al de fixed, hasta llegar a ese punto se comportará como 
+										  si no tuviera posicionamiento, aunque si contará como posicionado si necesitáramos colocar otro elemento respecto a 
+										  él (absolute).
+
+										- Dicho posicionamiento solo se dara dentro de la caja padre/contenedor. Eso quiere decir que mientras la la caja 
+										  padre/contenedor este a la vista del navegador, el elemento hijo con "position: sticky" funcinara como un "position: fixed". 
+								  		  Al hacer el scroll suficiente como para que la caja contenedor desapararezca de la vista del navegador, tambien desaparecera
+										  el elemento hijo con "position: sticky".
+
+										- ¿Para que sirven las propiedades "top, left, botton y right"? Es para indicarle en que parte del navegador debe estar la 
+										  etiqueta padre/contenedor para que el elemento "sticky" se comporte como tal. 
+
+										- RECORDAR que este valor solo funciona cuando el overflow viene por defecto, osea "overflow: visible;". Si cambiamos ese 
+										  valor por otro, como "overflow: hidden;" el "position: sticky;" no va a funcionar.
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+*{													/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;					
+}
+
+body{												/* Esta propiedadad es sumamente estetica */
+	margin: 0;
+}
+
+
+
+
+
+
+/* Ente apunte vamos a utilizar el "position: sticky;". Para ello se lo daremos a la barra de menu y todos los titulos secundarios de nuestra página web.
+   Para apreciar este conjunto propiedad/valor hay que hacer scroll  */
+
+/* Ej N°1 */
+.header{
+	background-color: #333;
+	margin: 0;
+	height: 300px;											/* <header> es la etiqueta padre del elemento menu (elemento al cual se le va a aplicar el "position: sticky;"). Menu solamente sera visible la distancia del alto de su etiqueta padre, osea 300 pixeles */
+}
+.menu{
+	background-color: lightcoral;
+	color: blue;
+	text-align: center;
+	
+	position: sticky;										/* A este elemento se le esta aplicando la propiedad "position: sticky;". Solamente sera visible lo que dure el alto de su etiqueta padre (<header>). Osea, 300 pixeles */ 
+	top: 0;
+}
+
+
+
+/* Ej N°2 */
+.article-title{
+	background-color: lightcoral;
+	color: blue;
+
+	position: sticky;										/* En este caso, el efecto de "position: sticky;" en este elemento durara lo que mida su elemento/etiqueta padre (<article>)  */
+	top: 0;
+}

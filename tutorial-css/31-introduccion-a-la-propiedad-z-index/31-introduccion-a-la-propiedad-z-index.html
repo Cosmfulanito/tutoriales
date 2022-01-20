@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/tutorial-css/31-introduccion-a-la-propiedad-z-index/normalize.css">										<!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+		<link rel="stylesheet" href="/tutorial-css/31-introduccion-a-la-propiedad-z-index/31-introduccion-a-la-propiedad-z-index-dist.css">		<!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+		<title>Introducción a la propiedad: "z-index:"</title>
+	</head>
+
+	<body>
+		<h1>Introducción a la propiedad: "z-index:"</h1>																											<br><br>
+		
+
+		<!-- Posicionamiento de las cajas: -->
+		<h2>Posicionamiento de las cajas:</h2>
+		<div class="caja caja-1">Caja N°1<br><br>z-index: 2;</div>
+		<div class="caja caja-2">Caja N°2<br><br>z-index: 4;</div>
+		<div class="caja caja-3">Caja N°3<br><br>z-index: 1;</div>
+		<div class="caja caja-4">Caja N°4<br><br>z-index: 3;</div>																									<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
+
+
+		<!-- Posicionar una caja "hija" por detras de su caja "padre": -->
+		<h2>Posicionar una caja "hija" por detras de su caja "padre":</h2>
+		<div class="caja-padre">Caja padre<br><br>z-index: auto;
+			<div class="caja-hija">Caja hija<br><br>z-index: -1;</div>
+		</div>																																						<br><br><br>
+
+	</body>
+</html>

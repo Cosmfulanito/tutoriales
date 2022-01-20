@@ -1,0 +1,108 @@
+/* 
+
+																_____Tipos de Iconos_____
+
+
+    Existen dos tipos de iconos, "Iconos de fuente" y los "Iconos SVG" (ya visto en el tutorial de HTML)
+
+	En este apunte ns vamos a enfocar en los "iconos de fuente"
+
+	Link para seleccionar iconos de Google	https://fonts.google.com/icons
+
+
+
+
+	- Iconos de Fuente				- Básicamente no son más que un "glifo" propio de una "fuente", de ahí su numbre.
+									  Osea, basicamente es una letra con forma de icono.
+
+									- Debido a esto, para cambiar su tamaño, color, etc. Hay que usar las mismas propiedades que se usan en las fuentes, porque 
+									  literalmente son "glifos de una fuente"
+									  Ej:	"color:"	"font-size:"	etc
+
+									- Como fuentes que son, se pueden seleccionar en la página de Google: "Google icons". 
+									
+									- ¿Como utilizarlos?
+											1- - Seleccionasmos el icono deseado
+											   - Automaticamente aparecera un archivo <span> el cual nos permitira copiar y pegar
+
+											2- - Pegamos esa etiqueta dentro del <body> en nuestro archivo .html.  
+
+											3- - Para que dicho icono funcione, dentro de la etiqueta <meta>, por encima de nuestros estilos CSS, debemos poner una 
+											     etiqueta <link rel="stylesheet" href="">  dentro del href="" va el link de la libreria del icono que estamos usando. 
+											   - En el caso de Google, temos que seleccionar la libreria en base al tipo de icono seleccionado:
+													- Material Icons:
+													  https://fonts.googleapis.com/css?family=Material+Icons
+
+													- Material Icons Outlined:	
+													  https://fonts.googleapis.com/css?family=Material+Icons+Outlined
+
+													- Material Icons Two Tone:
+													  https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone
+
+													- Material Icons Rounded
+													  https://fonts.googleapis.com/css?family=Material+Icons+Round
+
+													- Material Icons Sharp
+													  https://fonts.googleapis.com/css?family=Material+Icons+Sharp
+											
+									- NOTA: - Si se van a usar una gran cantidad de iconos en nuestra web, es util usar una libreria remota. Osea, usar "iconos de 
+									          fuente"
+											- En caso contrario, cuando solamente usamos pocos iconos, es mejor descargarlos en formato .svg y utilizarlos como 
+											  "imagenes"
+
+
+									
+
+
+	- Iconos SVG					- "Scalable Vector Graphics". Traducido como gráficos vectoriales escalables, básicamente son las tipicas imagenes/iconos 
+						              vectoriales ya vistos en en el tutorial de HTML. 
+
+									- Al ser "imagenes vectoriales", para cambiar su aspecto hay que utilizar las mismas propiedades que se utilizan en cualquier 
+									  imagen.
+									  En caso de querer cambiar el "color" del icono, estamos obligados a modificar el archivo .svg (de la misma manera que tendriamos
+									  que modificar un archivo .jpg en el caso de una imagen normal) 
+
+									- ¿Como utilizarlos?
+											1- Me dirijo a la página de Google y descargo y lo selecciono. Luego descargo el icono en formato.svg
+											
+											2- Ahora dentro del <body> simplemente pongo el icono .svg dentro de una etiqueta <img src="" alt=""> como si fuera una 
+											   imagen normal. Porque practicamente eso es lo que es
+
+
+
+
+
+   - ¿Cuando usar uno u otro?		- Si se van a usar una gran cantidad de iconos en nuestra web, es util usar una libreria remota. Osea, usar "iconos de 
+									  fuente"
+									  
+								    - En caso contrario, cuando solamente usamos pocos iconos, es mejor descargarlos en formato .svg y utilizarlos como 
+									  "imagenes"
+
+
+									  
+
+*/
+
+
+
+*{
+	box-sizing: border-box;				/* Pongo esta propiedad para normalizar esta buena practica */
+}
+
+
+
+
+
+
+
+/* Iconos de Fuente: */						/* Estos tipos de iconos al ser "glifos de una fuente" se tienen que modicar de la misma manera que se modificaria a un texto, porque en estos caos, son exactamente eso */
+.icono-fuente{
+	font-size: 5rem;
+	color: coral;
+}
+
+
+
+
+/* Iconos de SVG: */						
+/* El color y el tamaño de este icono los cambie modificando el archivo .svg */

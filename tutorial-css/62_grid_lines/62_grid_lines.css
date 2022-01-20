@@ -1,0 +1,237 @@
+/*
+
+																	_____Grid lines_____
+
+
+
+
+ - Se recomienda repasar el contenido del apunto "56_grid-column_y_grid-row", ya que utilizaremos la bases de los temas visto en ese apunte y los utilizaremos en este
+
+
+
+ - En este apunte veremos como ponerle nombre a las "grid lines"  (lineas que separan a las columnas y a las filas). 
+   Esto nos permite ordenar las celdas como lo vimos en el apunte "56_grid-column_y_grid-row". Pero en vez de usar las columnas y las filas, usaremos las "grid lines" 
+ 
+
+
+ - Sintaxis:  
+
+	- Nombrar las lineas que separan a las columnas y a las filas:
+
+		- grid-template-column/row:			- Estas propiedades ya las vimos en apuntes anteriores. Son las encargada de darle una cantidad y tamaño a las columnas o 
+			[primera-linea-columna/fila]	  filas 
+			75px 							- El nombre puede ser cualquier cosa, pero es obligatorio que este entre corchetes. No hace falta que este verticalmente, 
+			[segunda-linea-columna/fila]			  pero de esta manera es más comodo de ver
+			75px							- Los numeros son las medidas de las filas y columnas que declarariamos normalmente en un  "grid-template-column/row" comun
+			[tercera-linea-columna/fila] 	  y corrriente		
+			75px 
+			[cuarta-linea-columna/fila]
+			75px
+			[quinta-linea-columna/fila];
+
+
+
+
+	- Utilizar las lineas que separan a las columnas y a las filas:  
+	  Todas estas propiedades ya las vimos en el apunte "56_grid-column_y_grid-row", solo que en este caso en vez de usar numeros, usamos las lineas renombradas que 
+	  separan a las columnas y a las filas 
+
+		- grid-row-start: primera-linea-columna/fila;									
+		- grid-row-end: segunda-linea-columna/fila;		
+		- grid-column/row: tercera-linea-columna/fila;
+
+ 
+
+
+
+
+
+ - Como ejercio haremos lo mismo que hicimos en el apunte "56_grid-column_y_grid-row" pero con las "grid lines"  
+ 
+*/
+
+
+
+
+
+
+
+/* Esto es sumamente estetico, la mayor parte de este codigo lo puso el mismo Dorian  */
+*{												
+	box-sizing: border-box;								/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+
+h2{
+	margin-top: 60px;
+}
+
+
+section{										/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* Caja de inicio: */							
+		
+/* Esto esta copiado tal cual del video de Dorian */
+
+/* En este caso tenemos 5 grid-column-lines (lineas de columna) y 4 grid-row-lines (lineas de filas). Obviamente incluyendo las del los lados externos */
+
+.grid-container1{	
+	padding: 1rem;
+	background-color: #fff;
+	display: grid;
+	column-gap: 10px;
+	row-gap: 10px;
+
+	grid-template-columns: 75px 75px 75px 75px;
+	grid-template-rows: 75px 75px 75px;	
+}
+
+.grid-item1{
+	border: 1px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 2rem;
+	color: #000;
+}
+
+.grid-item1:first-child,								
+.grid-item1:nth-child(2){
+	background-color: violet;
+}
+
+.grid-item1:nth-child(3),								
+.grid-item1:nth-child(4){
+	background-color: orange;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Caja final: */	
+
+/* En este caso tenemos 5 grid-column-lines (lineas de columna) y 5 grid-row-lines (lineas de filas). Obviamente incluyendo las del los lados externos */
+
+.grid-container2{	
+	padding: 1rem;
+	background-color: #fff;
+	display: grid;
+	column-gap: 10px;
+	row-gap: 10px;	
+
+	/* Nombrando las lineas que separan a las columnas y a las filas  */
+	grid-template-columns: 							/*-----*/
+		[primera-linea-columna]
+		75px 
+		[segunda-linea-columna]
+		75px
+		[tercera-linea-columna] 
+		75px 
+		[cuarta-linea-columna]
+		75px
+		[ultima-linea-columna];
+
+	grid-template-rows: 							/*-----*/
+		[primera-linea-fila]
+		75px 
+		[segunda-linea-fila]
+		75px
+		[tercera-linea-fila] 
+		75px 
+		[cuarta-linea-fila]
+		75px
+		[ultima-linea-fila];	
+}
+
+.grid-item2{
+	border: 1px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 2rem;
+	color: #000;
+}
+
+.grid-item2:first-child,								
+.grid-item2:nth-child(2){
+	background-color: violet;
+}
+
+.grid-item2:nth-child(3),								
+.grid-item2:nth-child(4){
+	background-color: orange;
+}
+
+
+
+/* Ordenando los elementos/cldas de izquierda a derecha con las "grid lines". E4s exactamente lo mismo que hicimos en el apunte "56_grid-column_y_grid-row" pero 
+   en este caso en vez de usar numeros, usamos las lineas renombradas que separan a las columnas y a las filas */
+
+/* Elemento D: */
+.grid-item2:nth-child(4){							
+	background-color: orange;
+
+	grid-column-start: primera-linea-columna;							/*-----*/				
+	grid-row-start: primera-linea-fila;									/*-----*/
+}
+
+/* Elemento A: */
+.grid-item2:nth-child(1){												
+	background-color: violet;
+}
+
+/* Elemento C: */
+.grid-item2:nth-child(3){												
+	background-color: orange;
+
+	grid-column-start: tercera-linea-columna;							/*-----*/				
+	grid-row-start: primera-linea-fila;									/*-----*/
+	grid-row-end: tercera-linea-fila;									/*-----*/
+}
+
+/* Elemento B: */
+.grid-item2:nth-child(2){												
+	background-color: violet;
+
+	grid-column: primera-linea-columna / tercera-linea-columna;			/*-----*/								
+	grid-row: segunda-linea-fila / cuarta-linea-fila;					/*-----*/
+}
+
+/* El resto de los elementos estan posisionados en su lugar correspondiete. Por ende no hace falta tocarlos */
+
+

@@ -1,0 +1,68 @@
+/* 
+
+															_____Introduccion la propiedad "position:"_____
+
+
+
+	position:				- Esta propiedad nos permite  los elementos. Hay conseptos que se deben conocer para entender esta propiedad.
+
+							- Flujo renderizado: 		Por norma general los elementos se dibujan de izquierda a derecha y de arriba a abajo. El punto 0,0 de los 
+							                        	de los elementos, por norma general, es la esquina superior derecha.
+
+							- Espacio reservado: 		Es el espacio que tiene un elemento asignado en el navegador. Básicamente es el lugar que ocupa la caja. 
+														Puede modificarse mediante varias propiedades entre ellas "whith:", "hight", etc. 
+
+							- Elemento posicionado:		Esto significa que el elemento tiene la propiedad "position:" con valor distinto de "static", que es el 
+														valor que tiene esta propiedad por defecto. Osea, cuando un elemento no tiene el valor "static" se dice que 
+														posicionado, esto se debe a que estamos abilitando la posibilidad de poder mover/posicionar ese elemento en 
+														cualquiera de los 3 ejes.
+
+							- Stakin context: 			Contenido de apilamiento. Es el orden en que se apilaran las cajas que se superponen dentro del mismo 
+														contenedor
+
+
+
+							- Al posicionar un elemento se habilitan 5 propiedades que podemos utilizar para mover los elementos en los 3 ejes
+									- top				El elemento se moverá desde la parte superior la distancia que le hayamos indicado.
+
+									- right				El elemento se moverá desde la parte derecha la distancia que le hayamos indicado.
+
+									- botton			El elemento se moverá desde la parte inferiors la distancia que le hayamos indicado.
+
+									- left 				El elemento se movera desde la parte izquierda la distancia que le hayamos indicado.
+
+									- z-index			Nos permitira vover el elemento en el contexto de apilamiento (eje Z). Osea, cual es la caja que va a estar
+														arriba/tapando a otra.
+
+									NOTA: Si a un elemento le declaramos la propiedad top y/o left, las propiedades botton y/o right no funcionaran. Esto se da 
+									cuando hay dos propiedades que afectan al mismo eje.   
+									Ej: Si el navegador tiene que elegir si hacer caso a la propiedad top o a la propiedad botton, el navegador termina eligiendo top. 
+							
+									
+
+							- Los posibles valores que le podemos dar son:
+									- static			Es el valor que tiene por defecto un elemento, con ese valor el elemento NO ESTA POSICIONADO y por lo cual no 
+														podemos moverlo. Para que un elemento este "posicionado" tenemos que quitarle este calor y cambiarlo por 
+														cualquiera de los otros 3 que estan abajo
+
+									- relative 			El elemento mantendra su posición y medidas de flujo de renderizado y mantendrá su espacio reservado. Si lo 
+														movemos lo hará usando su posición en el HTML como punto de referencia. 
+														Esto quiere decir que si hay una caja de 200 pixeles X 200 pixeles y la movemos de lugar, por mas que "veamos"
+														la caja en otro lugar, en su sitio origal va a segir estando un espacio de 200 X 200 reservado por esa caja y 
+														que por ende no puede ser ocupado por otra caja. 
+													 
+									- absolute			El elemento prederá sus medidas y su espacio reservado. Si lo movemos usará el elemento "posicionado 
+														contenedor" como referencia. Si no tiene ninguno, usará el elemento HTML de referencia.
+														
+									- fixed				El elemento perderá sus medidas y su espacio reservado.
+														Si lo movemos usara el elemento HTML de referencia, y además se quedara fijo en esa posición aunque hagamos
+														scroll. 
+
+									- sticky			Es una mezcla de position relative y "fixed". 
+														Con este tipo de posicion los valores top, left, botton y right no sirven para mover el elemento, sino para 
+														indicarle en qué punto pasará a tener un comportamiento de posición similar al de fixed, hasta llegar a ese 
+														punto se comportará como si no tuviera posicionamiento, aunque si contará como posicionado si necesitáramos
+														colocar otro elemento respecto a él (absolute).
+
+*/
+

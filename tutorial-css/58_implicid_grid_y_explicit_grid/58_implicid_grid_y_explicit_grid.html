@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="58_implicid_grid_y_explicit_grid.css">
+		<title>"Implicid grid" y "Explicit grid"</title>
+	</head>
+	<body>
+		<h1>"Implicid grid" y "Explicit grid"</h1>
+
+		<!-- Caja de referencia: -->
+		<h2>Caja de referencia:</h2>
+		<p>Esta caja tiene tiene las dos primeras filas con un valor declarado, mientras que la tercera fila al no tener valores declarados es un "Implicit grib" y por ende esos valores se los da el navegador.<br>Nuestro objetivo darle valor a los "Implicit grib". Esto lo haremos en los siguientes ejemplos</p>
+		<section>									
+			<div class="grid-container1">
+				<div class="grid-item1">A</div>
+				<div class="grid-item1">B</div>
+				<div class="grid-item1">C</div>
+				<div class="grid-item1">D</div>
+				<div class="grid-item1">E</div>
+				<div class="grid-item1">F</div>
+				<div class="grid-item1">G</div>
+				<div class="grid-item1">H</div>
+				<div class="grid-item1">I</div>
+				<div class="grid-item1">J</div>
+				<div class="grid-item1">K</div>
+				<div class="grid-item1">L</div>
+				<div class="grid-item1">M</div>
+				<div class="grid-item1">N</div>
+			</div>
+		</section>
+
+
+
+
+		<!-- Dandole valor a los "Implicit grib": -->
+		<h2>Dandole valor a los "Implicit grib":</h2>
+
+		<h2>grib-auto-row:</h2>
+		<p>Ahora todas las filas a las cuales nosotros no le declaremos una medida tendran 200 pixeles de largo</p>
+		<section>									
+			<div class="grid-container2">
+				<div class="grid-item2">A</div>
+				<div class="grid-item2">B</div>
+				<div class="grid-item2">C</div>
+				<div class="grid-item2">D</div>
+				<div class="grid-item2">E</div>
+				<div class="grid-item2">F</div>
+				<div class="grid-item2">G</div>
+				<div class="grid-item2">H</div>
+				<div class="grid-item2">I</div>
+				<div class="grid-item2">J</div>
+				<div class="grid-item2">K</div>
+				<div class="grid-item2">L</div>
+				<div class="grid-item2">M</div>
+				<div class="grid-item2">N</div>
+			</div>
+		</section>
+
+
+
+		<!-- grib-auto-flow: row -->
+		<h2>grib-auto-flow: row</h2>
+		<p>Convierte las celdas sobrantes (Implicit grib) en filas. Valor por defecto, por ende no cambia en nada</p>
+		<section>									
+			<div class="grid-container3">
+				<div class="grid-item3">A</div>
+				<div class="grid-item3">B</div>
+				<div class="grid-item3">C</div>
+				<div class="grid-item3">D</div>
+				<div class="grid-item3">E</div>
+				<div class="grid-item3">F</div>
+				<div class="grid-item3">G</div>
+				<div class="grid-item3">H</div>
+				<div class="grid-item3">I</div>
+				<div class="grid-item3">J</div>
+				<div class="grid-item3">K</div>
+				<div class="grid-item3">L</div>
+				<div class="grid-item3">M</div>
+				<div class="grid-item3">N</div>
+			</div>
+		</section>
+
+		<!-- grib-auto-flow: column -->
+		<h2>grib-auto-flow: column</h2>
+		<p>Convierte las celdas sobrantes (Implicit grib) en columnas</p>
+		<section>									
+			<div class="grid-container4">
+				<div class="grid-item4">A</div>
+				<div class="grid-item4">B</div>
+				<div class="grid-item4">C</div>
+				<div class="grid-item4">D</div>
+				<div class="grid-item4">E</div>
+				<div class="grid-item4">F</div>
+				<div class="grid-item4">G</div>
+				<div class="grid-item4">H</div>
+				<div class="grid-item4">I</div>
+				<div class="grid-item4">J</div>
+				<div class="grid-item4">K</div>
+				<div class="grid-item4">L</div>
+				<div class="grid-item4">M</div>
+				<div class="grid-item4">N</div>
+			</div>
+		</section>
+
+
+
+		<!-- grib-auto-flow: dense -->
+		<h2>grib-auto-flow: dense</h2>
+		<p>El valor "dense" hace que se rellenen los espacios vacios</p>
+		<h3>Caja de referencia:</h3>
+		<section>									
+			<div class="grid-container5">
+				<div class="grid-item5">A</div>
+				<div class="grid-item5">B</div>
+				<div class="grid-item5">C</div>
+				<div class="grid-item5">D</div>
+				<div class="grid-item5">E</div>
+				<div class="grid-item5">F</div>
+				<div class="grid-item5">G</div>
+				<div class="grid-item5">H</div>
+				<div class="grid-item5">I</div>
+				<div class="grid-item5">J</div>
+				<div class="grid-item5">K</div>
+				<div class="grid-item5">L</div>
+				<div class="grid-item5">M</div>
+				<div class="grid-item5">N</div>
+			</div>
+		</section>
+		<h3>Aplicando "dense":</h3>
+		<section>									
+			<div class="grid-container6">
+				<div class="grid-item6">A</div>
+				<div class="grid-item6">B</div>
+				<div class="grid-item6">C</div>
+				<div class="grid-item6">D</div>
+				<div class="grid-item6">E</div>
+				<div class="grid-item6">F</div>
+				<div class="grid-item6">G</div>
+				<div class="grid-item6">H</div>
+				<div class="grid-item6">I</div>
+				<div class="grid-item6">J</div>
+				<div class="grid-item6">K</div>
+				<div class="grid-item6">L</div>
+				<div class="grid-item6">M</div>
+				<div class="grid-item6">N</div>
+			</div>
+		</section>
+
+	</body>
+</html>

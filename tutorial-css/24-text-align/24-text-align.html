@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/tutorial-css/24-text-align/normalize.css">                    <!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+        <link rel="stylesheet" href="/tutorial-css/24-text-align/24-text-align-dist.css">           <!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+        <title>Propiedad "text-align:"</title>
+    </head>
+
+    <body>
+        <h1>Propiedad "text-align:"</h1>                                                                                                                            <br><br><br>
+
+
+        <!-- Desplazamiento con ancho sin declarar: -->
+        <h2>Desplazamiento con ancho sin declarar:</h2>
+        <p class="texto-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam obcaecati nostrum dolorum aspernatur impedit delectus dolores aliquam error, distinctio sunt eligendi deserunt harum saepe! Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam.</p> <br>
+        <p class="texto-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam obcaecati nostrum dolorum aspernatur impedit delectus dolores aliquam error, distinctio sunt eligendi deserunt harum saepe! Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam.</p> <br>
+        <p class="texto-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam obcaecati nostrum dolorum aspernatur impedit delectus dolores aliquam error, distinctio sunt eligendi deserunt harum saepe! Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus fugiat perferendis quibusdam amet ipsam.</p> <br><br><br>
+        
+        
+
+
+        <!-- Desplazamiento con ancho declarado (error comun): -->
+        <h2>Desplazamiento con ancho declarado (error comun):</h2>
+        <p class="texto-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores quaerat voluptatum quod sunt quae deleniti fugiat perferendis ipsum qui ea magnam quia asperiores, ipsam saepe consequuntur labore ex doloremque sequi!</p>
+        <p class="texto-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores quaerat voluptatum quod sunt quae deleniti fugiat perferendis ipsum qui ea magnam quia asperiores, ipsam saepe consequuntur labore ex doloremque sequi!</p>
+        <p class="texto-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores quaerat voluptatum quod sunt quae deleniti fugiat perferendis ipsum qui ea magnam quia asperiores, ipsam saepe consequuntur labore ex doloremque sequi!</p> <br><br><br>
+
+
+
+
+        <!-- RECORDAR: "text-align:" desplaza el contenido, no la caja: -->
+        <h2>RECORDAR: "text-align:" desplaza el contenido, no la caja:</h2>
+        <div class="caja-1">Contenido</div>
+        <div class="caja-2">Contenido</div>
+        <div class="caja-3">Contenido</div>                                                                                                                         <br><br><br><br>
+
+
+
+        
+        <!-- "text-align:" no funciona con elementos de linea: -->
+        <h2>"text-align:" no funciona con elementos de linea:</h2>
+        <p>Esto se debe a que los elementos de "Linea" como un link tienen un ancho declarado y por ende no hay espacio por donde moverse </p>
+        <a href="#" class="link-1">Soy un link :3</a>                                                                                                               <br>
+
+        <p>Para poder desplazar un elemento de "Linea" hay que convertirlo en un elemento de "Bloque"</p>
+        <a href="#" class="link-2">Soy un link :3</a>                                                                                                               <br><br><br><br>
+
+
+
+
+        <!-- Desplazar una imagen con "text-align:": -->
+        <h2>Desplazar una imagen:</h2>
+        <p>Esto no es posible debido a que las imagenes son un elemento inline-block (fución entre un un elemento de "Linea" y de "Bloque)" <br>Al no tener un espacio por donde moverse, no podemos mover la imagen. Siempre se va a quedar en el mismo lugar</p>
+        <img src="/tutorial-css/assets/images/Gatito.webp" alt="Gatito" class="imagen-1">                                                                           <br><br><br>                
+
+        
+        <h3>Hay "truquitos" para desplazar una imagen. Estos son algunos de ellos:</h3>
+        <p>Para solucionar este problema podemos convertir la imagen en un elemento de "Bloque". <br>Es el mismo razonamiento que hicimos con el link de arriba, peeeero al ser una imagen estamos obligados a utilizar "margin-left: auto;" y "margin-right: auto;" porque el "text-align" no funciona en imagenes.</p>
+        <img src="/tutorial-css/assets/images/Gatito.webp" alt="Gatito" class="imagen-2">                                                                           <br><br><br>
+
+
+        <p>Otro metodo es poner la imagen dento de una caja y centrar el contenido que esta dentro:<br>RECORDAR en este caso, esto va a funcionar siempre y cuando la imagen venga por defecto y no sea un "display: "boque"" como en el ejemplo anterior. Debido a que si la imagen es un elemento de bloque, va a tratar de ocupar todo el ancho posible y por ende este metodo no va a funcionar</p>
+        <div class="caja-de-imagen">
+        <img src="/tutorial-css/assets/images/Gatito.webp" alt="Gatito" class="imagen-3"> 
+        </div>                                                                                                                                                      <br><br><br><br>
+
+
+
+    </body>
+</html>

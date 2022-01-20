@@ -1,0 +1,130 @@
+<!--
+
+                                                                _____Tablas_____
+
+
+ - Las tablas sirven en HTML para mostrar contenido tabulado
+
+ - La estructura basica de una tabla se compone de:
+    
+    <table>                     Etiqueta que encierra una tabla
+    </table>
+
+    <caption> </caption>        Le da un titulo a la tabla. Esta etiqueta se coloca dentro de la etiqueta <table>
+    
+    <thead>                     Table head: Sirve para establecer la cabecera de una tabla. Dentro debe ir una etiqueta <tr> y par crear celdas se utiliza una tiqueta <th>, que para la cabecera seria el equivalente a un <td> 
+    </thead>                        
+                                    <th> </th>      Table header: Sirve para crear las celdas de la cabecera de una tabla y va dentro de una etiqueta <tr> que a su vez esta dentro de la etiqueta <theader>. Es equivalente a la etiqueta <td>
+
+    <tbody>                     Sirve para establecer el cuerpo de el cuerpo de nuestra tabla, aqui iria el resto del contenido de nuestra tabla. Esta etiqueta es opcional a no ser que haya una etiqueta <thead>. En ese caso seria obligatorio usar un <tbody>. Esto se debe al estandar semantico de HTML
+    </tbody>
+
+    <tr>                        Table row: Estructura que construye una fila. Va dentro de la etiqueta <table>
+    </tr>
+
+    <td></td>                   Table data: Estructura que construye una celda de la fila creada con <tr>. Va dentro de la etiquta <tr>
+
+    <tfoot> </tfoot>            Sirve para establecer el pie de una tabla.Dentro podria las etiquetas <tr> y <td>
+    
+
+
+
+ - Tip: El número de celdas dentro de un <tr> establecerá el número de columnas de una tabla
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablas</title>
+    </head>
+
+    <body>
+        <table>
+            <caption>Horarios de clase</caption>        <!-- Titulo de la tabla -->
+
+            <thead>                         <!-- Cabecera de la tabla -->
+                <tr>
+                    <th></th>               <!-- En este caso no pongo nada porqu es una celda vacía-->
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+
+            <tbody>                             <!-- Establece el cuerpo de nuestra tabla, esta etiqueta es opcional a no ser que haya una etiqueta <thead>. En ese caso seria obligatorio usar un <tbody>  -->
+                <tr>                            <!-- Esta etiqueta funcionaria como la primera fila horizontal de la tabla, esta fila esta compuesta por varias celdas conformadas cada una por un <td> -->
+                    <td>8:30 - 9:30</td>        <!-- Son las celdas individuales de cada fila horizontal -->
+                    <td>Matemáticas</td>
+                    <td>Matemáticas</td>
+                    <td>Cs. Sociales</td>
+                    <td>Matemáticas</td>
+                    <td>Matemáticas</td>
+                </tr>
+        
+                <tr>
+                    <td>9:30 - 10:45</td>
+                    <td>Lengua</td>
+                    <td>Lengua</td>
+                    <td>Matemáticas</td>
+                    <td>Ciencias</td>
+                    <td>Lengua</td>
+                </tr>
+
+                <tr>
+                    <td>10:25 - 11:20</td>
+                    <td>Educacion Física</td>
+                    <td>Ciencias</td>
+                    <td>Lengua</td>
+                    <td>Lengua</td>
+                    <td>Educacion Física</td>
+                </tr>
+
+                <tr>
+                    <td>11:20 - 17:45</td>
+                    <td>Recreo</td>
+                </tr>
+
+                <tr>
+                    <td>11:45 - 12:40</td>
+                    <td>Ingles</td>
+                    <td>Cs. Sociales</td>
+                    <td>Ingles</td>
+                    <td>Tutoria</td>
+                    <td>Ingles</td>
+                </tr>
+
+                <tr>
+                    <td>12:40 - 13:35</td>
+                    <td>Música</td>
+                    <td>Educación física</td>
+                    <td>Plástica</td>
+                    <td>Religión</td>
+                    <td>Música</td>
+                </tr>
+
+                <tr>
+                    <td>13:35 - 14:30</td>
+                    <td>Tecnologia</td>
+                    <td>Francés</td>
+                    <td>Tecnologia</td>
+                    <td>Francés</td>
+                    <td>Tecnología</td>
+                </tr>
+
+                <footer>
+                    <tr>
+                        <td>Total de materias</td>
+                        <td>12 materias</td>
+                    </tr>
+                </footer>
+
+            </tbody>
+        </table>
+    </body>
+</html>

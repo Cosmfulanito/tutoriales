@@ -1,0 +1,115 @@
+/* 
+
+                                                                _____Propiedad "display:"_____
+
+
+
+    display:            - Esta propiedad nos permite cambiar el tipo de "caja" de un elemento. Esto significa que si un elemento/etiqueta es una caja del tipo
+                          "bloque", podemos cambiarlo al tipo de "linea" y viceversa. Estos cambios incluyen todas las propiedades, ventajas y desventajas del tipo
+                          de elemento al que cambiamos
+                        
+                        - Admite varios valores. En este apunte solamente veremos estos debido a que el resto son experimentales y todabia no lo soportan la mayoria 
+                          de los navegadores:
+                                - none              Hace que el elemento no se muestre, pero sigue existiendo y por ende cargandoce. Hay que tener cuidado con este valor debido a que a pesar de no poder ver es elemento seleccionado, este va a seguir existiendo y cargando sus procesos. Eso quiere decir que a pesar de que dicha propiedad es invisible, es informacion extra para el navegador y va a hacer demorar la carga de la página web 
+                                - block             Hace que el elemento sea de bloque
+                                - inline            Hace que el elemento sea de linea
+                                - inline-block      Hace que el elemento sea de linea y se comporte como tal peeeero que a su vez tenga las propiedades de un elemento de bloque. Ya que admite medidas y margenes verticales como lo haria un elemento de bloque. Básicamenente es la fucion de ambos elementos. No es una propiedad que se utilice muy a menudo, pero hay ocaciones en las que puede salvarnos de un apuro
+
+
+
+*/
+
+
+*{                                                  /* Pongo esta propiedad para normalizar esta buena paractica */
+    box-sizing: border-box;
+}
+
+
+
+
+/* Elementos de "Bloque" y de "Linea" genericos de ejemplo: */
+.texto-1{
+    background-color: coral;
+}
+
+.link-1{
+    background-color: mediumturquoise;
+}
+
+
+
+
+
+
+/* Ocultar elementos: */
+.texto-2{                                                   
+    background-color: coral;
+
+    display: none;                                                                              /* Ahora el texto va estar oculto pero va a segir existiendo. Esto se puede comprobar mediante el "inspector de elementos" */
+}
+
+.link-2{
+    background-color: mediumturquoise;
+}
+
+
+
+
+
+
+/* Convertir un elemento de "Linea" en un elemento de "Bloque": */
+.texto-3{
+    background-color: coral;
+}
+
+.link-3{
+    background-color: mediumturquoise;
+
+    display: block;                                                                             /* Los elementos de "linea" ahora se convirtieron en elementos de "bloque" junto con todas sus propiedades, ventajas y desbentajas. Esto significa que ahora puedo hacer cosas que con los elementos de linea no se podia, como cambiar el tamaño de la caja */
+    height: 50px;                                                                               /* Como se puede apreciar, este link al convertirse en un elemento de bloque, ahora puedo darle una altura de 50 pixeles */
+}
+
+
+
+
+
+
+/* Convertir un elemento de "Bloque" en un elemento de "Linea": */
+.texto-4{
+    background-color: coral;
+
+    display: inline;                                                                            /* Los elementos de "bloque" ahora se convirtieron en elementos de "linea" junto con todas sus propiedades, ventajas y desbentajas. Por más que intente darle un ancho y un largo no va a ocurrir nada porque ahora ese texto es un elemento de "linea" */
+    width: 100px;                                                                               /* Como se puede apreciar, el texto al convertirse en un elemento de "linea" no se le puede alterar propiedades como el ancho o la altura. Osea que esta linea de codigo y la de abajo estan al pedo*/
+    height: 200px;
+}
+
+.link-4{
+    background-color: mediumturquoise;
+}
+
+
+
+
+
+
+/* Crear un híbrido que sea un elemento de "Linea" con propiedads de elemento de "Bloque": */
+.texto-5{
+    background-color: coral;
+}
+
+.link-5{
+    background-color: mediumturquoise;                                                          
+    display: inline-block;                                                                      /* Ahora los elemento de linea "link" van a segir siendo elementos de "Linea" pero van a tener las mismas propiedades que un elemento de "Bloque". Osea, va a ser un híbrido. Por ende va a seguir comportandose como un elemento de "Linea" pero con propiedades del elemento de "Bloque" como poder cambiarle su ancho y altura altura */
+    width: 150px;                                                                               /* Como se puede apreciar, es un elemento de "Linea" que se comporta como tal (un ejemplo de esto es que ambas cajas estasn una al lado de la otra) y a su vez se pueden hacer cosas como cambiar su ancho y largo */
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+

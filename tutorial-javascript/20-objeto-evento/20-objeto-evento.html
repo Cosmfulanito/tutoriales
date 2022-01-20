@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="20-objeto-evento.css">
+		<title>Objeto: "evento"</title>
+	</head>
+	<body>
+		<h1>Objeto: "evento"</h1>																																	<br><br>
+		<p>Recordar poner la consola</p>																															<br>
+
+		
+		<!-- _____Parte N°1 del apunte:_____ -->
+		<h2>Parte N°1 del apunte:</h2>
+
+		<form>
+			<!-- _____Obtener toda la informacion de un evento:_____ -->
+			<h3>Acceder a toda la informacion un evento:</h3>
+			<label for="input_1">Presiona una tecla</label>
+			<input id="input_1" type="text">																														<br><br><br>
+													
+			<!-- Acceder a informacion especifica de un evento -->
+			<h3>Acceder a informacion especifica de un evento:</h3>
+			<label for="input_2">Presiona una tecla</label>
+			<input id="input_2" type="text">																														<br><br>
+
+			<label for="input_3">Presiona una tecla</label>
+			<input id="input_3" type="text">																														<br><br><br>
+
+			<!-- Acceder a la información de un evento de cualquier elemento -->
+			<h3>Acceder a la información de un evento de cualquier elemento:</h3>
+			<p>Recordar que esta activado el evento "doble click". Este evento da información sobre este mismo evento, pero tiene la peculiaridad de que podemos hacer click sobre cualquier elemento para activarlo. Básicamente haciendo doble click sobre cualquier parte de la página puedo acceder a la información de este evento y del elemento en el cual se activo</p>	<br>
+
+		</form>																																						<br><br><br><br><br>
+
+																													
+
+
+
+		<!-- _____Parte N°2 del apunte:_____ -->
+		<h2>Parte N°2 del apunte:</h2>
+
+		<!-- Objeto "evento" en elementos padres e hijos: -->
+		<h3>Objeto "evento" en elementos padres e hijos:</h3>
+		<div id="galeria" class="galeria">
+			<div class="galery_item">1</div>
+			<div class="galery_item">2</div>
+			<div class="galery_item">3</div>
+			<div class="galery_item">4</div>
+			<div class="galery_item">5</div>
+			<div class="galery_item">6</div>
+			<div class="galery_item">7</div>
+			<div class="galery_item">8</div>
+			<div class="galery_item">9</div>
+		</div>																																						<br><br><br><br><br>
+
+
+
+
+
+		<!-- _____Parte N°3 del apunte_____ -->
+		<h2>Parte N°3 del apunte</h2>
+
+		<!-- Cómo implementar un objeto "evento" sobre un elemento que reinicia la página: -->
+		<h3>Cómo implementar un objeto "evento" sobre un elemento que reinicia la página:</h3>
+		<form>
+			<label for="">Boton SIN ".preventDefault()"</label>
+			<button id="boton_1">Click Me</button>																													<br><br>
+
+			<label for="">Boton CON ".preventDefault()" </label>
+			<button id="boton_2">Click Me</button>
+		</form>																																						<br><br>
+
+		<!-- Ejemplo del uso de un .preventDefault() en un Link: -->
+		<h3>Ejemplo del uso de un .preventDefault() en un Link:</h3>	
+		<label for=>"Link SIN .preventDefault()"</label>
+		<a id="link_1" href="https://www.google.com/">Link a Google</a>																								<br><br>																	
+		
+		<label for=>"Link CON .preventDefault()"</label>
+		<a id="link_2" href="https://www.google.com/">Link a Google</a>																								<br><br><br><br><br>
+
+		
+
+
+
+		<!-- Parte N°4 del apunte: -->
+		<h2>Parte N°4 del apunte:</h2>
+
+		<!-- Como forzar un evento de forma automatica: -->
+		<h2>Como forzar un evento de forma automatica:</h2>
+		<p>Al hacer click en este boton se forzara el evento de forma automatica de hacer click en el Link</p>
+		<button id="boton_3">Click me!</button>																														<br><br>
+		<a id="link_3" href="https://www.youtube.com/">Link a Youtube</a>																							<br><br><br><br><br>
+
+
+		<script src="20-objeto-evento.js"></script>
+	</body>
+</html>

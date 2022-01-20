@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/tutorial-css/38-como-funcionan-las-medidas-relativas-al-viewport-responsive/normalize.css">																<!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+		<link rel="stylesheet" href="/tutorial-css/38-como-funcionan-las-medidas-relativas-al-viewport-responsive/38-como-funcionan-las-medidas-relativas-al-viewport-responsive-dist.css">		<!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+		<title>Cómo funcionan las medidas relativas al VIEWPORT RESPONSIVE</title>
+	</head>
+
+	<body>
+
+		<!-- Primer ejemplo del uso de la unidad viewport -->
+		<header class="header">
+			<h1>&ltheader&gt</h1> 
+			<p>En este caso el &ltheader&gt tiene un "height: 100vh;"</p>	
+			<p>Osea que va a ocupar un alto exactamente igual al alto que tiene el VIEWPORT (El espacio de vision de mi navegador)</p>
+		</header>
+
+
+		<!-- Medidas del viewport -->
+		<h2>Medidas del viewport</h2>
+		<p>(Jugar con el tamaño "horizontal" de la pantalla para apreciar el efecto)</p>
+		<div class="caja-padre-1">
+			<div class="caja-hija-1">Caja hija con "width: 50vw;"<br><br>Siempre medira la mitad de lo que mide el ancho del viewport</div>
+		</div>																																						<br><br><br>			
+
+
+		<!-- Viewport máximo y míninimo -->
+		<h2>Viewport máximo y míninimo</h2>
+		<p>(Jugar con el tamaño "horizontal" y "vertical" de la pantalla para apreciar el efecto)</p>
+		<div class="caja-padre-2">
+			<div class="caja-hija-2">Caja hija con "width: 100vmin;"<br><br>Siempre medira lo mismo que mide el lado más pequeño del viewport, este puede ser tanto el ancho como el largo</div>
+		</div>
+
+
+
+	</body>
+</html>
+

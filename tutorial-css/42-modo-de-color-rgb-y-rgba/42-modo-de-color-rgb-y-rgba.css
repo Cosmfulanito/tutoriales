@@ -1,0 +1,104 @@
+/* 
+
+															_____Modo de color: RGB y RGBA_____
+
+
+
+	RGB				- En el modo RGB tenemos tres canales (Red, Green, Blue) los cuales tienen 8 bits de color por canal (cada bit tiene dos posibles valores 0 ó 1). 
+					  Lo que significa que tenemos 2^8 posibles valores, que van desde el 0 hasta 255. Danco un total de 256 valores incluyendo al 0
+
+					- Esto nos da un total de 255* 255 * 255 = 16.581.375 colores.   
+
+					- Su sintaxis es rgb(R,G,B)			Ej: rgb(80, 185, 200);
+
+					- Si ponemos todos los canales a 0 tendremos un negro puro  	Ej: rgb(0, 0, 0)
+					  Y si los ponemos a 255 tendremos un blanco puro 	  Ej: rgb(255, 255, 255)
+
+					- Para movernos por la gama de grises debemos poner los 3 canales con el mismo valor. Si ponemos los 3 canales a 128 tendremos el gris puro (debido a que es el valor que esta entre medio de 0 y 255).   Ej: rgb(50, 50, 50) 		rgb(128, 128, 128)		rgb(200, 200, 200);	
+
+	
+
+
+	RGBA 			- RGBA es la posibilidad de usar un cuarto canal llamado Alpha. Este canal representa la "transparencia". 
+	
+					- Sus valores van desde el 0 al 1. Donde 0 es la transparencia total (invisible) y 1 es basicamente sin transparencia
+
+					- Tenemos dos sintaxis para para utilizar el canal Alpha. Ambas tienen exactamente el mismo efecto y no cambian en nada salvo en su sintaxis:
+							rgba(R,G,B,A)			Ej: rgb(255, 127, 80, 0.5)	
+							rgb(R G B / A)			Ej: rgb(255 127 80 / .5)
+
+					- Tiene muchas utilidades, entre ellas hacer que las sombras se vean más reales al darle una transparencia. De esta manera no son un negro plano
+
+
+*/
+
+
+
+
+*{
+	box-sizing: border-box;					  	/* Pongo esta propiedad para normalizar esta buena practica */
+}
+
+
+/* Estos selectores son solamente esteticos */
+body{											
+	background-color: #bbb;
+	font-family: sans-serif;
+}
+.caja{											
+	display: inline-block;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+/* Modo RGB: */
+.caja-rgb{
+	background-color: rgb(255, 127, 80);
+}
+
+
+
+
+/* Modo RGBA: */
+/* Opción: 1 */
+.caja-rgba-1{
+	background-color: rgba(255, 127, 80, 0.5);
+}
+
+/* Opción: 2 */
+.caja-rgba-2{
+	background-color: rgb(255  127  80 / 0.5);
+}
+
+
+
+
+/* Utilizando la transparencia del RGBA para hacer sombras más realistas: */
+.caja-padre{
+	height: 500px;
+	background-color: mediumorchid;
+}
+
+.caja-hija-con-sombra{
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	background-color: lightcoral;
+
+	box-shadow: 20px 20px 10px rgb(0, 0, 0, 0.5);
+}
+
+
+
+

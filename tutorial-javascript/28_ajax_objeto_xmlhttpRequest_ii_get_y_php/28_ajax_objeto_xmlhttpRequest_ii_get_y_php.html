@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="28_ajax_objeto_xmlhttpRequest_ii_get_y_php.css">
+		<title>AJAX - Objeto XMLHttpRequest II - GET + PHP</title>
+	</head>
+	<body>
+		<h1>AJAX - Objeto XMLHttpRequest II - GET + PHP</h1>
+		<!-- Form donde voy a hacer click en un boton para obtener la informacion de loa base de datos -->
+		<form action="#" id="form">
+			<select name="characters" id="characters"></select>
+			<input type="submit" value="Get Data">
+		</form>
+	  
+		<!-- Cuadro donde va a ir toda la información -->
+		<table id="table">
+			<thead>
+				<th>Name</th>
+				<th>Alignment</th>
+				<th>Hometown</th>
+				<th>Gender</th>
+				<th>Fighting Skills</th>
+			</thead>
+		</table>																																					<br><br><br>
+	  
+
+
+
+		<!-- Ejercicio: -->
+		<h2>Ejercicio:</h2>
+		<form action="#" id="formB">
+			<select name="characters" id="charactersB">						<!-- Se que esta mal poner 2 ids pero no tengo idea de como funciona el .php o el .sql y en una parte de esos archivos me pide un "characters" y no creo que sea valido poner "characters_2" -->
+				<option value="Good">Bueno</option>
+				<option value="Neutral">Neutral</option>
+				<option value="Bad">Malo</option>
+			</select>
+			<input id="botonB" type="submit" value="Get Data B">
+		</form>
+
+		<table id="tableB">
+			<thead>
+				<th>Nombre</th>
+				<th>Alineación</th>
+			</thead>
+			<thead></thead>						<!-- En esta etiqueta voy a guardar toda de la información. La pongo porque al ser una lista de heroes voy a tener dentro varias etiquetas <th>. Entonces, cuando quiera caraga informacion nueva, me es más facil borrar esta etiqueta con todoas sus etiquetas hijas que borras todas las etiquetas hijas por separado -->
+		</table>
+
+
+		<script src="28_ajax_objeto_xmlhttpRequest_ii_get_y_php.js"></script>
+	</body>
+</html>
+
+

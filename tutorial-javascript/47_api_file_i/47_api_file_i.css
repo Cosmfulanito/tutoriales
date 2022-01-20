@@ -1,0 +1,11 @@
+body{
+	font-family: sans-serif;
+}
+
+img{
+	max-width: 100%;						/* Con esto evito que la imagen desborde si es demaciado grande */
+}
+
+.text{
+	color: coral;
+}

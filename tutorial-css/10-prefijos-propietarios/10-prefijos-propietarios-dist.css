@@ -1,0 +1,91 @@
+/*
+
+                                                                    _____Prefijos Propietarios_____
+
+
+    Link de Autoprefixer:               (Más abajo se explicara que es y para que sirve)
+    https://autoprefixer.github.io/
+
+    Link de descarga de Prepos:         (Más abajo se explicara que es y para que sirve)
+    https://prepros.io/
+
+
+    Todo esto esta mucho mejor explicado en el video de Dorian Desings
+    https://www.youtube.com/watch?v=d9cBmsODumI&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=21         (link en YouTube)
+    https://www.udemy.com/course/css-edicion-2020/learn/lecture/26063864#overview                        (link en Udemy)
+
+
+
+ - Cada vez que CSS larga nuevo contenido y propiedades nuevas, para que estas propiedades funcionen tienen que ser agregadas en cada uno de los navegadores (son 
+   ellos quienes deciden si dichas propiedades se incluyen en su navegador). Una vez que dicha propiedad es incluida en la mayoria de los navegadores más 
+   importantes, esa propiedad se vuelve una propiedad estandar. 
+
+ - Mientras eso no ocurra, ese contenido nuevo no es más que contenido experimental. Durante ese periodo de tiempo obviamente dichas propiedades nuevas no van a 
+   funcionar en determinados navegadores hasta que ellos las adopten. Mientras tanto, para hacerlas funcionar hay que utilizar "prefijos" especiales para cada
+   navegador. De esta manera forzamos el funcionamiendo de dichas propiedades nuevas en los navegadores que todavia no las adoptaron.
+
+ - Añadir dichos "prefijos" es muy pesado. Ademas de que es probable de que en un futuro muy proximo los navegadores adopten dichas propiedades y por ende sus 
+   respectivos prefijos se vuelven totalmente innecesarios. Esto quiere decir que no tiene ningun sentido que gastemos tiempo en aprender algo que luego sera 
+   eliminado. Ademas de que tendriamos que ir a nuestro archrivo .css y eliminar deichos "prefijos obosoletos", tener que hacer esto cada tanto es una locura.
+ 
+
+
+
+_____¿hay alguna manera de agragar dichos prefijos de forma automatica para ahorrarme el trabajo?_____
+ 
+ - Si la hay!!! Hay distintas formas de que se agraguen estos "prefijos" de forma automatica, pero nosotros veremos solamente dos de ellas
+   
+   1- Mediante la página: "Autofixer"                       https://autoprefixer.github.io/
+      Copiaremos nuestro codigo de .css y luego lo pegaremos en dicha página web, esta nos devolvera el codigo CSS con los prefijos agregados
+        
+   2- Mediante el programa/aplicacion: "Prepros"            Link de descarga: https://prepros.io/
+      Dicho programa hace todo ese trabajo de forma automatica  
+
+
+
+
+
+_____Como utilizar el programa/aplicación "Prepos"_____
+
+ 1- Primero lo descargamos desde su página web
+
+ 2- Abrimos el programa y luego arrastramos la carpeta donde esta nuestra página web y la metemos dentro (de la misma manera como cuando queremos abrir un archvo en
+    Visual Studio Code)
+    
+ 3- Seleccionamos nuestro archivo .css al que queremos agregarle los prefijos y automaticamente se desplegara una pestaña con opciones. Dentro de esas opciones a 
+    nosotros nos interesa que este marcada la opción "Porcess Automatically" y "AUTOPREFIXER". 
+    También nos interesa que se visualice un texto que dice "OUTPUT FILE" y que abajo me muestre un archivo. Como su nombre lo indica  OUTPUT FILE es el archivo
+    que este programa me va a devolver, es una copia del archivo .css que le di pero con los prefijos agregados (todo esto es visual, hasta el momento no tengo
+    ningun nuevo archivo a mano)
+    
+ 4- Una vez hecho todo eso, tengo que volver al Visual Estudio Code y vere que dendro de dicha carpeta hay un nuevo archivo llamado "prepos.config" (incluso tiene un
+    icono propio con forma de tuerca). Este archivo "prepos.config" no hay que tocarlo, simplemente se deja ahí.
+    
+ 5- Ahora tenemos que ir a nuestro archivo .css y darle a guardar (Ctrl + s). De la misma manera que se guardaria un archivo normalmente.
+    Al hacer esto se creara un segundo archivo .css que es una copia pocesada del original. Esto quiere decir que ahora tengo un archivo .css que identico al original
+    pero con los "prefijos" agregados. 
+
+ 6- Nosotros vamos a trabajar con el archivo original, pero por logica, el archivo .css creado por "Prepox" sera el que este conectado al .html
+    Cada vez que guarde un cambio en el archivo .css orinal (con el que trabajo), el archivo .css de "Prepox" se actualizara. 
+    
+ 7- Ahora simplemente asociamos el archivo .css de "Prepos" a nuestro archivo .html     El archivo original no debe esta asociado al .html, en el solamente escribimos+
+    el codigo   
+
+    
+*/
+
+
+
+
+/* Ejemplo de codigo CCS que sera procesado por el programa "Prepos". Al ir al archivo creado por "Prepos", "10-prefijos-propietarios-dist.css", veremos exactamente
+   este mismo codigo pero con los "prefijos" agregados*/
+.example {
+    display: -ms-grid;
+    display: grid;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}

@@ -1,0 +1,117 @@
+/* 
+
+                                                            _____Propiedad "box-shadow:"_____
+
+
+
+    box-shadow:             - Esta propiedad se creó para añadir efectos a las sombras de nuestra caja.
+                            
+                            - En esencia lo que hace es crear un clon de la caja seleccionada, respetando la forma de su box-model (ancho, largo, redondez)
+
+                            - La sintaxis de "box-shadow:" se puede escribir de distintas formas según lo que queramos conseguir.
+
+                            - Los valores que le podemos poner son:
+                                    - offset-x              Desplazamiento en X (obligatorio). Admite valores positivos o negativos para desplazar la sombra a la derecha o a la izquierda respectivamente .
+                                    - offset-y              Desplazamiento en Y (obligatorio). Admite valores positivos o negativos para desplazar la sombra a la abajo o a arriba respectivamente.
+                                    - blur-radius           Desenfoque de la sombra. Básicamente seria un difuminado
+                                    - spread-radius         Extención de la sombra. Básicamente juego con sus proporciones haciendola más grande o más chica. Como si fuera un padding. Admite valores positivos o negativos, para agrandar o achicar la caja respectivamente
+                                    - color                 Color de la sombra. Si no lo especificamos lo heredará del elemento al que pertenece
+                                    - inset                 Determina si la sombra será interior o exterior. Es util para dar tridimencionalidad
+
+                                    - El "box-shadow:" se usaria así:
+                                        Ej: box-shadow: offset-x  offset-y  blur-radius  spread-radius  color  inset;      
+                                        Ej: box-shadow: 5px 10px 20px 30px red inset;                                       Básicamente esta sombra en relacion a la caja esta a 5 pixeles por debajo. 10 pixeles a la derecha. Tiene 20 pixeles de desenfoque. 30 pixeles de tamaño extra. Es de color roja. Y esta arriba de la caja       
+
+                                    - También se pueden agragar más de una sombra mediante el uso de la coma ",":           RECORDAR poner las sombras a distintas distancias poque de lo contrario una estaria encima de la otra y no se verian  
+                                        Ej: box-shadow: 5px 5px red, 10px 10px blue, 20px 20px green;                       Ahora tengo una caja con tres sombras, una roja, otra azul y otra verde.
+
+
+*/
+
+
+*{
+    box-sizing: border-box;                             /* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+
+
+.caja-1,
+.caja-2,
+.caja-3,
+.caja-4,
+.caja-5,
+.caja-6,
+.caja-7,
+.caja-8{                                                /* Esta regla (conjuto elementos/propiedades) esta aqui para darle el mismo estilo a todas las cajas. Es plenamente estetico */
+    background-color: coral;              
+    width: 200px;
+    padding: 50px;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+
+
+
+
+/* Caja generica sin sombra */
+.caja-1{
+    background-color: mediumturquoise;
+}
+
+
+
+
+
+/* Caja con sombra simple: */
+.caja-2{
+    box-shadow: 20px 110px;                                               /* Le estoy diciendo al navegador que haga una sombra que este a 20 pixeles a la derecha de la caja y 110 pixeles por debajo */
+}
+
+
+
+
+
+/* Caja con sombra compleja: */
+.caja-3{
+    box-shadow: 10px 20px 15px #333 ;                                   /* Tengo una sombra que en relacion a la caja esta a 10 pixeles por debajo, 20 pixeles a la derecha, tiene un desenfoque de 15 pixeles y es de color gris oscura */
+}
+
+
+
+
+
+/* Aumentar o disminuir el tamaño de una sombra: */
+.caja-4{
+    box-shadow: 0px 0px 15px 20px #333 ;                                /* El cuarto valor es el encargado de cambiar el tamaño de la sombra. Ahora es 15 pixeles más grande */
+}
+
+
+
+
+
+/* Poner la sombra por encima de la caja (efecto 3D): */
+.caja-5{
+    box-shadow: 0px 0px 20px 0px #111 inset;                             
+}
+
+.caja-6{
+    box-shadow: 10px 10px 20px 0px #111 inset;                          /* Como se puede apreciar, aquí la sombra se aplica a la inversa, en vez de aplicarse abajo a la derecha, se aplica arriba a la izquierda. El razonamiento del navegador es el siguiente: Las partes de la caja que estaban en contacto con la sombra (aunque no se viera por que la caja esta por arriba) ahora no lo estan, y las partes que no estaban en contacto con la sombra ahora tendran la sombra arriba  */
+}
+
+
+
+
+
+/* Varias sombras a la vez: */
+.caja-7{
+    border-radius: 0px;
+    box-shadow: 5px 5px blue, 10px 10px green, 15px 15px red;       /* Como se puede apreciar, gracias a la coma "," ahora tengo 3 sombras al mismo tiempo */
+}
+
+.caja-8{
+    border-radius: 0px;
+    box-shadow: 5px 5px blue inset , -10px -10px green inset;         /* Aquí simplemente estoy jugando con el valor "inset" mientras pongo varias sombras */
+}

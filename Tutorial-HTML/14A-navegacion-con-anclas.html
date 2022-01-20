@@ -1,0 +1,75 @@
+<!--
+
+                                                            _____Navegación con anclas_____
+
+
+    <nav>           Representa una seccion de la página cuyo propósito es proporcionar enlaces de navegación, sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices
+    </nav>
+
+-->
+
+
+<!--
+
+ - En este apunte vamos a navegar dentro de nuestra propia página web mediante enlaces de navegación que nos redirigen a partes especificas de nuestra página, al
+   que lo hacen los indices de wikiedia que nos redirigen a partes especificas de la página que nos interesa
+
+ - Para ello vamos a trabajar con la con la etiqueta <nav> y con los atributos id="" y <a href=""></a> 
+                                                
+ - Con la etiqueta <nav> vamos a crear un índice, cada parte del indice debera estar conectado a su respectivo post. Para lograr eso, tenemos que ponerle un id="" 
+   con su propio nombre a cada post. Luego, dentro del índice, crear subindices que esten conectados a dicho id, para ello vamos a usar el <a href=""></a> y copiar
+   dentro el nombre que creamos en el indice con un # adelante
+
+ - Como la página es muy corta no va a haber desplazamiento, para poder hacerlo  hay que darle bastante zoom al navegador 
+
+
+ - También vamos a acceder a los post de esta página mediante los links de otra página totalmente diferente, 14b-navegacion-con-anclas.html 
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navegación con anclas A</title>
+    </head>
+
+    <body>
+        <h1>Blog</h1>
+
+        <nav>                                                   <!-- Representa una seccion de la página cuyo propósito es proporcionar enlaces de navegación, sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices -->            
+            <p><a href="#post-1">Post 1</a></p>                 <!-- Tengo que poner el id del post seleccionado, recordar poner primero # antes del id -->
+            <p><a href="#post-2">Post 2</a></p>                 <!-- Esta etiqueta <p> esta mal puesta, pero esta ahí como ejemplo didactico. En realidad deberia ir una etiqueta <li> y todo esto dentro de una etiqueta <ul>. Estos temas son muy abanzados y se veran más adelante en el epunte 15-listas.html -->
+            <p><a href="#post-3">Post 3</a></p>
+            <p><a href="#post-4">Post 4</a></p>
+            <p><a href="#post-5">Post 5</a></p>
+        </nav>
+
+        <article id="post-1">                                   <!-- Gracias a este id puedo acceder a este post -->
+            <h2>Post 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum accusantium necessitatibus, fugiat id, adipisci quisquam et, dicta ab unde quaerat asperiores corporis odit iure ut tempore qui nesciunt quam minus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sit quaerat blanditiis quis, recusandae itaque iure vitae maiores dolore eum ipsa, enim dolorem est explicabo soluta adipisci aliquam quibusdam possimus.</p>
+        </article>   
+
+        <article id="post-2">
+            <h2>Post 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis, officia dolore excepturi nostrum laudantium minima molestias enim. Ab autem facere rem enim laborum fugit repudiandae dicta consequuntur iure placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, illo soluta facilis qui in suscipit veniam accusantium et recusandae fugiat sint quia voluptatem error porro. Fugiat error ipsa praesentium odio?</p>
+        </article> 
+
+        <article id="post-3">
+            <h2>Post 3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt quis veritatis perferendis reprehenderit eaque, vitae, ad hic consequuntur culpa minus in necessitatibus itaque asperiores vel fuga fugit unde reiciendis mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sed ipsa perferendis, cum, expedita totam ab repellendus accusantium soluta illum fugit aut sint dignissimos harum blanditiis deleniti, eaque dolorum aliquid.</p>
+        </article> 
+
+        <article id="post-4">
+            <h2>Post 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae quam et aperiam perferendis eius quod obcaecati neque nulla animi distinctio, ab est ipsa dolorum veniam eos! Nam, praesentium porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est voluptatibus fuga dignissimos quia, dolor modi dolorum, possimus optio magnam delectus maiores? Exercitationem velit blanditiis nesciunt architecto similique a consectetur vero!</p>
+        </article>
+
+        <article id="post-5">
+            <h2>Post 5</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores doloribus cumque reiciendis. Itaque error eius repellendus! Esse ea quae, et hic vero atque incidunt vel accusantium quod blanditiis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odio aliquid magnam nemo reprehenderit maiores! Laboriosam quibusdam quasi eum error alias corrupti itaque, natus accusantium dolore, architecto facere sed placeat.</p>
+        </article>
+    </body>
+
+</html>

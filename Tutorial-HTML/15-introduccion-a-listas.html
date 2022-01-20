@@ -1,0 +1,89 @@
+<!--
+
+                                                        _____Listas_____
+
+ - Las listas en HTML sirven para listar contenido. En función al tipo de conenido tenemos tres tipos de litas:
+
+        <ul>            Unordered list: Como su nombre lo índica, se utiliza para ordenar los items de una lista sin un orden. Dichos items van a aparecer en el navegador ordenados con un punto adelante. Recordar que dentro de esta etique deben ir los items adentro de una etiqueta <li>
+        </ul>
+
+        <ol>            Ordered list: Como su nombre lo índica, se utiliza para ordenar los items de una lista con un orden numérico. Dichos items van a apareceran en el navegador ordenados con su respectivo numero adelante. Recordar que dentro de esta etique deben ir los items adentro de una etiqueta <li>
+        </ol>
+
+        <li>            List item: Se utiliza para colocar los items de una lista. Esta etiqueta debe ir dentro de las etiquetas <ul> y <ol>
+        </li>
+
+        <dl>            Definition list: Se utiliza para hacer una lista de definición. Esto sería un item con su respectiva descripcion. Este tipo de lista debe tener adentro estas dos etiquetas, <dt> y <dd>
+        </dl>
+                            <dt> </dt>      Definitión term: El termino/item que vamos a definir    
+                            <dd> </dd>      Definition description: La descrpción del término/item 
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listas</title>
+    </head>
+
+    <body>
+        <h1>Listas</h1>
+
+        <h2>Listas desordenadas &lt;ul&gt;</h2>
+            <h3>Ejemplo simple</h3>
+            <ul>                        <!--  Primer ejemplo -->
+                <li>Pan</li>
+                <li>Huevos</li>
+                <li>Leche</li>
+            </ul>
+
+            <h3>Ejemplo complejo de una forma semanticamente correcta de crear un índice</h3>
+            <nav>                       <!-- Ejemplo más abanzado de un uso real que se le daria a la etiqueta <ul>. En este caso estoy creando un indice ordenado que me redireeciona a los post de otra página web. Esta es la semantica correcta de un menu de navegación-->  
+                <ul>                                                  
+                    <li><a href="/Tutoria HTML/14a-navegacion-con-anclas.html#post-1">Post 1</a></li>                 
+                    <li><a href="/Tutoria HTML/14a-navegacion-con-anclas.html#post-2">Post 2</a></li>                 
+                    <li><a href="/Tutoria HTML/14a-navegacion-con-anclas.html#post-3">Post 3</a></li>
+                    <li><a href="/Tutoria HTML/14a-navegacion-con-anclas.html#post-4">Post 4</a></li>
+                    <li><a href="/Tutoria HTML/14a-navegacion-con-anclas.html#post-5">Post 5</a></li>
+                </ul> 
+            </nav>
+
+
+
+        
+        <h2>Lista ordenada &lt;ol&gt;</h2>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScrip</li>
+                <li>Frameworks</li>
+            </ol>
+
+
+
+
+        <h2>Lista de definición &lt;dl&gt;</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Marcup Language: Es un lenguaje de marcado que se usa para estructurar datos en una página web</dd>
+
+                <dt>CSS</dt>
+                <dd>Cascade Style Sheets: Es un lenguaje de diseño que se utiliza para dar estilos al HTML</dd>
+
+                <dt>JavaScrip</dt>
+                <dd>Es un leguaje de de programación para darle interactividad a un sitio wed</dd>
+            </dl>
+
+            
+
+    </body>
+
+</html>
+
+

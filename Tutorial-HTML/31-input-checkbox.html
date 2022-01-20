@@ -1,0 +1,53 @@
+<!--
+
+                                                                    _____Input "checkbox"_____
+
+
+    "checkbox"              Permite seleccionar varias opciones de una lista de occiones relacionadas
+
+
+-->
+
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input "checkbox"</title>
+    </head>
+
+    <body>
+        <h1>Input "checkbox"</h1>
+
+        <form>
+            <h2>¿Que lenguajes que conoces?</h2>
+            
+
+            <div>
+                <input id="a" type="checkbox"  name="lenguajes"  value="html">          <!-- El atributo name="" Es obligatorio. Me permite decirle al navegador que los 4 inputs pertenecen a la misma categoria, en este caso lenguaje -->
+                <label for="a">HTML</label>                                             <!-- El atributo value="" es importantisimo en los input de "checkbox". Ya que le da un valor a ese input el cual luego sera mandado al servidor. El valor puede ser cualquier cosa, palabra/numero. Lo importante es que sea identificativo con el input correspondiente-->
+            </div>
+
+            <div>
+                <input id="b" type="checkbox"  name="lenguajes"  value="css">
+                <label for="b">CSS</label>
+            </div>
+
+            <div>
+                <input id="c" type="checkbox"  name="lenguajes"  value="javascript">
+                <label for="c">JavaScrip</label>
+            </div>
+
+            <div>
+                <input id="d" type="checkbox"  name="lenguajes"  value="el-de-mi-pais"  checked>            <!-- Este atributo del tipo booleano que sirve para tener un input "radio" ya selecciondo. Sirve en casos como ¿quiere que le enviemos mails a su casilla de correos? (Y el checked estaria en "si") -->
+                <label for="d">El de mi país, soy don comedia (?</label>
+            </div>
+
+
+
+
+        </form>
+    </body>
+
+</html>

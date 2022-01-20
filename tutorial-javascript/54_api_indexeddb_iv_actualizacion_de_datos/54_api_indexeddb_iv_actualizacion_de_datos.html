@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="54_api_indexeddb_iv_actualizacion_de_datos.css">
+		<title>API IndexedDB IV - Actualización de datos</title>
+	</head>
+	<body>
+		<h1>API IndexedDB IV - Actualización de datos</h1>
+
+		<form id="form" class="form">
+			<label for="task">Task</label>
+			<input type="text" name="task" id="task">
+			<select name="priority" id="priority">
+				<option value="low">Low</option>
+				<option value="normal">Normal</option>
+				<option value="hight">Hight</option>
+			</select>
+			<button class="button" name="button" data-action="add">Add Task</button>		<!-- Segun MDN: Los atributos data-*  permiten almacenar información adicional sobre un elemento HTML cualquiera sin tener que recurrir a artilugios tales como la utilización de atributos no estándar, propiedades adicionales en el DOM. (Esto debe ser del tutorial viejo de HTML porque lo da por sabido) -->
+		</form>
+		<div id="tasks" class="tasks"></div>
+		
+		<script src="54_api_indexeddb_iv_actualizacion_de_datos.js"></script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+/* 
+
+															_____Qué es el "Staking constext"_____
+
+															
+
+ - Este a apunte es sumamente teorico. Para profundizar en el tema ir a los links:
+   https://www.youtube.com/watch?v=kSQeLmPwrt4&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=43
+   https://www.udemy.com/course/css-edicion-2020/learn/lecture/26348962#questions
+
+	
+
+ - El "Staking constext" o "contexto de apilamiento" es el espacio donde nuestros elementos se van a ir apilando para que unos queden por detras y otros por delante.
+
+ - El orden de prioridad del "Staking constext" visto desde adelante hacia atras es el siguiente: 
+		1- Elementos "posicionados" y CON un "z-index" de 1 más. 								Estos elementos estaran adelante de todos.
+		2- Elementos "posicionados" y SIN un "z-index" declarado (o z-index: auto;). 
+		3- Elementos NO "posicionados".
+		4- Elementos con "z-index" negativo.													Estos elementos estaran atras de todos. 			
+
+ - Recordar que el "z-index" no afecta a los hijos. Saber esto es es importante porque puedo tener cajas contenedores/padres arriba de otras cajas, pero los hijos no 
+  se verian porque estarian por detras. Para solucionar este problema se debe darle un "posicionamiento" y un "z-index" a las cajas hijas.    
+
+ - Tener cuidado a la hora de usar la propiedad "opacity:" (propiedad que sera vista más adelante). Ya que rompe el "Staking constext".
+
+
+
+*/
+

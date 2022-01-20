@@ -1,0 +1,117 @@
+/* 
+
+														_____Cómo decorar textos en CSS_____
+
+
+
+
+ - Transfrmacion de texto:
+
+		- text-transform:			- Esta propiedad nos permitehacer transformaciones ESTÉTICAS en nuestro texto. 
+									- Admite los valores:
+										- none					No se aplicara ninguna transformación.
+										- uppercase				El texto se pondrá en mayúsculas. 
+										- lowercase				El texto se pondra en minúsculas.
+										- capitalize			Transforma la primera letra de cada palabra en mayúsculas.
+
+
+
+
+- Adornos en el texto:	
+
+		- text-decoration:			- Esta propiedad nos permite controlar la linea que podemos poner en los textos.
+									- Admite los valores:
+										- none 					Elimina cualquier linea.
+										- underline				Coloca una linea bajo el texto.
+										- overline				Coloca una linea sobre el texto.
+										- line-through			Coloca una linea tachada al texto.
+										- Valor extra			Permite ponerle un color a la linea si junto con los demas ponemos un color como valor extra 
+		
+
+		- text-shadow:				- Funciona exáctamente igual que box-shadow, con la única diferencia de que no admite el valor inset ni la expancion de sombra.										
+									- Los valores son:
+										- offsetX 				Desplazamiento horizontal.
+										- offsetY				Dezplazamiento vertical.
+										- blur					Desenfoque.	
+										- color					Color. Por defecto tiene el color del texto.
+
+
+
+
+*/
+
+*{
+	box-sizing: border-box;						/* Pongo esto para normalizar esta buena practica */
+}
+
+/* Todo esto es estetico */
+body{
+	font-family: sans-serif;
+}
+h1{
+	text-align: center;
+}
+h2,
+h3,
+p,
+a{
+	margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* text-transform: */
+
+.texto_1{
+	text-transform: none;						/* Obviamente no va a ocurrir nada */
+}
+
+.texto_2{
+	text-transform: uppercase;
+}
+
+.texto_3{
+	text-transform: lowercase;
+}
+
+.texto_4{
+	text-transform: capitalize;
+}
+
+
+
+
+
+
+/* text-decoration: */
+.link_1{
+	text-decoration: none;
+}
+
+.link_2{
+	-webkit-text-decoration: underline red;
+	        text-decoration: underline red;			/* Es el valor que viene por defecto para un link, por ende no va a haber mucha diferencia entre este y cualquier otro link. Ademas le puse un valor extra que vendria a ser el color "red" por ende ahora la raya de este link sera de color roja */
+}
+
+.link_3{
+	text-decoration: overline;
+}
+
+.link_4{
+	text-decoration: line-through;
+}
+
+
+
+
+
+/* text-shadow: */
+.texto_5{
+	text-shadow: 5px 5px 5px red;
+}

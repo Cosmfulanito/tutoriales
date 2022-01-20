@@ -1,0 +1,58 @@
+<!--
+
+                                                                    _____Formularios_____
+
+ - Son cosas que nos permiten interactuar con el usuario pidiendole información. Cada vez que hacemos loging en un sitio o ponesmos nuestros datos en un campo a 
+   rellenar, todo eso esta construido con formularios
+
+
+ - La estructura basica de un formulario se compone de 4 elementos:
+
+
+    <form>                          Es la etiqueta que engloba nuestro formulario
+    </form>                           method=""   Es el metodo con el cual el usuraio envia información al servidor. Hay de dos tipos: "GET" y "POST". De no usar este atributo el metodo por defecto es el "GET"  //   Buscar información en el apunte: 37-envio-GET-vs-POST.html
+
+    <label> </label>                Sirve para escribir el nombre del campo a rellenar. Basicamente, es un texto descriptivo
+                                      for=""    Se le indica un id proveniente de su <input> correspondiente. De esta manera ambas etiquetas estaran conectadas. Un ejemplo de este uso seria que haciendo clic en <lavel>, puedo escribir en el <input>
+    
+    <input>                         Sirve para crear un campo que permitirá al usuario interactuar. Básicamente es un rectangulo para escribir informacion
+                                      date=""     Sirve para cambiar a los diferentes tipos de <input>, ir al apunte 25-tipos-de-input.html 
+
+    <button>                        Crea un botón que permitira enviar un formulario 
+    </button>    
+
+
+
+ - Toda esta informacion tiene que ir a alguna parte, ya sea a un archivo de un servidor o a otro archivo para para trabajar con esa info. Eso se hace con 
+   los Atributos propios de cada una de estas etiquetas que veremos más adelante.
+
+ - El comportamiento por defecto de un formularrio es recargar la página una vez se envia la información. Esto se soluciona con JavaScrip.
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+
+    </head>
+
+    <body>
+        <form>
+        
+            <label>Nombre:</label>
+            
+            <input>
+            
+            <button>Enviar formulario</button>
+        
+        </form>
+    </body>
+
+</html>

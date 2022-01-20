@@ -1,0 +1,49 @@
+<!--
+
+                                                            _____Atributo srcset=""_____
+
+
+
+_____Device Pixel Ratio (DVR):_____   
+
+ - Es el zoom que se le da a una página web. Un zoom del 100% equivale a 1 DPR (Device Pixel Ratio) de una unidad. Mientras que un zoom del 200% equivale a 2 DPR. 
+   Es importante saber esto porque los celulares le hacen zoom a la página para adaptarla a sus pantallas. Un ejemplo de esto es el Iphone cuya pantalla
+   tiene 3 DPR. Esto es algo a tener en cuenta para poder hacer páginas "responsives", ya que cada panatalla tendra un zoon diferente que moveran de lugar a 
+   las imagenes que estan en la página
+
+
+
+
+    <img>           srcset=""   Funciona exactamente igual que src="" ya visto en el apunte anterior: 39-Insertar-imagenes-en-HTML.html, salvo que en vez de enviar una imagen, envio un set de ellas (de ahí su nombre). Ponemos la misma imagen pero repetida varias veces en distintos formatos o resoluciones y le ponemos condiciones al navegador de en que momento usar cada una. Ej: puede ser que usemos la imagen A que tiene mucha más resolucion en una pantalla más grande como un monitor y la imagen B con menos resolucion en un telefono. Este atributo es mucho más conveniente de usar que un src="", porque optrimizamos la pagína en función al "Device Pixel Ratio" del dispositivo que entre a la página. Esto hace que la pagína este mucho más optimizada y cargue más rapido. La "condición" de cuando usar cual imagen se da con un "nuerox". Donde se representa "Device Pixel Ratio". Esto quiere decir que si a una de las imagenes le pongo la condición 3x, solamente se mostrara esa imagen en dispositivos con un DVR igual a 3. Osea, esta imagen se mostrara en un Iphone
+                        
+    - Tip:          - Dichas imagenes estan separadas por comas y compartir el mismo par de comillas
+                    - La "condición" de cuando usar cual imagen se da con un "nuerox". Donde se representa "Device Pixel Ratio". Esto quiere decir que si a una de las imagenes le pongo la condición 3x, solamente se mostrara esa imagen en dispositivos con un DVR igual a 3. Osea, esta imagen se mostrara en un Iphone
+
+-->
+
+
+
+<!-- En este apunte tendremos que poner un set de imagenes que son la misma pero a distinta resolución.  -->
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atributo srcset=""</title>
+    </head>
+    
+    <body>
+        <!-- Como se puede apreciar, ambas imagenes estan separadas por una coma "," y a su vez estan dentro de del mismo par de parentesis. La ultima imagen la cual debe ser abierta en los navegadores de los celulares, tiene la condicion 3x que significa que solo puede ser abierta por navegadores que tengan  de DPR (que es igual a un 200% de zoom). Osea, un celular -->
+        <!-- Tambien debemos poner una opcion .jpg por si el navegador no soporta el formato .webp -->
+        <!-- Internet explorer es tan choto que ademas de no soportar el dormato .webp, tampoco soporta el atributo srcset="", por ende tenemos que poner un atributo src="" solo para el. Es una porqueria Internet explorer-->
+        <img srcset="
+        /Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.webp,
+        /Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-baja-resolucion.webp 2x,
+
+        /Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.jpg,
+        /Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-baja-resolucion.jpg 2x"
+        
+        src="/Tutorial-HTML/assets/images/imagenes-a-distintas-resolucones/Gatito-alta-resolucion.jpg" alt="Gatito muy tierno">      
+    </body>
+</html>

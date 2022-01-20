@@ -1,0 +1,37 @@
+<!--
+
+                                                        _____Atributos de los links_____
+
+ - Estos son los atriibutos mas usados en los en los links <a href=""></a>
+
+    target=""           Define donde se abrirá el recurso solicitado. Funciona con la etiqueta <a href=""></a> Por norma general siempre que useis rutas absolutas pondreís como valor "_self" o "_blanck"  
+                        "_self"         Viene por defecto. Por ende nunca lo voy a usar pero no esta de mas saberlo. Hace que el link abra en la misma pestaña donde esta mi página. Obviamente mi pagína se va a cerrar  
+                        "_blank"        Hace que el link se habra en otra pestaña 
+
+    download            Atributo booleano, sirve para descargar el recurso solicitado. Importante, el recurso debe estar en mi propio servidor. Esto se hace con la etiqueta <a>, recordar que esta etiqueta no es solo para linkear, sino que es para acceder a diferentes archivos, viendolos o descargandolos
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atributos de los links</title>
+    </head>
+
+    <body>
+        <h1>Home</h1> 
+        
+        <a href="https://google.com/" target="_self">Ir a Google desde esta misma pestaña</a>               <br><!-- Este <br> esta horrenda pero me sirve para que el apunte sea más entendible -->    
+        <a href="https://google.com/" target="_blank">Ir a Google desde otra pestaña</a>                    <br>    <br>
+        
+        <a href="assets/images/Gatito.jpg" download>Descargar Gatito</a>                                       
+
+
+    </body>
+
+</html>

@@ -1,0 +1,153 @@
+/* 
+
+														_____Modo de color: Hexadecimal_____ 
+
+
+
+	Hexadexiamal		- La notacion hexadecimal es la más comun en el desarrolo web. Se basa en los mismos principios del RGB pero escrito en notacion hexadecimal.
+
+						- En este tipo de notación también necesitamos 256 valores.  
+
+						- El sistema hexadecimal esta basado en 16 valores del 0 al 15.
+						  Utiliza los digitos del 0 al 9 y las letras de la A a la F. Donde "0" es el valor más pequeño y "F" el más grande	
+						  
+						- Se componen de 16 caracteres en pareja ya que 16*16 = 256  
+							0 1 2 3 4 5 6 7 8 9 A B C D E F
+							0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+						- Para indicar que vamos a usar la notación hexadecimal, debemos usar el símbolo de hash/almohadilla "#" y a continuación usaremos esta 
+						  notación por parejas.
+						  Cada canal debe recibir 2 valores.  
+						  	#RRGGBB		 	Ej: #ff7f50
+
+						- En algunas ocaciones se puede simplificar la notacion. Esto ocurre cuando una pareja usa el mismo valor, ya que se puede omitir el segundo 
+						  valor. Siempre y cuando que esto ocurra en las 3 parejas.
+							Ej1: 	rgb(255, 255, 255)		=		#ffffff			=		#fff		 
+							Ej2:	rgb(0, 0, 0)			=		#000000			=		#000
+
+						- También tenemos la opcción de usar transparencias en hexadecimal añadiendo un cuarto canal que sigue las mismas normas
+							Ej:		rgb(0 0 0 .5)			= 		#00000088		=		#0008
+
+
+*/
+
+
+
+*{												/* Pongo esta propiedad para normalizar esta buena practica */
+	box-sizing: border-box;
+}
+
+/* Todas estas propiedades son esteticas */
+body{
+	font-family: sans-serif;
+}
+
+.caja{
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	border: 5px solid #555;
+	text-align: center;
+	border-radius: 20px;
+	padding-top: 10px;
+}
+
+
+
+
+/* Ejemplo del uso del modo de color Hexadecimal */
+.caja-1{
+	background-color: coral;
+}
+
+.caja-2{
+	background-color: rgb(255, 127, 80);
+}
+
+.caja-3{
+	background-color: #ff7f50;
+}
+
+
+
+/* Ejemplo con el color "banco": */
+.caja-4{
+	color: white;
+	background-color: black;
+}
+
+.caja-5{
+	color: white;
+	background-color: rgb(0, 0, 0);
+}
+
+.caja-6{
+	color: white;
+	background-color: #000000;
+}
+
+.caja-7{
+	color: white;
+	background-color: #000;
+}
+
+
+
+/* Ejemplo con el color "gris": */
+.caja-8{
+	background-color: gray;
+}
+
+.caja-9{
+	background-color: rgb(128, 128, 128);
+}
+
+.caja-10{
+	background-color: #808080;
+}
+
+
+
+/* Ejemplo con el color "blanco": */
+.caja-11{
+	background-color: white;
+}
+
+.caja-12{
+	background-color: rgb(255, 255, 255);
+}
+
+.caja-13{
+	background-color: #ffffff;
+}
+
+.caja-14{
+	background-color: #fff;
+}
+
+
+
+/* Uso de transparencia */
+.caja-padre{
+	height: 500px;
+	background-color: mediumorchid;
+}
+
+.caja-hija-sin-transparencia{
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	background-color: #ff7f50;
+}
+.caja-hija-con-transparencia{
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	background-color: #ff7f5088;
+}

@@ -1,0 +1,217 @@
+/*
+
+														_____Medidas y función repeat()_____
+
+
+
+ (Todo el contenido que vamos a ver en este apunte sirve tanto para filas como para columnas. Por comodidad, todos los ejemplos usados en este apunte fueron hechos 
+ con columnas)
+
+
+
+
+
+ _____Medidas de la cuadricula:_____													
+ Se pueden dar medidas con cualquiera de las unidades que ya conocemos y dos más que vien con grid: "fr" y "auto"
+
+	- fr 		Significa "fraction". Equivale a n fracciones del espacio disponible después de establecer medidas fijas. Básicamente representa una fracción del 
+				espacio disponible en el contenedor de la cuadrícula
+	            Si hay dos colunas con 1fr cada una, significa que hay 2fr totales que se van a repartir
+
+	- auto   	Esta medida si bien ya lo conocemos, se comporta distinto en grid. Equivale al espacio que queda después de repartir todos los elementos, es el 
+				último que se repate. El tamaño mínimo del item será el espacio del contenido más el padding si lo tubiera 
+									
+
+
+
+
+	
+ ______Función repeat()____
+ - Con la función repeat podemos establecer repeticiones de de medidas o patrones.
+
+ - En el caso "simple" recibira 2 parametros (valores): 
+	- repeat(nColumnso nFiles, medida) 
+	  	Ej: grid-template-columns: repeat(4, 100px)      	Es lo mismo que =>  grid-template-columns: 100px 100px 100px 100px;    
+
+ - Si tomo el segundo valor añadimos mas de una medida cosntruiremos un patrón, no hay limites de valores.
+	- grid-template-columns: repeat(2, 100px 50px)  		Es lo mismo que =>	grid-template-columns: 100px 50px 50px 100px;
+
+
+
+	
+														
+*/
+
+
+
+
+
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+h2{
+	margin-top: 150px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+section{													/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Medidas de la cuadricula: */
+
+/* Medidas genericas: */
+.grid-container1{
+	display: grid;		
+	
+	grid-template-columns: 40px 30% 30vw;					/* Ejemplo de que se puede usar cualquier tipo de medida */
+}
+
+.grid-item1{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+/* Medidas con valor "fr": */
+.grid-container2{
+	display: grid;		
+	
+	grid-template-columns: 50px 1fr 1fr;					/* Hay 2fr totales. Osea, el espacio sobrante del elemento padre se dividira en 2 partes iguales, una para cada columna cuyo valor sea fr */		
+}
+
+.grid-item2{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+/* Medidas con valor "auto": */
+.grid-container3{
+	display: grid;		
+	
+	grid-template-columns: 100px 100px auto 100px;			/* "auto" es: Despues de repartir fracciones, pixeles, padding, etc. El hueco que queda es lo que se le asigna */			
+}
+
+.grid-item3{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	/* padding: 1rem; */									/* Debo sacarle el padding para que el tamaño de la columna que me da el valor "auto" no se vea alterado */
+	font-size: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Función repeat() */
+
+/* Ejemplo simple: */
+.grid-container4{
+	display: grid;		
+	
+	grid-template-columns: repeat(4, 100px);				/* Ahora va haber 4 columnas de 100px cada una */			
+}
+
+.grid-item4{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+/* Ejemplo convinado: */
+.grid-container5{
+	display: grid;		
+	
+	grid-template-columns: 200px repeat(4, 50px) 200px;		/* La primera columna va a ser de 200px, las 4 siguientes de 50px, y la ultima de 200px  */					
+}
+
+.grid-item5{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+/* Patrones: */
+.grid-container6{
+	display: grid;		
+	
+	grid-template-columns: repeat(3, 50px 75px 150px);		/* Va a haber un patron de 50px 75px 100px que se va a repetir 3 veces. Osea, va a haber 9 columnas */			
+}
+
+.grid-item6{
+	border: 1px solid;					
+	display: flex;								
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+

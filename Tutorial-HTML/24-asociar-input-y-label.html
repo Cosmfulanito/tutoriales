@@ -1,0 +1,46 @@
+<!--
+
+                                                                _____Asociar input y label_____
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+        
+    </head>
+
+    <body>
+            <h1>Asociar input y label</h1>
+
+
+
+        <h2>Forma más comun de asociar un &lt;input&gt; con un &lt;lavel&gt;</h2>
+        <form>
+            <label for="name">Nombre:</label>                       <!-- Si hago clic en este <label> voy a poder escribir en el input ya que ambos estan asociados por el id del <input> -->
+            <input id=name>
+            <button>Enviar formulario</button>
+        </form>
+
+
+
+
+        <h2>Forma menos comun de asociar un &lt;input&gt; con un &lt;label&gt; </h2>        <!-- Este otro metodo es muy poco comun pero es posible que lo vea, constiste en meter el <input> dentro del <label> -->
+        <form>
+            <label>
+                Nombre:
+                <input>
+            </label>
+            <button>Enviar formulario</button>
+        </form>
+
+    </body>
+
+</html>

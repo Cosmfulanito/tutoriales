@@ -1,0 +1,194 @@
+/*
+
+														_____Flex-direction y flex-wrap_____
+
+			
+														
+ Fexbox:		- display: flex 				Convierte el contenedor en un contexto para flexbox y hace que el contenedor sea un elemento de bloque para los 
+  												elementos que lo rodean 																
+
+				- display: inline-flex			Convierte el contenedor en un contexto para flexbox y hace que el contenedor sea un elemento de linea para los 
+												elementos que lo rodean
+
+				- flex-direction: 				Modifica la direccion y cual es su eje principal.  Acepta los valores:
+												- row		 			Horizontal: de izquierda a derecha	(Valor por defecto)
+												- row-reverse 			Horizontal: de derecha a izquierda
+												- column				Vertical: de arriba a abajo			 									
+												- column-reverse		Vertical: de abajo a arriba
+
+				- flex-wrap:					Controla si los elementos saltarán de línea o no. Osea, controla el colapsado. Acepta los valores:												
+												- nowramp 				Es el valor por defecto. Un contenedor flex va a hacer que todos los elementos se queden en 
+																		una línea si no se especificamos los contrario 
+												- wrap					Hace que los elementos que no quepan en una línea (manteniendo sus dimenciones, si las 
+																		tuvieran), salten a la linea inferior 																		
+												- wrap-reverse			Hace lo mismo que "wrap" pero en lugar de hacer que salten a la linea inferior , hace que 
+																		salten a la linea superior 
+													
+
+ 													
+*/
+
+
+
+
+
+/* Esto es sumamente estetico */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+h1{
+	text-align: center;
+}
+
+div{
+	margin-bottom: 100px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Caja de referencia: */
+.flex-container1{
+	background-color: #fca17d;
+	padding: 0.5em;
+}
+
+.flex-item{
+	width: 30px;
+	height: 30px;
+	margin: 0.5em;
+	line-height: 30px;
+	color: aliceblue;
+	text-align: center;
+	background-color: #9a348e;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* display: flex */
+.flex-container2{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+}
+
+
+
+
+/* display: inline-flex */
+.flex-container3{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: inline-flex;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* flex-direction: row */
+.flex-container4{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+
+/* flex-direction: row-reverse */
+.flex-container5{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+
+
+
+/* flex-direction: column */
+.flex-container6{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+/* flex-direction: column-reverse */
+.flex-container7{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* flex-wrap: no-wramp */
+.flex-container8{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+
+
+
+/* flex-wrap: wramp */
+.flex-container9{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+
+/* flex-wrap: wrap-reverse */
+.flex-container10{
+	background-color: #fca17d;
+	padding: 0.5em;
+
+	display: flex;
+	flex-wrap: wrap-reverse;
+}

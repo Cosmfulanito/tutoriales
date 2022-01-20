@@ -1,0 +1,56 @@
+<!--
+
+                                                                _____Inputs extras_____
+
+
+- Esto es un repaso especificamente para inpusts genericos del apunte 25-tipos-de-inputs.html  
+
+
+-->
+
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inputs extras</title>
+    </head>
+
+    <body>
+        <form>
+
+            <div>
+                <label for="a">"text</label>
+                <input id="a" type="text">                 <!-- Es el que viene por defecto, es como no poner ningun atributo-->
+            </div>
+
+            <div>   
+                <label for="b">"number"</label>             <!-- A modo de curiosidad, las flechitas con las que viene se llaman "widgets", saber esto ultimo es interesante ya que le puedo cambiar su estita con CSS -->
+                <input id="b" type="number">
+            </div>
+
+            <div>
+                <label for="c">"color"</label>
+                <input id="c" type="color">
+            </div>
+
+            <div>
+                <label for="d">"range"</label>
+                <input id="d" type="range">
+
+                <label for="e">"range" (Rango de 0 a 20 y que avance cada 5 unidades)</label>
+                <input id="e" type="range" step="5" min="0" max="20">                           <!-- El  input "range" viene con otros atributos extras: step="" permite hacer saltos de unidas. Osea, en vez de contar de 1 en 1, puedo contar de 10 en 10  //  min="" Es valor minimo de nuestro rango  // max="" Es el valor maximo de nuestro rango  -->
+            </div>
+
+            <div>
+                <label for="f">"reset"</label>
+                <input id="f" type="reset">
+            </div>
+
+            
+
+        </form>
+    </body>
+
+</html>

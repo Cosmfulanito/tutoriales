@@ -1,0 +1,1036 @@
+/*
+
+															_____Alineamiento y order_____
+
+
+ - El order con "grid" funciona exactamente igual que con "flexbox". Por ende si entiendo uno puedo entender el otro
+
+
+ - Aliniamiento:  
+	- items:
+		- justify-items: 			- Alinea los elementos horizontales respecto a la celda 
+									- Admiten los valores: 
+										- start 	/ 	flex-start				Aliena los elementos a la izquierda			(Ambos valores funcionan exactamente igual)
+										- center	/ 	flex-center				Aliena los elementos al centro
+										- end   	/ 	flex-end				Aliena los elementos a la derecha
+										- stretch (default)						Los elementos ocupan todo el ancho que puededan 
+
+										
+		- aling-items: 				- Alinea los elementos verticalmente respecto a la celda
+									- Admiten los valores: 
+										- start 	/ 	flex-start				Aliena los elementos arriba					(Ambos valores funcionan exactamente igual)
+										- center	/ 	flex-center				Aliena los elementos al centro
+										- end   	/ 	flex-end				Aliena los elementos abajo
+										- stretch (default)						Los elementos ocupan todo el largo que puedan 
+
+
+		- place-items: 				Engloba las propiedades "justify-items" y "alingn-items". Osea, con esta propiedad utilizo las dos anteriores. Esto es mucho más 
+									comodo
+										- place-items: aling-items  justify-items. 				En caso de de usar el mismo valor, este se ecribira una sola vez 	
+											Ej1: place-items: start center
+											Ej2: place-items: center							(Ambos valores tienen como valor la palabra "center". Por ende se 
+																								escribe una sola vez)
+
+
+
+
+
+	- Content:																			
+		- justify-content: 			- Alinea los elementos horizontalmente respecto al contenedor 	 
+									- Admite los valores: 				
+										- start									Mandamos el contenido a la izquierda del contenedor 
+										- end									Mandamos el contenido a la derecha del contenedor
+										- center								Mandamos el contenido al centro del contenedor
+										- stretch 								(default)						
+										- space-around							El contenido se separa por igual y deja un poco de espacio en el borde		
+										- space-between							El contenido se separa por igual pero no deja espacio en los bordes
+										- space-evenly  						El contenido se separa por igual y deja el mismo espacio por dentro como por los bordes
+
+		- align-content: 			Alinea los elementos verticalmente respecto al contenedor
+									- Admite los valores: 				
+										- start									Mandamos el contenido arriba del contenedor 
+										- end									Mandamos el contenido abajo derecha del contenedor
+										- center								Mandamos el contenido al centro del contenedor
+										- stretch 								(default)						
+										- space-around							El contenido se separa por igual y deja un poco de espacio en el borde		
+										- space-between							El contenido se separa por igual pero no deja espacio en los bordes
+										- space-evenly  						El contenido se separa por igual y deja el mismo espacio por dentro como por los bordes
+
+		- place-content: 			Engloba las propiedades "justify-content:" y "align-content:". Osea, con esta propiedad utilizo las dos anteriores. Esto es mucho 
+									más comodo
+										- place-content: aling-content / jsutify-content		En caso de de usar el mismo valor, este se ecribira una sola vez 
+											Ej1: place-content: start center 			
+											Ej2: place-content: center							(Ambos valores tienen como valor la palabra "center". Por ende se 
+																								escribe una sola vez)
+
+
+
+
+
+	- Tambien tenemos las mismas propiedades pero con el sufijo "-self". Básicamente aplica los cambios ya vistos pero unicamente en un elemento en especifico 
+		- justify-self
+		- aling-self 
+		- place-self
+
+			Admite los valores: 
+				- start
+				- end
+				- center
+				- stretch
+
+
+
+
+ - Order: 	Funciona igual que en flexbox, por defecto todos los items tienen order 0			
+
+*/
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+h2{
+	margin-top: 150px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Caja de referencia: */
+.grid-container1{
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+}
+
+.grid-item1{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* justify-items: */
+
+/* justify-items: start */
+.grid-container2{
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	justify-items: start;									/*-----*/
+}
+
+.grid-item2{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-items: center */
+.grid-container3{
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	justify-items: center;									/*-----*/
+}
+
+.grid-item3{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-items: end */
+.grid-container4{
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	justify-items: end;										/*-----*/
+}
+
+.grid-item4{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* aling-items: */
+
+/* aling-items: start */
+.grid-container5{
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	align-items: start;										/*-----*/
+}
+
+.grid-item5{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* aling-items: center */
+.grid-container6{
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	align-items: center;									/*-----*/
+}
+
+.grid-item6{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* aling-items: end */
+.grid-container7{
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	align-items: end;										/*-----*/
+}
+
+.grid-item7{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Convinar "justify-items:" con "aling-items: */
+
+/* Elementos arriba a la derecha: */
+.grid-container8{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	justify-items: end;										/*-----*/					
+	align-items: start;										/*-----*/
+}
+
+.grid-item8{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* Elementos en  la parte central izquierda: */
+.grid-container9{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	justify-items: start;									/*-----*/
+	align-items: center;									/*-----*/
+}
+
+.grid-item9{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+/* Elementos en el centro: */
+.grid-container10{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	justify-items: center;									/*-----*/	
+	align-items: center;									/*-----*/
+}
+
+.grid-item10{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* place-items: */
+/* "place-items:" Es la convinacion de "justify-items:" con "aling-items:" en una sola propiedad. Para demostraelo haremos las mismas cajas anteiores pero con "place-items:" */
+
+
+/* Elementos arriba a la derecha con "place-items:" */
+.grid-container11{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	place-items: start end;									/*-----*/
+}
+
+.grid-item11{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* Elementos en  la parte central izquierda con "place-items:" */
+.grid-container12{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	place-items: center start;								/*-----*/
+}
+
+.grid-item12{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+/* Elementos en el centro con "place-items:" */
+.grid-container13{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);
+
+	place-items: center ;									/*-----*/
+}
+
+.grid-item13{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* justify-content: */
+
+/* Caja de referencia: */
+.grid-container14{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				/* Hago esto para que se pueda apreciar los cambios hechos con "justify-content:" */
+}
+
+.grid-item14{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-content: start */
+.grid-container15{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: start;									/*-----*/
+}
+
+.grid-item15{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-content: end */
+.grid-container16{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: end;									/*-----*/
+}
+
+.grid-item16{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-content: center */
+.grid-container17{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: center;								/*-----*/
+}
+
+.grid-item17{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-content: space-around */
+.grid-container18{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: space-around;							/*-----*/
+}
+
+.grid-item18{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-content: space-between */
+.grid-container19{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: space-between;							/*-----*/
+}
+
+.grid-item19{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* justify-content: space-evenly */
+.grid-container20{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: space-evenly;							/*-----*/
+}
+
+.grid-item20{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* align-content: */
+
+/* align-content: start */
+.grid-container21{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	align-content: start;								/*-----*/
+}
+
+.grid-item21{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* align-content: end */
+.grid-container22{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	align-content: end;									/*-----*/
+}
+
+.grid-item22{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* align-content: center */
+.grid-container23{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	align-content: center;								/*-----*/
+}
+
+.grid-item23{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* align-content: space-around */
+.grid-container24{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	align-content: space-around;							/*-----*/
+}
+
+.grid-item24{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* align-content: space-between */
+.grid-container25{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	align-content: space-between;							/*-----*/
+}
+
+.grid-item25{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* align-content: space-evenly */
+.grid-container26{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	align-content: space-evenly;							/*-----*/
+}
+
+.grid-item26{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Convinar "justify-content:" con "align-content:"  */
+
+/* Ej1: Ambos con el valor "space-between" */
+.grid-container27{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: space-between;							/*-----*/		
+	align-content: space-between;							/*-----*/
+}
+
+.grid-item27{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* Ej2: justify-content: space-evenly; + align-content: start; */
+.grid-container28{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+	
+	justify-content: space-evenly;							/*-----*/		
+	align-content: start;									/*-----*/
+}
+
+.grid-item28{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* place-content: */
+
+
+/* Ej1: place-content: space-between */
+.grid-container29{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+							
+	place-content: space-between;							/*-----*/
+}
+
+.grid-item29{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+/* Ej2: place-content: space-evenly start */
+.grid-container30{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+
+	place-content: start space-evenly;						/*-----*/
+}
+
+.grid-item30{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Sufijo "-self" */
+
+/* align-self: */
+.grid-container31{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+
+	justify-items: center;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.grid-item31{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.grid-item31:first-child{
+	align-self: start;								/*-----*/
+}
+
+
+
+
+/* justify-self: */
+.grid-container32{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+
+	justify-items: center;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.grid-item32{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.grid-item32:first-child{
+	justify-self: stretch;								/*-----*/
+}
+
+
+
+
+
+/* place-self */
+.grid-container33{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 100PX);				
+
+	justify-items: center;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.grid-item33{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.grid-item33:first-child{
+	place-self: start stretch;							/*-----*/
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* order */
+
+.grid-container34{											
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;	
+	grid-template-columns: repeat(3, 1fr);				
+
+}
+
+.grid-item34{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.grid-item34:nth-child(2){
+	background-color: royalblue;
+	order: 1;										/*-----*/
+}

@@ -1,0 +1,78 @@
+<!--
+
+                                                            _____Insertar imágenes en HTML_____
+
+
+
+    <img>           Sirve para visualizar los ditintos tipos de imagenes. Entre ellos: .svg, .jpg, .gif, .png, webp, etc. 
+                        src=""      Atributo obligatorio. En el pondremos el link/ruta de las carpetas del archivo deseado
+                        srcset=""   Funciona exactamente igual que src="" salvo que en vez de enviar una imagen, envio un set de ellas (de ahí su nombre). Ponemos la misma imagen pero repetida varias veces en distintos formatos o resoluciones y le ponemos condiciones al navegador de en que momento usar cada una. Ej: puede ser que usemos la imagen A que tiene mucha más resolucion en una pantalla más grande como un monitor y la imagen B con menos resolucion en un telefono. Este atributo es mucho más conveniente de usar que un src="", porque optrimizamos la pagína en función al "Device Pixel Ratio" del dispositivo que entre a la página. Esto hace que la pagína este mucho más optimizada y cargue más rapido. Este atributoto se ve en mucho más profundidad en el el apunte: 40-atributo-srcset.html  
+                        alt=""      Atributo obligatorio. En el pondremos una pequeña descripcion de la imágen. Esto es util en caso de que no cargue la imagen o de que el usuario use un lector en caso de ser invidente ya que le brindaria una descripción. Esta etiqueta no puede funcionar sin este atributo, es obligatorio ya que de no ponerlo, el W3C nos marcaria un error y posiblemente este penalizado por el SEO 
+
+
+
+
+ - Tip:     Idealmente se recomienda que todas las imagenes esten en formato .svg siempre que se pueda, caso contrario en .webp. Ya que estos dos formatos son los que menos pesan
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insertar imágenes en HTML</title>
+        <style>                                 /* Hago que las imagenes tengan el mimo tamaño y entren en la pantalla. Esto corresponde a CSS y se vera más adelante en su correspondiente curso */
+            img{
+                max-width: 250px;
+            }
+
+            svg{
+                max-width: 250px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Insertar imágenes en HTML</h1>                                                                                                                          <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->
+
+                                                                                                                                               
+        <div>
+            <h2>.jpg vs .webp</h2>
+            <img src="/Tutorial-HTML/assets/images/Gatito.jpg" alt="Gatito">
+            <img src="/Tutorial-HTML/assets/images/Gatito.webp" alt="Gatito">
+        </div>                                                                                                                                                      <br><br><br>                                                                                             
+
+        <div>
+            <h2>.png vs .webp</h2>
+            <img src="/Tutorial-HTML/assets/images/Darth Vader.png" alt="Dart Vader">
+            <img src="/Tutorial-HTML/assets/images/Darth Vader.webp" alt="Dart Vader">
+        </div>                                                                                                                                                      <br><br><br>
+
+        <div>
+            <h2>.gif vs .webp</h2>
+            <img src="/Tutorial-HTML/assets/images/Charizard.gif" alt="Charizar volando">
+            <img src="/Tutorial-HTML/assets/images/Charizard.webp" alt="Charizard volando">
+        </div>                                                                                                                                                      <br><br><br>
+
+        <div>
+            <h2>.svg (Imagen vectorizada)</h2>
+            <p>(Dos formas distintas para subir un .svg)</p>
+            <img src="/Tutorial-HTML/assets/images/facebook.svg" alt="Logo de Facebook">                    <!-- Metodo N°1 para subir una imagen .svg (vectorizada). Hay que descargar la imagen a una carpeta y luego colocarla en la etiqueta <img> como si fuera cualquier otro tipo de imagen. Esta es la forma más recomendada para pincipiantes ya que todos los cambios los hago con CSS -->
+            
+                                                                                                            <!-- Metodo N°2 para subir una imagen .svg (vectorizada). Simplemente copio la ecuación de la imagen y la pego donde quiero. No hace falta usar la etiqueta <img>. Esta opcion es recomendada para desarrolladores con más experiencia, ya que esta forma es mas complicada pero permite hacerle cambios al archivo en tiempo real -->
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <path style="fill:#1976D2;" d="M448,0H64C28.704,0,0,28.704,0,64v384c0,35.296,28.704,64,64,64h384c35.296,0,64-28.704,64-64V64
+                C512,28.704,483.296,0,448,0z"/>
+            <path style="fill:#FAFAFA;" d="M432,256h-80v-64c0-17.664,14.336-16,32-16h32V96h-64l0,0c-53.024,0-96,42.976-96,96v64h-64v80h64
+                v176h96V336h48L432,256z"/>
+</svg>
+        </div>  
+
+    </body>
+</html>
+

@@ -1,0 +1,114 @@
+<!--
+                                                                _____Atributos para formularios_____
+
+
+
+ - placeholder=""               Da una pista al usuario de lo que debe introducir. Esto normalmente se debe hacer con CSS
+
+ - required                     Requerido. Es un atributo booleano. Hace que un campo a llenar sea obligatorio, de lo contrario aparecera un cartel con la frace "Completa este campo". Esto no es para nada seguro ya que con hacer clic en "inspeccionar elementos" esto se puede modificar. Para que sea realmente seguro se necesita JavaScrit
+
+ - readonly                     Solamente leer. Es un tributo booleano. Hace que el contenido que este adentro por de defecto solo sea para lectura, el usuario no puede escribir nada. Tener en cuenta de que si pongo un <button> esa informacion que tengo por defecto escrita se va a enviar. El usuario no va a poder escribir informacion. Esto no es para nada seguro ya que con hacer clic en "inspeccionar elementos" esto se puede modificar. Para que sea realmente seguro se necesita JavaScrit
+
+ - disabled                     Incapacitado. Es un atributo booleano. Funciona de manera similar a un atributo readonly ya que sirve para mostrar texto sin darle la oportunidad al usuario de escribir soble el, pero es mucho mejor, ya que desactiva por completo un <input> y a su vez no envia informacion que esta escrita por defecto dentro de el cuando se presiona un <button>
+
+ - min=""                       Estos dos atributos establecen el mínimo y máximo de valores de un campo númerico respectivamente. En grafico o lista me van a aparecer esos numeros, y en caso de que los agregue con el teclado y ponga numero que no entren en ese rango, me va a aparecer un cartel diciendome "ese numero es muy grande o muy pequeño". Estos dos atributos no son obligatorios ni tampoco es obligatorio que esten los dos al mismo tiempo
+ - max=""              
+
+ - minlength=""                 Estos dos atributos establecen la cantidad mínima y máxima de caracteres que se pueden escribir 
+ - maxlength=""
+
+ - selected                     Atributo booleano. Sirve para que aparezca seleccionada de forma predefinida una opción en particular entre muchas 
+
+ - autofocus                    Atributo booleano. Al cargar una página hace clic automaticamente sobre el elemento deseado y tambien dezplaza la página hacia ese elemento para que el usuario empiece a escribir directamente sin perder el tiempo. Es como si el usuario hiciera clic en ese elemento si haberlo hecho  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atributos para formularios</title>
+    </head>
+
+    <body>
+        <h1>Atributos para formularios</h1>                                                                                                                         <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->
+
+        <form>
+
+
+
+
+            <!-- placeholder=""-->
+            <h2>placeholder=""</h2>
+
+            <input type="text" placeholder="Introduce tu nombre">                                                                                                   <br><br><br>
+
+
+
+
+            <!-- required -->
+            <h2>required</h2>
+
+            <input type="text" placeholder="Introduce tu apellido" required>                                                                                       
+            <button>Enviar</button>                                                                                                                                 <br><br><br>
+
+
+
+
+            <!-- readonly -->
+            <h2>readonly</h2>
+
+            <input type="text" value="Hola!" readonly>                                                                                                              <br><br><br>
+
+
+
+
+            <!-- disabled -->
+            <h2>disabled</h2>
+
+            <input type="text" value="Hola!" disabled>                                                                                                              <br><br><br>
+
+
+
+
+            <!-- min="" / max="" -->
+            <h2>min="" / max=""</h2>
+
+            <input type="number" min="5" max="10">                                                                                                                  <br><br><br>
+
+
+
+
+            <!-- minlength="" / maxlength="" -->
+            <h2>minlength="" / maxlength=""</h2>
+
+            <label for="contraseña">Tu contraceña debe tener entre 5 y 8 caracteres:</label>                                                                        
+            <input id="contraceña" type="text" minlength="5" maxlength="8">                                                                                         <br><br><br>
+
+
+
+
+            <!-- selected -->
+            <h2>selected</h2>
+
+            <select name="numeros">
+                <option value="uno">Uno</option>
+                <option value="dos" selected >Dos</option>
+                <option value="tres">Tres</option>
+            </select>                                                                                                                                               <br><br><br>
+
+
+
+
+            <!-- autofoco -->
+            <h2>autofoco</h2>
+
+            <input type="text" autofocus>                           <!-- Renobar la página para apreciarlo si es que ya se hizo clic en otra cosa -->
+            
+
+        </form>
+    </body>
+
+</html>

@@ -1,0 +1,75 @@
+<!--
+
+                                                                    _____Input "radio"_____
+
+
+                                                
+    "radio"     Permite seleccionar una única opcion en una lista de opciones relacionadas.                                                            
+
+
+-->
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input radio</title>
+    </head>
+
+    <body>
+        <h1>Input "radio"</h1>
+
+
+        <!-- Forma incorrecta de usar el input "radio" -->
+        <form>                                                                  
+            <h2>Inpust "radio" SIN el atributo name="" (da error porque selecciona todo)</h2>
+
+            <label>Masculino</label>
+            <input type="radio">
+
+            <label>Femenino</label>
+            <input type="radio">
+
+            <label>Otro</label name=>
+            <input type="radio">
+        </form>                                                                                                                                             <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->
+
+
+
+
+
+        <!-- Forma correcta de usar el input "radio" -->
+        <form>
+            <h2>Inpust "radio" CON el atributo name="" (funciona como Dios manda)</h2>
+
+            <label>Masculino</label>
+            <input type="radio" name="genero" value="masculino">                <!-- El atributo name="" es obligatorio. Me permite decirle al navegador que los 3 inputs pertenecen a la misma categoria, en este caso genero. De esta manera solamente se selecciona una casilla y no todas -->
+                                                                                <!-- El atributo value="" es importantisimo en los input de "radio". Ya que le da un valor a ese input el cual luego sera mandado al servidor. El valor puede ser cualquier cosa, palabra/numero. Lo importante es que sea identificativo con el input correspondiente-->
+            <label>Femenino</label>
+            <input type="radio" name="genero" value="femenino">
+
+            <label>Otro</label name=>
+            <input type="radio" name="genero" value="otro">
+        </form>                                                                                                                                             <br><br><br> <!-- Poner esta etiqueta de esta forma esta horrible pero lo hago para que pagína sea más prolija en el navegador. La forma correcta seria hacerlo con CSS  -->
+
+
+
+
+        <form>
+            <h2>Input "radio" ya seleccionado de forma predeterminada</h2>
+
+            <label>Masculino</label>
+            <input type="radio" name="genero"  value="masculino"  checked>        <!-- Este atributo del tipo booleano que sirve para tener un input "radio" ya selecciondo. Sirve en casos como ¿quiere que le enviemos mails a su casilla de correos? (Y el checked estaria en "si") -->                  
+
+            <label>Femenino</label>
+            <input type="radio" name="genero"  value="femenino">
+
+            <label>Otro</label name=>
+            <input type="radio" name="genero"  value="otro">
+        </form>
+
+    </body>
+
+</html>

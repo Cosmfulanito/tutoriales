@@ -1,0 +1,161 @@
+/* 
+
+                                                                _____Propiedad text-align:____
+
+
+    text-align:             - Es la propiedad que nos permite alinear horizontalmente el "contenido" de una caja. Especificamente el contenido de un elemento de 
+                              bloque, siempre que el contenido NO TENGA ANCHO DECLARADO
+
+                            - Esta propiedad no funciona con elementod de linea, esto se debe a que tienen un ancho declarado y por ende no hay espacio por donde moverse 
+                                
+                            - De nuevo, solamente alinea el "contenido" de la caja. Para alinear una caja tengo que jugar con la propiedad "margin:" ya vista en
+                                apuntes antenriores
+
+                            - Acepta 4 posibles valores:
+                                    - left              Alinea el contenido a la izquierda (valor que suele venir por defecto)
+                                    - right             Alinea el contenido a la derecha.
+                                    - center            Alinea el contenido al centro
+                                    - justify           Alinea el contenido de forma justificada (no es recomendable usarlo). Básicamente se expande para abarcar todo el ancho de la pantalla. En el caso de un texto, crearia espacios en blanco entre las palabras para abarcar todo el ancho de la pantalla, haciendo que el texto se vea feo. Por ese motivo no es muy recomendable usarlo
+
+
+
+*/
+
+*{
+  box-sizing: border-box;                                 /* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+
+.caja-1,                                                  /* Esto es para darle el mismo estilo a todas las cajas, es sumamente estetico */
+.caja-2,
+.caja-3{
+  background-color: lightslategrey;
+  width: 300px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 50px 100px;
+  border: crimson 2px solid;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* Desplazamiento con ancho sin declarar: */
+.texto-1{
+    /* background-color: lightsalmon; */                                /* Tengo esta propiedad comentada para para que se pueda apreciar como se veria el texto "con" y "sin" una caja al rededor */
+
+    text-align: left;
+}
+
+.texto-2{
+    background-color: lightsalmon;
+
+    text-align: center;
+}
+
+.texto-3{
+    background-color: lightsalmon;
+
+    text-align: right;
+}
+
+
+
+
+
+
+/* Desplazamiento con ancho declarado (error comun): */
+.texto-4{                                                               
+    /* background-color: lightgreen; */                                 /* Tengo esta propiedad comentada para para que se pueda apreciar como se veria el texto "con" y "sin" una caja al rededor */                                   
+    width: 700px;
+
+    text-align: left;
+}
+
+.texto-5{
+    background-color: lightgreen;
+    width: 700px;
+
+    text-align: center;                                                 /* Por más que intente que el texto este en el centro de la pantalla, no es posible debido a que esta dentro de una caja con un máximo de 700 pixeles de ancho cuando mi pantalla tiene 1080 pixeles. Simplemente se centrara pero dentro de dicha caja */
+}
+
+.texto-6{
+    background-color: lightgreen;
+    width: 700px;
+
+    text-align: right;
+}
+
+
+
+
+
+
+/* RECORDAR: "text-align:" desplaza el contenido, no la caja: */
+.caja-1{
+    text-align: left;
+}
+
+.caja-2{
+    text-align: center;
+}
+
+.caja-3{
+    text-align: right;
+}
+
+
+
+
+
+/* "text-align:" no funciona con elementos de linea: */
+.link-1{
+    background-color: lightpink;
+
+    text-align: center;
+}
+
+.link-2{
+    background-color: lightpink;
+
+    display: block;                                                         /* Ahora el Link deja de ser un elemento de "Linea" y se convierte en un elemento de "Bloque". Gracias a esto ahora tiene más espacio por donde desplazarce */
+    text-align: center;
+}
+
+
+
+
+
+/* Desplazar una imagen: */
+.imagen-1{
+    text-align: center;                                                     /* Por regla no se puede deplazar una imagen con "text-align" por más que lo intente, por el metodo escrito en esta linea de codigo es inutil. A no ser que utilice los truquitos que estan abajo */
+}
+
+.imagen-2{                                                                  /* Para solucionar este problema podemos convertir la imagen en un elemento de "Bloque". Es el mismo razonamiento que hicimos con el link de arriba, peeeero al ser una imagen estamos obligados a utilizar "margin-left: auto;" y "margin-right: auto;" porque el "text-align" no funciona en imagenes. */
+    display: block;                                                         
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.caja-de-imagen{                                                            /* Otro metodo es poner la imagen dentro de una caja y luego centar el contenido que esta tenga adentro. RECORDAR en este caso, esto va a funcionar siempre y cuando la imagen venga por defecto y no sea un "display: "boque"" como en el ejemplo anterior. Debido a que si la imagen es un elemento de bloque, va a tratar de ocupar todo el ancho posible y por ende este metodo no va a funcionar  */
+    background-color: lightgreen;
+
+    text-align: center;
+}
+
+
+
+
+
+
+

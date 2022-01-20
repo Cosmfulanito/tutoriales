@@ -1,0 +1,38 @@
+/*
+
+																_____Flexbox: introducción_____
+
+
+
+ - Es un modelo de layout (diseño) que permiten que las cajas sean flexibles, es un valor de la propiedad display
+ 
+
+ - Variantes: 				- display: flex 					Para que el contenedor sea de bloque
+   
+   							- display: inline-flex				Para que el contenedor sea de linea
+
+
+ - Funciona en conjunto con el pádre (flex-container) y al menos un hijo (flex-item)					   
+
+
+ - Las cajas flexibles son los items (cajas hijas, texto, etc), el contenedor es el contexto al que pertenecenm los items
+
+
+ - Ejes:		- El flex-container tiene dos ejes con los cuales vamos ordenas a los flex-items
+
+					- main axis:		Eje horizontal, va de izquierda a derecha. Este es el eje principal.
+										Se divide en dos partes: 
+											- main start: 	Principio del eje (lado izquierdo) 
+											- main end: 	Final del eje (lado derecho) 
+
+					- cross axis: 		Eje vertical, va de arriba a abajo. Este es el eje secundario
+										Se divide en dos partes:
+											- cross start:	Princio del eje (lado superior)
+											- cross end:	Final del eje (lado inferior)	
+					
+
+				 	- Recordar que el "main axis" puede estar vertical o horizontalmente. Generalmente esta de forma horizontal pero eso puede cambiar. Si eso ocurre, 
+				      el "cross axis" pasara de ser vertical a horizontal
+*/
+
+

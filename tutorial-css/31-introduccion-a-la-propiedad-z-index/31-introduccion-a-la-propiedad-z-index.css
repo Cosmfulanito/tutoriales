@@ -1,0 +1,108 @@
+/* 
+
+													_____Introducción a la propiedad: "z-index:"_____
+
+
+
+	z-index:				- Es la propiedad que nos permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.
+							  Para poder utilizar esta propiedad se necesita que el elemento seleccionado este "posicionado".
+							
+							- Como valor lleva un numero. Mientras más grande sea el numero más por arriba en el eje X se posicionara. 
+							  Ej: Una caja con un "z-index: 5," estara arriba de una caja con un "z-index: 2;"  
+
+						    - Los elementos que tengan el mismo valor de z-index: se posicionaran segun el orden del de como fueron declarados en el .html. Dejando 
+							  por arriba los elementos que fueron declarados a lo ultimo.
+							  
+							- Tiene como valor predeterminado "z-index: auto,". Que seria equivalente a "0" pero no funciona igual. Recordar esto. 
+
+							- Esta propiedad apila a los hijos por arriba de de los padres automaticamene, pero se encuentran problemas  cuando se quiere apilar un 
+							  padre por encima de un hijo. Suena extraño pero un "padre" no se puede poner por delante de un "hijo", pero un "hijo" si se puede poner 
+							  por atras de un "padre", siempre y cuando el padre tenga como valor "z-index: auto,", eso quiere decir que el hijo debera tener como 
+							  valor un numero negativo para poder apilarlo por detras de su padre.
+							  Ej: "z-index: 1,"  
+
+							- TIP: En la practica no conviene ponerle a las cajas numeros consecutivos. (Ej: 1,2,3,4 etc,) debido a que puede venir un futuro 
+							  desarrollador y querer poner una caja entre medio de esas. Obviamente si quiere poner una nueva caja que este entre la caja 3 y 4, 
+							  debera convertir la antigua caja 3 en 4 y a la antigua caja 4 en 5 y así seguidamente para poder hacer espacio. Esto es inviable 
+							  Para solucionar este problema se aconseja poner como "z-index:" valores con mucho margen de distancia (Ej: 100, 200, 300, 400 etc). De 
+							  esta manera si quiero poner una nueva caja entre medio de los valores 300 y 400, seria tan simple como darle un valor de 350 a la nueva
+							  caja.
+							
+					
+
+*/
+
+
+*{								/* Pongo esta propidad para acordarme de esta buena practica */
+box-sizing: border-box;					
+}
+
+
+
+/* Posicionamiento de las cajas: */
+/* En este ejercio vamos a crear 4 cajas y vamos a alterar su orden de apilamniento mediante el "z-index:"  */
+.caja{															/* Este propiedades son parav darle las mismas medidadas a todas las cajas */
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	position: absolute;
+}
+
+.caja-1{
+	background-color: lightsalmon;
+
+	z-index: 2;
+	top: 310px;
+	left: 10px;
+}
+
+.caja-2{
+	background-color: lightgreen;
+
+	z-index: 4;
+	top: 510px;
+	left: 30px;
+}
+
+.caja-3{
+	background-color: lightblue;
+
+	z-index: 1;
+	top: 210px;
+}
+
+.caja-4{
+	background-color: lightgoldenrodyellow;
+
+	z-index: 3;
+	top: 410px;
+	left: 20px;
+}
+
+	
+
+
+
+
+/* Posicionar una caja "hija" por detras de su caja "padre": */
+.caja-padre{
+	background-color: #aaa;
+	width: 550px;
+	height: 550px;
+	text-align: center;
+	position: relative;
+
+	z-index: auto;																/* Es el valor que viene por defecto, ponerlo no cambia en nada. Solamente lo puse a modo de ejemplo */
+}
+
+.caja-hija{
+	background-color: lightsalmon;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	border: 2px solid #333;
+	position: relative;
+	left: 485px;
+	
+	z-index: -1;																/* Para que una caja hija se posicione por detras de una caja padre, esta debe tener un valor menor al de su padre (recordar que para que esto funcione el valor de del padre tiene que estar en "z-index: auto" que es equivalente a "0"). Eso quire decir que la etiqueta hija tiene que tener un z-index: con valor negativo en este caso "z-index: -1;" */
+}

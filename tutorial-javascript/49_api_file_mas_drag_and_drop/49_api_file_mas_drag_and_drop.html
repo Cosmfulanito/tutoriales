@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Round">	 				<!-- Este link es el que me da acceso al icono sacado de "google icons" -->
+		<link rel="stylesheet" href="49_api_file_mas_drag_and_drop.css">
+		<title>API File + Drag & Drop</title>
+	</head>
+	<body>
+		<h1 class="title">API File + Drag & Drop</h1>
+
+		<form class="form" method="post" enctype="multipart/form-data">												<!-- Este atributo es necesario siempre y cuando vayamos a enviar datos multimedia -->			
+			<div>
+				<input class="hide" type="file" name="file" id="file" multiple>
+
+				<div id="drop-zone" class="drop-zone">					
+					<span class="material-icons-round fas fa-zone-upload">upload_file</span>						<!-- Este este es el icono de carga. Tener en cuenta de que este es un icono del tipo "fuente". Osea que es básicamente una letra con forma de icono, y por ende todos los cambios de estilo que le hagamos, se lo tendremos que hacer como si fuera un texto más del monton.   No confundir con los iconos .svg -->
+					<p class="drop-zone__text">Arrastra un archivo aquí o haz click aquí para caragar un archivo</p>
+				</div>
+				<input type="submit" id="upload-button" class="form__button" value="Upload">
+			</div>
+		</form>
+
+
+
+		<script src="49_api_file_mas_drag_and_drop.js"></script>
+	</body>
+</html>

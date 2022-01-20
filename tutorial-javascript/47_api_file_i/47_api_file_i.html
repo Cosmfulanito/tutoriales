@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="47_api_file_i.css">
+		<title>API File</title>
+	</head>
+	<body>
+		<h1>API File</h1>																																			<br><br>
+
+		<p>Seleccionar un archivo de la carpeta de archivos de este mismo tutorial.</p>																				<br>
+
+		<label for="file-text"> Seleccionar un archivo del tipo .txt:</label>
+		<input type="file" id="file-text">	 
+		 																						<!-- Con este tipo de <input> el usuario puede subir sus propios archivos -->   <br><br>
+		<label for="file-text"> Seleccionar un archivo del tipo imagen:</label>
+		<input type="file" id="file-img">																															<br><br>
+
+		<label for="file-img-multiple">Seleccionar multiples archivos del tipo imagen:</label>
+		<input type="file" id="file-img-multiple" multiple>										<!-- Con el atributo "multiple" puedo subir multiples archivos al mismo tiempo -->
+
+		<p id="text" class="text"></p>															<!-- Como ya vimos en el tutorial de HTML, este tipo de <input> sirve para enviar archivos al servidor -->
+		<img id="img">
+
+		<div id="images"></div>
+		
+		<script src="47_api_file_i.js"></script>
+	</body>
+</html>

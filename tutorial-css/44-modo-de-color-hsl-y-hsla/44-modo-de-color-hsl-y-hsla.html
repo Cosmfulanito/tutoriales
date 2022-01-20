@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/tutorial-css/44-modo-de-color-hsl-y-hsla/normalize.css">								<!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+		<link rel="stylesheet" href="/tutorial-css/44-modo-de-color-hsl-y-hsla/44-modo-de-color-hsl-y-hsla-dist.css">		<!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+		<title>Modo de color: HSL y HSLA</title>
+	</head>
+
+	<body>
+		<h1>Modo de color: HSL y HSLA</h1>																															<br><br>
+
+		<!-- Ejemplo del uso del modo de color HSL: -->
+		<h2>Ejemplo del uso del modo de color HSL:</h2>
+		<div class="caja caja-1">Palabra clave:<br>red</div>
+		<div class="caja caja-2">Modo RGB<br>rgb(255, 0, 0)</div>
+		<div class="caja caja-3">Modo HSL<br>hsl(0, 100%, 50%)</div>																								<br><br><br>
+
+
+
+		<!-- Distintos colores en HSL: -->
+		<h2>Distintos colores en HSL:</h2>
+		<div class="caja caja-4">Rojo<br>hsl(<u>0</u>, 100%, 50%)</div>
+		<div class="caja caja-5">Verde<br>hsl(<u>120</u>, 100%, 50%)</div>
+		<div class="caja caja-6">Azulz<br>hsl(<u>240</u>, 100%, 50%)</div>																									<br><br><br>
+		
+
+		
+		<!-- Saturation en HSL: (Escala de grises de un color) -->
+		<h2>Saturation en HSL: (Escala de grises de un color)</h2>
+		<div class="caja caja-7">Saturación al 0%<br>hsl(0, <u>0%</u>, 50%)</div>
+		<div class="caja caja-8">Saturación al 50%<br>hsl(0, <u>50%</u>, 50%)</div>
+		<div class="caja caja-9">Saturación al 100%<br>hsl(0, <u>100%</u>, 50%)</div>																				<br><br><br>
+
+
+
+		<!-- Lightness en HSL: (Luminacia de un color) -->
+		<h2>Lightness en HSL: (Luminacia de un color)</h2>
+		<div class="caja caja-10">Lightness al 4%<br>(Color oscuro)<br>hsl(0, 100%, <u>4%</u>)</div>
+		<div class="caja caja-11">Lightness al 50%<br>(Color puro)<br>hsl(0, 100%, <u>50%</u>)</div>
+		<div class="caja caja-12">Lightness al 96%<br>(Color iluminado)<br>hsl(0, 100%, <u>96%</u>)</div>
+
+
+
+		<!-- Transparencia en HSL: -->
+		<h2>Transparencia en HSL:</h2>
+		<div class="caja-padre">
+			<div class="caja caja-hija-sin-transparencia">Caja "sin" transparencia<br>Color coral<br>hsl(16, 100%, 66%)</div>
+			<div class="caja caja-hija-con-transparencia-1">Caja "con" transparencia:<br>Sintaxis N°1<br>hsla(16, 100%, 66%, 0.5)</div>
+			<div class="caja caja-hija-con-transparencia-2">Caja "con" transparencia:<br>Sintaxis N°2<br>hsl(16 100% 66% / 0.5)</div>
+		</div>
+
+
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!--
+
+                                                                    _____Etiqueta <audio>_____
+
+
+    <audio>                 Esta etiqueta como su nombre lo indica, sirve para reproducir contenido de audio. Esta va dentro de la etiqueta <picture>. Para funcionar necesita obligatoriamente el atributo src="" y controls
+    </audio>                    src=""          Aqui va la dirección del archivo de audio. Funciona de la misma manera que lo haría con una etiqueta <img>
+                                control         Es un atributo booleano obligatorio. Sirve para que se visualice el elemento de audio. De lo contrario no apareceria en la pagína
+                                autoplay        Es un atributo booleano. Sirve para que el elemento de audio se reproduzca automaticamente. Actualmente muchos navegadores reconocen que esto es molesto y por ende lo desactivan. Es posible que en mi navegador mientras estoy programando este atributo funcione correctamente, pero normalmente a un usuario no se reproduciria automaticamente el audio. A no ser que se use el atributo muted que esta más abajo
+                                muted           Es un atributo booleano. Sirve para que el reproductor este muteado por defecto. Es usado en conjunto con el atributo autoplay en páginas como Instagram, ya que en estas páginas se reproduce el video pero no el sonido, a no ser que el usuario lo active
+                                loop            Es un atributo booleano. Sirve para que el reproductor vuelva a inciar otra vez desde el comienzo el el archivo de audio cuando este llegue a su fin
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etiqueta &lt;audio&gt;</title>
+    </head>
+
+    <body>
+
+        <picture>
+            <audio src="/Tutorial-HTML/assets/audio/queen-dont-stop-me-now.mp3" controls autoplay muted></audio>
+        </picture>
+
+    </body>
+</html>
+

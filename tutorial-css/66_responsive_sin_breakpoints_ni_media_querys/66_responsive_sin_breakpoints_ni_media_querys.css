@@ -1,0 +1,103 @@
+/*
+
+													_____Responsive sin breakpoints ni media querys_____
+
+
+
+													
+ - Como practica vamos a hacer un sitio responsive sin breakpoints ni media querys
+   Objetivos: 		- Banner con unidades de viewport  
+					- Footer siempre abajo
+					- Responsive con flexbox
+					- Responsive con grid
+
+ - Para poder apreciarlo se aconseja cambiar las medidas del navegador 
+
+*/
+
+
+
+body{
+	margin: 0;
+	color: #eee;
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a1957);
+	background-repeat: no-repeat;
+
+	min-height: 100vh;										/* Como es muy poco contenido, el "body" abarca solamente una pequeña fraccion del tamaño de la pantalla. Esto se soluciona diciendole al navegador que el "body" tenga como altura minima el tamaño nuestra pantalla. Este problema se nota con el fondo violeta que solamente llega hasta el primer tercio de la pantala en vez de abarcarlo todo. Ademas esto genera problemas con el "footer" ya que para el, el fondo de la pantalla es solamente el primer tercio de esta */
+	display: flex;											/* Con esto puedo poner el "footer" al fondo de la pantalla */
+	flex-direction: column;									/* Con esto puedo poner el "footer" al fondo de la pantalla */
+}
+
+
+
+
+
+
+
+
+/* Hacer que el tamaño del "banner" se adapte segun nuestro dipositivo: */
+/* El baner puede tener un gran tamaño en una monitor de PC, pero ese tamaño en una pantalla de un dispositivo movil se vuelve exagerado y por ende hay que hacer 
+   que se achique cuando estamos viendo esta página en un celular */
+.banner{
+	background-color: royalblue;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+
+	padding: 10vmin;					/* Le estamos diciendo que mida un 10% del lado más pequeño de la pantalla. Ya sea vertical o horizontalmente */
+}
+
+
+
+
+
+
+
+
+/*Poner el "footer" abajo de la pantalla: */
+.footer{
+	background-color: red;
+	padding: 1em;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	
+	margin-top: auto;										/* Con esto puedo poner el "footer" al fondo de la pantalla */
+}
+
+
+
+
+
+
+
+/* Responsive con flexbox */
+/* Esta comentado para que no tenga problemas con el grid. Para usar uno hay que comentar el otro */
+/* .flexbox{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flexbox-item{
+	margin: 2rem;
+	min-width: 320px;										Esta en 320px porque esta es la resolucion más pegueña que existe en movil. Si buen esta medida va aumentando a medida que salen nuevos dispositivos moviles, esta página web va a funcionar correctamente incluso en los celulares más viejos
+
+	flex: 1 1 200px;
+} */
+
+
+
+
+
+
+
+/* Responsive con grid: */
+/* Esta comentado para que no tenga problemas con el flexbox. Para usar uno hay que comentar el otro */
+.grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));		/* Esta en 320px porque esta es la resolucion más pegueña que existe en movil. Si buen esta medida va aumentando a medida que salen nuevos dispositivos moviles, esta página web va a funcionar correctamente incluso en los celulares más viejos */
+	column-gap: 2rem;
+	row-gap: 2rem;
+	padding: 1rem;
+}

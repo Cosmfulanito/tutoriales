@@ -1,0 +1,85 @@
+/*
+
+																_____Responsive Web Design_____
+
+
+
+
+ _____¿Que es el "Responsive Web Design"?_____ 
+   
+ -  No es un estandar, no es CSS, es un conjunto de patrones de diseño.
+   Su objetivo es que cualquier página se vea bien independientemente del dispositivo, ajustandose a sus medidas
+
+ - Los frameworks (bootstrap, foundation, materialize, etc), pero es un error utilizarlos para evitar aprender lo que hay detrás
+
+ - Se basa en 3 conceptos fundamentales:
+	1- Columnas fluidas
+	2- Imágenes flexibles. 	Ej: max-width 100% 
+	3- Media querys
+	A día de hoy el números de retos crecio notablemente y se hace "imprensidible" el uso de javascript. 
+
+
+
+
+
+
+
+
+ _____Columnas fluidas:_____  	
+
+ - Para conseguir un sistema de columnas o de cajas fluidas, es tan sencillo como aplicar anchos den procentaje 
+
+ - NO hay que asignar TODOS los anchos en porcentajes, solo se le aplica a los elementos que necesiten cambiar su tamaño
+
+
+
+
+
+
+
+
+ _____Media Querys - Concepto_____ 
+
+ - Son condiciones para que el navegador sepa cómo actuar en función de la condición
+ 
+
+ - Hay 4 tipos de "Media Querys"
+ 	- screen: 			Destinado principalmente a las pantallas. Es el principal para diseño web y el que veremos en este curso
+	- all: 				Apto para todos los dispositivos 
+	- print: 			Destinado a material impreso y visualización de modo de vista previa de impreción
+	- speech: 			Destinado a sintetizadores de voz
+
+
+ - Sintaxis: 
+    - @media "tipo de media" and|or (condición)	
+
+
+ - Las condiciones más utilizadas son "min-width", "max-widht" y orientation 	
+
+   Ej: 	- @media screen and (min-widht: 360px)										Le estamos diciendo que es para un medio del tipo "pantalla" y con un "ancho minimo
+																					de 360px" 										
+			
+		- @media screen and (max-width: 1024px) and (orientation: landscape)		Le estamos diciendo que es para una "pantalla" con un "ancho maximo de 1024px" "y" 
+		                                                                            con la orientación en "landscape" (con el movil en horizontal o en un monitor)														orizontal)
+		
+		- @media screen and (max-widht: 480px) or (orientation: portrait)			Le estamos diciendo que es para una "pantalla" con "ancho minimo de 480px" "o" que
+																					este en orientación "portrair" (en vertical como en un movil) 
+
+
+
+
+
+
+
+ _____Metodologías_____																			
+
+ - Movile-first: 	 	Consiste en hacer primero el diseño movil y luego ir subiendo en tamaño. 
+                    		Osea: 		Movil => Tablet => Monitor de PC => Televisor => Monitor ultrawide => etc
+
+ - Desktop-first:		Consiste en hacer primero el diseño de escritorio e ir bajando de tamaño			
+                        	Osea: 		Television => Monitor de PC => Tablet => Movil 
+
+ - Content-first: 		Consiste en saber primero todo el contenido de la web y después se hace el diseño  						
+
+
+*/

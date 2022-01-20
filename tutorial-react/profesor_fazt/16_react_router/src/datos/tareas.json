@@ -1,0 +1,24 @@
+
+
+[
+	{
+		"id": 0,								
+		"title": "Tarea N°1",
+		"description": "Estudiar programación",
+		"done": false
+	},
+	{
+		"id": 1,								
+		"title": "Tarea N°2",
+		"description": "Hacer los mandados",
+		"done": true
+	},
+	{
+		"id": 2,								
+		"title": "Tarea N°3",
+		"description": "Hacer ejercicio",
+		"done": false
+	}
+]
+
+

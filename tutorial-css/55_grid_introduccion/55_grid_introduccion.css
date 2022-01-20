@@ -1,0 +1,267 @@
+/*
+
+															_____Grid: Introducción_____
+
+
+
+
+
+ - Es un modelo de "layout" (diseño) que permite construir grillas o cuadriculas dinámicas. 
+   Es un valor de la propiedad "display:" al ifual que "flexbox"															
+
+ - Al igual que "flexbox", tenemos "display: gid" (para que se comporte como elemento de bloque) y "display: inline-grid" (para que se comporte como un elemento de 
+   linea)
+
+ - Se necesita de un contenedor (grid-container) y al menos un hijo (grid-item)
+ 
+ - Las celdas son los items, el contenedor es el contexto donde pertenecen los items
+
+
+
+ - Terminología:
+	- Grid column:		Es cada columna de nuestra cuadrícula
+	- Grid row:			Es cada fila de nuestra cuadrícula
+	- Grid cell:		Es cada celda de nuestra cuadricula 
+	- Grid gap:			Es la separación entre celdas
+	- Grid line:		Existen "columns lines" y "row lines", son las líneas que delimitan cada columna/fila respectivamente
+
+
+	
+- Ventajas:
+	- En Grid cada celda es dinamica. Cuando cambiamos el tamaño de una celda, el resto de la cuadricula se adapta automaticamente
+	- Podemos decir donde empieza cada celda y donde acaba, tamto en columna como en fila. Por ejemplo, podemos decir que comience en la linea 1 termine en la 
+	  linea 3, tanto en filas como en columnas 
+	- Tiene soporte total en todos los navegadores, salvo por Internet explorer. Pero ese navegador es una pija que ya fue reemplazado por EDGE y por ende va adejar 
+	  de recibir actualizacines de cualquier tipo de herramienta nueva
+	
+
+*/
+
+
+
+
+
+
+
+/* Esto es sumamente estetico, la mayor parte de este codigo lo puso el mismo Dorian  */
+*{												/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	background-image: radial-gradient(circle, #b94bf8, #3a2957);
+	/* background-repeat: no-repeat; */
+	margin: 0;
+	color: #eee;
+	/* height: 100vh; */
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+h2{
+	margin-top: 150px;
+}
+
+h3{
+	margin-top: 50px;
+}
+
+section{										/* Este section lo puse para que no de de errores con el titulo, ya las declaraciones que tiene adentro pertenecen Dorian las puso en el body  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Caja de referencia: */
+.grid-item1{
+	border: 1px solid;					
+	display: flex;								/* Esto me centra las letras */
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Caja con "display: grid"  */
+.grid-container2{
+	display: grid;												/* Visualmente no ocurre nada. Esto ocurre porque por defecto "display: grid" nos da una sola columna. Si no le dicimos cuantas columnas queremos, el determina que solo queremos una*/
+}
+
+.grid-item2{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Establecer el numero y ancho de las columnas con "grid-template-columns:" */
+
+/* mismo ancho: */
+.grid-container3{
+	display: grid;
+
+	grid-template-columns: 100px 100px 100px 100px;				/* Establecemos la cantidad de columas con sus respectivas medidas. Esn este caso va a haber 4 columnas de 100 pixeles de ancho cada una */
+}
+
+.grid-item3{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+/* Diferen ancho: */
+.grid-container4{
+	display: grid;
+
+	grid-template-columns: 100px 50px 150px 10px;				/* En este caso son las mismas 4 columas, pero ahora tienen diferente ancho */
+}
+
+.grid-item4{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Establecer la altura de las filas con "grid-template-rows:" */
+.grid-container5{
+	display: grid;
+
+				
+	grid-template-rows: 200px 200px;						/* Si bien la sintaxis es la misma que con las columnas. Aquí solamente determinanos el tamaño de las filas, no su cantidad */	
+}	
+
+.grid-item5{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Convinar el numero y ancho de las columnas con el alto de las filas: */
+.grid-container6{
+	display: grid;
+
+	grid-template-columns: 100px 50px 150px 10px;					/*-----*/
+	grid-template-rows: 200px 120px 50px;							/*-----*/	
+}
+
+.grid-item6{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Establecer el ancho de las celdas con el shorthand "gap": */
+.grid-container7{
+	display: grid;
+	grid-template-columns: 100px 50px 150px 10px;
+	grid-template-rows: 200px 120px 50px;	
+	
+	column-gap: 20px;												
+	row-gap: 50px 													
+}
+
+.grid-item7{
+	border: 1px solid;					
+	display: flex;						
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+
+

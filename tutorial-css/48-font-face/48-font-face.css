@@ -1,0 +1,92 @@
+/* 
+
+																_____Cómo usar @font-face_____
+
+
+
+ 	Páginas para descargar fuentes: 																
+		https://www.1001fonts.com/
+		https://www.dafont.com/es/
+
+	Página para convertir un formato de fuente a otro
+		https://convertio.co/es/ttf-otf/
+
+	Extención de Chrome para saber que fuente es la que estamos viendo en una página de internet
+		https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=es 
+	
+
+
+
+ - Formatos para fuentes:																
+
+	.ttf						"True Type Font" 			- Fue el primer formato estándar. Al ser el más antiguo, es el que más probable con el que me pueda cruzar
+
+	.oft 						"Open True Type Font"		- Facilita o implementa la cración de las curvas. Osea, se creo para poder hacer fuentes más redondeadas 
+
+	.woff / .woff2				"Web Open Font Format" 		- Es un formato mucho más ligero y mejora el rendimiento.Funciona a travéz de metadatos. WOFF tiene soporte 
+	 														  total en todos los navegadores, mientras WOFF2 no funciona en Internet explorer.  
+
+	.svg 						"Scalabe Vector Graphics"	- Vasicamente son las imagenes vectoriales que ya conocemos pero en este caso funcionan a modo de fuente. 
+															  Se utilizan para efectos y animaciones sobre el texto. 
+															- No es recomendable usarlo en un texto genérico en la web ya que tiene muchos problemas. Ya que al ser SVG 
+															  se trata más de una imagen que de una fuente
+
+	.eot						"Embedded Open Type"		- Primer formato digital propuesto para sitios WEB, es muy comprimido. Se quedó como una propuesta ya que 
+															  no paso a ser estándar.  
+
+
+
+
+
+
+ - Regla @font-face:			- Básicamente es la forma de utilizar fuentes quefueron previamente descargadas. Ya que la otra opción es traerlas desde un servidor 
+ 								  remoto como se vio anteriormente con Google Fonts.   	
+								  Cuando usamos usamos Google Fonts ocurre esto mismo por detrás sin que lo notemos
+
+								- Recordar descargar previamente esas fuentes y guardarlas en la una carpeta "fonts". Dicha carpeta debe estar dentro de la carpeta
+								  "assets"
+
+								- Su sintaxis es:
+
+									@font-face{
+
+										font-family: 		Nombre de la familia de esta nueva fuente, se lo damos nosotros.
+
+										src: 				Aquí pondremos los dos primeros tipos de valores, el tercero no es tan suado:
+																- local() 	Pondremos el nombre de la fuente para buscarla en el ordenador del usuario, de esa forma 
+																	    	podremos evitar descaragarla.   
+																- url()		Si no existe esa fuente procederemos a descargarla.
+
+																- format()	Este es otro tipo de valor menos usado. Este valor o pasaremos de forma opcional si 
+																			queremos ser más especificos con la fuente vamos a buscar o descargar. Si no la ponemos 
+																			agarrara el primer formato soportado, si lo ponemos sólo usará el que le hemos establecido,
+																					y si no lo encuentra no hara nada.
+
+																- Hay más valores opcionales como:					
+																	font-style
+																	font-weight
+																	font-display (experimental)
+									}
+
+									- Se recomienda declarar todo esto al principio del archivo .css
+
+									- Recordar que hacer esto deja la fuente lista y preparada para usar como si fuera cualquier otra fuente
+
+*/										
+
+
+
+
+
+@font-face {										/* Ahora tenemos esta fuente descargada y lista para usar cuando queramos como si fuera cualquier otra fuente */
+	font-family: nikin;
+	src: url("assets/fonts/Bellerose.ttf");
+}
+
+
+body{
+	font-family: nikin;								/* Como se puede apreciar, aplique esta fuente como cualquier otra */
+}
+
+
+

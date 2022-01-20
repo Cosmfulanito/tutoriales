@@ -1,0 +1,49 @@
+/* 
+
+																_____Propiedad: "position: fixed;"_____
+
+
+
+	position: fixed;			- El elemento perderá sus medidas y su espacio reservado. Si lo movemos usara el elemento HTML de referencia, y además se quedara 
+								  fijo en esa posición aunque hagamos scroll. 																
+             
+								- Este valor ya no se usa tanto actualmente ya que fue reemplazado por "position: sticky;". 
+								  A pesar de esto a veces estamos obligados a utilizar el valor "fixed" debido a que "sticky" no es soportado por los navegadores 
+								  más antiguos. 
+
+*/
+
+
+
+
+
+
+*{
+	box-sizing: border-box;								/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+
+
+
+
+
+/* El objetivo de este apunte es dejar fijado una caja en la parte superior de la pantalla que haria de "menu". Dicha caja va a estar en en la parte superior
+   de la pantalla a pesar de que hagamos scroll */
+
+
+.header{
+	text-align: center;
+	padding: 25px 0;
+	background-color: lightsalmon;
+	color: blue;
+	
+	position: fixed;									/* Ahora el header va a estar en la parte superior de la pantalla y no se va a mover de ahí */
+	top: 0;
+	width: 100%;
+	
+}
+
+
+body{													/* Parte del contenido de la página web va a ser tapado por la caja que hace de menu. Esto se debe a que dicha caja al estar posicionada con un "fixed" pierde su espacio reservado, debido a esto por logica en ese espacio no hay nada (por más que se muestre la caja) y es ocupado por el contenido que luego es tapado por la caja. Para solucionar esto, simplemento le pongo un "padding" de unos cuantos pixeles al body para bajarlo un poco   */
+	padding-top: 70px;
+}

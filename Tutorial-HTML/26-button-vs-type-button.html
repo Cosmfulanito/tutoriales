@@ -1,0 +1,42 @@
+<!--
+
+                                                            _____<button> vs type="button"_____
+
+
+ - La diferencia entre hacer un boton con <button> y otro con <input type="button"> es que el primero si manda la información y reinicia la página
+                                                            
+ - El <input type="button"> es basicamente para que haga una operacion en JavaScript, pero no va a servir para enviar un formulario
+ 
+ - La unica forma de enviar formularios y reiniciar una página con un <input> es utilizando atributo type="submit" ya que esta hecho para eso
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;button&gt; vs type="button"</title>
+    </head>
+
+    <body>
+        <form>
+
+            <input>                                                                 <!-- Este es el <input> de prueba, con el sabremos si los botones funcionan y mandan la información escrita -->
+
+            <!-- Botones type="button"-->
+            <input type="button">                                                   <!-- Este es un boton type="button" cuadrado y sin nada escrito. No va a enviar información ni tampoco reinicia la página -->
+            <input type="button" value="Enviar (type=&quot;button&quot;)">          <!-- Con value="" le podemos dar nombre al boton. Tampoco va a enviar información ni tampoco reinicia la página -->
+
+            <!-- Boton type="submit" -->                                            
+            <input type="submit" value="Enviar (type=&quot;value&quot;)">           <!-- type="submit" si esta hecho para enviar formularios y reiniciar la página como <button> -->
+
+            <!-- Boton <button> -->                                                 
+            <button>Enviar (&lt;button&gt;)</button>                                <!-- Boton que cumple su función de enviar información y reinciciar una página -->
+
+        </form>
+    </body>
+
+</html>

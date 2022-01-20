@@ -1,0 +1,117 @@
+/*
+
+																_____Videos responsive_____
+
+
+ - Un promblema de los videos es que cuesta muchisimo que se vuelvan "responsive" y que escalen correctamente con el ancho de la pantalla del dispositivo
+ 
+
+ - Videos responsive: 
+	- La forma más comun de de hacer un "video responsive" es haciendo un "padding-button: 56.25%"
+	- Este numero es el resultado de la operación "9 / 16", es decir, un formato 16:9. Esto da como resultado 0.5625, si lo multiplicamos por 100 da como resultado "56.25"  
+
+
+
+
+
+
+
+
+ - En este apunte habra 3 videos distintos: 
+	- Un video sin CSS
+	- Un video con diseño responsive hecho por mi (obviamente sale mal)
+	- Un video con la forma correcta de volverlo responsive 
+
+ - En este caso usamos una etiqueta <iframe> pero es lo mismo que poner un <video>
+	
+
+
+
+
+ - Tambien esta la opción de hacerlo con "grid". Pero no lo haremos en este apunte
+   Si quisieramos hacerlo, tendriamos que hacer una cuadricula de 16 * 9 y funcionaria exactamente igual
+   El problema es que con navegadores antiguos, grid no funciona
+*/
+
+
+
+
+
+
+
+/* Esto es sumamente estetico */
+body{
+	font-family: sans-serif;
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+h2{
+	margin-top: 70px;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Intento de video responsive hecho por mí: (Sale mal) */
+.videopropio{
+	width: 90%;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Video responsive: (hecho correctamente) */
+.container{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: red;
+	min-width: 320px;								/* Este es el ancho mínimo. Ponemos 320px porque este el es ancho minimo de los celulares actualmente. A medida que pase el tiempo este ancho va a ser más grande, pero sigue siendo conveniente poner este ancho porque nos aseguramos de que esta página se vea bien incluso en los dispositivos más viejos */
+	max-width: 1400px;								/* El ancho máximo ya es cosa nuestra. Este numero esta forma arbitraria ya que puede haber pantallas con esta resolución */
+}
+
+.video{
+	height: 0;
+	padding-bottom: 56.25%;							/* El motivo del por que de este numero esta arriba en el apunte */
+	position: relative;
+}
+
+.iframe{
+	position: absolute;								/* Cuando ponemos este valor. La caja pierde sus dimenciones */
+	width: 100%;
+	height: 100%;
+}
+
+
+/* - Usamos 3 cajas, una hija de la otra. En orden seria: primer <div> => segundo <div> =>  <iframe>
+   - El primer <div> tiene un ancho del 80% en relacion al ancho de nuestra pantalla
+   - El segundo <div> le tiene un padding-botton del 56.25%. Esto hace que esta segunda caja tenga  un ancho del 80% de la pantalla (heredado de su padre) y una 
+     altura del 56.25% relativo a ese ancho. Esto hace que la segunda caja tenga una relacion altura/ancho del 16:9 (al igual que los videos) 
+   - El <iframe>, al quitarle las dimenciones toma el tamaño de su padre. Osea, una proporción de 19:6. Que a su vez tiene un ancho del 80%  en relacion al ancho 
+     de la pantalla de nuestro dispositivo 
+   - Conclución: Hay 3 cajas porque la primera da el ancho. La segunda da la altura. Y la tercera que es el <iframe>, quien es el que contiene el video, no tiene 
+     dimenciones pero hereda las de su padre y abuelo */
+   
