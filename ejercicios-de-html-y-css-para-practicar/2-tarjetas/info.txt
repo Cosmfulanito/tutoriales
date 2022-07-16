@@ -1,0 +1,50 @@
+
+
+- Crear una página con titulo y 4 tarjetas tal cual esta en el video:
+  https://www.youtube.com/watch?v=n826Dnwfa-4&list=PLROIqh_5RZeBgvaU8yP883WJDHZkMNU9o&index=2
+
+
+
+- El CCS se hara con los siguientes valores:
+
+	Colores
+	Tarjetas
+		Red: hsl(0, 78%, 62%)
+		Cyan: hsl(180, 62%, 55%)
+		Orange: hsl(34, 97%, 64%)
+		Blue: hsl(212, 86%, 64%)
+	Sombra
+		Dark Blue: hsl(240, 25%, 50%) al 20% de opacidad;
+	Texto
+		Grey: hsl(229, 6%, 66%)
+	Fondo de la tarjeta y del background
+		White: hsl(0, 0%, 93%)
+	Fuente de la página
+	https://fonts.google.com/specimen/Poppins
+	Estilos 200, 400 y 600
+
+
+
+
+ - Texto:
+
+		Reliable, efficient delivery
+		Powered by Technology 
+		Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful
+
+		Team Builder
+		Scans our talent network to create the optimal team for your project
+
+		Supervisor
+		Monitors activity to identify project roadblocks
+
+		Karma
+		Regularly evaluates our talent to ensure quality
+
+
+		Supervisor
+		Uses data from past projects to provide better delivery estimates
+
+
+
+

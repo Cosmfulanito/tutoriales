@@ -1,0 +1,161 @@
+*{
+	box-sizing: border-box;
+}
+
+
+.body {
+	background-color: hsl(0, 0%, 90%);
+	font-family: 'Karla', sans-serif;
+}
+
+
+
+.background{
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	
+	height: 100vh;
+	width: 100vw;
+}
+
+.image-bg{
+	position: absolute;
+}
+
+.image-bg-top{
+	top: -75px;
+	left: -150px;
+}
+
+.image-bg-botton{
+	bottom: -150px;
+	right: 0;
+}
+
+
+
+
+.title-header{
+	position: relative;
+	top: 90px;
+	left: 120px;
+	display: inline-block;
+	width: 420px;
+	margin-bottom: 200px;
+}
+
+.title{
+	font-size: 3rem;
+	color: hsl(300, 43%, 22%);
+	
+}
+
+.title-text{
+	font-weight: bolder;
+	color: hsl(303, 10%, 53%);
+}
+
+
+
+
+.qualifications{
+	position: relative;
+	left: 463px;
+	top: 80px;
+	display: inline-block;
+}
+
+.qualifications-box{
+	height: 60px;
+	width: 430px;
+	margin-bottom: 14px;
+	padding-left: 35px;
+	padding-top: 8px;
+	border-radius: 8px;
+	background-color: hsl(300, 24%, 96%);
+}
+
+.qb2{
+	position: relative;
+	left: 26px;
+}
+.qb3{
+	position: relative;
+	left: 52px;
+}
+
+.star{
+	margin-right: 5px;
+}
+
+.qualifications-text{
+	position: relative;
+	top: -3px;
+	left: 25px;
+	display: inline-block;
+}
+
+.cards-set{
+	position: relative;
+	top: -50px;
+	left: 120px;
+}
+
+.card{
+	display: inline-block;
+	width: 380px;
+	height: 200px;
+	margin-right: 50px;
+	border-radius: 10px;
+	background-color: hsl(300, 43%, 22%);
+}
+
+
+.circle{
+	display: inline-block;
+	font-size: 0;										/* Hay un margen que sale de la parte inferior de la imagen deformando el circulo. Esto se soluciona poniendo font-size: 0; */
+	margin-left: 35px;
+	overflow: hidden;
+	border-radius: 50px;
+}
+
+.user-image{
+	width: 50px;
+}
+
+
+.card-name{
+	position: relative;
+	top: -10px;
+	left: 20px;
+	display: inline-block;
+	font-size: 1rem;
+	padding-top: 30px;
+	color: hsl(300, 24%, 96%);
+	line-height: 1.4;
+}
+
+.verified{
+	color: hsl(333, 80%, 67%);
+}
+
+.card-text{
+	position: relative;
+	top: -20px;
+	width: 310px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+	color: hsl(300, 24%, 96%);
+}
+
+.card-2{
+	position: relative;
+	top: 45px;
+}
+
+.card-3{
+	position: relative;
+	top: 90px;
+}

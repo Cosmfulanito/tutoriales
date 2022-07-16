@@ -1,0 +1,54 @@
+
+
+- Hacer una página web identica a la de la practica del sigiente video:
+  https://www.youtube.com/watch?v=y2M6-8gEXII&list=PLROIqh_5RZeBgvaU8yP883WJDHZkMNU9o&index=5	
+
+
+
+
+
+
+- Valores de referencia:
+
+  - Texto: 
+	- 10,000+ of our users love our products.
+
+	- We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services
+
+	- Rated 5 Stars in Reviews
+
+	- Rated 5 Stars in Report Guru
+
+	- Rated 5 Stars in BestTech
+
+	- Verified Buyer
+
+	- Colton Smith
+
+	- “ We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! ”
+
+    - Irene Roberts
+
+	- “ Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery.”
+
+    - Anne Wallace
+
+	- “ Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone! ” 
+
+
+
+  - Colores
+	dark-purple: hsl(300, 43%, 22%)
+	pink:hsl(333, 80%, 67%)
+	purple: hsl(303, 10%, 53%)
+	soft-white: hsl(300, 24%, 96%)
+	background-color: hsl(0, 0%, 90%);
+
+  - Fuente de la página
+	https://fonts.google.com/specimen/Karla
+	Estilos 200 y 400
+
+
+  body {
+  background-color: hsl(0, 0%, 90%);
+  }

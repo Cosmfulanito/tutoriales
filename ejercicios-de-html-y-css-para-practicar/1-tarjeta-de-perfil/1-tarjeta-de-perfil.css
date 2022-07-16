@@ -1,0 +1,121 @@
+*{
+	box-sizing: border-box;						/* Pongo est6a propiedad para normalizar esta buena practica */
+}
+
+
+
+
+
+
+.body{
+	font-family: sans-serif;
+	background-color: hsl(185, 75%, 39%);
+}
+
+
+.light{
+	color: hsl(227, 10%, 46%);
+}
+
+
+.fondo{
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	
+	height: 100vh;
+	width: 100vw;
+}
+
+.circulo-superior{
+	position: absolute;
+	top: -500px;								/* Con valor 0 el circulo queda tocando la parte superior. La imagen mide 978px, osea que para dejar el circulo justo a la mitad tengo que poner -489px. Puse un poquito menos para que este a la mitad pero "para que se vea un poco más de circulo"*/
+	left: -200px;
+}
+
+.circulo-inferior{
+	position: absolute;
+	bottom: -500px;
+	right: -200px;
+}
+
+
+
+
+
+
+.tarjeta{
+	overflow: hidden;
+	max-width: 100vw;
+	width: 350px;								/* Tiene este tamaño porque este es el tamaño de la tarjeta superior */
+	height: 370px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20vh;
+	
+	font-size: 1.2rem;
+	text-align: center;
+	
+	background-color: white;
+	border-radius: 20px;
+}
+
+
+
+
+.caja_circulo{
+	position: relative;
+	top: -47px;
+	
+	display:inline-block;
+	overflow: hidden;
+	
+	line-height: 0;								/* Esta es una propiedad ya vista, le da una "altura" a las lineas de texto separandolas verticalmente. Por defecto la caja contenedora tambien tiene esta propiedas, por ende dicha caja es tan grande como la imagen almacenada, más un cachito extra dado por esta propiedad. Antes pensaba que era un margin o un paddin pero era esto. Con el valor "0" le quito ese margen extra*/
+	
+	border-radius: 50px;
+	box-shadow: 0 0 0 4px white;			  /* Con esto creo un borde blanco sobre la foto como en la imagen de referencia */
+}
+
+.foto{
+	max-width: 85px;							/* Este es el tamaño máximo que debe tener la foto. La puse más pequeña que la original porque en la imagen de referencia era más pequeña */ 
+}
+
+
+.info_personal{
+	position: relative;
+	top: -55px;
+
+	padding-bottom: 20px;
+
+	line-height: 0.6;							/* Altura de la separacion entre renglon y renglon */
+
+	border-bottom: solid 2px hsla(228, 10%, 80%, 0.795);
+}
+
+
+.edad{
+	margin-left: 0.4em;							/* Puse esto para simular un "espacio". De no haber este margen, el nombre estaria pegado a la edad  */
+}
+
+
+
+
+.info{
+	position: relative;
+	top: -60px;
+
+	display: inline-block;
+	width: 100px;
+}
+
+
+.numero{
+	font-size: 1.65rem;
+}
+
+.texto{
+	position: relative;
+	top: -17px;
+}
+
+

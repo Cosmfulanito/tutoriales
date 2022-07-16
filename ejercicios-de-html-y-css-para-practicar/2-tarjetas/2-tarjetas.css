@@ -1,0 +1,107 @@
+*{
+	box-sizing: border-box;					/* Pongo esta propiedad para acostumbrarme a esta buena practica */
+}
+
+body{
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	background-color: hsl(0, 0%, 93%);
+}
+
+.h1{
+	font-size: 2.6rem;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+.titulo{
+	display: block;
+	font-weight: 200;
+}
+
+.subtitulo{
+	display: block;
+	margin-bottom: 23px;
+	font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+.borde_red{
+	box-shadow: 0px -5px 0px 0px hsl(0, 78%, 62%), 
+			 	5px 5px 10px 5px hsl(240, 25%, 50%, 0.2);
+}
+.borde_cyan{
+	box-shadow: 0px -5px 0px 0px hsl(180, 62%, 55%), 
+			 	5px 5px 10px 5px hsl(240, 25%, 50%, 0.2);
+}
+.borde_orange{
+	box-shadow: 0px -5px 0px 0px hsl(34, 97%, 64%), 
+			 	5px 5px 10px 5px hsl(240, 25%, 50%, 0.2);
+}
+.borde_blue{
+	box-shadow: 0px -5px 0px 0px hsl(212, 86%, 64%), 
+			 	5px 5px 10px 5px hsl(240, 25%, 50%, 0.2);
+}
+
+
+
+
+.parrafo{
+	font-size: 1.05rem;
+	line-height: 1.5;
+	color: hsl(229, 6%, 66%);
+}
+
+
+
+
+.conjunto{
+	font-size: 1rem;
+	top: -1.688em;
+	position: relative;
+}
+
+.tarjeta{
+	display: inline-block;
+	width: 23.75em;
+	height: 15.938em;
+	padding-top: 0.063em;
+	margin: 0px 2.5em ;
+	text-align: left;
+	border-radius: 0.625em;
+}
+
+.caja_contenedora{
+	margin-left: auto;
+	margin-right: auto;
+	width: 20em;
+}
+
+
+.texto{
+	margin-bottom: 2.813em;
+	line-height: 1.5;
+	color: hsl(229, 6%, 66%);
+}
+
+.caja_imagen{
+	text-align: right;
+}
+
+
+.posicion_builder{
+	position: relative;
+	top: 5.625em;
+}
+
+.posicion_karma{
+	position: relative;
+	top: 10em;
+}

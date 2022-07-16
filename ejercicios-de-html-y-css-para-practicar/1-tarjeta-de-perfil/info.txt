@@ -1,0 +1,16 @@
+
+
+Crear una página con una tarjeta de perfil tal cual esta en el video
+https://www.youtube.com/watch?v=ooQhAdPQyCI&list=PLROIqh_5RZeBgvaU8yP883WJDHZkMNU9o 
+
+
+
+Datos:
+
+CSS:  
+/*
+  Color de fondo: hsl(185, 75%, 39%)
+  Color del texto gris: hsl(227, 10%, 46%)
+*/
+
+

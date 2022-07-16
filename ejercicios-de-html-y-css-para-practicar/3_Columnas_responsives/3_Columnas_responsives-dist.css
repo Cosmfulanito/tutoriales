@@ -1,0 +1,80 @@
+*{
+	box-sizing: border-box;				/* Pongo esta propiedad para normalizar esta buena practica */
+}
+
+body{
+	text-align: center;
+	background-color: #333;
+}
+
+
+.orange{
+	background-color: hsl(31, 77%, 52%);
+}
+
+.cyan{
+	background-color: hsl(184, 100%, 22%);
+}
+
+.darkcyan{
+	background-color: hsl(179, 100%, 13%);
+}
+
+
+.orange-text{
+	color: hsl(31, 77%, 52%);
+}
+
+.cyan-text{
+	color: hsl(184, 100%, 22%)
+}
+
+.darkcyan-text{
+	color: hsl(179, 100%, 13%);
+}
+
+
+
+.caja-tarjetas{
+	position: relative;
+	top: 200px;
+	font-size: 0;										/* Hay un margen que sale de nada que me separa las tarjetas un pixel. Esto se soluciona poniendo font-size: 0; */
+}
+
+.tarjeta{
+	display: inline-block;
+	height: 31.25em;
+	width: 19.375em;				
+	font-size: 1rem;
+	color: hsl(0, 0%, 100%, 0.75);
+}
+
+
+.caja-contenedora{
+	display: inline-block;
+	width: 12.188em;
+	padding-top: 3.125em;
+	text-align: left;
+}
+
+.titulo{
+	font-family: 'Big Shoulders Display', cursive;		
+	font-size: 2.5rem;									/* Como en la clase .caja-tarjetas{} (que pertenece al elemento padre del elemento dueño de esta clase) tiene un "font-size: 0;", El resto de los elementos hijos también tendran ese tamaño de letra, osea, el tamaño de letra letra sera 0. Por ese motivo aquí pongo "font-size: 2.5;" */
+}
+
+.texto{
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 1rem;									/* Como en la clase .caja-tarjetas{} (que pertenece al elemento padre del elemento dueño de esta clase) tiene un "font-size: 0;", El resto de los elementos hijos también tendran ese tamaño de letra, osea, el tamaño de letra letra sera 0. Por ese motivo aquí pongo "font-size: 1;" */
+	line-height: 1.2;
+	margin-bottom: 6.875em;
+}
+
+.link{
+	font-size: 1rem;
+	font-family: 'Lexend Deca', sans-serif;
+	background-color: white;
+	border-style: none;
+	padding: 0.7em 2em;
+	text-decoration: none;
+	border-radius: 5em;
+}

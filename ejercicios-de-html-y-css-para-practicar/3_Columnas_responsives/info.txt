@@ -1,0 +1,47 @@
+
+
+- Hacer una página web identica a la de la practica del sigiente video:
+  https://www.youtube.com/watch?v=t6kP5ltbEr8&list=PLROIqh_5RZeBgvaU8yP883WJDHZkMNU9o&index=3
+
+
+
+
+
+
+- Valores de referencia:
+
+	Colores
+		Background: #333
+		Tarjetas
+			Orange: hsl(31, 77%, 52%)
+			Cyan: hsl(184, 100%, 22%)
+			Dark cyan: hsl(179, 100%, 13%)
+		
+		Texto
+			Blanco al 0.75 de opacidad
+
+	Fuentes de la página
+		Títulos
+			https://fonts.google.com/specimen/Big+Shoulders+Display
+			Estilo 600
+		Textos
+			https://fonts.google.com/specimen/Lexend+Deca
+			Estilo 400
+	
+
+	body {
+	background-color: #333;
+	}
+
+
+	Textos:
+		SEDANS
+		Choose a sedan for its affordability and exellent fuel economy. Ideal for cruising in the city or on your next road trip.
+
+		SUVS
+		Take an SUV for its spacius interiro, power, and versatility. Perfect for your next family vacation and off-road adventures.
+
+		LUXURY
+		Cruise in the best car brands withouts the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.
+
+		Learn More
