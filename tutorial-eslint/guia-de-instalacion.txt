@@ -1,0 +1,22 @@
+
+ - Este video enseña a instalar ESLint:
+   https://www.youtube.com/watch?v=bClwMhv50aI&list=PLROIqh_5RZeCfIPoHeB50a6NH8jI4iEDb&index=7
+
+ - Esta instalación solamente afecta a la carpeta donde se encuentren los archivos del SLIint. Si creo otra carpeta tengo que instalar todo de nuevo
+
+ - RECORDAR que algunas cosas cambiaron hasta la fecha y por ende podría no lograr instalar el ESLint. Para solucionar eso debo ir a la página oficial donde también 
+   hay un tutorial de instalación
+
+
+
+
+En la terminal escribir lo siguiente en este orden:
+
+	npm init -y
+
+	npm install -g eslint	(El -g significa "global", esto quiere decir que se instala en la PC. Por ende solamente hay ponerlo una vez en la vida cuando instalamos 
+							 el ESSlint por primera vez)
+	npx eslint --init
+
+
+Luego simplemente hay que elegir las opciones deseadas
