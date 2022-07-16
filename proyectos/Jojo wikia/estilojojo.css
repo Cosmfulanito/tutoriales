@@ -1,0 +1,58 @@
+
+/*_____Modelo caja/contenedor:_____*/
+
+
+
+/*Me permite pintar nuestras cajas/etiquetas de estructura del tipo block.*/
+
+#color_cabecera_web{                             /*Se utiliza cuando se quiere aplicar apariencia a un "unico" documento dentro de tu página web. En este caso lo voy a utilizar para cambiar de color unicamente en el <header> del titulo, dejando al resto de los <header> intactos*/
+    background-color:cadetblue;
+}
+
+
+
+#color_navegacion_principal{                     /*En este caso lo voy a utilizar para cambiar el color de la barra de navegacion <nav>*/
+    background-color: darkgoldenrod;
+}
+
+
+
+#color_barra_lateral{                            /*Afecta al <aside>*/
+    background-color: crimson;
+    float: left;                                 /*La propiedad float mueve la etiqueta a un lateral (en este caso el izquierdo). Ademas hace que no ocupe el 100% del ancho de la página. De esta forma el resto de la paguina (en este caso el contenodo principal/ <section>) ocupa el espacio restante que esta al lado y por abajo. De esta forma convertimos a la barra lateral en una "verdadera barra lateral" */
+    height: 1285px;                              /*No quiero que el resto de la página pase por debajo de la barra lateral, entonces lo que hago es estirarla hacia abajo todo lo que quiera con la propiedad height: El valor ingresado represanta a la cantidad de pixeles y es un numero arbitrario. En este caso es lo suficientemente grande como para que otra etiqueta no este por debajo*/
+}                                                
+
+
+
+#color_contenido_principal{                      /*Afecta al <section>*/
+    background-color: dimgrey;
+    margin-left: 330px;                          /*Esta propiedad me crea un "margen" (espacio de separacion en blanco) que puede ser arriba, abajo, izquiera o derecha. En este caso el margen es de 330 pixeles desde el lado izquierdo ¿Por que tantos? Porque tengo a la barra de navegacion <nav> "flotando" a la derecha gracias a la propiedad float vista mas arriba. Entonces tengo que sumar los pixeles que ocupa dicha barra más los pixeles que yo quiero desplazar. */
+    padding-left: 15px;                          /*Lo que hace es hacer un desplazamiento del contenido interno del block. En este caso lo que hice fue mover las letras que estaban muy pegadas al margen izquierdo, 15 pixeles a la derecha  */
+    padding-top: 15px;
+}
+
+
+#color_pie_principal{
+    background-color: lightsalmon;             /*Afecta unicamente al ultimo <footer>*/
+    clear: both;                                 /*Basicamente le digo al pie/<footer> que si esta en contacto con una etiqueta float (que atraviesa todo), que se ponga por debajo*/
+    margin-top: 30px;                            /*Muevo tantos pixeles porque en realidad esta dejando una sepatracion entre esta etiqueta la de <section> /contenido principal que es la que verdaderamente esta arriba de esta de forma gerarquica aunque parezca que sea la barra lateral/ <aside> */
+}
+
+
+
+
+
+
+/*Ahora quiero poner los elementos de la barra de navegacion <nav> en horizontal: */
+/*Pero primero tengo que colorear cada elemento*/
+
+li {                                          /*Este es un "selector de etiqueta". Más precisamente de las etiquetas <li> que estan dentro del <nav>*/
+    background-color: yellow;                
+    display: inline;                          /*Si quiero poner los elementos/etiquetas <li> de la barra de navegacion en horizontal, tengo que convertir dichas etiquetas de "block" a "inline" */
+}
+
+
+
+
+
