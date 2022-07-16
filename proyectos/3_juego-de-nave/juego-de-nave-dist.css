@@ -1,0 +1,108 @@
+@font-face {
+	font-family: "astera";
+	src: url(assets/fonts/airstrike.ttf);
+}
+
+
+
+*{
+	box-sizing: border-box;			/* Ponga esta propiedad para normalizar esta biena practica */
+}
+
+body{
+	font-family: sans-serif;
+	text-align: center;
+	background-color: black;
+}
+
+h1{
+	font-family: "astera";
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 0.6em white;
+	font-weight: normal;				/* Deja el texto norma, sin negrita. Tengo que poner esto porque por defecto los titulos como <h1> le ponen negrita al texto */
+	text-decoration: underline;
+}
+p{
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 0.6em white;
+
+}
+
+.fondo_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vmax;
+	max-width: 100vw;
+	max-height: 100vh;
+	z-index: -1;
+}
+
+.nave_img{
+	max-width: 100px;
+}
+
+
+
+.coral{
+	background-color: coral;
+}
+
+.darkCoral{
+	background-color: hsl(16, 50%, 40%);
+}
+
+
+
+.nave{
+	/* background-color: coral;
+	border-radius: 50px; */
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+	z-index: 200;
+	position: relative;
+	text-align: center;
+}
+
+
+
+
+
+
+.contenedorControles{
+	font-size: 1.5rem;
+	text-align: center;
+	z-index: 300;
+	position: absolute;								
+	bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);		/* No se como funciona esto pero me centra la nave */
+	
+}
+
+.boton{
+	display: inline-block;
+	height: 2em;
+	width: 2em;
+	border-radius: 0.5em;
+	padding: 0.35em;
+	cursor: pointer;
+}
+
+.botonArriba{
+	position: relative;
+	top: -0.3em;
+}
+.botonIzquierda{
+	position: relative;
+	
+}
+.botonAbajo{
+	position: relative;
+}
+.botonDerecha{
+	position: relative;
+}

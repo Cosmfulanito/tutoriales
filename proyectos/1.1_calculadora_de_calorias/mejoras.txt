@@ -1,0 +1,16 @@
+_____Upgrates_____
+
+ - Cambiar el metodo Number() por parseFloat()
+
+ - Validar los formularios para que no me salten errores cuando el usuario ponga un dato mal. 
+   Ej: Puede ser que el usuario ponga un numero y por accidente aprete el espacio o alguna letra
+
+ - Poner un selector para sistema metrico e imperial
+   Ej: El usuario va a poder eleguir si poner su altura en "metros" o pies. Tambien a va poder poner su peso en "kilos" o   
+       "onzas"
+
+
+
+_____Fixes:_____
+
+

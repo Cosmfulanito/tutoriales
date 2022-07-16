@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="normalize.css">									<!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+		<link rel="stylesheet" href="juego-de-nave-dist.css">							<!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+		<title>Juego de nave</title>
+	</head>
+	<body id="body">
+		<h1>Naveneitor 3000</h1>
+		<p>Presiona W,A,S,D para mover la nave</p>
+		
+		<!-- Fondo del "juego": -->
+		<img class="fondo_img" srcset="assets/images/space_horizontal.webp, 						
+									   assets/images/space_vertical.webp 2x" alt="fondo">		<!-- Uso la primera imagen que esta en horizontal para cuando habro esta página en una monitor y la que esta en vertical la utilizo en movil  -->
+
+		<!-- Nave: -->
+		<div id="nave" class="nave">
+			<img class="nave_img" src="/proyectos/juego-de-nave/assets/images/spaceship.png" alt="nave">
+		</div>																															
+
+		<!-- Botones:  -->
+		<div id="contenedorControles" class="contenedorControles">
+			<div id="botonArriba" class="boton botonArriba coral" value="arriba">&uarr;</div>
+			<div> 																				<!-- Pongo estos 3 botones dentro de este <div> porque se me hace más facil alinearlos. Ademas estos 3 botones son los que van abajo -->
+				<div id="botonIzquierda" class="boton botonIzquierda coral" value="izquierda">&larr;</div>
+				<div id="botonAbajo" class="boton botonAbajo coral" value="abajo">&darr;</div>
+				<div id="botonDerecha" class="boton botonDerecha coral" value="derecha">&rarr;</div>
+			</div>
+		</div>
+
+
+		<script src="juego-de-nave.js"></script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/proyectos/calculadora-de-calorias/normalize.css">
+		<link rel="stylesheet" href="/proyectos/calculadora-de-calorias/stiles-dist.css">
+		<title>Contador de calorias</title>
+	</head>
+	<body class="body">
+		<header>
+			<h1 class="h1">Contador de calorías<br>Harris-Benedict</h1>			
+		</header>
+
+		<main>
+			<form class="form">
+				<!-- Peso: -->
+				<div class="div div-1">
+					<label for="peso">Peso en kilogramos:</label>
+					<input type="number" id="peso" required class="label">
+				</div>
+
+
+				<!-- Altura: -->
+				<div class="div div-2">
+					<label for="altura">Altura en centímetros:</label>
+					<input type="number" id="altura" required class="label">
+				</div>
+
+
+				<!-- Edad: -->
+				<div class="div div-3">
+					<label for="edad">Edad:</label>
+					<input type="number" id="edad" required class="label">
+				</div>
+
+				<!-- Sexo: -->
+				<div class="div div-4">
+					<label for="sexo">Sexo:</label>
+					<select name="Sexo" id="sexo" class="label">
+						<option value="femenino">Femenino</option>
+						<option value="masculino">Masculino</option>
+					</select>
+				</div>
+
+				<!-- Ejercicio: -->
+				<div class="div div-5">
+					<label for="ejercicio">Cantidad de ejercicio:</label>
+					<select name="Ejercicio" id="ejercicio" class="label">
+						<option value="1">Poco o ninguno</option>    			 				
+						<option value="2">1-3 días a la semana</option>
+						<option value="3">3-5 días a la semana</option>
+						<option value="4">6-7 días a la semana</option>
+						<option value="5">Dos veces al día</option>
+					</select>
+				</div>
+
+
+				<!-- Boton para iniciar: -->
+				<div class="div div-6">
+					<div class="div-boton">
+						<button type="button" onclick="RecogerValores()" class="boton"><a href="#resultado" class="ancla">Calcular</a></button>
+						<!-- <input type="submit" value="Enviar" onclick="RecogerValores()" class="boton"> -->
+					</div>
+				</div>
+			</form>
+
+			<!-- Resultado: -->
+			<div class="div div-7">
+				<p class="p-1">La ingesta óptima de calorias para mantener su peso es de:</p>
+				<div class="caja-resultado"></div>
+				<div id="resultado" class="resultado"></div>
+			</div>
+		</main>
+
+		<script src="/proyectos/calculadora-de-calorias/scrips.js"></script>
+	</body>
+</html>

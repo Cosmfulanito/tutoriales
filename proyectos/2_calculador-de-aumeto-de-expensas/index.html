@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="normalize.css">								<!-- Puse este archivo para acostumbrarme a normarlizar los estilos de los navegadores -->
+		<link rel="stylesheet" href="stiles-dist.css">								<!-- Uso este archivo y no el original para acostumbrarme al uso de "Prepos" -->
+		<title>Calculador de aumento de expensas</title>
+	</head>
+	<body>
+		<h1>Calculador de aumento de expensas</h1>
+
+
+		<section class="section">
+			<form>
+				<!-- Monto Inicial: -->
+				<div>
+					<label for="amount"></label>Monto Inicial
+					<input id="amount"  type="number" required>
+				</div>
+
+				<!-- Meses de contrato: -->
+				<div>
+					<label for="months"></label>Meses de contrato
+					<input id="months" type="number">
+				</div>
+
+				<!-- Aumento porcentual: -->
+				<div>
+					<label for="increase"></label>Aumento porcentual
+					<input id="increase" type="number">
+				</div>
+
+				<!-- Periodo de meses donde se efectua el incremento: -->
+				<div>
+					<label for="adjustmentPeriod"></label>Periodo de meses donde se efectua el incremento
+					<input id="adjustmentPeriod" type="number">
+				</div>
+
+				<!-- Boton calcular: -->
+				<div>
+					<button id="button" class="button" type="button">Calcular</button>
+				</div>
+
+			</form>
+				
+				<!-- resultado: -->
+				<div id="result" class="coral">
+					<div></div>					<!-- Este nodo hijo solamente existe para ser reemplazado por otro <div> que dentro tiene las etiquetas <p>  -->
+				</div>
+
+		</section>
+
+
+
+
+
+		<section class="section">
+			<form>
+				<!-- Monto Inicial: -->
+				<div>
+					<label for="amountB"></label>Monto Inicial
+					<input id="amountB"  type="number" required>
+				</div>
+
+				<!-- Meses de contrato: -->
+				<div>
+					<label for="monthsB"></label>Meses de contrato
+					<input id="monthsB" type="number">
+				</div>
+
+				<!-- Aumento porcentual: -->
+				<div>
+					<label for="increaseB"></label>Aumento porcentual
+					<input id="increaseB" type="number">
+				</div>
+
+				<!-- Periodo de meses donde se efectua el incremento: -->
+				<div>
+					<label for="adjustmentPeriodB"></label>Periodo de meses donde se efectua el incremento
+					<input id="adjustmentPeriodB" type="number">
+				</div>
+
+				<!-- Boton calcular: -->
+				<div>
+					<button id="buttonB" class="button" type="button">Calcular</button>
+				</div>
+
+			</form>
+				
+				<!-- resultado: -->
+				<div id="resultB" class="coral">
+					<div></div>					<!-- Este nodo hijo solamente existe para ser reemplazado por otro <div> que dentro tiene las etiquetas <p>  -->
+				</div>
+
+		</section>
+
+
+
+
+
+		<script src="scripts.js"></script>
+	</body>
+</html>

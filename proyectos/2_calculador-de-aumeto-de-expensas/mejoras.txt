@@ -1,0 +1,12 @@
+_____Upgrates_____
+
+ - - Cambiar el metodo Number() por parseFloat()
+
+ - Validar los formularios para que no me salten herrores cuando el usuario ponga un dato mal. 
+   Ej: Que el usuario vez de poner un numero, ponga 2 numeros separados por en espacio o letras 
+
+
+
+_____Fixes:_____
+
+

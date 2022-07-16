@@ -1,0 +1,86 @@
+
+*{
+	box-sizing: border-box;
+}
+
+
+
+
+html{
+	scroll-behavior: smooth;			/* Hace que la navegacion por anclas sea suave. De lo contrario da la impracion de que me teletransporto */
+}
+
+
+.body{
+	font-size: 1.2rem;					/* Con esto calculo las proporciones de toda la página web */ 
+	font-family: sans-serif;
+}
+
+.h1{
+	text-align: center;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.div{
+	text-align: center;
+	margin-bottom: 1.5em;
+}
+
+.label{
+	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align-last: center;
+	width: 12.5em;
+}
+
+
+
+.boton{
+	margin-top: 1.5em;
+	width: 12.5em;
+	height: 3em;
+	background-color: white;
+	border-radius: 15em;
+	border: none;
+	border: coral 0.3em solid;
+	color: coral;
+	margin-bottom: 0.93em;
+}
+.ancla{
+	box-sizing: content-box;
+	text-decoration: none;
+	color: coral;
+	display: block;
+
+
+	position: relative;
+	padding: 0.5em 1.25em;
+
+}
+
+
+.p-1{
+	width: 12.5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.caja-resultado{
+	background-color: coral;
+	margin-left: auto;
+	margin-right: auto;
+	width: 12.5em;
+	padding-top: 1.563em;
+	padding-bottom: 1.563em;
+	border-radius: 6.25em;
+}
+.resultado{
+	color: white;
+	position: relative;
+	top: -2.063em;
+	padding-bottom: 3.125em;
+}

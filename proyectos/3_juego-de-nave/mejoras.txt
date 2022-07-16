@@ -1,0 +1,12 @@
+_____Upgrates_____
+
+ - Que sea un juego donde hay que esquivar meteoritos y a su vez dispararles. El juego acaba cuando un meteotito impacta
+   con nosotros.
+
+ - Poner un sistema de puntuación online
+
+
+
+_____Fixes:_____
+
+
