@@ -1,0 +1,3 @@
+export default function Postpage () {
+    return(null)                            // Esto es un harcodeado de la concha de su madre. Toda la info esta en el layout, el cual necesitamos para que sirva de molde para que dentro del post seleccionado, al hacer click en "ver comentarios" estos comentarios aparezcan dentro del layout que sirve de molde. Osea, la pagina verdadera es el layout, pero para funcionar necesita de un archivo page.jsx que es este, por eso esta vacio
+}
