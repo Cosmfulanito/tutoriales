@@ -1,5 +1,0 @@
-- Esta carpeta (same-layout) como cualquier otra carpeta que contenga parentesis (), sirve para cuando tenemos una lista grande
-  de rutas hermanas que comparten el mismo layout, pero queremos que haya algunas exepciones con estilos propios
-
-- Recordar que para Next esta carpeta no existe no existe como padre. Sus hijos, las carpetas "perrito" y "gatito", siguen 
-  siendo hermanos de las carpetas "about", "contact", y "posts"
